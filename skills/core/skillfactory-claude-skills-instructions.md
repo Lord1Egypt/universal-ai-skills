@@ -1,15 +1,15 @@
 # the AI Skills Reference
 
-**Complete guide to creating and using specialized capabilities (Skills) in Claude**
+**Complete guide to creating and using specialized capabilities (Skills) in the AI**
 
 ---
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [What Are the AI Skills](#what-are-claude-skills)
+- [What Are the AI Skills](#what-are-the AI-skills)
 - [How Skills Work](#how-skills-work)
-- [Skills Across the AI Products](#skills-across-claude-products)
+- [Skills Across the AI Products](#skills-across-the AI-products)
 - [Creating Skills](#creating-skills)
 - [Skill Structure](#skill-structure)
 - [Best Practices](#best-practices)
@@ -21,7 +21,7 @@
 
 ## Introduction
 
-Claude Skills are specialized capabilities that teach the AI how to perform specific tasks. They're packaged as folders containing instructions, scripts, and resources that the AI loads when relevant to the task at hand.
+the AI Skills are specialized capabilities that teach the AI how to perform specific tasks. They're packaged as folders containing instructions, scripts, and resources that the AI loads when relevant to the task at hand.
 
 **Key Concept**: Skills make the AI better at specialized tasks like working with Excel, following brand guidelines, or executing custom workflows—without requiring manual skill selection.
 
@@ -48,7 +48,7 @@ Skills are folders that include:
 
 ### When Skills Load
 
-Claude scans available skills while working on tasks and loads only relevant ones with minimal information needed, keeping the AI fast while accessing specialized expertise.
+the AI scans available skills while working on tasks and loads only relevant ones with minimal information needed, keeping the AI fast while accessing specialized expertise.
 
 **Think of Skills as**: Custom onboarding materials that package expertise, making the AI a specialist in what matters most to you.
 
@@ -73,7 +73,7 @@ Claude scans available skills while working on tasks and loads only relevant one
 ```
 User Task: "Create a branded Excel report from this data"
          ↓
-Claude identifies:
+the AI identifies:
   - excel-handler skill (data processing)
   - brand-guidelines skill (styling)
          ↓
@@ -101,7 +101,7 @@ Branded Excel report generated
 - Example skills you can customize
 - Ability to create custom skills
 - Automatic skill invocation based on task relevance
-- Skills visible in Claude's chain of thought
+- Skills visible in the AI's chain of thought
 
 **Creating Skills**:
 - Use the built-in "skill-creator" skill
@@ -115,7 +115,7 @@ Branded Excel report generated
 2. Enable Skills
 3. Team/Enterprise: Admin must enable org-wide first
 
-**Video Guide**: [Creating custom Skills with Claude](https://www.youtube.com/watch?v=kS1MJFZWMq4)
+**Video Guide**: [Creating custom Skills with the AI](https://www.youtube.com/watch?v=kS1MJFZWMq4)
 
 ### 2. the AI Developer Platform (API)
 
@@ -155,10 +155,10 @@ Branded Excel report generated
 **Option B: Manual Installation**
 ```bash
 # Copy skill folder to user skills directory
-cp -r my-skill ~/.claude/skills/
+cp -r my-skill ~/.the AI/skills/
 
 # Or install project-level
-cp -r my-skill .claude/skills/
+cp -r my-skill .the AI/skills/
 ```
 
 **Features**:
@@ -167,15 +167,15 @@ cp -r my-skill .claude/skills/
 - Team collaboration via project-level skills
 - Same skills work across team members
 
-**Claude Agent SDK**: Provides same Agent Skills support for building custom agents
+**the AI Agent SDK**: Provides same Agent Skills support for building custom agents
 
-**Documentation**: [the AI coding agent Skills Guide](https://docs.the AI.com/en/docs/claude-code/skills)
+**Documentation**: [the AI coding agent Skills Guide](https://docs.the AI.com/en/docs/the AI-code/skills)
 
 ---
 
 ## Creating Skills
 
-### Method 1: Interactive Creation (Claude Apps)
+### Method 1: Interactive Creation (the AI Apps)
 
 **Using skill-creator**:
 
@@ -189,7 +189,7 @@ cp -r my-skill .claude/skills/
    - What resources are needed?
    - What should the skill produce?
 
-3. **Claude generates**:
+3. **the AI generates**:
    - Complete folder structure
    - Formatted SKILL.md file
    - Required Python scripts (if needed)
@@ -201,7 +201,7 @@ cp -r my-skill .claude/skills/
    - Adjust instructions as needed
    - Add additional resources
 
-**Video**: [Claude Skills: Specialized capabilities you can customize](https://www.youtube.com/watch?v=IoqpBKrNaZI)
+**Video**: [the AI Skills: Specialized capabilities you can customize](https://www.youtube.com/watch?v=IoqpBKrNaZI)
 
 ### Method 2: Manual Creation
 
@@ -404,19 +404,19 @@ Output: Filtered report for period
 **For Teams**:
 ```bash
 # Project-level skills (shared)
-.claude/skills/
+.the AI/skills/
 ├── team-style-guide/
 └── data-processor/
 
 # Add to version control
-git add .claude/skills/
+git add .the AI/skills/
 git commit -m "Add team skills"
 ```
 
 **For Personal Use**:
 ```bash
 # User-level skills (not shared)
-~/.claude/skills/
+~/.the AI/skills/
 ├── my-workflow/
 └── personal-templates/
 ```
@@ -434,7 +434,7 @@ git commit -m "Add team skills"
 | **Code** | Can include Python scripts | Prompt-based only |
 | **Context** | Shared with main thread | Separate context window |
 | **Use Case** | Domain expertise | Workflow automation |
-| **Location** | `~/.claude/skills/` | `~/.claude/agents/` |
+| **Location** | `~/.the AI/skills/` | `~/.the AI/agents/` |
 
 ### When to Use Each
 
@@ -478,7 +478,7 @@ Skill: code-quality-standards
 ### Learning Path
 
 **Beginner**:
-1. Read [Skills User Guide](https://support.the AI.com/en/articles/12580051-teach-claude-your-way-of-working-using-skills)
+1. Read [Skills User Guide](https://support.the AI.com/en/articles/12580051-teach-the AI-your-way-of-working-using-skills)
 2. Try built-in skills in the AI apps
 3. Customize an example skill
 
@@ -498,9 +498,9 @@ Skill: code-quality-standards
 
 ### Official Documentation
 
-- **Claude Apps User Guide**: [Skills Help Center](https://support.the AI.com/en/articles/12580051-teach-claude-your-way-of-working-using-skills)
+- **the AI Apps User Guide**: [Skills Help Center](https://support.the AI.com/en/articles/12580051-teach-the AI-your-way-of-working-using-skills)
 - **API Documentation**: [Skills API Guide](https://docs.the AI.com/en/api/skills-guide)
-- **the AI coding agent**: [Skills for the AI coding agent](https://docs.the AI.com/en/docs/claude-code/skills)
+- **the AI coding agent**: [Skills for the AI coding agent](https://docs.the AI.com/en/docs/the AI-code/skills)
 - **Engineering Blog**: [Agent Skills Design Pattern](https://www.the AI provider.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 
 ### Example Skills
@@ -510,13 +510,13 @@ Skill: code-quality-standards
 
 ### Learning Resources
 
-- **the AI provider Academy**: [Build with Claude](https://www.the AI provider.com/learn/build-with-claude)
+- **the AI provider Academy**: [Build with the AI](https://www.the AI provider.com/learn/build-with-the AI)
 - **Video Tutorials**: YouTube - the AI provider Channel
 - **Community**: Share skills and get help
 
 ### Security & Safety
 
-- **Security Considerations**: [Using Skills Safely](https://support.the AI.com/en/articles/12512180-using-skills-in-claude#h_2746475e70)
+- **Security Considerations**: [Using Skills Safely](https://support.the AI.com/en/articles/12512180-using-skills-in-the AI#h_2746475e70)
 - **Best Practice**: Only use skills from trusted sources
 - **Code Review**: Review Python scripts before installation
 
@@ -556,7 +556,7 @@ Skill: code-quality-standards
 
 **Stay Updated**:
 - Follow [the AI provider News](https://www.the AI provider.com/news)
-- Check [Changelog](https://developers.the AI provider.com/codex/changelog) regularly
+- Check [Changelog](https://developers.the AI provider.com/the AI coding agent/changelog) regularly
 - Join community discussions
 
 ---

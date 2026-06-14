@@ -2,13 +2,13 @@
 
 **Rule:** Do not open a positive claim by first negating an alternative. Covers `"不是X，而是Y"` / `"It's not X, it's Y"` and all variants.
 
-**Source model:** an AI model.4
+**Source model:** the AI model
 
 **Test input:** a commentary on Marc Andreessen's "five traits of innovators" framework (open ended, ~300 words of context), asking the model to summarize + give its take. This prompt reliably exercises the pattern because the natural rhetorical move is to reject the reader's assumed answer before stating the real one.
 
 ## Current locked baseline: v0.6.1 (2026-04-11)
 
-Rule 2 (negation frame): **converged on same-prompt stress test.** Three consecutive fresh-conversation runs of the Andreessen prompt against an AI model.4 produced zero negation-frame violations in every run. Status across versions: 6 → 4 → 3 → 0 → 0 → 0. The v0.5.0 combination (broadened scope, removed self-quoted example, added BAD/GOOD few-shot pairs) looks like the load-bearing change. Cross-prompt validation is still open — one to two more tests on a different contrastive prompt (Peter Thiel, Naval,硬科技 team evaluation) would fully confirm convergence.
+Rule 2 (negation frame): **converged on same-prompt stress test.** Three consecutive fresh-conversation runs of the Andreessen prompt against the AI model produced zero negation-frame violations in every run. Status across versions: 6 → 4 → 3 → 0 → 0 → 0. The v0.5.0 combination (broadened scope, removed self-quoted example, added BAD/GOOD few-shot pairs) looks like the load-bearing change. Cross-prompt validation is still open — one to two more tests on a different contrastive prompt (Peter Thiel, Naval,硬科技 team evaluation) would fully confirm convergence.
 
 Rule 3 (summary-stamp closings): holding on closing position after the v0.6.1 structural fix. Two of three tests at v0.6.1 ended with a direct closing sentence, no stamp. One earlier test (v0.6.0) ended with `"一句话落地："`, which motivated the v0.6.1 rule 3 rewrite.
 
@@ -28,7 +28,7 @@ Rule 3 (summary-stamp closings): holding on closing position after the v0.6.1 st
 
 ## v0.3.1 leak excerpts
 
-From a real an AI model.4 response to the Andreessen prompt after installing `v0.3.1`:
+From a real the AI model response to the Andreessen prompt after installing `v0.3.1`:
 
 1. Opening sentence: `"真正的创新者不是'有创意的人'，而是五种特质同时拉满的稀有人"`
 2. Mid-paragraph: `"创新的瓶颈常常不是钱，不是想法，而是'能把想法熬成现实的那种人'太少"` (chained negation form)
@@ -37,7 +37,7 @@ From a real an AI model.4 response to the Andreessen prompt after installing `v0
 
 ## v0.4.0 leak excerpts
 
-From a real an AI model.4 response to the Andreessen prompt after installing `v0.4.0`:
+From a real the AI model response to the Andreessen prompt after installing `v0.4.0`:
 
 1. **New variant (reverse order):** `"真正的创新者=五种特质同时拉满的人，而不是单纯'聪明'或'有创意'的人"` — this is "correct then reject" order. The v0.4.0 rule only banned "open by negating," which assumes negation-first order. This form appends a negation after a positive claim and slipped through.
 2. Classic form: `"最稀缺的不是高智商，是'开放性+尽责性'同时很高"` — standard, with the `而` elided but the structure intact.
@@ -49,7 +49,7 @@ From a real an AI model.4 response to the Andreessen prompt after installing `v0
 
 1. **Attention decay by rule position.** v0.3.1 had the rule at position 14 (last). v0.4.0 moved the negation rule to position 2 and saw meaningful drop (4 → 3 on the classic form), but left the closing-pattern rule at position 13, which then leaked the exact phrase the rule named.
 2. **Negative examples in rule text become templates.** The specific `"不是交易信号"` phrase in v0.4.0 rule 2 was intended as an illustration of what not to write. The model then wrote it verbatim. Models can confuse "here's an example of the forbidden shape" with "here's an approved phrase to use."
-3. **Rule text covered only one order.** v0.4.0 rule 2 said "open a positive claim by first negating." That banned the common form but not the reverse form (append `而不是Y` to a positive claim). an AI model.4 switched to the uncovered variant and produced a clean "correct then reject" sentence that technically did not match the rule description.
+3. **Rule text covered only one order.** v0.4.0 rule 2 said "open a positive claim by first negating." That banned the common form but not the reverse form (append `而不是Y` to a positive claim). the AI model switched to the uncovered variant and produced a clean "correct then reject" sentence that technically did not match the rule description.
 4. **No positive demonstration.** All v0.3.x and v0.4.0 iterations relied on prohibition text alone ("do not do X"). Models with strong priors for X respond better to showing both sides of a transformation (BAD → GOOD) than to prohibitions, because the transformation gives them a concrete alternative direction.
 
 ## v0.4.0 fix (partial)
@@ -73,8 +73,8 @@ Four changes in `prompt.md` for v0.5.0, in response to observed v0.4.0 leaks:
 
 ## How to re-run this test
 
-1. Install the latest `prompt.md` via any of the supported paths (`clawhub install talk-normal && bash skills/talk-normal/install.sh`, paste GitHub link into OpenClaw, or manual `git clone`).
-2. Start a fresh an AI model.4 conversation in OpenClaw or the AI assistant custom instructions.
+1. Install the latest `prompt.md` via any of the supported paths (`clawhub install talk-normal && bash skills/talk-normal/install.sh`, paste GitHub link into the AI agent platform, or manual `git clone`).
+2. Start a fresh the AI model conversation in the AI agent platform or the AI assistant custom instructions.
 3. Paste the Andreessen "five traits of innovators" context (or any open-ended commentary prompt that asks for a summary + take).
 4. Count occurrences of the pattern in the response. Target is 0 to 1. Anything above 2 means the rule is still not holding and needs further iteration.
 

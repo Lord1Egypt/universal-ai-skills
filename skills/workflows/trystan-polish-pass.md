@@ -21,7 +21,7 @@ If the design is clearly mid-flight (broken layout, missing sections, placeholde
 
 ## Phase 2: Run four review passes
 
-Codex runs as a single agent loop, so run the four reviews **sequentially** against the file, collecting findings as you go. Each pass is the equivalent of one of the standalone review skills, scoped to this file. Do not stop after the first issue — complete all four passes before fixing, so the fix phase has the full picture.
+The AI agent runs as a single loop, so run the four reviews **sequentially** against the file, collecting findings as you go. Each pass is the equivalent of one of the standalone review skills, scoped to this file. Do not stop after the first issue — complete all four passes before fixing, so the fix phase has the full picture.
 
 ### Pass 1: Accessibility audit
 

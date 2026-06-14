@@ -1,6 +1,8 @@
 # Prompt Architect Reference
 
 ## Compact Prompt Skeleton
+# Prompt Architect Reference
+
 Use this shape when drafting or refactoring prompts:
 
 ```markdown

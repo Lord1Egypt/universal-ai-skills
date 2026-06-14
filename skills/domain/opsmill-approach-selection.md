@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: approach, mcp, check, transform, decision
 ---
 
+# Approach Selection
+
 ## Choosing the Right Approach
 
 Impact: MEDIUM
@@ -35,7 +37,7 @@ the question, not on what tooling feels available.
 | --------- | ------------------------- | ------------- | -------------------- |
 | **Trigger** | On demand, conversational | Every proposed change | Scheduled or on demand |
 | **Enforcement** | None (informational) | Blocks merge on failure | None (output only) |
-| **Automation** | Manual (Claude + human) | Fully automated | Fully automated |
+| **Automation** | Manual (the AI model + human) | Fully automated | Fully automated |
 | **Output** | Chat response | Pass/fail in pipeline UI | File artifact (JSON/CSV/text) |
 | **Setup cost** | Zero | Python + GQL + config | Python/Jinja2 + config |
 | **Best for** | Exploration, one-off audits | Ongoing policy enforcement | Recurring reports, exports |

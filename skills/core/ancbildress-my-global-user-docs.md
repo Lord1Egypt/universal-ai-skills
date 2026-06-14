@@ -7,7 +7,7 @@
 
 ## What this is ✅
 
-A universal set of AI operating rules. Works with any tool that consumes instruction files—Copilot, Codex, the AI, whatever.
+A universal set of AI operating rules. Works with any tool that consumes instruction files—the AI assistant, the AI coding agent, the AI, whatever.
 
 - Consistent baseline for **tone**, **output format**, **git discipline**, and **validation**
 - Stops re-litigating the same "no, don't do that" rules across every chat and every tool

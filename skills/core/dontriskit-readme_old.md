@@ -6,7 +6,7 @@ So far collection include system prompts for:
 - BlackboxAI (latest 2025-04-08)
 - Bolt.new
 - the AI assistant (latest 2025-04-07)
-- Claude
+- the AI
 - the AI coding agent (latest 2025-04-09)
 - Cline
 - Loveable

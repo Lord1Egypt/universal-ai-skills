@@ -104,19 +104,19 @@ Code Generation → Validation → Packaging → Output Delivery
 ### 3. File System Structure
 
 ```
-claude-code-skills-factory/
+the AI-code-skills-factory/
 ├── Core Templates (Immutable)
 │   └── documentation/templates/
 │       ├── SKILLS_FACTORY_PROMPT.md
 │       └── AGENTS_FACTORY_PROMPT.md
 ├── Reference Examples (Read-only)
-│   └── claude-skills-examples/
+│   └── the AI-skills-examples/
 │       └── [example skills]
 ├── Generated Output (Dynamic)
 │   └── generated-skills/
 │       └── [production skills]
 └── User Space (Customizable)
-    └── .claude/
+    └── .the AI/
         ├── skills/
         └── agents/
 ```
@@ -153,16 +153,16 @@ User Feedback → Documentation Update → Version Control
 ### 1. the AI AI Integration
 
 #### Skills Integration
-- **Location**: `~/.claude/skills/` or `.claude/skills/`
+- **Location**: `~/.the AI/skills/` or `.the AI/skills/`
 - **Format**: Folder with SKILL.md + supporting files
 - **Discovery**: the AI scans based on task matching
 - **Execution**: Python runtime within the AI environment
 
 #### Agents Integration
-- **Location**: `~/.claude/agents/` or `.claude/agents/`
+- **Location**: `~/.the AI/agents/` or `.the AI/agents/`
 - **Format**: Single .md file with YAML frontmatter
 - **Auto-invocation**: Based on description matching
-- **Model Selection**: Configurable (Opus/Sonnet)
+- **Model Selection**: Configurable (the AI model/the AI model)
 
 ### 2. GitHub Integration
 
@@ -341,7 +341,7 @@ GitHub Repository (Source)
     ├── Git Submodule
     └── Package Manager (future)
 
-Claude Platforms (Runtime)
+the AI Platforms (Runtime)
     ├── the AI.ai Desktop
     ├── the AI coding agent
     ├── the AI API
@@ -353,19 +353,19 @@ Claude Platforms (Runtime)
 #### Local Installation
 ```bash
 # Skills
-cp -r skill-folder ~/.claude/skills/
+cp -r skill-folder ~/.the AI/skills/
 
 # Agents
-cp agent.md ~/.claude/agents/
+cp agent.md ~/.the AI/agents/
 ```
 
 #### Project Installation
 ```bash
 # Skills
-cp -r skill-folder .claude/skills/
+cp -r skill-folder .the AI/skills/
 
 # Agents
-cp agent.md .claude/agents/
+cp agent.md .the AI/agents/
 ```
 
 ### 3. Update Mechanism
@@ -505,7 +505,7 @@ description: One-line description
 name: agent-name
 description: Agent purpose
 tools: Read, Write, Edit
-model: opus|sonnet
+model: the AI model|the AI model
 color: blue|green|red
 field: frontend|backend|data
 expertise: junior|mid|senior|expert

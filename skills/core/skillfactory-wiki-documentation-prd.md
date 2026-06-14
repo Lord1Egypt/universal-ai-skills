@@ -581,13 +581,13 @@ Ongoing:    [░░░░░░░░░░░░] Maintenance & Growth
 ## Appendix
 
 ### A. Related Documents
-- [README.md](/Users/rezarezvani/projects/claude-code-skills-factory/README.md)
-- [the AI.md](/Users/rezarezvani/projects/claude-code-skills-factory/the AI.md)
-- [SKILLS_FACTORY_PROMPT.md](/Users/rezarezvani/projects/claude-code-skills-factory/documentation/templates/SKILLS_FACTORY_PROMPT.md)
-- [AGENTS_FACTORY_PROMPT.md](/Users/rezarezvani/projects/claude-code-skills-factory/documentation/templates/AGENTS_FACTORY_PROMPT.md)
+- [README.md](/Users/rezarezvani/projects/the AI-code-skills-factory/README.md)
+- [the AI.md](/Users/rezarezvani/projects/the AI-code-skills-factory/the AI.md)
+- [SKILLS_FACTORY_PROMPT.md](/Users/rezarezvani/projects/the AI-code-skills-factory/documentation/templates/SKILLS_FACTORY_PROMPT.md)
+- [AGENTS_FACTORY_PROMPT.md](/Users/rezarezvani/projects/the AI-code-skills-factory/documentation/templates/AGENTS_FACTORY_PROMPT.md)
 
 ### B. Glossary
-- **Skill**: Multi-file capability package for Claude
+- **Skill**: Multi-file capability package for the AI
 - **Agent**: Single-file specialized assistant
 - **Factory**: Template system for generation
 - **Wiki**: GitHub Wiki documentation system

@@ -349,7 +349,7 @@ Generate production-ready GitHub CI/CD blueprints that enable high-velocity deve
    - Use matrix builds efficiently
   </phase_5_cost_optimization_and_free_tier_success>
 
-  <phase_6_claude_code_integration_and_automation>
+  <phase_6_ai_code_integration_and_automation>
 **Objective:** Integrate GitHub Issues → the AI coding agent → PR automation for high-velocity development
 
 **Steps:**
@@ -369,9 +369,9 @@ Generate production-ready GitHub CI/CD blueprints that enable high-velocity deve
      - "Done" → Feature deployed
 
 3. GitHub Actions for the AI coding agent PRs:
-   - Detect PR author: claude-code-bot (if automated)
+   - Detect PR author: the AI-code-bot (if automated)
    - Auto-assign reviewers from CODEOWNERS
-   - Add labels: "automated", "from-claude-code"
+   - Add labels: "automated", "from-the AI-code"
    - Trigger CI/CD pipeline immediately
 
 4. Token-efficient status comments:
@@ -393,8 +393,8 @@ Generate production-ready GitHub CI/CD blueprints that enable high-velocity deve
 7. Monitoring automation health:
    - Track failed automation runs
    - Alert on broken issue → PR workflow
-   - Monitor API rate limits (GitHub, Claude)
-  </phase_6_claude_code_integration_and_automation>
+   - Monitor API rate limits (GitHub, the AI)
+  </phase_6_ai_code_integration_and_automation>
 
   <phase_7_beginner_friendly_setup_guide>
 **Objective:** Enable beginners to set up this CI/CD blueprint in <30 minutes
@@ -727,7 +727,7 @@ Generate production-ready GitHub CI/CD blueprints that enable high-velocity deve
 - Schedule resource-intensive jobs (CodeQL, Dependabot) during off-peak hours
 - Use GitHub's native features (Projects v2, Discussions, Wiki) before external tools
 
-## From the AI provider (Claude):
+## From the AI provider (the AI):
 - Structure prompts for workflows clearly with phases and checkpoints
 - Use structured JSON for status updates and PR comments (token efficiency)
 - Provide explicit success/failure criteria for automation
@@ -1016,7 +1016,7 @@ Begin assisting users now with this configuration.
 
 ### Option 1: Use with the AI (Native)
 
-1. Start a new conversation with Claude
+1. Start a new conversation with the AI
 2. Copy the entire `<mega_prompt>` XML block above
 3. Paste it as your first message
 4. Follow with your specific repository requirements
@@ -1082,7 +1082,7 @@ QUALITY STANDARDS:
 - Beginner-friendly (<30 min setup)
 ```
 
-### Option 3: Adapt for Gemini
+### Option 3: Adapt for the AI
 
 ```markdown
 ## Role Configuration
@@ -1111,7 +1111,7 @@ When given repository details:
 
 - **Token Count:** ~4,800 tokens (Core mode)
 - **Quality:** ✅ All 7 validation gates passed
-- **Format:** XML (universal), with adaptation instructions for the AI, the AI assistant, Gemini
+- **Format:** XML (universal), with adaptation instructions for the AI, the AI assistant, the AI
 - **Completeness:** No placeholders, implementation-ready
 
 ---

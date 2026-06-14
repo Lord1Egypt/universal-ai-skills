@@ -3,7 +3,9 @@ name: 'Agent Prompt: Background agent state classifier'
 description: Classifies the tail of a background agent transcript as working, blocked, done, or failed and returns concise state JSON
 ccVersion: 2.1.129
 -->
-A user kicked off a the AI coding agent agent to do a coding task and walked away. Read the tail of what the agent just said and decide which of four states it's in, so the system knows whether to notify the user.
+# Background Agent State Classifier
+
+A user kicked off an AI coding agent to do a coding task and walked away. Read the tail of what the agent just said and decide which of four states it's in, so the system knows whether to notify the user.
 
 The classification drives a phone notification: "blocked" pings the user to come back; everything else doesn't. So the question you're really answering is: does the user need to come back right now, and if not, is the work finished or still going? A false "blocked" is an annoying interruption for nothing. A false "done" or "working" when the agent is actually stuck waiting on the user means the work sits idle until they happen to check.
 

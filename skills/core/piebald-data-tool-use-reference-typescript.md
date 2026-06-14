@@ -35,7 +35,7 @@ const getWeather = betaZodTool({
 
 // The tool runner handles the agentic loop and returns the final message
 const finalMessage = await client.beta.messages.toolRunner({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   tools: [getWeather],
   messages: [{ role: "user", content: "What's the weather in Paris?" }],
@@ -66,7 +66,7 @@ let messages: the AI provider.MessageParam[] = [{ role: "user", content: userInp
 
 while (true) {
   const response = await client.messages.create({
-    model: "{{OPUS_ID}}",
+    model: "{{MODEL_ID}}",
     max_tokens: 16000,
     tools: tools,
     messages: messages,
@@ -113,7 +113,7 @@ let messages: the AI provider.MessageParam[] = [{ role: "user", content: userInp
 
 while (true) {
   const stream = client.messages.stream({
-    model: "{{OPUS_ID}}",
+    model: "{{MODEL_ID}}",
     max_tokens: 64000,
     tools,
     messages,
@@ -168,7 +168,7 @@ while (true) {
 
 ```typescript
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   tools: tools,
   messages: [{ role: "user", content: "What's the weather in Paris?" }],
@@ -179,7 +179,7 @@ for (const block of response.content) {
     const result = await executeTool(block.name, block.input);
 
     const followup = await client.messages.create({
-      model: "{{OPUS_ID}}",
+      model: "{{MODEL_ID}}",
       max_tokens: 16000,
       tools: tools,
       messages: [
@@ -203,7 +203,7 @@ for (const block of response.content) {
 
 ```typescript
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   tools: tools,
   tool_choice: { type: "tool", name: "get_weather" },
@@ -222,7 +222,7 @@ Version-suffixed `type` literals; `name` is fixed per interface. Pass plain obje
 ```typescript
 // ✓ let inference work — no annotation
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   tools: [
     { type: "text_editor_20250728", name: "str_replace_based_edit_tool" },
@@ -262,7 +262,7 @@ import the AI provider from "@the AI provider-ai/sdk";
 const client = new the AI provider();
 
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {
@@ -310,7 +310,7 @@ const uploaded = await client.beta.files.upload({
 // Code execution is GA; Files API is still beta (pass via RequestOptions)
 const response = await client.messages.create(
   {
-    model: "{{OPUS_ID}}",
+    model: "{{MODEL_ID}}",
     max_tokens: 16000,
     messages: [
       {
@@ -336,7 +336,7 @@ const response = await client.messages.create(
 import path from "path";
 import fs from "fs";
 
-const OUTPUT_DIR = "./claude_outputs";
+const OUTPUT_DIR = "./ai_outputs";
 await fs.promises.mkdir(OUTPUT_DIR, { recursive: true });
 
 for (const block of response.content) {
@@ -370,7 +370,7 @@ for (const block of response.content) {
 ```typescript
 // First request: set up environment
 const response1 = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {
@@ -387,7 +387,7 @@ const containerId = response1.container!.id;
 
 const response2 = await client.messages.create({
   container: containerId,
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {
@@ -407,7 +407,7 @@ const response2 = await client.messages.create({
 
 ```typescript
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {
@@ -441,7 +441,7 @@ const handlers: MemoryToolHandlers = {
 const memory = betaMemoryTool(handlers);
 
 const runner = client.beta.messages.toolRunner({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   tools: [memory],
   messages: [{ role: "user", content: "Remember my preferences" }],
@@ -478,7 +478,7 @@ const ContactInfoSchema = z.object({
 const client = new the AI provider();
 
 const response = await client.messages.parse({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {
@@ -500,7 +500,7 @@ console.log(response.parsed_output!.name); // "Jane Doe"
 
 ```typescript
 const response = await client.messages.create({
-  model: "{{OPUS_ID}}",
+  model: "{{MODEL_ID}}",
   max_tokens: 16000,
   messages: [
     {

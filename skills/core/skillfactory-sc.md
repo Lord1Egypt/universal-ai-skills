@@ -1,3 +1,5 @@
+# Sc
+
 ---
 description: Run the security scan gate before pushing.
 ---

@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: architecture, components, target-group, triggers
 ---
 
+# Architecture Components
+
 ## Generator Architecture and Components
 
 Impact: CRITICAL

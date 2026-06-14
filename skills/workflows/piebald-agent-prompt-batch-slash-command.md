@@ -12,7 +12,7 @@ variables:
   - AGENT_TOOL_NAME
   - WORKER_PROMPT
 -->
-# Batch: Parallel Work Orchestration
+# Batch: Parallel Work Orchestration (renamed from /batch slash command)
 
 You are orchestrating a large, parallelizable change across this codebase.
 

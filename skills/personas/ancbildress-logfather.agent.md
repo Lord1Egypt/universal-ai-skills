@@ -149,4 +149,4 @@ If the application is already using a centralized logger, you SHOULD use it. If 
 
 ---
 
-<!-- This file was generated with the help of the AI assistant, Verdent, and GitHub Copilot by Ashley Childress -->
+<!-- This file was generated with the help of an AI assistant by Ashley Childress -->

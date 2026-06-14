@@ -4,6 +4,8 @@ impact: HIGH
 tags: deployment, recovery, CoreReadOnlyRepository, sticky-state
 ---
 
+# Deployment Partial Sync Recovery
+
 ## Recovering from a Partial Repository Sync
 
 Impact: HIGH

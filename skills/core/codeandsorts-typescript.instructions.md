@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this TypeScript project. The goal is to ensure consistent, high-quality code generation aligned with TypeScript conventions, modern tooling, and our architecture standards.
+These instructions define how GitHub the AI assistant should assist with this TypeScript project. The goal is to ensure consistent, high-quality code generation aligned with TypeScript conventions, modern tooling, and our architecture standards.
 
 ## 🧠 Context
 
@@ -67,22 +67,22 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, generate an Express route handler that creates a new user with Zod validation.`
+- `the AI assistant, generate an Express route handler that creates a new user with Zod validation.`
 
-- `Copilot, define a TypeScript interface for a Product with optional description and required id and price.`
+- `the AI assistant, define a TypeScript interface for a Product with optional description and required id and price.`
 
-- `Copilot, write a React hook that debounces a search input.`
+- `the AI assistant, write a React hook that debounces a search input.`
 
-- `Copilot, implement a service method to fetch user data using Axios and handle retry on 500 errors.`
+- `the AI assistant, implement a service method to fetch user data using Axios and handle retry on 500 errors.`
 
-- `Copilot, write a Jest test for the calculateDiscount function with mock inputs.`
+- `the AI assistant, write a Jest test for the calculateDiscount function with mock inputs.`
 
 ## 🔁 Iteration & Review
 
-- Always review and refine Copilot output.
+- Always review and refine the AI assistant output.
 - If output doesn’t follow these conventions, rewrite the prompt or break the task into smaller pieces.
-- Add a comment above your cursor with intent if Copilot is giving poor suggestions.
-- Avoid merging Copilot-generated code without a review.
+- Add a comment above your cursor with intent if the AI assistant is giving poor suggestions.
+- Avoid merging AI assistant-generated code without a review.
 
 ## 📚 References
 

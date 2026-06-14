@@ -3,6 +3,8 @@ name: 'Agent Prompt: /code-review part 1 base finder angles'
 description: Line-by-line diff scan instructions for the /code-review slash command's finder-angle phase
 ccVersion: 2.1.160
 -->
+# Code Review: Base Finder Angles
+
 ### Angle A — line-by-line diff scan
 
 Read every hunk in the diff, line by line. Then Read the enclosing function for

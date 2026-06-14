@@ -94,8 +94,8 @@
 **Allowed files in project root:**
 - ✅ `README.md` - Project overview and quick start
 - ✅ `the AI.md` - Repository guidance for the AI coding agent
-- ✅ `claude-skills-instructions.md` - Official the AI provider Skills documentation
-- ✅ `claude-agents-instructions.md` - Official the AI provider Agents documentation
+- ✅ `the AI-skills-instructions.md` - Official the AI provider Skills documentation
+- ✅ `the AI-agents-instructions.md` - Official the AI provider Agents documentation
 
 **Validation Result:**
 - ✅ No unauthorized .md files in project root

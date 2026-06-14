@@ -6,7 +6,7 @@
 - Last Updated: [YYYY-MM-DD HH:MM]
 - Total Tasks: [N]
 - Completed: 0/[N] (0%)
-- Execution Engine: Codex (non-interactive mode)
+- Execution Engine: AI agent (non-interactive mode)
 
 ---
 

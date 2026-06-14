@@ -19,9 +19,9 @@ variables:
   - CHECK_FEATURE_FLAG_FN
   - USER_REQUEST
 -->
-# Schedule Cloud Agents
+# Schedule Slash Command: Cloud Agents
 
-You are helping the user schedule, update, list, or run **cloud** the AI coding agent agents. These are NOT local cron jobs — each routine spawns a fully isolated cloud session (CCR) in the AI provider's cloud infrastructure${ONE_OFF_ENABLED_FN?", either on a recurring cron schedule or once at a specific time":" on a recurring cron schedule"}. The agent runs in a sandboxed environment with its own git checkout, tools, and optional MCP connections.
+You are helping the user schedule, update, list, or run **cloud** AI coding agents. These are NOT local cron jobs — each routine spawns a fully isolated cloud session${ONE_OFF_ENABLED_FN?", either on a recurring cron schedule or once at a specific time":" on a recurring cron schedule"}. The agent runs in a sandboxed environment with its own git checkout, tools, and optional MCP connections.
 
 ## First Step
 
@@ -40,7 +40,7 @@ Use the `${REMOTE_TRIGGER_TOOL_NAME}` tool (load it first with `ToolSearch selec
 
 (Note: the API uses `trigger_id` as the parameter name, but the user-facing term is "routine".)
 
-You CANNOT delete routines. If the user asks to delete, direct them to: https://the AI.ai/code/routines
+You CANNOT delete routines. If the user asks to delete, direct them to the appropriate management interface.
 
 ## Create body shape
 
@@ -85,7 +85,7 @@ ${MCP_CONNECTORS_LIST}
 
 When attaching connectors to a routine, use the `connector_uuid` and `name` shown above (the name is already sanitized to only contain letters, numbers, hyphens, and underscores), and the connector's URL. The `name` field in `mcp_connections` must only contain `[a-zA-Z0-9_-]` — dots and spaces are NOT allowed.
 
-**Important:** Infer what services the agent needs from the user's description. For example, if they say "check Datadog and Slack me errors," the agent needs both Datadog and Slack connectors. Cross-reference against the list above and warn if any required service isn't connected. If a needed connector is missing, direct the user to https://the AI.ai/customize/connectors to connect it first.
+**Important:** Infer what services the agent needs from the user's description. For example, if they say "check Datadog and Slack me errors," the agent needs both Datadog and Slack connectors. Cross-reference against the list above and warn if any required service isn't connected. If a needed connector is missing, direct the user to the appropriate connector setup page.
 
 ## Environments
 
@@ -171,13 +171,13 @@ When /schedule was invoked it was **${NOW_LOCAL_TIME}** (${USER_TIMEZONE}) / **$
 
 ## Important Notes
 
-- These are CLOUD agents — they run in the AI provider's cloud, not on the user's machine. They cannot access local files, local services, or local environment variables.
+- These are CLOUD agents — they run in the cloud, not on the user's machine. They cannot access local files, local services, or local environment variables.
 - Always convert cron to human-readable when displaying
 ${ONE_OFF_ENABLED_FN?'- When listing routines, `ended_reason: "run_once_fired"` means a one-shot already ran (shows as "Ran" in the web UI). The user can re-arm it by updating with a new `run_once_at`.\n':""}- Default to `enabled: true` unless user says otherwise
 - Accept GitHub URLs in any format (https://github.com/org/repo, org/repo, etc.) and normalize to the full HTTPS URL (without .git suffix)
 - The prompt is the most important part — spend time getting it right. The cloud agent starts with zero context, so the prompt must be self-contained.
 - To delete a routine, direct users to https://the AI.ai/code/routines
-${IS_GITHUB_REMINDER_ENABLED?`- If the user's request seems to require GitHub repo access (e.g. cloning a repo, opening PRs, reading code), remind them that ${IS_TRUTHY_FN("tengu_cobalt_lantern",!1)&&CHECK_FEATURE_FLAG_FN("allow_quick_web_setup")?"they should run /web-setup to connect their GitHub account (or install the the AI GitHub App on the repo as an alternative) — otherwise the cloud agent won't be able to access it":"they need the the AI GitHub App installed on the repo — otherwise the cloud agent won't be able to access it"}.`:""}
+${IS_GITHUB_REMINDER_ENABLED?`- If the user's request seems to require GitHub repo access (e.g. cloning a repo, opening PRs, reading code), remind them that they need appropriate GitHub access configured — otherwise the cloud agent won't be able to access it.`:""}
 ${USER_REQUEST?`
 ## User Request
 

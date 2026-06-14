@@ -4,6 +4,8 @@ impact: HIGH
 tags: tracking, idempotent, delete_unused_nodes, allow_upsert
 ---
 
+# Tracking Idempotent
+
 ## Tracking System and Idempotent Behavior
 
 Impact: HIGH

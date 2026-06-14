@@ -15,7 +15,7 @@ than general-purpose prompting alone.
 ## Prerequisites
 
 - An AI coding assistant that supports skills
-  ([the AI coding agent](https://docs.the AI provider.com/en/docs/claude-code),
+  ([the AI coding agent](the AI coding agent documentation),
   GitHub Copilot, Cursor, Windsurf, or similar)
 - An Infrahub repository to work with
   (or create one from scratch)
@@ -47,13 +47,13 @@ projects:
 
 ```bash
 # Add the OpsMill marketplace
-/plugin marketplace add opsmill/claude-marketplace
+/plugin marketplace add opsmill/infrahub-marketplace
 
 # Install the Infrahub plugin
 /plugin install infrahub@opsmill
 ```
 
-Or add directly to `~/.claude/settings.json`:
+Or add directly to `the AI agent config directory.json`:
 
 ```json
 {
@@ -61,7 +61,7 @@ Or add directly to `~/.claude/settings.json`:
     "opsmill": {
       "source": {
         "source": "github",
-        "repo": "opsmill/claude-marketplace"
+        "repo": "opsmill/infrahub-marketplace"
       }
     }
   },
@@ -177,7 +177,7 @@ are the foundation; the rest depends on your use case.
 | `infrahub:analyzing-data` | Querying and correlating live Infrahub data via the MCP server |
 | `infrahub:auditing-repo` | Auditing a repository against all rules and best practices |
 
-## Using with Non-Claude Tools
+## Using with Non-the AI model Tools
 
 These skills are plain Markdown — any AI tool that
 reads files from your project can use them. See the

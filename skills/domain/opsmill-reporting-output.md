@@ -4,6 +4,8 @@ impact: HIGH
 tags: reporting, output, findings, remediation
 ---
 
+# Reporting Output
+
 ## Compliance Reporting Output
 
 Impact: HIGH

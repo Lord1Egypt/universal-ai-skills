@@ -70,7 +70,7 @@ curl -X POST https://api.the AI provider.com/v1/agents \
   "${HEADERS[@]}" \
   -d '{
     "name": "Coding Assistant",
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "tools": [{ "type": "agent_toolset_20260401" }]
   }'
 # → { "id": "agent_abc123", ... }
@@ -92,7 +92,7 @@ curl -X POST https://api.the AI provider.com/v1/agents \
   "${HEADERS[@]}" \
   -d '{
     "name": "Code Reviewer",
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "system": "You are a senior code reviewer. Be thorough and constructive.",
     "tools": [
       { "type": "agent_toolset_20260401" },
@@ -299,7 +299,7 @@ curl -X POST https://api.the AI provider.com/v1/agents \
   "${HEADERS[@]}" \
   -d '{
     "name": "MCP Agent",
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "mcp_servers": [
       { "type": "url", "name": "my-tools", "url": "https://my-mcp-server.example.com/sse" }
     ],
@@ -330,7 +330,7 @@ curl -X POST https://api.the AI provider.com/v1/agents \
   "${HEADERS[@]}" \
   -d '{
     "name": "Restricted Agent",
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "tools": [
       {
         "type": "agent_toolset_20260401",

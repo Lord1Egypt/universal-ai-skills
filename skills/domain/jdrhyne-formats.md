@@ -159,7 +159,7 @@ Output: EPUB (e-books), HTML (web), PDF (print)
 # Upload with explicit format
 gimme up paper.tex --format latex
 
-# Download to specific format  
+# Download to specific format
 gimme dl abc123 --format pdf
 gimme dl abc123 --format docx
 gimme dl abc123 --format epub

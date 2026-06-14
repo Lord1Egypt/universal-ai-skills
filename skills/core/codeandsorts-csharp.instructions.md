@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -74,16 +74,16 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, generate an ASP.NET Core controller with CRUD endpoints for Product.`
-- `Copilot, implement a MediatR command handler for creating a new order.`
-- `Copilot, create an Entity Framework Core DbContext for a blog application.`
-- `Copilot, write an xUnit test for the CalculateInvoiceTotal method.`
+- `the AI assistant, generate an ASP.NET Core controller with CRUD endpoints for Product.`
+- `the AI assistant, implement a MediatR command handler for creating a new order.`
+- `the AI assistant, create an Entity Framework Core DbContext for a blog application.`
+- `the AI assistant, write an xUnit test for the CalculateInvoiceTotal method.`
 
 ## 🔁 Iteration & Review
 
-- Copilot output should be reviewed and modified before committing.
+- the AI assistant output should be reviewed and modified before committing.
 - If code isn’t following these instructions, regenerate with more context or split the task.
-- Use /// XML documentation comments to clarify intent for Copilot and future devs.
+- Use /// XML documentation comments to clarify intent for the AI assistant and future devs.
 - Use Rider or Visual Studio code inspections to catch violations early.
 
 ## 📚 References

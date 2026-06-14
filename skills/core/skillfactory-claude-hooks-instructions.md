@@ -3,16 +3,16 @@
 > This page provides reference documentation for implementing hooks in the AI coding agent.
 
 <Tip>
-  For a quickstart guide with examples, see [Get started with the AI coding agent hooks](/en/docs/claude-code/hooks-guide).
+  For a quickstart guide with examples, see [Get started with the AI coding agent hooks](/en/docs/the AI-code/hooks-guide).
 </Tip>
 
 ## Configuration
 
-the AI coding agent hooks are configured in your [settings files](/en/docs/claude-code/settings):
+the AI coding agent hooks are configured in your [settings files](/en/docs/the AI-code/settings):
 
-* `~/.claude/settings.json` - User settings
-* `.claude/settings.json` - Project settings
-* `.claude/settings.local.json` - Local project settings (not committed)
+* `~/.the AI/settings.json` - User settings
+* `.the AI/settings.json` - Project settings
+* `.the AI/settings.local.json` - Local project settings (not committed)
 * Enterprise managed policy settings
 
 ### Structure
@@ -45,7 +45,7 @@ Hooks are organized by matchers, where each matcher can have multiple hooks:
     `matcher` blank.
 * **hooks**: Array of commands to execute when the pattern matches
   * `type`: Currently only `"command"` is supported
-  * `command`: The bash command to execute (can use `$CLAUDE_PROJECT_DIR`
+  * `command`: The bash command to execute (can use `$AI_PROJECT_DIR`
     environment variable)
   * `timeout`: (Optional) How long a command should run, in seconds, before
     canceling that specific command.
@@ -72,9 +72,9 @@ that don't use matchers, you can omit the matcher field:
 
 ### Project-Specific Hook Scripts
 
-You can use the environment variable `CLAUDE_PROJECT_DIR` (only available when
+You can use the environment variable `AI_PROJECT_DIR` (only available when
 the AI coding agent spawns the hook command) to reference scripts stored in your project,
-ensuring they work regardless of Claude's current directory:
+ensuring they work regardless of the AI's current directory:
 
 ```json  theme={null}
 {
@@ -85,7 +85,7 @@ ensuring they work regardless of Claude's current directory:
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-style.sh"
+            "command": "\"$AI_PROJECT_DIR\"/.the AI/hooks/check-style.sh"
           }
         ]
       }
@@ -96,14 +96,14 @@ ensuring they work regardless of Claude's current directory:
 
 ### Plugin hooks
 
-[Plugins](/en/docs/claude-code/plugins) can provide hooks that integrate seamlessly with your user and project hooks. Plugin hooks are automatically merged with your configuration when plugins are enabled.
+[Plugins](/en/docs/the AI-code/plugins) can provide hooks that integrate seamlessly with your user and project hooks. Plugin hooks are automatically merged with your configuration when plugins are enabled.
 
 **How plugin hooks work**:
 
 * Plugin hooks are defined in the plugin's `hooks/hooks.json` file or in a file given by a custom path to the `hooks` field.
 * When a plugin is enabled, its hooks are merged with user and project hooks
 * Multiple hooks from different sources can respond to the same event
-* Plugin hooks use the `${CLAUDE_PLUGIN_ROOT}` environment variable to reference plugin files
+* Plugin hooks use the `${AI_PLUGIN_ROOT}` environment variable to reference plugin files
 
 **Example plugin hook configuration**:
 
@@ -117,7 +117,7 @@ ensuring they work regardless of Claude's current directory:
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/format.sh",
+            "command": "${AI_PLUGIN_ROOT}/scripts/format.sh",
             "timeout": 30
           }
         ]
@@ -137,11 +137,11 @@ ensuring they work regardless of Claude's current directory:
 
 **Environment variables for plugins**:
 
-* `${CLAUDE_PLUGIN_ROOT}`: Absolute path to the plugin directory
-* `${CLAUDE_PROJECT_DIR}`: Project root directory (same as for project hooks)
+* `${AI_PLUGIN_ROOT}`: Absolute path to the plugin directory
+* `${AI_PROJECT_DIR}`: Project root directory (same as for project hooks)
 * All standard environment variables are available
 
-See the [plugin components reference](/en/docs/claude-code/plugins-reference#hooks) for details on creating plugin hooks.
+See the [plugin components reference](/en/docs/the AI-code/plugins-reference#hooks) for details on creating plugin hooks.
 
 ## Hook Events
 
@@ -151,7 +151,7 @@ Runs after the AI creates tool parameters and before processing the tool call.
 
 **Common matchers:**
 
-* `Task` - Subagent tasks (see [subagents documentation](/en/docs/claude-code/sub-agents))
+* `Task` - Subagent tasks (see [subagents documentation](/en/docs/the AI-code/sub-agents))
 * `Bash` - Shell commands
 * `Glob` - File pattern matching
 * `Grep` - Content search
@@ -170,9 +170,9 @@ Recognizes the same matcher values as PreToolUse.
 
 Runs when the AI coding agent sends notifications. Notifications are sent when:
 
-1. the AI needs your permission to use a tool. Example: "Claude needs your
+1. the AI needs your permission to use a tool. Example: "the AI needs your
    permission to use Bash"
-2. The prompt input has been idle for at least 60 seconds. "Claude is waiting
+2. The prompt input has been idle for at least 60 seconds. "the AI is waiting
    for your input"
 
 ### UserPromptSubmit
@@ -214,17 +214,17 @@ development context like existing issues or recent changes to your codebase, ins
 
 #### Persisting environment variables
 
-SessionStart hooks have access to the `CLAUDE_ENV_FILE` environment variable, which provides a file path where you can persist environment variables for subsequent bash commands.
+SessionStart hooks have access to the `AI_ENV_FILE` environment variable, which provides a file path where you can persist environment variables for subsequent bash commands.
 
 **Example: Setting individual environment variables**
 
 ```bash  theme={null}
 #!/bin/bash
 
-if [ -n "$CLAUDE_ENV_FILE" ]; then
-  echo 'export NODE_ENV=production' >> "$CLAUDE_ENV_FILE"
-  echo 'export API_KEY=your-api-key' >> "$CLAUDE_ENV_FILE"
-  echo 'export PATH="$PATH:./node_modules/.bin"' >> "$CLAUDE_ENV_FILE"
+if [ -n "$AI_ENV_FILE" ]; then
+  echo 'export NODE_ENV=production' >> "$AI_ENV_FILE"
+  echo 'export API_KEY=your-api-key' >> "$AI_ENV_FILE"
+  echo 'export PATH="$PATH:./node_modules/.bin"' >> "$AI_ENV_FILE"
 fi
 
 exit 0
@@ -243,9 +243,9 @@ ENV_BEFORE=$(export -p | sort)
 source ~/.nvm/nvm.sh
 nvm use 20
 
-if [ -n "$CLAUDE_ENV_FILE" ]; then
+if [ -n "$AI_ENV_FILE" ]; then
   ENV_AFTER=$(export -p | sort)
-  comm -13 <(echo "$ENV_BEFORE") <(echo "$ENV_AFTER") >> "$CLAUDE_ENV_FILE"
+  comm -13 <(echo "$ENV_BEFORE") <(echo "$ENV_AFTER") >> "$AI_ENV_FILE"
 fi
 
 exit 0
@@ -254,7 +254,7 @@ exit 0
 Any variables written to this file will be available in all subsequent bash commands that the AI coding agent executes during the session.
 
 <Note>
-  `CLAUDE_ENV_FILE` is only available for SessionStart hooks. Other hook types do not have access to this variable.
+  `AI_ENV_FILE` is only available for SessionStart hooks. Other hook types do not have access to this variable.
 </Note>
 
 ### SessionEnd
@@ -295,7 +295,7 @@ The exact schema for `tool_input` depends on the tool.
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "/Users/.../.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "cwd": "/Users/...",
   "permission_mode": "default",
   "hook_event_name": "PreToolUse",
@@ -314,7 +314,7 @@ The exact schema for `tool_input` and `tool_response` depends on the tool.
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "/Users/.../.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "cwd": "/Users/...",
   "permission_mode": "default",
   "hook_event_name": "PostToolUse",
@@ -335,7 +335,7 @@ The exact schema for `tool_input` and `tool_response` depends on the tool.
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "/Users/.../.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "cwd": "/Users/...",
   "permission_mode": "default",
   "hook_event_name": "Notification",
@@ -348,7 +348,7 @@ The exact schema for `tool_input` and `tool_response` depends on the tool.
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "/Users/.../.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "cwd": "/Users/...",
   "permission_mode": "default",
   "hook_event_name": "UserPromptSubmit",
@@ -365,7 +365,7 @@ from running indefinitely.
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "~/.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "~/.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "permission_mode": "default",
   "hook_event_name": "Stop",
   "stop_hook_active": true
@@ -380,7 +380,7 @@ For `manual`, `custom_instructions` comes from what the user passes into
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "~/.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "~/.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "permission_mode": "default",
   "hook_event_name": "PreCompact",
   "trigger": "manual",
@@ -393,7 +393,7 @@ For `manual`, `custom_instructions` comes from what the user passes into
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "~/.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "~/.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "permission_mode": "default",
   "hook_event_name": "SessionStart",
   "source": "startup"
@@ -405,7 +405,7 @@ For `manual`, `custom_instructions` comes from what the user passes into
 ```json  theme={null}
 {
   "session_id": "abc123",
-  "transcript_path": "~/.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
+  "transcript_path": "~/.the AI/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl",
   "cwd": "/Users/...",
   "permission_mode": "default",
   "hook_event_name": "SessionEnd",
@@ -416,7 +416,7 @@ For `manual`, `custom_instructions` comes from what the user passes into
 ## Hook Output
 
 There are two ways for hooks to return output back to the AI coding agent. The output
-communicates whether to block and any feedback that should be shown to Claude
+communicates whether to block and any feedback that should be shown to the AI
 and the user.
 
 ### Simple: Exit Code
@@ -533,7 +533,7 @@ Additionally, hooks can modify tool inputs before execution using `updatedInput`
   "reason": "Explanation for decision",
   "hookSpecificOutput": {
     "hookEventName": "PostToolUse",
-    "additionalContext": "Additional information for Claude"
+    "additionalContext": "Additional information for the AI"
   }
 }
 ```
@@ -563,7 +563,7 @@ Additionally, hooks can modify tool inputs before execution using `updatedInput`
 
 `Stop` and `SubagentStop` hooks can control whether the AI must continue.
 
-* `"block"` prevents the AI from stopping. You must populate `reason` for Claude
+* `"block"` prevents the AI from stopping. You must populate `reason` for the AI
   to know how to proceed.
 * `undefined` allows the AI to stop. `reason` is ignored.
 
@@ -643,7 +643,7 @@ issues = validate_command(command)
 if issues:
     for message in issues:
         print(f"• {message}", file=sys.stderr)
-    # Exit code 2 blocks tool call and shows stderr to Claude
+    # Exit code 2 blocks tool call and shows stderr to the AI
     sys.exit(2)
 ```
 
@@ -742,7 +742,7 @@ sys.exit(0)
 ## Working with MCP Tools
 
 the AI coding agent hooks work seamlessly with
-[Model Context Protocol (MCP) tools](/en/docs/claude-code/mcp). When MCP servers
+[Model Context Protocol (MCP) tools](/en/docs/the AI-code/mcp). When MCP servers
 provide tools, they appear with a special naming pattern that you can match in
 your hooks.
 
@@ -788,7 +788,7 @@ You can target specific MCP tools or entire MCP servers:
 ## Examples
 
 <Tip>
-  For practical examples including code formatting, notifications, and file protection, see [More Examples](/en/docs/claude-code/hooks-guide#more-examples) in the get started guide.
+  For practical examples including code formatting, notifications, and file protection, see [More Examples](/en/docs/the AI-code/hooks-guide#more-examples) in the get started guide.
 </Tip>
 
 ## Security Considerations
@@ -816,12 +816,12 @@ Here are some key practices for writing more secure hooks:
 2. **Always quote shell variables** - Use `"$VAR"` not `$VAR`
 3. **Block path traversal** - Check for `..` in file paths
 4. **Use absolute paths** - Specify full paths for scripts (use
-   "\$CLAUDE\_PROJECT\_DIR" for the project path)
+   "\$the AI\_PROJECT\_DIR" for the project path)
 5. **Skip sensitive files** - Avoid `.env`, `.git/`, keys, etc.
 
 ### Configuration Safety
 
-Direct edits to hooks in settings files don't take effect immediately. Claude
+Direct edits to hooks in settings files don't take effect immediately. the AI
 Code:
 
 1. Captures a snapshot of hooks at startup
@@ -838,14 +838,14 @@ This prevents malicious hook modifications from affecting your current session.
 * **Parallelization**: All matching hooks run in parallel
 * **Deduplication**: Multiple identical hook commands are deduplicated automatically
 * **Environment**: Runs in current directory with the AI coding agent's environment
-  * The `CLAUDE_PROJECT_DIR` environment variable is available and contains the
+  * The `AI_PROJECT_DIR` environment variable is available and contains the
     absolute path to the project root directory (where the AI coding agent was started)
-  * The `CLAUDE_CODE_REMOTE` environment variable indicates whether the hook is running in a remote (web) environment (`"true"`) or local CLI environment (not set or empty). Use this to run different logic based on execution context.
+  * The `AI_CODE_REMOTE` environment variable indicates whether the hook is running in a remote (web) environment (`"true"`) or local CLI environment (not set or empty). Use this to run different logic based on execution context.
 * **Input**: JSON via stdin
 * **Output**:
   * PreToolUse/PostToolUse/Stop/SubagentStop: Progress shown in transcript (Ctrl-R)
   * Notification/SessionEnd: Logged to debug only (`--debug`)
-  * UserPromptSubmit/SessionStart: stdout added as context for Claude
+  * UserPromptSubmit/SessionStart: stdout added as context for the AI
 
 ## Debugging
 
@@ -857,7 +857,7 @@ If your hooks aren't working:
 2. **Verify syntax** - Ensure your JSON settings are valid
 3. **Test commands** - Run hook commands manually first
 4. **Check permissions** - Make sure scripts are executable
-5. **Review logs** - Use `claude --debug` to see hook execution details
+5. **Review logs** - Use `the AI --debug` to see hook execution details
 
 Common issues:
 
@@ -869,7 +869,7 @@ Common issues:
 
 For complex hook issues:
 
-1. **Inspect hook execution** - Use `claude --debug` to see detailed hook
+1. **Inspect hook execution** - Use `the AI --debug` to see detailed hook
    execution
 2. **Validate JSON schemas** - Test hook input/output with external tools
 3. **Check environment variables** - Verify the AI coding agent's environment is correct
@@ -880,7 +880,7 @@ For complex hook issues:
 
 ### Debug Output Example
 
-Use `claude --debug` to see hook execution details:
+Use `the AI --debug` to see hook execution details:
 
 ```
 [DEBUG] Executing hooks for PostToolUse:Write
@@ -905,12 +905,12 @@ Progress messages appear in transcript mode (Ctrl-R) showing:
 > Learn how to customize and extend the AI coding agent's behavior by registering shell commands
 
 the AI coding agent hooks are user-defined shell commands that execute at various points
-in the AI coding agent's lifecycle. Hooks provide deterministic control over Claude
+in the AI coding agent's lifecycle. Hooks provide deterministic control over the AI
 Code's behavior, ensuring certain actions always happen rather than relying on
 the LLM to choose to run them.
 
 <Tip>
-  For reference documentation on hooks, see [Hooks reference](/en/docs/claude-code/hooks).
+  For reference documentation on hooks, see [Hooks reference](/en/docs/the AI-code/hooks).
 </Tip>
 
 Example use cases for hooks include:
@@ -933,7 +933,7 @@ suggestions into app-level code that executes every time it is expected to run.
   You must consider the security implication of hooks as you add them, because hooks run automatically during the agent loop with your current environment's credentials.
   For example, malicious hooks code can exfiltrate your data. Always review your hooks implementation before registering them.
 
-  For full security best practices, see [Security Considerations](/en/docs/claude-code/hooks#security-considerations) in the hooks reference documentation.
+  For full security best practices, see [Security Considerations](/en/docs/the AI-code/hooks#security-considerations) in the hooks reference documentation.
 </Warning>
 
 ## Hook Events Overview
@@ -951,12 +951,12 @@ workflow:
 * **SessionStart**: Runs when the AI coding agent starts a new session or resumes an existing session
 * **SessionEnd**: Runs when the AI coding agent session ends
 
-Each event receives different data and can control Claude's behavior in
+Each event receives different data and can control the AI's behavior in
 different ways.
 
 ## Quickstart
 
-In this quickstart, you'll add a hook that logs the shell commands that Claude
+In this quickstart, you'll add a hook that logs the shell commands that the AI
 Code runs.
 
 ### Prerequisites
@@ -965,11 +965,11 @@ Install `jq` for JSON processing in the command line.
 
 ### Step 1: Open hooks configuration
 
-Run the `/hooks` [slash command](/en/docs/claude-code/slash-commands) and select
+Run the `/hooks` [slash command](/en/docs/the AI-code/slash-commands) and select
 the `PreToolUse` hook event.
 
 `PreToolUse` hooks run before tool calls and can block them while providing
-Claude feedback on what to do differently.
+the AI feedback on what to do differently.
 
 ### Step 2: Add a matcher
 
@@ -984,7 +984,7 @@ Type `Bash` for the matcher.
 Select `+ Add new hook…` and enter this command:
 
 ```bash  theme={null}
-jq -r '"\(.tool_input.command) - \(.tool_input.description // "No description")"' >> ~/.claude/bash-command-log.txt
+jq -r '"\(.tool_input.command) - \(.tool_input.description // "No description")"' >> ~/.the AI/bash-command-log.txt
 ```
 
 ### Step 4: Save your configuration
@@ -997,7 +997,7 @@ Then press Esc until you return to the REPL. Your hook is now registered!
 
 ### Step 5: Verify your hook
 
-Run `/hooks` again or check `~/.claude/settings.json` to see your configuration:
+Run `/hooks` again or check `~/.the AI/settings.json` to see your configuration:
 
 ```json  theme={null}
 {
@@ -1008,7 +1008,7 @@ Run `/hooks` again or check `~/.claude/settings.json` to see your configuration:
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '\"\\(.tool_input.command) - \\(.tool_input.description // \"No description\")\"' >> ~/.claude/bash-command-log.txt"
+            "command": "jq -r '\"\\(.tool_input.command) - \\(.tool_input.description // \"No description\")\"' >> ~/.the AI/bash-command-log.txt"
           }
         ]
       }
@@ -1022,7 +1022,7 @@ Run `/hooks` again or check `~/.claude/settings.json` to see your configuration:
 Ask the AI to run a simple command like `ls` and check your log file:
 
 ```bash  theme={null}
-cat ~/.claude/bash-command-log.txt
+cat ~/.the AI/bash-command-log.txt
 ```
 
 You should see entries like:
@@ -1034,7 +1034,7 @@ ls - Lists files and directories
 ## More Examples
 
 <Note>
-  For a complete example implementation, see the [bash command validator example](https://github.com/the AI providers/claude-code/blob/main/examples/hooks/bash_command_validator_example.py) in our public codebase.
+  For a complete example implementation, see the [bash command validator example](https://github.com/the AI providers/the AI-code/blob/main/examples/hooks/bash_command_validator_example.py) in our public codebase.
 </Note>
 
 ### Code Formatting Hook
@@ -1072,7 +1072,7 @@ Automatically fix missing language tags and formatting issues in markdown files:
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/markdown_formatter.py"
+            "command": "\"$AI_PROJECT_DIR\"/.the AI/hooks/markdown_formatter.py"
           }
         ]
       }
@@ -1081,7 +1081,7 @@ Automatically fix missing language tags and formatting issues in markdown files:
 }
 ```
 
-Create `.claude/hooks/markdown_formatter.py` with this content:
+Create `.the AI/hooks/markdown_formatter.py` with this content:
 
 ````python  theme={null}
 #!/usr/bin/env python3
@@ -1097,7 +1097,7 @@ import os
 def detect_language(code):
     """Best-effort language detection from code content."""
     s = code.strip()
-    
+
     # JSON detection
     if re.search(r'^\s*[{\[]', s):
         try:
@@ -1105,26 +1105,26 @@ def detect_language(code):
             return 'json'
         except:
             pass
-    
+
     # Python detection
     if re.search(r'^\s*def\s+\w+\s*\(', s, re.M) or \
        re.search(r'^\s*(import|from)\s+\w+', s, re.M):
         return 'python'
-    
-    # JavaScript detection  
+
+    # JavaScript detection
     if re.search(r'\b(function\s+\w+\s*\(|const\s+\w+\s*=)', s) or \
        re.search(r'=>|console\.(log|error)', s):
         return 'javascript'
-    
+
     # Bash detection
     if re.search(r'^#!.*\b(bash|sh)\b', s, re.M) or \
        re.search(r'\b(if|then|fi|for|in|do|done)\b', s):
         return 'bash'
-    
+
     # SQL detection
     if re.search(r'\b(SELECT|INSERT|UPDATE|DELETE|CREATE)\s+', s, re.I):
         return 'sql'
-        
+
     return 'text'
 
 def format_markdown(content):
@@ -1136,34 +1136,34 @@ def format_markdown(content):
             lang = detect_language(body)
             return f"{indent}```{lang}\n{body}{closing}\n"
         return match.group(0)
-    
+
     fence_pattern = r'(?ms)^([ \t]{0,3})```([^\n]*)\n(.*?)(\n\1```)\s*$'
     content = re.sub(fence_pattern, add_lang_to_fence, content)
-    
+
     # Fix excessive blank lines (only outside code fences)
     content = re.sub(r'\n{3,}', '\n\n', content)
-    
+
     return content.rstrip() + '\n'
 
 # Main execution
 try:
     input_data = json.load(sys.stdin)
     file_path = input_data.get('tool_input', {}).get('file_path', '')
-    
+
     if not file_path.endswith(('.md', '.mdx')):
         sys.exit(0)  # Not a markdown file
-    
+
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        
+
         formatted = format_markdown(content)
-        
+
         if formatted != content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(formatted)
             print(f"✓ Fixed markdown formatting in {file_path}")
-    
+
 except Exception as e:
     print(f"Error formatting markdown: {e}", file=sys.stderr)
     sys.exit(1)
@@ -1172,7 +1172,7 @@ except Exception as e:
 Make the script executable:
 
 ```bash  theme={null}
-chmod +x .claude/hooks/markdown_formatter.py
+chmod +x .the AI/hooks/markdown_formatter.py
 ```
 
 This hook automatically:
@@ -1228,7 +1228,7 @@ Block edits to sensitive files:
 
 ## Learn more
 
-* For reference documentation on hooks, see [Hooks reference](/en/docs/claude-code/hooks).
-* For comprehensive security best practices and safety guidelines, see [Security Considerations](/en/docs/claude-code/hooks#security-considerations) in the hooks reference documentation.
-* For troubleshooting steps and debugging techniques, see [Debugging](/en/docs/claude-code/hooks#debugging) in the hooks reference
+* For reference documentation on hooks, see [Hooks reference](/en/docs/the AI-code/hooks).
+* For comprehensive security best practices and safety guidelines, see [Security Considerations](/en/docs/the AI-code/hooks#security-considerations) in the hooks reference documentation.
+* For troubleshooting steps and debugging techniques, see [Debugging](/en/docs/the AI-code/hooks#debugging) in the hooks reference
   documentation.

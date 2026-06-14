@@ -163,10 +163,10 @@ Brief description of what we're building and why.
 
 ## Best Practices
 
-### For GitHub Copilot Users
+### For GitHub the AI assistant Users
 
 - Use this PRD as context when starting development
-- Reference specific sections when asking Copilot for implementation help
+- Reference specific sections when asking the AI assistant for implementation help
 - Keep the PRD updated as requirements evolve
 - Use PRD sections as prompts for generating code
 

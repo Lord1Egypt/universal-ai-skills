@@ -1,12 +1,12 @@
 ---
 status: "draft"
-description: "A language-agnostic, Copilot-ready checklist for secure, structured, and scalable logging inside applications — not infrastructure."
+description: "A language-agnostic, AI assistant-ready checklist for secure, structured, and scalable logging inside applications — not infrastructure."
 applyTo: "**"
 ---
 
 # Logging Best Practices 🧾
 
-A language-agnostic, Copilot-ready checklist for secure, structured, and scalable logging inside applications — not infrastructure.
+A language-agnostic, AI assistant-ready checklist for secure, structured, and scalable logging inside applications — not infrastructure.
 
 ---
 
@@ -80,7 +80,7 @@ logger.info("email_sent", request_id=request_id, recipient=email, duration_ms=12
 
 ---
 
-## Summary for Copilot Execution 🧠
+## Summary for the AI assistant Execution 🧠
 
 - Always assume logs must be structured
 - Always check for centralized logger presence before inserting one

@@ -65,7 +65,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "the AI provider-version: 2023-06-01" \
   -H "the AI provider-beta: oauth-2025-04-20" \
   -H "content-type: application/json" \
-  -d '{"model": "{{OPUS_ID}}", "max_tokens": 1024, "messages": [{"role": "user", "content": "Hello"}]}'
+  -d '{"model": "{{MODEL_ID}}", "max_tokens": 1024, "messages": [{"role": "user", "content": "Hello"}]}'
 
 # .env format — sets the AI provider_AUTH_TOKEN (and the AI provider_BASE_URL if the profile has one).
 # Output is bare KEY=value (no `export`), so use `set -a` to auto-export for child processes:
@@ -87,7 +87,7 @@ Beta resources (agents, sessions, environments, deployments, skills, vaults, mem
 
 ```sh
 ant models list
-ant messages create --model {{OPUS_ID}} --max-tokens 1024 --message '{role: user, content: "Hello"}'
+ant messages create --model {{MODEL_ID}} --max-tokens 1024 --message '{role: user, content: "Hello"}'
 ant beta:agents retrieve --agent-id agent_01...
 ant beta:sessions:events list --session-id session_01...
 ```
@@ -117,7 +117,7 @@ ant beta:agents list --transform '{id,name,model}' --format jsonl
 **Extract a scalar for shell use:** pair `--transform` with `-r` (`--raw-output` — prints strings unquoted, jq-style):
 
 ```sh
-AGENT_ID=$(ant beta:agents create --name "My Agent" --model '{id: {{SONNET_ID}}}' \
+AGENT_ID=$(ant beta:agents create --name "My Agent" --model '{id: {{MODEL_S_ID}}}' \
   --transform id -r)
 ```
 
@@ -128,7 +128,7 @@ AGENT_ID=$(ant beta:agents create --name "My Agent" --model '{id: {{SONNET_ID}}}
 ```sh
 ant beta:agents create \
   --name "Research Agent" \
-  --model '{id: {{OPUS_ID}}}' \
+  --model '{id: {{MODEL_ID}}}' \
   --tool '{type: agent_toolset_20260401}' \
   --tool '{type: custom, name: search_docs, input_schema: {type: object, properties: {query: {type: string}}}}'
 ```
@@ -138,7 +138,7 @@ ant beta:agents create \
 ```sh
 ant beta:agents create <<'YAML'
 name: Research Agent
-model: {{OPUS_ID}}
+model: {{MODEL_ID}}
 system: |
   You are a research assistant. Cite sources for every claim.
 tools:
@@ -149,9 +149,9 @@ YAML
 **`@file` references** — inline a file's contents into any string-valued field. Inside structured flag values, quote the path. Binary files are auto-base64'd; force with `@file://` (text) or `@data://` (base64). Escape a literal leading `@` as `\@`.
 
 ```sh
-ant beta:agents create --name "Researcher" --model '{id: {{SONNET_ID}}}' --system @./prompts/researcher.txt
+ant beta:agents create --name "Researcher" --model '{id: {{MODEL_S_ID}}}' --system @./prompts/researcher.txt
 
-ant messages create --model {{OPUS_ID}} --max-tokens 1024 \
+ant messages create --model {{MODEL_ID}} --max-tokens 1024 \
   --message '{role: user, content: [
     {type: document, source: {type: base64, media_type: application/pdf, data: "@./scan.pdf"}},
     {type: text, text: "Extract the text from this scanned document."}
@@ -168,7 +168,7 @@ This is the recommended flow for defining agents and environments — check the 
 ```yaml
 # summarizer.agent.yaml
 name: Summarizer
-model: {{SONNET_ID}}
+model: {{MODEL_S_ID}}
 system: |
   You are a helpful assistant that writes concise summaries.
 tools:

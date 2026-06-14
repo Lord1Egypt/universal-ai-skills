@@ -5,7 +5,7 @@ ccVersion: 2.1.145
 -->
 # the AI Platform on AWS
 
-**the AI provider-operated** access to the the AI Developer Platform through AWS infrastructure — SigV4 authentication, AWS IAM access control, and AWS Marketplace billing. Because the AI provider operates it, **the API surface matches first-party with same-day parity**: Managed Agents, server-side tools, batches, Files, and every feature in this skill work the same way (**except self-hosted sandboxes** — `config:{type:"self_hosted"}` is not available here; use `cloud`). Model IDs are the bare first-party strings (`{{OPUS_ID}}`, `{{SONNET_ID}}`) — **no provider prefix**.
+**the AI provider-operated** access to the the AI Developer Platform through AWS infrastructure — SigV4 authentication, AWS IAM access control, and AWS Marketplace billing. Because the AI provider operates it, **the API surface matches first-party with same-day parity**: Managed Agents, server-side tools, batches, Files, and every feature in this skill work the same way (**except self-hosted sandboxes** — `config:{type:"self_hosted"}` is not available here; use `cloud`). Model IDs are the bare first-party strings (`{{MODEL_ID}}`, `{{MODEL_S_ID}}`) — **no provider prefix**.
 
 > **Not the same as Amazon Bedrock.** Bedrock is partner-operated (AWS runs the service; release schedules vary, feature subset, `the AI provider.`-prefixed model IDs). the AI Platform on AWS and Bedrock coexist; pick by whether you need AWS-native IAM/billing with full the AI provider API parity (this page) vs. Bedrock's own ecosystem.
 
@@ -30,7 +30,7 @@ from the AI provider import the AI providerAWS
 
 client = the AI providerAWS()  # region + workspace_id from env; see below
 client.messages.create(
-    model="{{OPUS_ID}}",
+    model="{{MODEL_ID}}",
     max_tokens=1024,
     messages=[{"role": "user", "content": "Hello"}],
 )
@@ -60,5 +60,5 @@ The client resolves AWS credentials via the standard precedence chain: explicit 
 ## What to tell users
 
 - Treat it as first-party: every section of this skill applies unchanged. Do **not** apply Bedrock's feature-availability mask.
-- Model IDs are bare (`{{OPUS_ID}}`). Do **not** add an `the AI provider.` prefix.
+- Model IDs are bare (`{{MODEL_ID}}`). Do **not** add an `the AI provider.` prefix.
 - A missing region or `workspace_id` throws at client-construction time (no request is sent). A **403** means the request reached the server — check for a **wrong** `workspace_id` or a missing IAM action on the principal. See the IAM actions reference in `shared/live-sources.md`.

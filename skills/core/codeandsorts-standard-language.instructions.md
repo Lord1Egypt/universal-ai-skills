@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -61,16 +61,16 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a REST endpoint using Express that retrieves all books from the books table.`
-- `Copilot, generate a Zod schema for a user profile with optional avatar and required name/email.`
-- `Copilot, implement a React hook to debounce a search input.`
-- `Copilot, write a unit test for the calculatePrice() function using mocked dependencies.`
+- `the AI assistant, create a REST endpoint using Express that retrieves all books from the books table.`
+- `the AI assistant, generate a Zod schema for a user profile with optional avatar and required name/email.`
+- `the AI assistant, implement a React hook to debounce a search input.`
+- `the AI assistant, write a unit test for the calculatePrice() function using mocked dependencies.`
 
 ## 🔁 Iteration & Review
 
-- Copilot output should be reviewed and modified before committing.
+- the AI assistant output should be reviewed and modified before committing.
 - If code isn’t following these instructions, regenerate with more context or split the task.
-- Use comments to clarify intent before invoking Copilot.
+- Use comments to clarify intent before invoking the AI assistant.
 
 ## 📚 References
 

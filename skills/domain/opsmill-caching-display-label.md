@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: display-label, parent, caching, batch-loading, object-loading
 ---
 
+# Caching Display Label
+
 ## Display Label Caching with Parent Relationships
 
 Impact: MEDIUM

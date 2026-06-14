@@ -1,4 +1,4 @@
-# Kiro Workflow Diagrams
+# AI-Assisted Development Workflow Diagrams
 
 ## Main Workflow State Machine
 
@@ -111,16 +111,16 @@ Each phase has an explicit approval gate:
 ```mermaid
 sequenceDiagram
     participant U as User
-    participant K as Kiro
+    participant A as AI Agent
     participant D as Document
 
-    K->>D: Create/Update Document
-    K->>U: "Does this look good?"
-    U->>K: Feedback
-    K->>D: Update Based on Feedback
-    K->>U: "Does this look good?"
-    U->>K: "Yes, approved"
-    K->>K: Proceed to Next Phase
+    A->>D: Create/Update Document
+    A->>U: "Does this look good?"
+    U->>A: Feedback
+    A->>D: Update Based on Feedback
+    A->>U: "Does this look good?"
+    U->>A: "Yes, approved"
+    A->>A: Proceed to Next Phase
 ```
 
 ## Task Execution Flow

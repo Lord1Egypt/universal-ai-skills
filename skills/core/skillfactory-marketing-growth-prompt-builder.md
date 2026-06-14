@@ -9,7 +9,7 @@ A comprehensive system for generating world-class, production-ready prompts for 
 Transform any marketing or growth requirement into an optimized mega-prompt through:
 1. **Mandatory 5-7 question flow** customized for marketing professionals
 2. **12 comprehensive presets** for marketing and growth roles
-3. **Multi-format output** (XML/Claude/the AI assistant/Gemini)
+3. **Multi-format output** (XML/the AI/the AI assistant/the AI)
 4. **7-point quality validation** before delivery
 5. **Marketing best practices** integrated with compliance (CAN-SPAM, GDPR, CCPA, FTC)
 6. **Core & Advanced modes** for different needs
@@ -197,9 +197,9 @@ Your answer: `___`
 
 **Select output format:**
 1. `xml` - XML-structured markdown (optimal for LLM parsing) [DEFAULT]
-2. `claude` - Claude-optimized system prompt format
+2. `the AI` - the AI-optimized system prompt format
 3. `the AI assistant` - the AI assistant custom instructions format
-4. `gemini` - Google Gemini format
+4. `the AI` - Google the AI format
 5. `all` - Generate all 4 formats
 
 Your choice: `___` (or press enter for default)
@@ -481,7 +481,7 @@ BEST PRACTICES TO FOLLOW:
 Always provide [data-driven recommendations] and ensure [measurable outcomes].
 ```
 
-##### Format 4: Gemini Format
+##### Format 4: the AI Format
 
 ```markdown
 ## Role Configuration

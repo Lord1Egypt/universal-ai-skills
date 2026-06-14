@@ -89,4 +89,4 @@ If your agent misses details, be explicit:
 
 ---
 
-<small>This file was generated with 🔧 by GitHub Copilot + Me.</small>
+<small>This file was generated with 🔧 by GitHub the AI assistant + Me.</small>

@@ -1,3 +1,5 @@
+# Security Scan
+
 ---
 description: Perform local security scanning and dispatch the security audit workflow.
 ---
@@ -16,7 +18,7 @@ description: Perform local security scanning and dispatch the security audit wor
 ## Trigger Remote Audit
 ```bash
 gh workflow run security-audit.yml --ref $(git branch --show-current)
-gh run watch --workflow "Security Audit (Claude)"
+gh run watch --workflow "Security Audit (the AI)"
 ```
 
 ## Completion

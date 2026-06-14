@@ -3,6 +3,8 @@ name: 'Agent Prompt: /code-review part 4 three-state verification phase'
 description: Verification phase for /code-review that asks one agent verifier to classify each candidate as confirmed, plausible, or refuted
 ccVersion: 2.1.173
 -->
+# Code Review: Three-State Verification Phase
+
 - **CONFIRMED** — can name the inputs/state that trigger it and the wrong
   output or crash. Quote the line.
 - **PLAUSIBLE** — mechanism is real, trigger is uncertain (timing, env,

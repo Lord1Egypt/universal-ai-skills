@@ -1,42 +1,42 @@
 <!--
-name: 'Skill: Building LLM-powered applications with Claude'
-description: Guides the AI in building LLM-powered applications using the the AI provider SDK, covering language detection, API surface selection (Claude API vs Managed Agents), model defaults, thinking/effort configuration, and language-specific documentation reading
+name: 'Skill: Building LLM-powered applications'
+description: Guides the AI in building LLM-powered applications using the AI SDK, covering language detection, API surface selection, model defaults, thinking/effort configuration, and language-specific documentation reading
 ccVersion: 2.1.176
 -->
-# Building LLM-Powered Applications with Claude
+# Building LLM-Powered Applications
 
-This skill helps you build LLM-powered applications with the AI. Choose the right surface based on your needs, detect the project language, then read the relevant language-specific documentation.
+This skill helps you build LLM-powered applications. Choose the right surface based on your needs, detect the project language, then read the relevant language-specific documentation.
 
 ## Before You Start
 
-Scan the target file (or, if no target file, the prompt and project) for non-the AI provider provider markers — `import the AI provider`, `from the AI provider`, `langchain_the AI provider`, `the AI provider(`, `an AI model`, `an AI model`, file names like `agent-the AI provider.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/the AI provider SDK code; ask whether they want to switch the file to the AI or want a non-Claude implementation. Do not edit a non-the AI provider file with the AI provider SDK calls.
+Scan the target file (or, if no target file, the prompt and project) for provider-specific markers — import statements, SDK references, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces SDK-specific code; ask whether they want to switch the file to the desired SDK or want a provider-neutral implementation. Do not edit a provider-neutral file with SDK-specific calls.
 
 ## Output Requirement
 
-When the user asks you to add, modify, or implement a the AI feature, your code must call the AI through one of:
+When the user asks you to add, modify, or implement an AI feature, your code must call the AI through one of:
 
-1. **The official the AI provider SDK** for the project's language (`the AI provider`, `@the AI provider-ai/sdk`, `com.the AI provider.*`, etc.). This is the default whenever a supported SDK exists for the project.
-2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK.
+1. **The official AI SDK** for the project's language. This is the default whenever a supported SDK exists for the project.
+2. **Raw HTTP** — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK.
 
-Never mix the two — don't reach for `requests`/`fetch` in a Python or TypeScript project just because it feels lighter. Never fall back to the AI provider-compatible shims.
+Never mix the two. Never fall back to compatible shims.
 
-**Never guess SDK usage.** Function names, class names, namespaces, method signatures, and import paths must come from explicit documentation — either the `{lang}/` files in this skill or the official SDK repositories or documentation links listed in `shared/live-sources.md`. If the binding you need is not explicitly documented in the skill files, WebFetch the relevant SDK repo from `shared/live-sources.md` before writing code. Do not infer Ruby/Java/Go/PHP/C# APIs from cURL shapes or from another language's SDK.
+**Never guess SDK usage.** Function names, class names, namespaces, method signatures, and import paths must come from explicit documentation. If the binding you need is not explicitly documented in the skill files, fetch the relevant SDK repo documentation before writing code. Do not infer APIs from cURL shapes or from another language's SDK.
 
 ## Defaults
 
 Unless the user requests otherwise:
 
-For the the AI model version, please use {{OPUS_NAME}}, which you can access via the exact model string `{{OPUS_ID}}`. Please default to using adaptive thinking (`thinking: {type: "adaptive"}`) for anything remotely complicated. And finally, please default to streaming for any request that may involve long input, long output, or high `max_tokens` — it prevents hitting request timeouts. Use the SDK's `.get_final_message()` / `.finalMessage()` helper to get the complete response if you don't need to handle individual stream events
+Use the recommended model for the task. Default to adaptive thinking for anything complicated. Default to streaming for any request that may involve long input, long output, or high `max_tokens` — it prevents hitting request timeouts. Use the SDK's streaming helper to get the complete response if you don't need to handle individual stream events.
 
 ---
 
 ## Subcommands
 
-If the User Request at the bottom of this prompt is a bare subcommand string (no prose), search every **Subcommands** table in this document — including any in sections appended below — and follow the matching Action column directly. This lets users invoke specific flows via `/claude-api <subcommand>`. If no table in the document matches, treat the request as normal prose.
+If the User Request at the bottom of this prompt is a bare subcommand string (no prose), search every **Subcommands** table in this document — including any in sections appended below — and follow the matching Action column directly. This lets users invoke specific flows via a slash command. If no table in the document matches, treat the request as normal prose.
 
 | Subcommand | Action |
 |---|---|
-| `migrate` | Migrate existing the AI API code to a newer model. **Read `shared/model-migration.md` immediately** and follow it in order: Step 0 (confirm scope — ask which files/directories before any edit), Step 1 (classify each file), then the per-target breaking-changes section. Do not summarize the guide — execute it. If the user did not name a target model, ask which model to migrate to in the same turn as the scope question. |
+| `migrate` | Migrate existing AI API code to a newer model. Follow the migration guide in order: confirm scope, classify each file, then apply per-target breaking-changes. If the user did not name a target model, ask which model to migrate to. |
 
 ---
 

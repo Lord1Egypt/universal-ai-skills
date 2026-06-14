@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Drupal project. The goal is to ensure consistent, high-quality code generation aligned with Drupal conventions, security best practices, and our development standards.
+These instructions define how GitHub the AI assistant should assist with this Drupal project. The goal is to ensure consistent, high-quality code generation aligned with Drupal conventions, security best practices, and our development standards.
 
 ## 🧠 Context
 
@@ -109,19 +109,19 @@ config/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a custom Drupal module that adds a content type for events with date fields and location.`
-- `Copilot, implement a Drupal form that collects user feedback and saves it as a custom entity.`
-- `Copilot, write a Drupal hook_form_alter to add custom validation to the user registration form.`
-- `Copilot, create a Drupal service that integrates with an external API and caches the results.`
-- `Copilot, generate a Drupal theme template that displays a custom content type with proper field rendering.`
-- `Copilot, write a Drupal configuration entity for storing API settings with a settings form.`
-- `Copilot, implement a custom Drupal field type for storing and displaying social media links.`
-- `Copilot, create a Drupal behavior using vanilla JavaScript to add interactive functionality to a form.`
-- `Copilot, implement a JavaScript function using fetch() API to make AJAX calls to a Drupal REST endpoint.`
+- `the AI assistant, create a custom Drupal module that adds a content type for events with date fields and location.`
+- `the AI assistant, implement a Drupal form that collects user feedback and saves it as a custom entity.`
+- `the AI assistant, write a Drupal hook_form_alter to add custom validation to the user registration form.`
+- `the AI assistant, create a Drupal service that integrates with an external API and caches the results.`
+- `the AI assistant, generate a Drupal theme template that displays a custom content type with proper field rendering.`
+- `the AI assistant, write a Drupal configuration entity for storing API settings with a settings form.`
+- `the AI assistant, implement a custom Drupal field type for storing and displaying social media links.`
+- `the AI assistant, create a Drupal behavior using vanilla JavaScript to add interactive functionality to a form.`
+- `the AI assistant, implement a JavaScript function using fetch() API to make AJAX calls to a Drupal REST endpoint.`
 
 ## 🔁 Iteration & Review
 
-- Always validate Copilot output against Drupal coding standards using `drupal/coder`.
+- Always validate the AI assistant output against Drupal coding standards using `drupal/coder`.
 - Test all functionality in a local Drupal environment before committing.
 - Review security implications of any custom code, especially user input handling.
 - Use `drush` commands to clear caches and test configuration changes.

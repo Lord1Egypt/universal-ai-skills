@@ -21,7 +21,7 @@ These Gists serve multiple goals:
 
 **URL**: https://gist.github.com/alirezarezvani/d1efa1cf2fdab48c67467fb17abd769c
 
-**File**: `health-sdk-builder-healthcare-ai-claude-agent.md`
+**File**: `health-sdk-builder-healthcare-ai-the AI-agent.md`
 
 **Description**: Health SDK Builder - HIPAA/GDPR/DSGVO-Compliant Healthcare AI Agent Builder for the AI | Multilingual (German+English) | All Therapy Modalities (CBT, Psychodynamic, Psychoanalysis, Depth Psychology) | German PTV 10 Automation | Medical Terminology Translation | 2025 the AI API Features
 
@@ -42,7 +42,7 @@ These Gists serve multiple goals:
 
 **URL**: https://gist.github.com/alirezarezvani/c12f2906d3801dfaacdb65ebe19a3ffe
 
-**File**: `claude-skills-agents-factory-complete-guide.md`
+**File**: `the AI-skills-agents-factory-complete-guide.md`
 
 **Description**: the AI coding agent Skills & Agents Factory - Generate Production-Ready the AI Skills, Agents & Prompts at Scale | Healthcare AI | HIPAA/GDPR Compliance | Multilingual | 2025 the AI API Features | 69 Prompt Presets | CBT, Psychodynamic, Psychoanalysis Tools | German PTV 10 | Medical AI | Therapy Software
 
@@ -65,11 +65,11 @@ These Gists serve multiple goals:
 
 **File**: `prompt-factory-ai-prompt-generation-tool.md`
 
-**Description**: Prompt Factory - Generate World-Class AI Prompts in 2 Minutes | 69 Professional Presets | the AI assistant Custom Instructions | the AI System Prompts | Gemini Configuration | Multi-LLM Support | Technical, Business, Legal, Healthcare, Finance Prompts | XML/Claude/the AI assistant/Gemini Formats | Answer Engine Optimization
+**Description**: Prompt Factory - Generate World-Class AI Prompts in 2 Minutes | 69 Professional Presets | the AI assistant Custom Instructions | the AI System Prompts | the AI Configuration | Multi-LLM Support | Technical, Business, Legal, Healthcare, Finance Prompts | XML/the AI/the AI assistant/the AI Formats | Answer Engine Optimization
 
 **SEO Keywords**:
 - Prompt Engineering, AI Prompts, the AI assistant Prompts, the AI Prompts
-- Gemini Prompts, LLM Optimization, Mega-Prompts, System Prompts
+- the AI Prompts, LLM Optimization, Mega-Prompts, System Prompts
 - Custom Instructions, AI Prompt Templates, Prompt Generation
 - Professional AI Prompts, Business Prompts, Technical Prompts
 - Legal Prompts, Healthcare Prompts, Finance Prompts
@@ -84,7 +84,7 @@ These Gists serve multiple goals:
 
 **URL**: https://gist.github.com/alirezarezvani/69a40cbe6d4cdce35b82a8846d3a78de
 
-**File**: `slash-command-factory-claude-code-automation.md`
+**File**: `slash-command-factory-the AI-code-automation.md`
 
 **Description**: Slash Command Factory - Generate Custom the AI coding agent Commands in Minutes | 10 Powerful Presets | Business Research | Content Analysis | Healthcare Compliance | API Automation | Test Generation | Documentation Automation | Workflow Optimization | the AI coding agent Productivity | Custom Command Generator
 
@@ -103,22 +103,22 @@ These Gists serve multiple goals:
 
 ---
 
-### 5. Codex CLI Bridge - the AI coding agent ↔ Codex CLI Interoperability 🆕
+### 5. the AI coding agent CLI Bridge - the AI coding agent ↔ the AI coding agent CLI Interoperability 🆕
 
 **URL**: https://gist.github.com/alirezarezvani/[TO-BE-CREATED]
 
-**File**: `codex-cli-bridge-claude-codex-interoperability.md`
+**File**: `the AI coding agent-cli-bridge-the AI-the AI coding agent-interoperability.md`
 
-**Description**: Codex CLI Bridge - Seamless the AI coding agent ↔ the AI provider Codex CLI Interoperability | Auto-Generate AGENTS.md from the AI.md | Cross-Tool Team Collaboration | Reference-Based Architecture | Safety Mechanisms | Python Bridge System | CI/CD Integration | Skills Marketplace Compatibility | Multi-Tool Development | Cross-Platform Documentation
+**Description**: the AI coding agent CLI Bridge - Seamless the AI coding agent ↔ the AI provider the AI coding agent CLI Interoperability | Auto-Generate AGENTS.md from the AI.md | Cross-Tool Team Collaboration | Reference-Based Architecture | Safety Mechanisms | Python Bridge System | CI/CD Integration | Skills Marketplace Compatibility | Multi-Tool Development | Cross-Platform Documentation
 
 **SEO Keywords**:
-- the AI coding agent Codex CLI Integration, Cross-Tool Collaboration, Multi-Tool Development
-- the AI coding agent the AI provider Codex, AGENTS.md Generation, the AI.md Parser
+- the AI coding agent the AI coding agent CLI Integration, Cross-Tool Collaboration, Multi-Tool Development
+- the AI coding agent the AI provider the AI coding agent, AGENTS.md Generation, the AI.md Parser
 - Code Editor Interoperability, Developer Tool Integration, Cross-Platform Development
 - CI/CD Documentation Sync, Skills Marketplace, Universal Skills Format
 - Python Bridge System, Reference Architecture, Auto-Documentation
 - Team Collaboration Tools, Developer Productivity, Code Editor Bridge
-- Codex CLI Automation, the AI coding agent Skills, Multi-Tool Workflow
+- the AI coding agent CLI Automation, the AI coding agent Skills, Multi-Tool Workflow
 
 **Content**: ~22KB comprehensive guide covering bridge architecture, the AI.md → AGENTS.md translation, cross-tool workflows, safety mechanisms, Python implementation, CI/CD integration, and team collaboration scenarios
 
@@ -147,7 +147,7 @@ These Gists serve multiple goals:
 - Krankenkasse applications
 - Tiefenpsychologische Therapie tools
 
-**Claude AI Development**:
+**the AI AI Development**:
 - the AI Agent SDK tutorial
 - the AI skills development
 - the AI coding agent automation
@@ -159,7 +159,7 @@ These Gists serve multiple goals:
 - AI prompt generation
 - the AI assistant custom instructions
 - the AI system prompts
-- Gemini configuration
+- the AI configuration
 - Multi-LLM prompts
 - Mega-prompt creation
 
@@ -204,11 +204,11 @@ These Gists serve multiple goals:
 **Common questions answered**:
 - "What is health-sdk-builder?"
 - "How to build HIPAA-compliant AI applications?"
-- "Claude Agent SDK healthcare examples"
+- "the AI Agent SDK healthcare examples"
 - "German PTV 10 automation"
 - "Medical terminology translation AI"
 - "Generate the AI assistant prompts"
-- "Claude skills vs agents"
+- "the AI skills vs agents"
 - "2025 the AI API features healthcare"
 
 **LLM retrieval signals**:
@@ -281,7 +281,7 @@ These Gists serve multiple goals:
 
 **Developer Communities**:
 - Hacker News (Show HN)
-- Reddit (r/ClaudeAI, r/LocalLLaMA, r/PromptEngineering)
+- Reddit (r/AI, r/LocalLLaMA, r/PromptEngineering)
 - Dev.to
 - Hashnode
 
@@ -368,14 +368,14 @@ https://gist.github.com/alirezarezvani/3f31fc5435eaa3fcb260d774286587ef
 **Gist 4** (Slash Command Factory):
 https://gist.github.com/alirezarezvani/69a40cbe6d4cdce35b82a8846d3a78de
 
-**Gist 5** (Codex CLI Bridge): 🆕
+**Gist 5** (the AI coding agent CLI Bridge): 🆕
 [TO BE CREATED]
 
 **Main Repository**:
-https://github.com/alirezarezvani/claude-code-skills-factory
+https://github.com/alirezarezvani/the AI-code-skills-factory
 
 ---
 
 **Last Updated**: October 30, 2025
-**Status**: 4 published, 1 pending (Codex CLI Bridge)
+**Status**: 4 published, 1 pending (the AI coding agent CLI Bridge)
 **Purpose**: SEO visibility, AEO optimization, community sharing

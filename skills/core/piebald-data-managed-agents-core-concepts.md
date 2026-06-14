@@ -111,7 +111,7 @@ Key fields returned by the API:
 const agent = await client.beta.agents.create(
   {
     name: "Coding Assistant",
-    model: "{{OPUS_ID}}",
+    model: "{{MODEL_ID}}",
     system: "You are a helpful coding agent.",
     tools: [{ type: "agent_toolset_20260401"}],
   },

@@ -1,3 +1,5 @@
+# Planning
+
 ## Plan elements
 
 - A plan consists of steps.

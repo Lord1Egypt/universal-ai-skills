@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this infrastructure-as-code project. The goal is to ensure consistent, secure, and modular infrastructure definitions aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this infrastructure-as-code project. The goal is to ensure consistent, secure, and modular infrastructure definitions aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -71,15 +71,15 @@ infrastructure/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a Terraform module for an Azure Function App with a storage account and app settings.`
-- `Copilot, define input variables and outputs for a reusable AWS VPC module.`
-- `Copilot, generate a Pulumi component that provisions a GCP Cloud Run service.`
-- `Copilot, write a GitHub Actions workflow that runs terraform fmt, validate, plan, and apply on PR merge.`
-- `Copilot, implement a backend.tf configuration using Azure Storage Account for state management.`
+- `the AI assistant, create a Terraform module for an Azure Function App with a storage account and app settings.`
+- `the AI assistant, define input variables and outputs for a reusable AWS VPC module.`
+- `the AI assistant, generate a Pulumi component that provisions a GCP Cloud Run service.`
+- `the AI assistant, write a GitHub Actions workflow that runs terraform fmt, validate, plan, and apply on PR merge.`
+- `the AI assistant, implement a backend.tf configuration using Azure Storage Account for state management.`
 
 ## 🔁 Iteration & Review
 
-- Copilot output should be validated with preview/plan tools before merging.
+- the AI assistant output should be validated with preview/plan tools before merging.
 - Use inline comments to explain intent when generating complex infrastructure.
 - Refactor large resources or repeated blocks into modules.
 - Review all security-sensitive resources (e.g., IAM, firewall rules) manually.

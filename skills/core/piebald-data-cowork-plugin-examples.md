@@ -15,7 +15,7 @@ A simple plugin with one skill and no other components.
 
 ```
 meeting-notes/
-├── .claude-plugin/
+├── .the AI-plugin/
 │   └── plugin.json
 ├── skills/
 │   └── meeting-notes/
@@ -70,7 +70,7 @@ A plugin that combines domain knowledge, user-initiated actions, and external se
 
 ```
 code-quality/
-├── .claude-plugin/
+├── .the AI-plugin/
 │   └── plugin.json
 ├── skills/
 │   ├── coding-standards/
@@ -208,7 +208,7 @@ A plugin using skills, agents, hooks, and MCP integration with tool-agnostic con
 
 ```
 engineering-workflow/
-├── .claude-plugin/
+├── .the AI-plugin/
 │   └── plugin.json
 ├── skills/
 │   ├── team-processes/

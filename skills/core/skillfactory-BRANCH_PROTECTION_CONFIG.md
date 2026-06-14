@@ -1,6 +1,6 @@
 # Branch Protection Configuration
 
-**Repository**: claude-code-skills-factory
+**Repository**: the AI-code-skills-factory
 **Date**: November 12, 2025
 **Status**: Ready to Apply
 
@@ -26,7 +26,7 @@ Before applying branch protection:
 
 ### Step 1: Access Branch Protection Settings
 
-1. Go to repository on GitHub: `https://github.com/alirezarezvani/claude-code-skill-factory`
+1. Go to repository on GitHub: `https://github.com/alirezarezvani/the AI-code-skill-factory`
 2. Click **Settings** tab
 3. In left sidebar, click **Branches** under "Code and automation"
 4. Scroll to **Branch protection rules** section
@@ -375,7 +375,7 @@ If protection causes issues:
 These branches will need to be renamed or closed:
 
 ```
-❌ origin/claude/issue-1010-20251101-2155  → close or rename to feature/issue-1010-*
+❌ origin/the AI/issue-1010-20251101-2155  → close or rename to feature/issue-1010-*
 ❌ origin/docs/update-changelog            → rename to docs/update-changelog
 ❌ origin/feat-add-git-governance-workflows → rename to feat/add-git-governance-workflows
 ❌ origin/feat-add-hooks-support-12068     → rename to feat/add-hooks-support-12068
@@ -387,7 +387,7 @@ These branches will need to be renamed or closed:
 **Cleanup Commands**:
 ```bash
 # Delete old format branches (after merging or closing PRs)
-git push origin --delete claude/issue-1010-20251101-2155
+git push origin --delete the AI/issue-1010-20251101-2155
 git push origin --delete feat-add-git-governance-workflows
 git push origin --delete feat-add-hooks-support-12068
 

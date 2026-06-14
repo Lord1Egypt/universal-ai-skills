@@ -10,6 +10,8 @@ variables:
   - EFFICIENCY_FINDER_ANGLE_BLOCK
   - ALTITUDE_FINDER_ANGLE_BLOCK
 -->
+# Simplify Slash Command
+
 `/simplify → 4 cleanup agents in parallel → apply the fixes`
 
 You are improving the quality of the changed code, not hunting for bugs. Review

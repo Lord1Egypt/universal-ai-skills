@@ -5,9 +5,9 @@ ccVersion: 2.1.172
 -->
 # Managed Agents — Onboarding Flow
 
-> **Invoked via `/claude-api managed-agents-onboard`?** You're in the right place. Run the interview below — don't summarize it back to the user, ask the questions.
+> **Invoked via `/managed-agents-onboard`?** You're in the right place. Run the interview below — don't summarize it back to the user, ask the questions.
 
-Claude Managed Agents is a hosted agent: the AI provider runs the agent loop and provisions a sandboxed container per session where the agent's tools execute (or your own worker, with a `self_hosted` environment — see `shared/managed-agents-self-hosted-sandboxes.md`). You supply an **agent config** (tools, skills, model, system prompt — reusable, versioned) and an **environment config** (the sandbox — reusable across agents). Each run is a **session**.
+Managed Agents is a hosted agent service: the provider runs the agent loop and provisions a sandboxed container per session where the agent's tools execute (or your own worker, with a `self_hosted` environment). You supply an **agent config** (tools, skills, model, system prompt — reusable, versioned) and an **environment config** (the sandbox — reusable across agents). Each run is a **session**.
 
 The flow is four beats — **describe → agent → environment → session** — the same arc as the Console quickstart, and the same philosophy: **value before credentials**. The user goes from idea to a runnable session before any auth ask; each credential is *flagged* at the moment the design makes it relevant (§2) and *collected* once, at session setup (§4), where it binds (`sessions.create()`) and gets exercised (smoke-test). Read `shared/managed-agents-core.md` alongside this — it has full detail for each knob; this doc is the interview script.
 

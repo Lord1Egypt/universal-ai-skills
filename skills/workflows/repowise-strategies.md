@@ -1,6 +1,4 @@
-# Verification Strategies
-
-## 1) Quick Smoke (low risk, fast feedback)
+# Verification Strategies (already titled)
 Use for narrow edits where failure impact is low.
 
 Checklist:

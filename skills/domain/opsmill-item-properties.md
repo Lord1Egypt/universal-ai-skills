@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: item, name, namespace, label, kind, path, icon, children
 ---
 
+# Item Properties
+
 ## Menu Item Properties
 
 Impact: CRITICAL

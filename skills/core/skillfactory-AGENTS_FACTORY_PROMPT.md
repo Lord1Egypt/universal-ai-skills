@@ -31,7 +31,7 @@ Every agent file MUST start with YAML frontmatter:
 name: agent-name-in-kebab-case
 description: When to invoke this agent - be specific for auto-discovery
 tools: Read, Write, Edit, Bash  # Optional, comma-separated
-model: sonnet  # Optional: sonnet|opus|haiku|inherit
+model: the AI model  # Optional: the AI model|the AI model|the AI model|inherit
 color: green  # Visual categorization
 field: frontend  # Domain/expertise area
 expertise: expert  # beginner|intermediate|expert
@@ -44,7 +44,7 @@ mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
 - **name**: MUST be in kebab-case (lowercase-with-hyphens) - e.g., `code-reviewer`, `frontend-developer`, `test-runner`
 - **description**: Critical for auto-discovery! Describe WHEN the AI should invoke this agent
 - **tools**: Comma-separated string (NOT array) - e.g., `Read, Write, Edit` or omit to inherit all tools
-- **model**: Optional - `sonnet`, `opus`, `haiku`, or `inherit` to use main conversation's model
+- **model**: Optional - `the AI model`, `the AI model`, `the AI model`, or `inherit` to use main conversation's model
 - **color**: Visual categorization - `blue`, `green`, `red`, `purple`, `orange`
 - **field**: Domain area - `frontend`, `backend`, `testing`, `devops`, `product`, `design`, etc.
 - **expertise**: Complexity level - `beginner`, `intermediate`, `expert`
@@ -57,7 +57,7 @@ mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
 name: code-reviewer
 description: Expert code review specialist. Use proactively after code changes.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: the AI model
 color: red
 field: quality
 expertise: expert
@@ -69,7 +69,7 @@ expertise: expert
 name: frontend-developer
 description: React and TypeScript development expert. Use for building UI components and pages.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: green
 field: frontend
 expertise: expert
@@ -192,7 +192,7 @@ After YAML frontmatter, the system prompt:
 name: agent-name
 description: When to invoke
 tools: Read, Write
-model: sonnet
+model: the AI model
 color: blue
 field: product
 expertise: intermediate
@@ -217,14 +217,14 @@ Output format:
 
 ### Example 1: Code Reviewer (Quality Agent)
 
-**File:** `.claude/agents/code-reviewer.md`
+**File:** `.the AI/agents/code-reviewer.md`
 
 ```markdown
 ---
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: the AI model
 color: red
 field: quality
 expertise: expert
@@ -262,14 +262,14 @@ MCP Integration:
 
 ### Example 2: Frontend Developer (Implementation Agent)
 
-**File:** `.claude/agents/frontend-developer.md`
+**File:** `.the AI/agents/frontend-developer.md`
 
 ```markdown
 ---
 name: frontend-developer
 description: React and TypeScript frontend development specialist. Use for building UI components, pages, and client-side features.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: green
 field: frontend
 expertise: expert
@@ -323,14 +323,14 @@ MCP Integration:
 
 ### Example 3: Product Planner (Strategic Agent)
 
-**File:** `.claude/agents/product-planner.md`
+**File:** `.the AI/agents/product-planner.md`
 
 ```markdown
 ---
 name: product-planner
 description: Product strategy and planning expert. Use for creating product requirements, user stories, and feature specifications.
 tools: Read, Write, Grep
-model: opus
+model: the AI model
 color: blue
 field: product
 expertise: expert
@@ -640,14 +640,14 @@ description: An agent that helps with frontend  ❌ (Not action-oriented)
 
 ### Example 1: Test Runner (Quality Agent - Sequential)
 
-**File:** `.claude/agents/test-runner.md`
+**File:** `.the AI/agents/test-runner.md`
 
 ```markdown
 ---
 name: test-runner
 description: Test automation specialist. Use proactively after code changes to run tests and validate implementations.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: red
 field: testing
 expertise: expert
@@ -717,14 +717,14 @@ MCP Integration:
 
 ### Example 2: API Builder (Implementation Agent - Coordinated)
 
-**File:** `.claude/agents/api-builder.md`
+**File:** `.the AI/agents/api-builder.md`
 
 ```markdown
 ---
 name: api-builder
 description: RESTful API development specialist. Use for creating backend endpoints, controllers, and API services.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: green
 field: backend
 expertise: expert
@@ -790,14 +790,14 @@ Can work in parallel with frontend-developer when building full-stack features.
 
 ### Example 3: Product Requirements Specialist (Strategic Agent - Parallel-Safe)
 
-**File:** `.claude/agents/prd-specialist.md`
+**File:** `.the AI/agents/prd-specialist.md`
 
 ```markdown
 ---
 name: prd-specialist
 description: Product requirements documentation expert. Use for creating PRDs, user stories, and feature specifications.
 tools: Read, Write, Grep
-model: opus
+model: the AI model
 color: blue
 field: product
 expertise: expert
@@ -899,10 +899,10 @@ Can run in parallel with other strategic agents (architect, researcher).
 
 | Agent Type | Read | Write | Edit | Bash | Grep | Glob | Model | Color |
 |------------|------|-------|------|------|------|------|-------|-------|
-| Strategic  | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | opus/sonnet | blue |
-| Implementation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | sonnet | green |
-| Quality | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | sonnet | red |
-| Coordination | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | opus | purple |
+| Strategic  | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | the AI model/the AI model | blue |
+| Implementation | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | the AI model | green |
+| Quality | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | the AI model | red |
+| Coordination | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | the AI model | purple |
 
 **Note:** This is a suggestion guide. Users can override based on specific needs.
 
@@ -927,7 +927,7 @@ From rr- agent system baselines:
 
 **Check process count:**
 ```bash
-ps aux | grep -E "mcp|npm|claude" | wc -l
+ps aux | grep -E "mcp|npm|the AI" | wc -l
 ```
 
 ### Execution Safety Rules
@@ -982,7 +982,7 @@ For each agent, provide:
 ## Agent: {agent-name}
 
 **Type**: {Strategic|Implementation|Quality|Coordination}
-**File**: `.claude/agents/{agent-name}.md`
+**File**: `.the AI/agents/{agent-name}.md`
 **Color**: {blue|green|red|purple|orange}
 **Field**: {domain}
 **Expertise**: {beginner|intermediate|expert}
@@ -994,7 +994,7 @@ For each agent, provide:
 name: {agent-name}
 description: {when to invoke}
 tools: {comma-separated tools}
-model: {sonnet|opus|haiku}
+model: {the AI model|the AI model|the AI model}
 color: {color}
 field: {field}
 expertise: {expertise}
@@ -1035,7 +1035,7 @@ TOOLS_NEEDED: [Read, Write, Edit, Bash, Grep, Glob - follow tool access matrix o
 
 EXECUTION_PATTERN: [parallel|coordinated|sequential]
 
-MODEL: [sonnet|opus|haiku|inherit - or leave blank for default sonnet]
+MODEL: [the AI model|the AI model|the AI model|inherit - or leave blank for default the AI model]
 
 COLOR: [blue|green|red|purple|orange - or leave blank for auto-assignment]
 
@@ -1063,7 +1063,7 @@ DESCRIPTION: Unit test execution specialist. Use after code changes to run unit 
 CAPABILITIES: Run Jest tests, analyze failures, report results
 TOOLS_NEEDED: Read, Write, Bash
 EXECUTION_PATTERN: sequential
-MODEL: sonnet
+MODEL: the AI model
 COLOR: red
 EXPERTISE_LEVEL: intermediate
 MCP_TOOLS:
@@ -1080,7 +1080,7 @@ DESCRIPTION: React component development specialist. Use for building reusable U
 CAPABILITIES: Create React components, TypeScript types, component tests
 TOOLS_NEEDED: Read, Write, Edit, Bash, Grep, Glob
 EXECUTION_PATTERN: coordinated
-MODEL: sonnet
+MODEL: the AI model
 COLOR: green
 EXPERTISE_LEVEL: expert
 MCP_TOOLS: mcp__playwright
@@ -1097,7 +1097,7 @@ DESCRIPTION: Product requirements specialist. Use for creating detailed feature 
 CAPABILITIES: Write PRDs, create user stories, define acceptance criteria
 TOOLS_NEEDED: Read, Write, Grep
 EXECUTION_PATTERN: parallel
-MODEL: opus
+MODEL: the AI model
 COLOR: blue
 EXPERTISE_LEVEL: expert
 MCP_TOOLS:

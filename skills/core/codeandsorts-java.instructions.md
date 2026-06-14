@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -76,16 +76,16 @@ src/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a Spring Boot REST controller with GET and POST endpoints for books.`
-- `Copilot, write a JPA repository interface for querying users by email.`
-- `Copilot, define a DTO with validation annotations for user registration.`
-- `Copilot, write a JUnit test for the OrderService.createOrder method using Mockito.`
-- `Copilot, configure application.properties for PostgreSQL and enable debug logging.`
+- `the AI assistant, create a Spring Boot REST controller with GET and POST endpoints for books.`
+- `the AI assistant, write a JPA repository interface for querying users by email.`
+- `the AI assistant, define a DTO with validation annotations for user registration.`
+- `the AI assistant, write a JUnit test for the OrderService.createOrder method using Mockito.`
+- `the AI assistant, configure application.properties for PostgreSQL and enable debug logging.`
 
 ## 🔁 Iteration & Review
 
-- Always review Copilot output for null safety, thread safety, and proper annotations.
-- Use comments above the cursor to guide Copilot’s intent.
+- Always review the AI assistant output for null safety, thread safety, and proper annotations.
+- Use comments above the cursor to guide the AI assistant’s intent.
 - Refactor repetitive or over-engineered output.
 - Run linting (`Checkstyle`, `SpotBugs`, `PMD`) and formatting tools.
 

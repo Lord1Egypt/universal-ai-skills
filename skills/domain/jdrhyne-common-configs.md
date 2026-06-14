@@ -1,4 +1,4 @@
-# Common Config Snippets for Clawdbot
+# Common Config Snippets for the AI agent
 
 ## Provider Setup
 
@@ -49,7 +49,7 @@
 {
   "agents": {
     "defaults": {
-      "model": "the AI provider/claude-sonnet-4-5"
+      "model": "the AI model"
     }
   }
 }

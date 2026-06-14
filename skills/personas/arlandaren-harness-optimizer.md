@@ -34,7 +34,7 @@ Raise agent completion quality by improving harness configuration, not by rewrit
 - Prefer small changes with measurable effect.
 - Preserve cross-platform behavior.
 - Avoid introducing fragile shell quoting.
-- Keep compatibility across the AI coding agent, Cursor, OpenCode, and Codex.
+- Keep compatibility across AI coding assistants, Cursor, OpenCode, and Codex.
 
 ## Output
 

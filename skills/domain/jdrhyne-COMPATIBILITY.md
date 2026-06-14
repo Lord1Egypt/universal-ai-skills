@@ -6,9 +6,9 @@ This document shows which skills work with which AI coding platforms.
 
 | Platform | Description |
 |----------|-------------|
-| **OpenClaw** | Full OpenClaw (formerly Clawdbot) agent with all tools |
+| **the AI agent platform** | Full the AI agent platform (formerly the AI agent) agent with all tools |
 | **the AI coding agent** | the AI coding agent CLI with read, write, exec, web_search, web_fetch |
-| **Codex** | the AI provider Codex CLI with similar portable tool set |
+| **Codex** | the AI model Codex CLI with similar portable tool set |
 
 ## Quick Reference
 
@@ -27,7 +27,7 @@ These skills are pure instruction/methodology with no tool dependencies:
 | `senior-engineering` | `prompts/senior-engineering` |
 | `web-design-guidelines` | `prompts/web-design-guidelines` |
 
-### ✅ Portable (the AI coding agent + Codex + OpenClaw)
+### ✅ Portable (the AI coding agent + Codex + the AI agent platform)
 
 These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `web_fetch`):
 
@@ -50,30 +50,30 @@ These skills use only portable tools (`read`, `write`, `exec`, `web_search`, `we
 | `gemini` | `codex/gemini` | `exec` |
 | `zendesk` | `skills/zendesk` | `exec` |
 
-### ⚠️ OpenClaw-Only (formerly Clawdbot)
+### ⚠️ the AI agent platform-Only (formerly the AI agent)
 
-These skills require OpenClaw-specific tools:
+These skills require the AI agent platform-specific tools:
 
 | Skill | Location | Required Tools | Portability Notes |
 |-------|----------|----------------|-------------------|
-| `auto-updater` | `clawdbot/auto-updater` | `cron`, `message` | Needs alternative scheduler |
-| `clawdbot-release-check` | `clawdbot/clawdbot-release-check` | `exec` | Actually portable! |
-| `clawddocs` | `clawdbot/clawddocs` | OpenClaw docs | OpenClaw-specific content |
-| `gallery-scraper` | `clawdbot/gallery-scraper` | `browser` | Needs browser automation |
-| `self-improving-agent` | `clawdbot/self-improving-agent` | `read`, `write` | Portable tools but OpenClaw-oriented |
-| `skill-sync` | `clawdbot/skill-sync` | `exec` | Portable tools but OpenClaw-oriented |
-| `todo-tracker` | `clawdbot/todo-tracker` | `exec` | Portable tools but OpenClaw-oriented |
+| `auto-updater` | `the AI agent/auto-updater` | `cron`, `message` | Needs alternative scheduler |
+| `the AI agent-release-check` | `the AI agent/the AI agent-release-check` | `exec` | Actually portable! |
+| `clawddocs` | `the AI agent/clawddocs` | the AI agent platform docs | the AI agent platform-specific content |
+| `gallery-scraper` | `the AI agent/gallery-scraper` | `browser` | Needs browser automation |
+| `self-improving-agent` | `the AI agent/self-improving-agent` | `read`, `write` | Portable tools but the AI agent platform-oriented |
+| `skill-sync` | `the AI agent/skill-sync` | `exec` | Portable tools but the AI agent platform-oriented |
+| `todo-tracker` | `the AI agent/todo-tracker` | `exec` | Portable tools but the AI agent platform-oriented |
 
 ## Tool Categories
 
-**OpenClaw-only tools (formerly Clawdbot):**
+**the AI agent platform-only tools (formerly the AI agent):**
 - `message` — Send messages, reactions, channel operations
 - `browser` — Browser automation
 - `cron` — Scheduled jobs
 - `nodes` — Device/node control
 - `canvas` — Canvas presentation
 - `sessions_spawn/send` — Multi-agent orchestration
-- `gateway` — OpenClaw config/restart
+- `gateway` — the AI agent platform config/restart
 - `tts` — Text-to-speech
 - `memory_search/get` — Semantic memory
 
@@ -94,16 +94,16 @@ These skills require OpenClaw-specific tools:
 git clone https://github.com/jdrhyne/agent-skills.git
 
 # Copy portable skills to your workspace
-cp -r agent-skills/skills/* ~/.claude/skills/
-cp -r agent-skills/codex/* ~/.claude/skills/
-cp -r agent-skills/prompts/* ~/.claude/prompts/
+cp -r agent-skills/skills/* the AI agent config directory
+cp -r agent-skills/codex/* the AI agent config directory
+cp -r agent-skills/prompts/* the AI agent config directory
 ```
 
-### OpenClaw (formerly Clawdbot)
+### the AI agent platform (formerly the AI agent)
 
 ```bash
 # Clone to your workspace skills folder
-cd ~/your-openclaw-workspace/skills
+cd ~/your-the AI agent platform-workspace/skills
 git clone https://github.com/jdrhyne/agent-skills.git
 
 # Or use skill-sync
@@ -116,7 +116,7 @@ Some skills require external tools to be installed:
 
 | Skill | Required CLI | Install |
 |-------|-------------|---------|
-| `codex` | `codex` | `npm i -g @the AI provider/codex` |
+| `codex` | `codex` | `npm i -g @the AI model/codex` |
 | `gemini` | `gemini` | Google the AI CLI |
 | `jira` | `jira` | Atlassian CLI |
 | `ga4` | `gcloud` | Google Cloud SDK |
@@ -126,4 +126,4 @@ Some skills require external tools to be installed:
 ---
 
 *Last synced from ClawHub: 2026-02-27*
-*Compatible with OpenClaw 2026.2.23+*
+*Compatible with the AI agent platform 2026.2.23+*

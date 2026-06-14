@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Terraform project. The goal is to ensure consistent, secure, and modular infrastructure aligned with our conventions, cloud platform, and Terraform best practices.
+These instructions define how GitHub the AI assistant should assist with this Terraform project. The goal is to ensure consistent, secure, and modular infrastructure aligned with our conventions, cloud platform, and Terraform best practices.
 
 ## 🧠 Context
 
@@ -74,16 +74,16 @@ terraform/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a Terraform module that provisions an Azure App Service with a storage account and app settings.`
-- `Copilot, define input variables for a VPC module with cidr_block and public_subnets.`
-- `Copilot, write an output.tf that returns the public IP of an EC2 instance.`
-- `Copilot, generate a backend.tf file using Azure Storage Account with locking enabled.`
-- `Copilot, write a GitHub Actions workflow that runs terraform fmt, validate, plan on PR.`
+- `the AI assistant, create a Terraform module that provisions an Azure App Service with a storage account and app settings.`
+- `the AI assistant, define input variables for a VPC module with cidr_block and public_subnets.`
+- `the AI assistant, write an output.tf that returns the public IP of an EC2 instance.`
+- `the AI assistant, generate a backend.tf file using Azure Storage Account with locking enabled.`
+- `the AI assistant, write a GitHub Actions workflow that runs terraform fmt, validate, plan on PR.`
 
 ## 🔁 Iteration & Review
 
-- Review all Copilot-generated code with `terraform validate` and `terraform plan`.
-- Add inline comments before invoking Copilot to clarify resource behavior.
+- Review all AI assistant-generated code with `terraform validate` and `terraform plan`.
+- Add inline comments before invoking the AI assistant to clarify resource behavior.
 - Refactor repetitive blocks into modules.
 - Perform manual review of IAM, firewall, or public exposure changes.
 - Ensure all modules include `README.md`, `variables.tf`, `outputs.tf`.

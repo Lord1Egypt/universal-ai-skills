@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -70,16 +70,16 @@ migrations/
 
 ## 🧩 Example Prompts
 
-- `Copilot, implement a REST endpoint using Axum that returns a list of books as JSON.`
-- `Copilot, write a Rust function that parses a config file using Serde and returns a struct.`
-- `Copilot, create a struct for a User with id, name, and optional email, derived with Serde.`
-- `Copilot, write unit tests for the calculate_price function with edge cases.`
-- `Copilot, implement a CLI app using Clap that takes a --verbose flag and a file argument.`
+- `the AI assistant, implement a REST endpoint using Axum that returns a list of books as JSON.`
+- `the AI assistant, write a Rust function that parses a config file using Serde and returns a struct.`
+- `the AI assistant, create a struct for a User with id, name, and optional email, derived with Serde.`
+- `the AI assistant, write unit tests for the calculate_price function with edge cases.`
+- `the AI assistant, implement a CLI app using Clap that takes a --verbose flag and a file argument.`
 
 ## 🔁 Iteration & Review
 
-- Always review Copilot output with `clippy` and `rustfmt`.
-- Use inline comments to guide Copilot for generating clean and idiomatic code.
+- Always review the AI assistant output with `clippy` and `rustfmt`.
+- Use inline comments to guide the AI assistant for generating clean and idiomatic code.
 - Refactor boilerplate or verbose code into reusable utilities or traits.
 - Check all dependencies for security advisories via `cargo audit`.
 

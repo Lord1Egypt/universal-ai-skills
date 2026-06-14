@@ -35,7 +35,7 @@ This workflow provides a systematic approach to executing development tasks gene
 ### Step 2: Implementation
 
 1. **Plan the approach** - Outline implementation strategy
-2. **Implement the feature** - Write code using GitHub Copilot
+2. **Implement the feature** - Write code using GitHub the AI assistant
 3. **Test locally** - Verify functionality works as expected
 4. **Mark sub-task complete** - Update task list with `[x]`
 
@@ -91,7 +91,7 @@ git commit -m "feat: add payment validation logic" \
 - [x] **T001: Completed Task**
   - [x] Completed sub-task 1
   - [x] Completed sub-task 2
-  
+
 - [ ] **T002: In Progress Task**
   - [x] Completed sub-task 1
   - [ ] Current sub-task 2
@@ -110,7 +110,7 @@ Maintain an up-to-date list of all files created or modified:
 - `tests/auth.test.js` - Unit tests for authentication logic
 ```
 
-## GitHub Copilot Integration
+## GitHub the AI assistant Integration
 
 ### Effective Prompting
 

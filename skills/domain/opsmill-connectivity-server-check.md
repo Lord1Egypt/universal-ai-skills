@@ -4,6 +4,8 @@ impact: HIGH
 tags: connectivity, infrahubctl, server, info, offline, online
 ---
 
+# Connectivity Server Check
+
 ## Server Connectivity Check
 
 Impact: HIGH

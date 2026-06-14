@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: tag1, tag2
 ---
 
+#  Template
+
 ## Rule Title Here
 
 Impact: MEDIUM

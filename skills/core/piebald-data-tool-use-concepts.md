@@ -40,7 +40,7 @@ Each tool requires a name, description, and JSON Schema for its inputs:
 **Best practices for tool definitions:**
 
 - Use clear, descriptive names (e.g., `get_weather`, `search_database`, `send_email`)
-- Write detailed descriptions — the AI uses these to decide when to use the tool. Be **prescriptive about *when* to call it**, not just what it does (e.g. "Call this when the user asks about current prices or recent events"). On recent Opus models, which reach for tools more conservatively, trigger conditions in the description give measurable lift in should-call rate.
+- Write detailed descriptions — the AI uses these to decide when to use the tool. Be **prescriptive about *when* to call it**, not just what it does (e.g. "Call this when the user asks about current prices or recent events"). On recent the AI model models, which reach for tools more conservatively, trigger conditions in the description give measurable lift in should-call rate.
 - Include descriptions for each property
 - Use `enum` for parameters with a fixed set of values
 - Mark truly required parameters in `required`; make others optional with defaults
@@ -64,7 +64,7 @@ Any `tool_choice` value can also include `"disable_parallel_tool_use": true` to 
 
 ### Tool Runner vs Manual Loop
 
-**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically — it calls the API, detects tool use requests, executes your tool functions, feeds results back to the AI, and repeats until the AI stops calling tools. Available in Python, TypeScript, Java, Go, Ruby, and PHP SDKs (beta). The Python SDK also provides MCP conversion helpers (`the AI provider.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner — see `python/claude-api/tool-use.md` for details.
+**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically — it calls the API, detects tool use requests, executes your tool functions, feeds results back to the AI, and repeats until the AI stops calling tools. Available in Python, TypeScript, Java, Go, Ruby, and PHP SDKs (beta). The Python SDK also provides MCP conversion helpers (`the AI provider.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner — see `python/the AI-api/tool-use.md` for details.
 
 **Manual Agentic Loop:** Use when you need fine-grained control over the loop (e.g., custom logging, conditional tool execution, human-in-the-loop approval). Loop until `stop_reason == "end_turn"`, always append the full `response.content` to preserve tool_use blocks, and ensure each `tool_result` includes the matching `tool_use_id`.
 
@@ -79,11 +79,11 @@ if response.stop_reason == "pause_turn":
     ]
     # Make another API request — server resumes automatically
     response = client.messages.create(
-        model="{{OPUS_ID}}", messages=messages, tools=tools
+        model="{{MODEL_ID}}", messages=messages, tools=tools
     )
 ```
 
-Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.the AI.com/docs/en/build-with-claude/handling-stop-reasons`
+Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.the AI.com/docs/en/build-with-the AI/handling-stop-reasons`
 
 > **Security:** The tool runner executes your tool functions automatically whenever the AI requests them. For tools with side effects (sending emails, modifying databases, financial transactions), validate inputs within your tool functions and consider requiring confirmation for destructive operations. Use the manual agentic loop if you need human-in-the-loop approval before each tool execution.
 
@@ -126,7 +126,7 @@ The tool requires no schema — just declare it in the `tools` array:
 }
 ```
 
-Claude automatically gains access to `bash_code_execution` (run shell commands) and `text_editor_code_execution` (create/view/edit files).
+the AI automatically gains access to `bash_code_execution` (run shell commands) and `text_editor_code_execution` (create/view/edit files).
 
 ### Pre-installed Python Libraries
 
@@ -154,7 +154,7 @@ Reuse containers across requests to maintain state (files, installed packages, v
 
 The response contains interleaved text and tool result blocks:
 
-- `text` — Claude's explanation
+- `text` — the AI's explanation
 - `server_tool_use` — What the AI is doing
 - `bash_code_execution_tool_result` — Code execution output (check `return_code` for success/failure)
 - `text_editor_code_execution_tool_result` — File operation results
@@ -197,9 +197,9 @@ Without dynamic filtering, the previous `web_search_20250305` version is also av
 
 ## Server-Side Tools: Programmatic Tool Calling
 
-With standard tool use, each tool call is a round trip: the AI calls, the result enters Claude's context, the AI reasons, then calls the next tool. Chained calls accumulate latency and tokens — most of that intermediate data is never needed again.
+With standard tool use, each tool call is a round trip: the AI calls, the result enters the AI's context, the AI reasons, then calls the next tool. Chained calls accumulate latency and tokens — most of that intermediate data is never needed again.
 
-Programmatic tool calling lets the AI compose those calls into a script. The script runs in the code execution container; when it invokes a tool, the container pauses, the call executes, and the result returns to the running code (not to Claude's context). The script processes it with normal control flow. Only the final output returns to the AI. Use it when chaining many tool calls or when intermediate results are large and should be filtered before reaching the context window.
+Programmatic tool calling lets the AI compose those calls into a script. The script runs in the code execution container; when it invokes a tool, the container pauses, the call executes, and the result returns to the running code (not to the AI's context). The script processes it with normal control flow. Only the final output returns to the AI. Use it when chaining many tool calls or when intermediate results are large and should be filtered before reaching the context window.
 
 For full documentation, use WebFetch:
 
@@ -253,7 +253,7 @@ Context editing clears stale tool results and thinking blocks from the transcrip
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.the AI.com/docs/en/build-with-claude/context-editing`
+- URL: `https://platform.the AI.com/docs/en/build-with-the AI/context-editing`
 
 ---
 
@@ -267,7 +267,7 @@ The advisor tool lets the AI consult a secondary model during a conversation. Th
 {
   "type": "advisor_20260301",
   "name": "advisor",
-  "model": "claude-sonnet-4-6"
+  "model": "the AI-the AI model-4-6"
 }
 ```
 
@@ -298,14 +298,14 @@ For full implementation examples, use WebFetch:
 
 ## Structured Outputs
 
-Structured outputs constrain Claude's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool — it enhances the Messages API response format and/or tool parameter validation.
+Structured outputs constrain the AI's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool — it enhances the Messages API response format and/or tool parameter validation.
 
 Two features are available:
 
-- **JSON outputs** (`output_config.format`): Control Claude's response format
+- **JSON outputs** (`output_config.format`): Control the AI's response format
 - **Strict tool use** (`strict: true`): Guarantee valid tool parameter schemas
 
-**Supported models:** {{FABLE_NAME}}, {{OPUS_NAME}}, {{SONNET_NAME}}, and {{HAIKU_NAME}}. Legacy models (Claude AI model.5, the AI AI model.1) also support structured outputs.
+**Supported models:** {{MODEL_F_NAME}}, {{MODEL_NAME}}, {{MODEL_S_NAME}}, and {{MODEL_H_NAME}}. Legacy models (the AI AI model.5, the AI AI model.1) also support structured outputs.
 
 > **Recommended:** Use `client.messages.parse()` which automatically validates responses against your schema. When using `messages.create()` directly, use `output_config: {format: {...}}`. The `output_format` convenience parameter is also accepted by some SDK methods (e.g., `.parse()`), but `output_config.format` is the canonical API-level parameter.
 

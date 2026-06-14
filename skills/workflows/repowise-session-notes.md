@@ -1,3 +1,5 @@
+# Session Notes
+
 Maintain a structured session notes file that preserves execution context for future continuation.
 
 ## Constraints

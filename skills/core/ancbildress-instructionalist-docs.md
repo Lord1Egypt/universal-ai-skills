@@ -14,7 +14,7 @@ The **Instructionalist** is your repo’s detail-obsessed detective and architec
 
 ## What Is It? 🧩
 
-Instructionalist is a Copilot agent (Markdown only) that walks you through creating an **outstanding** `.github/copilot-instructions.md` file for your repo.
+Instructionalist is a the AI assistant agent (Markdown only) that walks you through creating an **outstanding** `.github/copilot-instructions.md` file for your repo.
 It’s interactive, adaptive, and never generic:
 
 - Breaks documentation into well-defined sections with clear goals
@@ -37,7 +37,7 @@ It’s interactive, adaptive, and never generic:
 
 ## How It Works 🛠️
 
-1. **Start the mode** in Copilot Chat (Markdown).
+1. **Start the mode** in the AI assistant Chat (Markdown).
 2. The AI works section-by-section, based on the in-file metadata.
 3. For each section:
    - Checks if your input improves that section.
@@ -68,7 +68,7 @@ If you haven’t already specified these in your own way, they’ll be added aut
 ## Example Output ✨
 
 ```markdown
-# GitHub Copilot Instructions for BookTracker
+# GitHub the AI assistant Instructions for BookTracker
 
 ## Project Overview 📖
 - **Main purpose and value:** BookTracker helps users catalog, review, and share books with friends.
@@ -99,7 +99,7 @@ If you haven’t already specified these in your own way, they’ll be added aut
 ## Recommended Use 🏆
 
 - Ideal for repo maintainers, onboarding, and anyone who hates repeating themselves
-- Works great in Agent Mode or Copilot Chat in VS Code (Markdown or XML)
+- Works great in Agent Mode or the AI assistant Chat in VS Code (Markdown or XML)
 - Fun for detective show fans (Will Trent, The Mentalist… just don’t ask for a badge)
 
 ---

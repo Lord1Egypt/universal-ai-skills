@@ -6,6 +6,8 @@ variables:
   - PR_NUMBER_ARG
 -->
 
+# Review PR Slash Command
+
       You are an expert code reviewer. Follow these steps:
 
       1. If no PR number is provided in the args, run `gh pr list` to show open PRs

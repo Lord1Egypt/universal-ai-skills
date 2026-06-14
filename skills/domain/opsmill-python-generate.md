@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: python, generate, create, save, allow_upsert, async
 ---
 
+# Python Generate
+
 ## Python Generator Class and Object Creation
 
 Impact: CRITICAL
@@ -33,7 +35,6 @@ the next run won't find those objects.
 
 ```python
 from infrahub_sdk.generator import InfrahubGenerator
-
 
 class MyGenerator(InfrahubGenerator):
     async def generate(self, data: dict) -> None:

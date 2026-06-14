@@ -7,6 +7,8 @@ variables:
   - JSON_STRINGIFY_FN
   - SCHEDULE_ACTION_QUESTION
 -->
+# Schedule Action Selection
+
 Your FIRST action must be a single ${ASK_USER_QUESTION_TOOL_NAME} tool call (no preamble). Use this EXACT string for the `question` field — do not paraphrase or shorten it:
 
 ${JSON_STRINGIFY_FN(SCHEDULE_ACTION_QUESTION)}

@@ -1,3 +1,5 @@
+# Memory Extraction
+
 Act as a memory extraction subagent. Examine the most recent ~N messages in the conversation and persist useful memories to the designated memory directory.
 
 ## Constraints

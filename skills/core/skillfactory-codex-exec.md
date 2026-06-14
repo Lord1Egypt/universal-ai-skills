@@ -1,29 +1,29 @@
-# /codex-exec - Execute Codex CLI Commands
+# /the AI coding agent-exec - Execute the AI coding agent CLI Commands
 
-**Easy wrapper for running Codex CLI commands from the AI coding agent with proper syntax.**
+**Easy wrapper for running the AI coding agent CLI commands from the AI coding agent with proper syntax.**
 
 ---
 
 ## Usage
 
 ```
-/codex-exec [analysis|edit|search|resume] "your task"
-/codex-exec --model [an AI model|an AI model-codex] "your task"
-/codex-exec --help
+/the AI coding agent-exec [analysis|edit|search|resume] "your task"
+/the AI coding agent-exec --model [an AI model|an AI model-the AI coding agent] "your task"
+/the AI coding agent-exec --help
 ```
 
 ---
 
 ## What This Command Does
 
-**Executes Codex CLI commands with**:
-- ✅ Correct syntax (always uses `codex exec`)
+**Executes the AI coding agent CLI commands with**:
+- ✅ Correct syntax (always uses `the AI coding agent exec`)
 - ✅ Intelligent model selection
 - ✅ Appropriate sandbox modes
 - ✅ High reasoning effort
 - ✅ Error handling
 
-**CRITICAL**: Always uses `codex exec` not plain `codex` (required for the AI coding agent environment)
+**CRITICAL**: Always uses `the AI coding agent exec` not plain `the AI coding agent` (required for the AI coding agent environment)
 
 ---
 
@@ -35,12 +35,12 @@ Safe code analysis without modifications.
 
 **Usage**:
 ```
-/codex-exec analysis "analyze security vulnerabilities"
+/the AI coding agent-exec analysis "analyze security vulnerabilities"
 ```
 
 **Executes**:
 ```bash
-codex exec -m an AI model -s read-only \
+the AI coding agent exec -m an AI model -s read-only \
   -c model_reasoning_effort=high \
   --skip-git-repo-check \
   "analyze security vulnerabilities"
@@ -61,12 +61,12 @@ Code editing and file modifications.
 
 **Usage**:
 ```
-/codex-exec edit "refactor main.py for async patterns"
+/the AI coding agent-exec edit "refactor main.py for async patterns"
 ```
 
 **Executes**:
 ```bash
-codex exec -m an AI model-codex -s workspace-write \
+the AI coding agent exec -m an AI model-the AI coding agent -s workspace-write \
   -c model_reasoning_effort=high \
   --full-auto \
   --skip-git-repo-check \
@@ -88,12 +88,12 @@ Tasks requiring latest information from the web.
 
 **Usage**:
 ```
-/codex-exec search "research latest Python async patterns"
+/the AI coding agent-exec search "research latest Python async patterns"
 ```
 
 **Executes**:
 ```bash
-codex exec -m an AI model -s read-only \
+the AI coding agent exec -m an AI model -s read-only \
   -c model_reasoning_effort=high \
   --search \
   --skip-git-repo-check \
@@ -111,16 +111,16 @@ codex exec -m an AI model -s read-only \
 
 ### Resume (Continue Session)
 
-Resume previous Codex session.
+Resume previous the AI coding agent session.
 
 **Usage**:
 ```
-/codex-exec resume
+/the AI coding agent-exec resume
 ```
 
 **Executes**:
 ```bash
-codex exec resume --last
+the AI coding agent exec resume --last
 ```
 
 **Use for**:
@@ -151,7 +151,7 @@ codex exec resume --last
 
 ---
 
-### an AI model-Codex (Code Specialized)
+### an AI model-the AI coding agent (Code Specialized)
 
 **Default for**: Edit tasks
 
@@ -175,7 +175,7 @@ codex exec resume --last
 
 **User**:
 ```
-/codex-exec analysis "analyze this codebase for security vulnerabilities"
+/the AI coding agent-exec analysis "analyze this codebase for security vulnerabilities"
 ```
 
 **What happens**:
@@ -187,7 +187,7 @@ codex exec resume --last
 
 **Output**:
 ```
-🚀 Executing Codex CLI command...
+🚀 Executing the AI coding agent CLI command...
 
 Security Analysis Report:
 - Found 3 SQL injection vulnerabilities
@@ -204,11 +204,11 @@ Security Analysis Report:
 
 **User**:
 ```
-/codex-exec edit "refactor database.py to use connection pooling"
+/the AI coding agent-exec edit "refactor database.py to use connection pooling"
 ```
 
 **What happens**:
-1. Uses an AI model-Codex (code specialized)
+1. Uses an AI model-the AI coding agent (code specialized)
 2. Workspace-write mode (can modify files)
 3. Full-auto enabled
 4. Refactors database.py
@@ -216,7 +216,7 @@ Security Analysis Report:
 
 **Output**:
 ```
-🚀 Executing Codex CLI command...
+🚀 Executing the AI coding agent CLI command...
 
 Refactored database.py:
 - Added connection pool (max_connections=20)
@@ -235,7 +235,7 @@ Files modified: database.py, tests/test_database.py
 
 **User**:
 ```
-/codex-exec search "compare FastAPI vs Flask for microservices"
+/the AI coding agent-exec search "compare FastAPI vs Flask for microservices"
 ```
 
 **What happens**:
@@ -246,7 +246,7 @@ Files modified: database.py, tests/test_database.py
 
 **Output**:
 ```
-🚀 Executing Codex CLI command...
+🚀 Executing the AI coding agent CLI command...
 
 Framework Comparison: FastAPI vs Flask
 
@@ -276,17 +276,17 @@ Recommendation: FastAPI for new microservices
 
 **User**:
 ```
-/codex-exec resume
+/the AI coding agent-exec resume
 ```
 
 **What happens**:
-1. Resumes last Codex session
+1. Resumes last the AI coding agent session
 2. Continues context from previous work
 3. No need to repeat information
 
 **Output**:
 ```
-🚀 Resuming last Codex session...
+🚀 Resuming last the AI coding agent session...
 
 Continuing from: "refactor database.py"
 
@@ -300,17 +300,17 @@ Ready to continue. What's next?
 ### Custom Model Selection
 
 ```
-/codex-exec --model an AI model edit "task"
+/the AI coding agent-exec --model an AI model edit "task"
 ```
 
-Forces an AI model instead of default an AI model-Codex for edit tasks.
+Forces an AI model instead of default an AI model-the AI coding agent for edit tasks.
 
 ---
 
 ### Show Command Only (Dry Run)
 
 ```
-/codex-exec --dry-run analysis "task"
+/the AI coding agent-exec --dry-run analysis "task"
 ```
 
 Shows the command that would be executed without running it.
@@ -318,7 +318,7 @@ Shows the command that would be executed without running it.
 **Output**:
 ```
 Would execute:
-codex exec -m an AI model -s read-only \
+the AI coding agent exec -m an AI model -s read-only \
   -c model_reasoning_effort=high \
   --skip-git-repo-check \
   "task"
@@ -328,22 +328,22 @@ codex exec -m an AI model -s read-only \
 
 ## Troubleshooting
 
-### Error: "Codex CLI not found"
+### Error: "the AI coding agent CLI not found"
 
 **Solution**:
 ```bash
-# Install Codex CLI
-which codex  # Check if installed
-codex --version  # Verify works
+# Install the AI coding agent CLI
+which the AI coding agent  # Check if installed
+the AI coding agent --version  # Verify works
 ```
 
 ---
 
 ### Error: "stdout is not a terminal"
 
-**Cause**: Using plain `codex` instead of `codex exec`
+**Cause**: Using plain `the AI coding agent` instead of `the AI coding agent exec`
 
-**Solution**: This command automatically uses `codex exec` ✅
+**Solution**: This command automatically uses `the AI coding agent exec` ✅
 
 ---
 
@@ -354,10 +354,10 @@ codex --version  # Verify works
 **Solution**:
 ```
 # Break into smaller tasks
-/codex-exec analysis "analyze auth module only"
+/the AI coding agent-exec analysis "analyze auth module only"
 
 # Instead of
-/codex-exec analysis "analyze entire codebase"
+/the AI coding agent-exec analysis "analyze entire codebase"
 ```
 
 ---
@@ -368,11 +368,11 @@ codex --version  # Verify works
 
 **Solution**:
 ```
-# Use edit for coding tasks (auto-uses an AI model-codex)
-/codex-exec edit "implement feature"
+# Use edit for coding tasks (auto-uses an AI model-the AI coding agent)
+/the AI coding agent-exec edit "implement feature"
 
 # Or force model
-/codex-exec --model an AI model-codex "implement feature"
+/the AI coding agent-exec --model an AI model-the AI coding agent "implement feature"
 ```
 
 ---
@@ -394,12 +394,12 @@ codex --version  # Verify works
 
 ✅ **GOOD**:
 ```
-/codex-exec analysis "check auth.py for SQL injection vulnerabilities"
+/the AI coding agent-exec analysis "check auth.py for SQL injection vulnerabilities"
 ```
 
 ❌ **VAGUE**:
 ```
-/codex-exec analysis "check security"
+/the AI coding agent-exec analysis "check security"
 ```
 
 ---
@@ -409,14 +409,14 @@ codex --version  # Verify works
 **For large codebases**:
 ```
 # Break into modules
-/codex-exec analysis "analyze auth module security"
-/codex-exec analysis "analyze API module security"
+/the AI coding agent-exec analysis "analyze auth module security"
+/the AI coding agent-exec analysis "analyze API module security"
 ```
 
 **Not**:
 ```
 # Too broad
-/codex-exec analysis "analyze entire 100K line codebase"
+/the AI coding agent-exec analysis "analyze entire 100K line codebase"
 ```
 
 ---
@@ -425,22 +425,22 @@ codex --version  # Verify works
 
 ```
 # First task
-/codex-exec analysis "review authentication"
+/the AI coding agent-exec analysis "review authentication"
 
 [Review results]
 
 # Continue
-/codex-exec resume
+/the AI coding agent-exec resume
 → "Now check the authorization logic"
 ```
 
 ---
 
-## Comparison: the AI coding agent vs Codex CLI
+## Comparison: the AI coding agent vs the AI coding agent CLI
 
-| Feature | the AI coding agent | /codex-exec (via Codex CLI) |
+| Feature | the AI coding agent | /the AI coding agent-exec (via the AI coding agent CLI) |
 |---------|-------------|----------------------------|
-| Model | the AI Sonnet | an AI model / an AI model-Codex |
+| Model | the AI the AI model | an AI model / an AI model-the AI coding agent |
 | Context | 200K tokens | Varies |
 | Skills | Native support | Reference in prompts |
 | Agents | Native | Not applicable |
@@ -453,27 +453,27 @@ codex --version  # Verify works
 - Leveraging 200K context
 - Integrated workflow
 
-**Use /codex-exec when**:
+**Use /the AI coding agent-exec when**:
 - Want an AI model perspective
 - Testing multiple approaches
-- Specific Codex features needed
+- Specific the AI coding agent features needed
 - Team uses both tools
 
 ---
 
 ## Integration with Bridge Skill
 
-Works seamlessly with codex-cli-bridge:
+Works seamlessly with the AI coding agent-cli-bridge:
 
 ```
 # 1. Generate AGENTS.md
 /sync-agents-md
 
-# 2. Reference in Codex command
-/codex-exec analysis "Using AGENTS.md, review project structure"
+# 2. Reference in the AI coding agent command
+/the AI coding agent-exec analysis "Using AGENTS.md, review project structure"
 
 # 3. Use skill documentation
-/codex-exec "Using skill at path/to/SKILL.md, implement feature"
+/the AI coding agent-exec "Using skill at path/to/SKILL.md, implement feature"
 ```
 
 ---
@@ -481,10 +481,10 @@ Works seamlessly with codex-cli-bridge:
 ## Technical Details
 
 **Command Type**: Slash command wrapper
-**Skill Used**: codex-cli-bridge (codex_executor.py)
+**Skill Used**: the AI coding agent-cli-bridge (codex_executor.py)
 **Python Module**: CodexExecutor class
 **Timeout**: 5 minutes (300 seconds)
-**Models**: an AI model, an AI model-Codex
+**Models**: an AI model, an AI model-the AI coding agent
 **Sandbox Modes**: read-only, workspace-write, danger-full-access
 
 ---
@@ -493,28 +493,28 @@ Works seamlessly with codex-cli-bridge:
 
 | Command | Model | Sandbox | Use Case |
 |---------|-------|---------|----------|
-| `/codex-exec analysis "task"` | an AI model | read-only | Safe analysis |
-| `/codex-exec edit "task"` | an AI model-codex | workspace-write | Code editing |
-| `/codex-exec search "task"` | an AI model | read-only | Web research |
-| `/codex-exec resume` | Previous | Previous | Continue session |
-| `/codex-exec --model an AI model "task"` | an AI model | read-only | Force model |
-| `/codex-exec --dry-run "task"` | - | - | Show command |
+| `/the AI coding agent-exec analysis "task"` | an AI model | read-only | Safe analysis |
+| `/the AI coding agent-exec edit "task"` | an AI model-the AI coding agent | workspace-write | Code editing |
+| `/the AI coding agent-exec search "task"` | an AI model | read-only | Web research |
+| `/the AI coding agent-exec resume` | Previous | Previous | Continue session |
+| `/the AI coding agent-exec --model an AI model "task"` | an AI model | read-only | Force model |
+| `/the AI coding agent-exec --dry-run "task"` | - | - | Show command |
 
 ---
 
 ## See Also
 
 - **`/sync-agents-md`**: Regenerate AGENTS.md
-- **codex-cli-bridge SKILL.md**: Complete skill documentation
+- **the AI coding agent-cli-bridge SKILL.md**: Complete skill documentation
 - **codex_executor.py**: Python implementation
-- **Codex CLI Docs**: https://github.com/the AI provider/codex
+- **the AI coding agent CLI Docs**: https://github.com/the AI provider/the AI coding agent
 
 ---
 
 **Version**: 1.0.0
 **Last Updated**: 2025-10-30
-**Maintained For**: Easy Codex CLI execution from the AI coding agent
+**Maintained For**: Easy the AI coding agent CLI execution from the AI coding agent
 
 ---
 
-**Execute Codex commands the right way!** 🚀
+**Execute the AI coding agent commands the right way!** 🚀

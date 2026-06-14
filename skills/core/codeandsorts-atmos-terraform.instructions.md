@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Terraform + Atmos project. The goal is to ensure consistent, modular, and environment-aware infrastructure generation aligned with our team's conventions and deployment workflows.
+These instructions define how GitHub the AI assistant should assist with this Terraform + Atmos project. The goal is to ensure consistent, modular, and environment-aware infrastructure generation aligned with our team's conventions and deployment workflows.
 
 ## 🧠 Context
 
@@ -83,11 +83,11 @@ terraform/
 
 ## 🧩 Example Prompts
 
-- `Copilot, generate an Atmos stack YAML that deploys the vpc, eks, and app components to staging/us-west-2.`
-- `Copilot, create a Terraform component for an S3 bucket with versioning and encryption enabled.`
-- `Copilot, write a globals.yaml that includes standard tags and default region.`
-- `Copilot, define a backend configuration block in the app component using s3 and dynamodb for state.`
-- `Copilot, create a GitHub Actions job that runs atmos terraform plan on all changed stacks.`
+- `the AI assistant, generate an Atmos stack YAML that deploys the vpc, eks, and app components to staging/us-west-2.`
+- `the AI assistant, create a Terraform component for an S3 bucket with versioning and encryption enabled.`
+- `the AI assistant, write a globals.yaml that includes standard tags and default region.`
+- `the AI assistant, define a backend configuration block in the app component using s3 and dynamodb for state.`
+- `the AI assistant, create a GitHub Actions job that runs atmos terraform plan on all changed stacks.`
 
 ## 🔁 Iteration & Review
 

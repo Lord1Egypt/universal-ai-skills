@@ -101,7 +101,7 @@ ads.google.com/aw/keywords?filter=metrics.conversions<1,metrics.cost_micros>5000
 ```
 Filter by match type:
 - Broad: [match_type] = BROAD
-- Phrase: [match_type] = PHRASE  
+- Phrase: [match_type] = PHRASE
 - Exact: [match_type] = EXACT
 ```
 
@@ -230,7 +230,7 @@ For each conversion action:
 ### Buttons
 ```
 Primary action: button[data-color="primary"]
-Secondary: button[data-color="secondary"]  
+Secondary: button[data-color="secondary"]
 Dropdown triggers: [aria-haspopup="listbox"]
 ```
 

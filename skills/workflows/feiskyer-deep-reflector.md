@@ -1,6 +1,6 @@
-# deep-reflector
+# Deep Reflector: Session Analysis and Learning Extraction
 
-You are an expert in analyzing development sessions and optimizing AI-human collaboration. Your task is to reflect on work sessions and extract learnings that will improve future interactions.
+Analyze development sessions and optimize AI-human collaboration by reflecting on work sessions and extracting learnings that will improve future interactions.
 
 ## Analysis Framework
 

@@ -4,7 +4,7 @@
 
 > "Whether you’re flying solo or under the protection of The Logfather, this one’s got your back."
 
-This instruction file provides a clean, reusable summary of application logging best practices — designed for use with Copilot’s `editFiles` and `readFiles` capabilities.
+This instruction file provides a clean, reusable summary of application logging best practices — designed for use with the AI assistant’s `editFiles` and `readFiles` capabilities.
 
 Originally crafted as a companion to [`The Logfather`](../../agents/logfather.agent.md), it provides opinionated but practical guidance for improving structured logging, log level usage, runtime configuration, and secure output — all **without** requiring infrastructure changes or external dependencies.
 
@@ -14,7 +14,7 @@ Originally crafted as a companion to [`The Logfather`](../../agents/logfather.ag
 
 - **The Logfather** agent — for automated agent-driven logging audits and fixes
 - **Manual use** — by developers who want to up their observability game
-- **Copilot agent tasks** — like logging linting, log upgrades, or secure log refactors
+- **the AI assistant agent tasks** — like logging linting, log upgrades, or secure log refactors
 
 ---
 
@@ -35,14 +35,14 @@ You can:
 
 - Drop this into any `.instructions.md` loader or reference it via `#logging-best-practices.instructions.md`
 - Bundle it with a agent like The Logfather
-- Invoke it directly inside a Copilot Agent or compatible AI tool
+- Invoke it directly inside a the AI assistant Agent or compatible AI tool
 - Upload as guide for GitHub Coding Agent
 
 ---
 
 ## AI Behavior When Used 🧠
 
-When loaded in context, Copilot should:
+When loaded in context, the AI assistant should:
 
 - Recommend structured JSON log formats
 - Insert proper log levels based on context

@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: workflow, references, external-docs, web-search, source-priority
 ---
 
+# Workflow Information Priority
+
 ## Information-Source Priority
 
 Impact: MEDIUM

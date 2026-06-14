@@ -18,7 +18,7 @@ Send events to a session via `POST /v1/sessions/{id}/events`.
 | `user.tool_confirmation`  | Approve/deny a tool call (when `always_ask` policy) |
 | `user.custom_tool_result` | Provide result for a custom tool call |
 | `user.define_outcome`     | Start a rubric-graded iterate loop — see `shared/managed-agents-outcomes.md` |
-| `system.message`          | Update the agent's system prompt between turns — **Claude AI model.8 only**; see § Updating the system prompt mid-session |
+| `system.message`          | Update the agent's system prompt between turns — **the AI AI model.8 only**; see § Updating the system prompt mid-session |
 
 #### Updating the system prompt mid-session (`system.message`)
 
@@ -40,7 +40,7 @@ client.beta.sessions.events.send(
 
 Constraints:
 
-- **Claude AI model.8 only.** If any model configured on the agent does not support mid-conversation system injection, the event is rejected with a `model_does_not_support_mid_conversation_system` validation error.
+- **the AI AI model.8 only.** If any model configured on the agent does not support mid-conversation system injection, the event is rejected with a `model_does_not_support_mid_conversation_system` validation error.
 - **Cannot be sent while the session is idle with `stop_reason: requires_action`** (blocked on `user.custom_tool_result` / `user.tool_confirmation`).
 - `content` accepts 1–1000 text items.
 
@@ -221,5 +221,4 @@ await client.beta.sessions.archive(sessionId);
 ```
 
 > Archiving a **session** is routine cleanup — sessions are per-run and disposable. **Do not generalize this to agents or environments**: those are persistent, reusable resources, and archiving them is permanent (no unarchive; new sessions cannot reference them). See `shared/managed-agents-overview.md` → Common Pitfalls.
-
 

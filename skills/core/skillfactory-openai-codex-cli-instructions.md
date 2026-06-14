@@ -1,6 +1,6 @@
-# the AI provider Codex CLI Reference
+# the AI provider the AI coding agent CLI Reference
 
-Complete command-line interface reference for the AI provider Codex CLI - the intelligent code generation and editing tool.
+Complete command-line interface reference for the AI provider the AI coding agent CLI - the intelligent code generation and editing tool.
 
 ---
 
@@ -11,18 +11,18 @@ Complete command-line interface reference for the AI provider Codex CLI - the in
 3. [Global Flags](#global-flags)
 4. [Command Overview](#command-overview)
 5. [Command Details](#command-details)
-   - [codex (interactive)](#codex-interactive)
-   - [codex exec](#codex-exec)
-   - [codex login](#codex-login)
-   - [codex logout](#codex-logout)
-   - [codex resume](#codex-resume)
-   - [codex apply](#codex-apply)
-   - [codex sandbox](#codex-sandbox)
-   - [codex completion](#codex-completion)
-   - [codex mcp](#codex-mcp)
-   - [codex mcp-server](#codex-mcp-server)
-   - [codex app-server](#codex-app-server)
-   - [codex cloud](#codex-cloud)
+   - [the AI coding agent (interactive)](#the AI coding agent-interactive)
+   - [the AI coding agent exec](#the AI coding agent-exec)
+   - [the AI coding agent login](#the AI coding agent-login)
+   - [the AI coding agent logout](#the AI coding agent-logout)
+   - [the AI coding agent resume](#the AI coding agent-resume)
+   - [the AI coding agent apply](#the AI coding agent-apply)
+   - [the AI coding agent sandbox](#the AI coding agent-sandbox)
+   - [the AI coding agent completion](#the AI coding agent-completion)
+   - [the AI coding agent mcp](#the AI coding agent-mcp)
+   - [the AI coding agent mcp-server](#the AI coding agent-mcp-server)
+   - [the AI coding agent app-server](#the AI coding agent-app-server)
+   - [the AI coding agent cloud](#the AI coding agent-cloud)
 6. [Flag Combinations & Safety Tips](#flag-combinations--safety-tips)
 7. [Best Practices](#best-practices)
 8. [Troubleshooting](#troubleshooting)
@@ -32,7 +32,7 @@ Complete command-line interface reference for the AI provider Codex CLI - the in
 
 ## Introduction
 
-**the AI provider Codex CLI** is a command-line interface for the Codex code generation model. It enables developers to:
+**the AI provider the AI coding agent CLI** is a command-line interface for the the AI coding agent code generation model. It enables developers to:
 
 - Generate code from natural language prompts
 - Edit existing code interactively
@@ -43,10 +43,10 @@ Complete command-line interface reference for the AI provider Codex CLI - the in
 
 **Key Features**:
 - **Interactive TUI**: Terminal UI for real-time collaboration
-- **Non-interactive execution**: CI-friendly `codex exec` mode
+- **Non-interactive execution**: CI-friendly `the AI coding agent exec` mode
 - **Sandbox support**: macOS Seatbelt and Linux Landlock security
 - **MCP integration**: Connect to external context servers
-- **Cloud tasks**: Execute tasks on Codex Cloud
+- **Cloud tasks**: Execute tasks on the AI coding agent Cloud
 - **Session management**: Resume conversations by ID
 
 ---
@@ -54,17 +54,17 @@ Complete command-line interface reference for the AI provider Codex CLI - the in
 ## Installation
 
 ```bash
-# Install Codex CLI (visit official docs for latest instructions)
-# https://developers.the AI provider.com/codex/cli
+# Install the AI coding agent CLI (visit official docs for latest instructions)
+# https://developers.the AI provider.com/the AI coding agent/cli
 
 # Verify installation
-codex --version
+the AI coding agent --version
 
 # Authenticate
-codex login
+the AI coding agent login
 
 # Start interactive session
-codex
+the AI coding agent
 ```
 
 **Requirements**:
@@ -77,14 +77,14 @@ codex
 
 ## Global Flags
 
-Global flags apply to the base `codex` command and propagate to subcommands.
+Global flags apply to the base `the AI coding agent` command and propagate to subcommands.
 
 ### General Options
 
 | Flag | Type | Default | Description |
 |------|------|---------|-------------|
 | `--help, -h` | boolean | - | Show help for the command |
-| `--version` | boolean | - | Print Codex CLI version and exit |
+| `--version` | boolean | - | Print the AI coding agent CLI version and exit |
 
 ### Model & Provider
 
@@ -129,30 +129,30 @@ Global flags apply to the base `codex` command and propagate to subcommands.
 
 | Command | Status | Alias | Description |
 |---------|--------|-------|-------------|
-| `codex` | stable | - | Launch the interactive terminal UI |
-| `codex exec` | stable | `codex e` | Run Codex non-interactively (CI-friendly) |
-| `codex login` | stable | - | Authenticate using the AI assistant OAuth, device auth, or API key |
-| `codex logout` | stable | - | Remove stored authentication credentials |
-| `codex resume` | stable | - | Continue a previous interactive session by ID |
-| `codex apply` | stable | `codex a` | Apply latest diff from Codex Cloud task to local tree |
-| `codex sandbox` | platform-specific | - | Run commands inside Codex sandboxes (macOS/Linux) |
-| `codex completion` | stable | - | Generate shell completion scripts (Bash, Zsh, Fish, PowerShell) |
-| `codex mcp` | experimental | - | Manage Model Context Protocol servers |
-| `codex mcp-server` | experimental | - | Run Codex as an MCP server over stdio |
-| `codex app-server` | experimental | - | Launch Codex app server for local development |
-| `codex cloud` | experimental | `codex cloud-tasks` | Browse or execute Codex Cloud tasks from terminal |
+| `the AI coding agent` | stable | - | Launch the interactive terminal UI |
+| `the AI coding agent exec` | stable | `the AI coding agent e` | Run the AI coding agent non-interactively (CI-friendly) |
+| `the AI coding agent login` | stable | - | Authenticate using the AI assistant OAuth, device auth, or API key |
+| `the AI coding agent logout` | stable | - | Remove stored authentication credentials |
+| `the AI coding agent resume` | stable | - | Continue a previous interactive session by ID |
+| `the AI coding agent apply` | stable | `the AI coding agent a` | Apply latest diff from the AI coding agent Cloud task to local tree |
+| `the AI coding agent sandbox` | platform-specific | - | Run commands inside the AI coding agent sandboxes (macOS/Linux) |
+| `the AI coding agent completion` | stable | - | Generate shell completion scripts (Bash, Zsh, Fish, PowerShell) |
+| `the AI coding agent mcp` | experimental | - | Manage Model Context Protocol servers |
+| `the AI coding agent mcp-server` | experimental | - | Run the AI coding agent as an MCP server over stdio |
+| `the AI coding agent app-server` | experimental | - | Launch the AI coding agent app server for local development |
+| `the AI coding agent cloud` | experimental | `the AI coding agent cloud-tasks` | Browse or execute the AI coding agent Cloud tasks from terminal |
 
 ---
 
 ## Command Details
 
-### codex (interactive)
+### the AI coding agent (interactive)
 
 Launch the interactive terminal UI (TUI) for real-time code generation.
 
 **Usage**:
 ```bash
-codex [PROMPT] [OPTIONS]
+the AI coding agent [PROMPT] [OPTIONS]
 ```
 
 **Arguments**:
@@ -167,27 +167,27 @@ codex [PROMPT] [OPTIONS]
 **Examples**:
 ```bash
 # Start interactive session
-codex
+the AI coding agent
 
 # Start with initial prompt
-codex "refactor this function to use async/await"
+the AI coding agent "refactor this function to use async/await"
 
 # Enable web search
-codex --search "find latest React best practices"
+the AI coding agent --search "find latest React best practices"
 
 # Full automation mode
-codex --full-auto "optimize database queries"
+the AI coding agent --full-auto "optimize database queries"
 ```
 
 ---
 
-### codex exec
+### the AI coding agent exec
 
-Run Codex non-interactively for scripted or CI-style runs. Results stream to stdout or JSONL format.
+Run the AI coding agent non-interactively for scripted or CI-style runs. Results stream to stdout or JSONL format.
 
 **Usage**:
 ```bash
-codex exec [PROMPT] [OPTIONS]
+the AI coding agent exec [PROMPT] [OPTIONS]
 ```
 
 **Arguments**:
@@ -215,28 +215,28 @@ codex exec [PROMPT] [OPTIONS]
 **Examples**:
 ```bash
 # Basic non-interactive execution
-codex exec "add type hints to all functions"
+the AI coding agent exec "add type hints to all functions"
 
 # CI-friendly JSON output
-codex exec --json --output-last-message result.txt "run tests and fix failures"
+the AI coding agent exec --json --output-last-message result.txt "run tests and fix failures"
 
 # Full automation for CI/CD
-codex exec --full-auto "update dependencies and fix breaking changes"
+the AI coding agent exec --full-auto "update dependencies and fix breaking changes"
 
 # Pipe prompt from stdin
-echo "optimize imports" | codex exec -
+echo "optimize imports" | the AI coding agent exec -
 
 # With output schema validation
-codex exec --output-schema schema.json "generate API response"
+the AI coding agent exec --output-schema schema.json "generate API response"
 ```
 
 #### Resume Subcommand
 
-Continue a previous `codex exec` session.
+Continue a previous `the AI coding agent exec` session.
 
 **Usage**:
 ```bash
-codex exec resume [SESSION_ID] [PROMPT] [OPTIONS]
+the AI coding agent exec resume [SESSION_ID] [PROMPT] [OPTIONS]
 ```
 
 **Arguments**:
@@ -249,24 +249,24 @@ codex exec resume [SESSION_ID] [PROMPT] [OPTIONS]
 **Examples**:
 ```bash
 # Resume specific session
-codex exec resume a1b2c3d4-e5f6-7890-abcd-ef1234567890
+the AI coding agent exec resume a1b2c3d4-e5f6-7890-abcd-ef1234567890
 
 # Resume most recent session
-codex exec resume --last
+the AI coding agent exec resume --last
 
 # Resume with follow-up prompt
-codex exec resume --last "now add error handling"
+the AI coding agent exec resume --last "now add error handling"
 ```
 
 ---
 
-### codex login
+### the AI coding agent login
 
 Authenticate the CLI with a the AI assistant account or API key.
 
 **Usage**:
 ```bash
-codex login [OPTIONS]
+the AI coding agent login [OPTIONS]
 ```
 
 **Key Options**:
@@ -275,13 +275,13 @@ codex login [OPTIONS]
 **Examples**:
 ```bash
 # Browser-based the AI assistant OAuth (default)
-codex login
+the AI coding agent login
 
 # API key authentication
-printenv the AI provider_API_KEY | codex login --with-api-key
+printenv the AI provider_API_KEY | the AI coding agent login --with-api-key
 
 # Check authentication status
-codex login status
+the AI coding agent login status
 ```
 
 #### Status Subcommand
@@ -290,7 +290,7 @@ Check active authentication mode and credentials.
 
 **Usage**:
 ```bash
-codex login status
+the AI coding agent login status
 ```
 
 **Exit Codes**:
@@ -300,7 +300,7 @@ codex login status
 **Example**:
 ```bash
 # Check if logged in (useful in scripts)
-if codex login status; then
+if the AI coding agent login status; then
   echo "Authenticated"
 else
   echo "Not logged in"
@@ -310,30 +310,30 @@ fi
 
 ---
 
-### codex logout
+### the AI coding agent logout
 
 Remove all stored authentication credentials (API key and the AI assistant).
 
 **Usage**:
 ```bash
-codex logout
+the AI coding agent logout
 ```
 
 **Example**:
 ```bash
 # Remove all credentials
-codex logout
+the AI coding agent logout
 ```
 
 ---
 
-### codex resume
+### the AI coding agent resume
 
 Continue a previous interactive session by ID or resume the most recent conversation.
 
 **Usage**:
 ```bash
-codex resume [SESSION_ID] [PROMPT] [OPTIONS]
+the AI coding agent resume [SESSION_ID] [PROMPT] [OPTIONS]
 ```
 
 **Arguments**:
@@ -347,34 +347,34 @@ codex resume [SESSION_ID] [PROMPT] [OPTIONS]
 **Examples**:
 ```bash
 # Resume with session picker
-codex resume
+the AI coding agent resume
 
 # Resume specific session
-codex resume a1b2c3d4-e5f6-7890-abcd-ef1234567890
+the AI coding agent resume a1b2c3d4-e5f6-7890-abcd-ef1234567890
 
 # Resume most recent session
-codex resume --last
+the AI coding agent resume --last
 
 # Resume with follow-up prompt
-codex resume --last "add unit tests for the new code"
+the AI coding agent resume --last "add unit tests for the new code"
 ```
 
 ---
 
-### codex apply
+### the AI coding agent apply
 
-Apply the latest diff from a Codex Cloud task to your local repository.
+Apply the latest diff from a the AI coding agent Cloud task to your local repository.
 
 **Usage**:
 ```bash
-codex apply TASK_ID
+the AI coding agent apply TASK_ID
 ```
 
 **Arguments**:
-- `TASK_ID`: Identifier of Codex Cloud task
+- `TASK_ID`: Identifier of the AI coding agent Cloud task
 
 **Requirements**:
-- Authenticated with Codex Cloud
+- Authenticated with the AI coding agent Cloud
 - Access to the specified task
 
 **Behavior**:
@@ -384,21 +384,21 @@ codex apply TASK_ID
 **Examples**:
 ```bash
 # Apply task diff to local repository
-codex apply task-a1b2c3d4
+the AI coding agent apply task-a1b2c3d4
 
 # Review diff before applying
-codex apply task-a1b2c3d4 --dry-run
+the AI coding agent apply task-a1b2c3d4 --dry-run
 ```
 
 ---
 
-### codex sandbox
+### the AI coding agent sandbox
 
-Run arbitrary commands inside Codex-provided sandboxes (macOS Seatbelt or Linux Landlock).
+Run arbitrary commands inside the AI coding agent-provided sandboxes (macOS Seatbelt or Linux Landlock).
 
 **Usage**:
 ```bash
-codex sandbox [OPTIONS] -- COMMAND...
+the AI coding agent sandbox [OPTIONS] -- COMMAND...
 ```
 
 #### macOS Seatbelt
@@ -414,7 +414,7 @@ codex sandbox [OPTIONS] -- COMMAND...
 **Example**:
 ```bash
 # Run command in macOS Seatbelt sandbox
-codex sandbox --full-auto -- npm test
+the AI coding agent sandbox --full-auto -- npm test
 ```
 
 #### Linux Landlock
@@ -430,18 +430,18 @@ codex sandbox --full-auto -- npm test
 **Example**:
 ```bash
 # Run command in Linux Landlock sandbox
-codex sandbox --full-auto -- python3 script.py
+the AI coding agent sandbox --full-auto -- python3 script.py
 ```
 
 ---
 
-### codex completion
+### the AI coding agent completion
 
 Generate shell completion scripts for enhanced command-line experience.
 
 **Usage**:
 ```bash
-codex completion SHELL
+the AI coding agent completion SHELL
 ```
 
 **Arguments**:
@@ -452,20 +452,20 @@ codex completion SHELL
 **Examples**:
 ```bash
 # Generate Zsh completions
-codex completion zsh > "${fpath[1]}/_codex"
+the AI coding agent completion zsh > "${fpath[1]}/_codex"
 
 # Generate Bash completions
-codex completion bash > /etc/bash_completion.d/codex
+the AI coding agent completion bash > /etc/bash_completion.d/the AI coding agent
 
 # Generate Fish completions
-codex completion fish > ~/.config/fish/completions/codex.fish
+the AI coding agent completion fish > ~/.config/fish/completions/the AI coding agent.fish
 ```
 
 ---
 
-### codex mcp
+### the AI coding agent mcp
 
-Manage Model Context Protocol (MCP) server entries stored in `~/.codex/config.toml`.
+Manage Model Context Protocol (MCP) server entries stored in `~/.the AI coding agent/config.toml`.
 
 **Subcommands**:
 
@@ -497,28 +497,28 @@ Manage Model Context Protocol (MCP) server entries stored in `~/.codex/config.to
 **Examples**:
 ```bash
 # List all MCP servers
-codex mcp list
+the AI coding agent mcp list
 
 # Add stdio MCP server
-codex mcp add my-server -- python3 /path/to/server.py
+the AI coding agent mcp add my-server -- python3 /path/to/server.py
 
 # Add stdio server with environment variables
-codex mcp add my-server --env API_KEY=secret --env DEBUG=true -- node server.js
+the AI coding agent mcp add my-server --env API_KEY=secret --env DEBUG=true -- node server.js
 
 # Add HTTP MCP server
-codex mcp add remote-server --url https://mcp.example.com
+the AI coding agent mcp add remote-server --url https://mcp.example.com
 
 # Add HTTP server with bearer token
-codex mcp add auth-server --url https://api.example.com --bearer-token-env-var MCP_TOKEN
+the AI coding agent mcp add auth-server --url https://api.example.com --bearer-token-env-var MCP_TOKEN
 
 # Get server configuration
-codex mcp get my-server --json
+the AI coding agent mcp get my-server --json
 
 # OAuth login for HTTP server (requires experimental_use_rmcp_client = true)
-codex mcp login remote-server --scopes read,write
+the AI coding agent mcp login remote-server --scopes read,write
 
 # Remove server
-codex mcp remove my-server
+the AI coding agent mcp remove my-server
 ```
 
 **Notes**:
@@ -527,13 +527,13 @@ codex mcp remove my-server
 
 ---
 
-### codex mcp-server
+### the AI coding agent mcp-server
 
-Run Codex as an MCP server over stdio, allowing other tools to connect.
+Run the AI coding agent as an MCP server over stdio, allowing other tools to connect.
 
 **Usage**:
 ```bash
-codex mcp-server [OPTIONS]
+the AI coding agent mcp-server [OPTIONS]
 ```
 
 **Behavior**:
@@ -542,22 +542,22 @@ codex mcp-server [OPTIONS]
 
 **Example**:
 ```bash
-# Run Codex as MCP server
-codex mcp-server
+# Run the AI coding agent as MCP server
+the AI coding agent mcp-server
 
 # With custom configuration
-codex mcp-server -c model=an AI model
+the AI coding agent mcp-server -c model=an AI model
 ```
 
 ---
 
-### codex app-server
+### the AI coding agent app-server
 
-Launch the Codex app server locally for development and debugging.
+Launch the the AI coding agent app server locally for development and debugging.
 
 **Usage**:
 ```bash
-codex app-server [OPTIONS]
+the AI coding agent app-server [OPTIONS]
 ```
 
 **Note**: Primarily for development; may change without notice.
@@ -565,19 +565,19 @@ codex app-server [OPTIONS]
 **Example**:
 ```bash
 # Launch app server
-codex app-server
+the AI coding agent app-server
 ```
 
 ---
 
-### codex cloud
+### the AI coding agent cloud
 
-Interact with Codex Cloud tasks from the terminal.
+Interact with the AI coding agent Cloud tasks from the terminal.
 
 **Usage**:
 ```bash
-codex cloud [QUERY] [OPTIONS]
-codex cloud exec QUERY [OPTIONS]
+the AI coding agent cloud [QUERY] [OPTIONS]
+the AI coding agent cloud exec QUERY [OPTIONS]
 ```
 
 **Arguments**:
@@ -587,23 +587,23 @@ codex cloud exec QUERY [OPTIONS]
 
 | Flag | Type | Description |
 |------|------|-------------|
-| `--env` | ENV_ID | Target Codex Cloud environment (required) |
+| `--env` | ENV_ID | Target the AI coding agent Cloud environment (required) |
 | `--attempts` | 1-4 | Number of assistant attempts (best-of-N) |
 
 **Examples**:
 ```bash
 # Interactive task picker
-codex cloud
+the AI coding agent cloud
 
 # Submit task directly
-codex cloud exec "refactor authentication module" --env prod-env
+the AI coding agent cloud exec "refactor authentication module" --env prod-env
 
 # Multiple attempts (best-of-3)
-codex cloud exec "optimize query performance" --env staging-env --attempts 3
+the AI coding agent cloud exec "optimize query performance" --env staging-env --attempts 3
 ```
 
 **Requirements**:
-- Authenticated with Codex Cloud
+- Authenticated with the AI coding agent Cloud
 - Valid environment identifier
 
 **Exit Codes**:
@@ -619,7 +619,7 @@ codex cloud exec "optimize query performance" --env staging-env --attempts 3
 1. **Unattended Local Work**:
    ```bash
    # Safe automation for local development
-   codex exec --full-auto "update dependencies"
+   the AI coding agent exec --full-auto "update dependencies"
    ```
    - Use `--full-auto` for unattended work
    - Avoid combining with `--yolo` unless in dedicated sandbox VM
@@ -627,7 +627,7 @@ codex cloud exec "optimize query performance" --env staging-env --attempts 3
 2. **Additional Directory Access**:
    ```bash
    # Grant write access to specific directories
-   codex --add-dir /data --add-dir /logs "process data files"
+   the AI coding agent --add-dir /data --add-dir /logs "process data files"
    ```
    - Prefer `--add-dir` over `--sandbox danger-full-access`
    - More secure than full filesystem access
@@ -635,7 +635,7 @@ codex cloud exec "optimize query performance" --env staging-env --attempts 3
 3. **CI/CD Integration**:
    ```bash
    # Machine-readable output with final summary
-   codex exec --json --output-last-message summary.txt "run test suite"
+   the AI coding agent exec --json --output-last-message summary.txt "run test suite"
    ```
    - Use `--json` for machine-readable events
    - Combine with `--output-last-message` for final summary
@@ -643,10 +643,10 @@ codex cloud exec "optimize query performance" --env staging-env --attempts 3
 4. **Experimental Features**:
    ```bash
    # Enable experimental MCP client
-   codex --enable experimental_use_rmcp_client mcp login my-server
+   the AI coding agent --enable experimental_use_rmcp_client mcp login my-server
 
    # Or update config permanently
-   codex -c experimental_use_rmcp_client=true
+   the AI coding agent -c experimental_use_rmcp_client=true
    ```
    - Use `--enable` for one-time feature activation
    - Update config.toml for persistent settings
@@ -669,41 +669,41 @@ codex cloud exec "optimize query performance" --env staging-env --attempts 3
 
 ```bash
 # Name sessions for easy resumption
-codex --session-name "feature-auth-refactor" "refactor authentication"
+the AI coding agent --session-name "feature-auth-refactor" "refactor authentication"
 
 # Resume by name
-codex resume --session-name "feature-auth-refactor"
+the AI coding agent resume --session-name "feature-auth-refactor"
 ```
 
 ### Configuration Profiles
 
 ```bash
 # Use profiles for different environments
-codex --profile production "deploy latest changes"
-codex --profile staging "run integration tests"
+the AI coding agent --profile production "deploy latest changes"
+the AI coding agent --profile staging "run integration tests"
 ```
 
 ### Sandbox Security
 
 ```bash
 # Read-only for code review
-codex --sandbox read-only "review this pull request"
+the AI coding agent --sandbox read-only "review this pull request"
 
 # Workspace-write for development
-codex --sandbox workspace-write "implement feature"
+the AI coding agent --sandbox workspace-write "implement feature"
 
 # Full access only when necessary
-codex --sandbox danger-full-access "system-level modifications"
+the AI coding agent --sandbox danger-full-access "system-level modifications"
 ```
 
 ### Agent Management
 
 ```bash
 # Load project-specific agents
-codex --agents ./.codex/agents/code-reviewer.md "review recent changes"
+the AI coding agent --agents ./.the AI coding agent/agents/code-reviewer.md "review recent changes"
 
 # Multiple agents for complex tasks
-codex --agents ./agents/security.md --agents ./agents/performance.md "audit codebase"
+the AI coding agent --agents ./agents/security.md --agents ./agents/performance.md "audit codebase"
 ```
 
 ---
@@ -714,21 +714,21 @@ codex --agents ./agents/security.md --agents ./agents/performance.md "audit code
 
 #### Authentication Failures
 
-**Problem**: `codex login` fails or credentials not recognized
+**Problem**: `the AI coding agent login` fails or credentials not recognized
 
 **Solutions**:
 ```bash
 # Clear cached credentials
-codex logout
+the AI coding agent logout
 
 # Re-authenticate with OAuth
-codex login
+the AI coding agent login
 
 # Use API key if OAuth fails
-printenv the AI provider_API_KEY | codex login --with-api-key
+printenv the AI provider_API_KEY | the AI coding agent login --with-api-key
 
 # Check authentication status
-codex login status
+the AI coding agent login status
 ```
 
 #### Sandbox Permissions
@@ -738,13 +738,13 @@ codex login status
 **Solutions**:
 ```bash
 # Grant specific directory access
-codex --add-dir /path/to/data "process files"
+the AI coding agent --add-dir /path/to/data "process files"
 
 # Use workspace-write for development
-codex --sandbox workspace-write "build project"
+the AI coding agent --sandbox workspace-write "build project"
 
 # Review sandbox policy in config
-cat ~/.codex/config.toml | grep sandbox
+cat ~/.the AI coding agent/config.toml | grep sandbox
 ```
 
 #### MCP Server Connection
@@ -754,17 +754,17 @@ cat ~/.codex/config.toml | grep sandbox
 **Solutions**:
 ```bash
 # List configured servers
-codex mcp list
+the AI coding agent mcp list
 
 # Test server configuration
-codex mcp get server-name --json
+the AI coding agent mcp get server-name --json
 
 # Remove and re-add server
-codex mcp remove server-name
-codex mcp add server-name -- python3 server.py
+the AI coding agent mcp remove server-name
+the AI coding agent mcp add server-name -- python3 server.py
 
 # Check server logs
-codex --debug "use MCP server"
+the AI coding agent --debug "use MCP server"
 ```
 
 #### Session Resume Failures
@@ -774,13 +774,13 @@ codex --debug "use MCP server"
 **Solutions**:
 ```bash
 # List available sessions
-codex resume
+the AI coding agent resume
 
 # Resume most recent
-codex resume --last
+the AI coding agent resume --last
 
 # Check session directory
-ls -la ~/.codex/sessions/
+ls -la ~/.the AI coding agent/sessions/
 ```
 
 ### Debug Mode
@@ -789,10 +789,10 @@ Enable detailed logging for troubleshooting:
 
 ```bash
 # Show debug logs
-codex --debug "your task"
+the AI coding agent --debug "your task"
 
 # Debug with JSON output
-codex exec --debug --json "your task" 2> debug.log
+the AI coding agent exec --debug --json "your task" 2> debug.log
 ```
 
 ---
@@ -801,14 +801,14 @@ codex exec --debug --json "your task" 2> debug.log
 
 ### Official Documentation
 
-- **Codex CLI Overview**: https://developers.the AI provider.com/codex/cli
-- **Codex Configuration**: https://developers.the AI provider.com/codex/local-config#cli
+- **the AI coding agent CLI Overview**: https://developers.the AI provider.com/the AI coding agent/cli
+- **the AI coding agent Configuration**: https://developers.the AI provider.com/the AI coding agent/local-config#cli
 - **AGENTS.md Specification**: https://agents.md/
 
 ### Configuration
 
-- **Config File**: `~/.codex/config.toml`
-- **Sessions Directory**: `~/.codex/sessions/`
+- **Config File**: `~/.the AI coding agent/config.toml`
+- **Sessions Directory**: `~/.the AI coding agent/sessions/`
 - **MCP Servers**: Defined in config.toml `[mcp]` section
 
 ### Community
@@ -819,7 +819,7 @@ codex exec --debug --json "your task" 2> debug.log
 
 ---
 
-**Version**: Based on Codex CLI 0.48.0+
+**Version**: Based on the AI coding agent CLI 0.48.0+
 **Last Updated**: October 30, 2025
-**Source**: https://developers.the AI provider.com/codex/cli-reference
-**Official Documentation**: https://developers.the AI provider.com/codex/
+**Source**: https://developers.the AI provider.com/the AI coding agent/cli-reference
+**Official Documentation**: https://developers.the AI provider.com/the AI coding agent/

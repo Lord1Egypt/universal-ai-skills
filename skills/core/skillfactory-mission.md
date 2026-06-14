@@ -93,7 +93,7 @@ Become the industry standard for AI agent and skill development, with thousands 
 ### Primary Audiences
 
 #### 1. Individual Developers
-- **Who**: Developers building Claude-powered applications
+- **Who**: Developers building the AI-powered applications
 - **Need**: Quick, reliable way to add specialized capabilities
 - **Value**: Hours of development time saved per skill
 
@@ -103,7 +103,7 @@ Become the industry standard for AI agent and skill development, with thousands 
 - **Value**: Enterprise capabilities at startup scale
 
 #### 3. Enterprise Development Teams
-- **Who**: Large organizations standardizing on Claude
+- **Who**: Large organizations standardizing on the AI
 - **Need**: Consistent, secure, scalable AI implementations
 - **Value**: Governance, security, and standardization
 
@@ -157,7 +157,7 @@ Become the industry standard for AI agent and skill development, with thousands 
 ## Competitive Advantages
 
 ### 1. Native the AI Integration
-Unlike generic AI frameworks, built specifically for Claude's capabilities and best practices.
+Unlike generic AI frameworks, built specifically for the AI's capabilities and best practices.
 
 ### 2. Production-Ready Output
 Not just examples - actual production code with error handling, typing, and documentation.
@@ -166,7 +166,7 @@ Not just examples - actual production code with error handling, typing, and docu
 Skills + Agents + Workflows + Automation - complete solution, not just pieces.
 
 ### 4. Active Maintenance
-Continuous updates aligned with Claude's evolution and community needs.
+Continuous updates aligned with the AI's evolution and community needs.
 
 ### 5. Enterprise Features
 Security, compliance, and governance built-in from the start.
@@ -258,15 +258,15 @@ Every skill generated, every agent deployed, every problem solved - these are ou
 
 ## Contact & Resources
 
-- **GitHub**: [claude-code-skills-factory](https://github.com/yourusername/claude-code-skills-factory)
-- **Discord**: [Join Community](https://discord.gg/claude-skills)
-- **Documentation**: [Wiki](https://github.com/yourusername/claude-code-skills-factory/wiki)
-- **Support**: support@claude-skills-factory.dev
-- **Newsletter**: [Subscribe](https://claude-skills-factory.dev/newsletter)
+- **GitHub**: [the AI-code-skills-factory](https://github.com/yourusername/the AI-code-skills-factory)
+- **Discord**: [Join Community](https://discord.gg/the AI-skills)
+- **Documentation**: [Wiki](https://github.com/yourusername/the AI-code-skills-factory/wiki)
+- **Support**: support@the AI-skills-factory.dev
+- **Newsletter**: [Subscribe](https://the AI-skills-factory.dev/newsletter)
 
 ---
 
-*"Empowering developers to unlock Claude's full potential, one skill at a time."*
+*"Empowering developers to unlock the AI's full potential, one skill at a time."*
 
 ---
 

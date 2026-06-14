@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -66,15 +66,15 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a FastAPI endpoint that returns all users from the database.`
-- `Copilot, write a Pydantic model for a product with id, name, and optional price.`
-- `Copilot, implement a CLI command that uploads a CSV file and logs a summary.`
-- `Copilot, write a pytest test for the transform_data function using a mock input.`
+- `the AI assistant, create a FastAPI endpoint that returns all users from the database.`
+- `the AI assistant, write a Pydantic model for a product with id, name, and optional price.`
+- `the AI assistant, implement a CLI command that uploads a CSV file and logs a summary.`
+- `the AI assistant, write a pytest test for the transform_data function using a mock input.`
 
 ## 🔁 Iteration & Review
 
-- Review Copilot output before committing.
-- Add comments to clarify intent if Copilot generates incorrect or unclear suggestions.
+- Review the AI assistant output before committing.
+- Add comments to clarify intent if the AI assistant generates incorrect or unclear suggestions.
 - Use linters (flake8, pylint) and formatters (black, isort) as part of the review pipeline.
 - Refactor output to follow project conventions.
 

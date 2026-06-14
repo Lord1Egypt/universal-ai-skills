@@ -14,6 +14,8 @@ variables:
   - THREE_STATE_VERIFY_PHASE
   - OUTPUT_FORMAT_FN
 -->
+# Code Review: Medium Effort Mode
+
 `medium effort → 3+4 angles × 6 candidates → 1-vote verify → ≤8 findings`
 
 You are reviewing for **precision** at medium effort: every finding you surface

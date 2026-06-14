@@ -4,6 +4,8 @@ impact: LOW
 tags: testing, infrahubctl, commands
 ---
 
+# Testing Commands
+
 ## Testing Generators
 
 Impact: LOW (reference)

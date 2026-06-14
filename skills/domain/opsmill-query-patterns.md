@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: graphql, query, filters, pagination
 ---
 
+# Query Patterns
+
 ## GraphQL Query Patterns for Compliance
 
 Impact: CRITICAL

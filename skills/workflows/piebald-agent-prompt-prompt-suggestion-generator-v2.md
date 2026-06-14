@@ -3,6 +3,8 @@ name: 'Agent Prompt: Prompt Suggestion Generator v2'
 description: V2 instructions for generating prompt suggestions for the AI coding agent
 ccVersion: 2.1.132
 -->
+# Prompt Suggestion Generator v2
+
 [SUGGESTION MODE: Suggest what the user might naturally type next into the AI coding agent.]
 
 FIRST: Look at the user's recent messages and original request.

@@ -35,14 +35,14 @@ NUMBER_OF_SKILLS: How many (e.g., 3)
 ```
 
 **2. Generate** (1 min)
-- Copy entire prompt → Paste into Claude
+- Copy entire prompt → Paste into the AI
 - the AI generates complete skill packages
 - Includes SKILL.md, Python files, samples, HOW_TO_USE.md
 
 **3. Install** (2 min)
 ```bash
 # the AI coding agent
-cp skill-folder ~/.claude/skills/
+cp skill-folder ~/.the AI/skills/
 
 # the AI Apps
 Import ZIP file through Skills menu
@@ -155,7 +155,7 @@ Import ZIP file through Skills menu
 
 → Use [Agents Factory](documentation/templates/AGENTS_FACTORY_PROMPT.md)
 → Browse [42 Example Agents](Agents-Catalog)
-→ Install to `.claude/agents/`
+→ Install to `.the AI/agents/`
 → **Result**: Auto-invoked specialists for frontend, backend, testing, security
 
 **Time Investment**: 10 minutes
@@ -247,7 +247,7 @@ Import ZIP file through Skills menu
 ### Catalogs
 - **[Skills Catalog](Skills-Catalog)** - 7 production skills with examples
 - **[Agents Catalog](Agents-Catalog)** - 42 agents organized by function
-- **[Example Skills](claude-skills-examples/)** - 3 reference implementations
+- **[Example Skills](the AI-skills-examples/)** - 3 reference implementations
 
 ### Templates
 - **[Skills Factory Prompt](documentation/templates/SKILLS_FACTORY_PROMPT.md)** - Generate the AI Skills
@@ -265,9 +265,9 @@ Import ZIP file through Skills menu
 ## 🤝 Community & Support
 
 ### Get Help
-- 💬 **[GitHub Discussions](https://github.com/rezashabrang/claude-code-skills-factory/discussions)** - Ask questions, share skills
-- 🐛 **[Report Issues](https://github.com/rezashabrang/claude-code-skills-factory/issues)** - Bug reports and feature requests
-- 📖 **[Wiki](https://github.com/rezashabrang/claude-code-skills-factory/wiki)** - Complete documentation
+- 💬 **[GitHub Discussions](https://github.com/rezashabrang/the AI-code-skills-factory/discussions)** - Ask questions, share skills
+- 🐛 **[Report Issues](https://github.com/rezashabrang/the AI-code-skills-factory/issues)** - Bug reports and feature requests
+- 📖 **[Wiki](https://github.com/rezashabrang/the AI-code-skills-factory/wiki)** - Complete documentation
 
 ### Contribute
 - 🌟 **Star this repo** - Help others discover it
@@ -278,7 +278,7 @@ Import ZIP file through Skills menu
 ### Resources
 - **[the AI provider Skills Docs](https://docs.the AI.com/en/docs/agents-and-tools/agent-skills/overview)** - Official documentation
 - **[Skills Marketplace](https://github.com/the AI providers/skills)** - Community skills
-- **[the AI coding agent Docs](https://docs.the AI.com/claude-code)** - CLI and agents
+- **[the AI coding agent Docs](https://docs.the AI.com/the AI-code)** - CLI and agents
 
 ---
 
@@ -310,7 +310,7 @@ Import ZIP file through Skills menu
 ### Option A: Use Existing Skills (2 minutes)
 ```bash
 # 1. Choose a skill from generated-skills/
-# 2. Copy to ~/.claude/skills/
+# 2. Copy to ~/.the AI/skills/
 # 3. Restart the AI coding agent
 # Done!
 ```
@@ -319,7 +319,7 @@ Import ZIP file through Skills menu
 ```bash
 # 1. Open documentation/templates/SKILLS_FACTORY_PROMPT.md
 # 2. Fill in your requirements
-# 3. Paste entire prompt into Claude
+# 3. Paste entire prompt into the AI
 # 4. Install generated skill
 # Done!
 ```
@@ -327,8 +327,8 @@ Import ZIP file through Skills menu
 ### Option C: Install Example Agents (1 minute)
 ```bash
 # Copy agents you need
-cp claude-agents-examples/agents/rr-frontend-engineer.md ~/.claude/agents/
-cp claude-agents-examples/agents/rr-backend-engineer.md ~/.claude/agents/
+cp the AI-agents-examples/agents/rr-frontend-engineer.md ~/.the AI/agents/
+cp the AI-agents-examples/agents/rr-backend-engineer.md ~/.the AI/agents/
 # Done!
 ```
 
@@ -342,9 +342,9 @@ cp claude-agents-examples/agents/rr-backend-engineer.md ~/.claude/agents/
 | 🤖 Browse Example Agents | [Agents Catalog](Agents-Catalog) |
 | 📦 Download Production Skills | [Skills Catalog](Skills-Catalog) |
 | 📖 Read Full Documentation | [Getting Started Guide](Getting-Started) |
-| 💬 Ask Questions | [GitHub Discussions](https://github.com/rezashabrang/claude-code-skills-factory/discussions) |
-| 🐛 Report Issues | [GitHub Issues](https://github.com/rezashabrang/claude-code-skills-factory/issues) |
-| ⭐ Star This Project | [Give a Star](https://github.com/rezashabrang/claude-code-skills-factory) |
+| 💬 Ask Questions | [GitHub Discussions](https://github.com/rezashabrang/the AI-code-skills-factory/discussions) |
+| 🐛 Report Issues | [GitHub Issues](https://github.com/rezashabrang/the AI-code-skills-factory/issues) |
+| ⭐ Star This Project | [Give a Star](https://github.com/rezashabrang/the AI-code-skills-factory) |
 
 ---
 

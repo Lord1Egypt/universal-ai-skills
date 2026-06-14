@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: protocols, generated-code, infrahubctl, schema, checks, generators, transforms
 ---
 
+# Protocols Generated
+
 ## Protocol Files Are Generated -- Do Not Hand-Edit
 
 Impact: CRITICAL

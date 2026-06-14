@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: deployment, git, repository, sync, infrahub-yml, generators, checks, transforms
 ---
 
+# Deployment Git Integration
+
 ## Git Repository Integration for Infrahub Code
 
 Impact: CRITICAL

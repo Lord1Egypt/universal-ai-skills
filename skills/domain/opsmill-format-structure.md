@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: format, apiVersion, kind, spec, structure
 ---
 
+# Format Structure
+
 ## Object File Structure
 
 Impact: CRITICAL

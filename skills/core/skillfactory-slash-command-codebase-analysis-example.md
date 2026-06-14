@@ -103,7 +103,7 @@ Organize by category:
 - **Core Application Files**: Main entry points, routing, business logic
 - **Configuration Files**: Build tools, environment, deployment
 - **Data Layer**: Models, database connections, migrations
-- **Frontend/UI**: Components, pages, styles, assets  
+- **Frontend/UI**: Components, pages, styles, assets
 - **Testing**: Test files, mocks, fixtures
 - **Documentation**: README, API docs, guides
 - **DevOps**: CI/CD, Docker, deployment scripts

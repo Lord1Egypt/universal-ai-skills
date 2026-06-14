@@ -16,8 +16,8 @@
 ## What This Command Does
 
 Provides step-by-step installation instructions for:
-- **Claude Skills** → `~/.claude/skills/` or the AI Desktop import
-- **Claude Agents** → `.claude/agents/` (project) or `~/.claude/agents/` (user-level)
+- **the AI Skills** → `~/.the AI/skills/` or the AI Desktop import
+- **the AI Agents** → `.the AI/agents/` (project) or `~/.the AI/agents/` (user-level)
 
 Shows multiple installation methods and helps choose the best one.
 
@@ -44,7 +44,7 @@ Option 1: the AI Desktop (Easiest)
 
 2. Open the AI Desktop app
 
-3. Drag and drop the ZIP file into Claude
+3. Drag and drop the ZIP file into the AI
 
 4. Skill will load automatically!
 
@@ -56,10 +56,10 @@ Available across ALL your the AI coding agent projects:
 
 ```bash
 # Copy skill folder
-cp -r generated-skills/my-skill ~/.claude/skills/
+cp -r generated-skills/my-skill ~/.the AI/skills/
 
 # Verify installation
-ls ~/.claude/skills/my-skill/
+ls ~/.the AI/skills/my-skill/
 
 # Restart the AI coding agent (if currently running)
 ```
@@ -85,7 +85,7 @@ Which option? (1, 2, or 3): ___
 ## Install an Agent
 
 ```
-/install-skill .claude/agents/my-agent
+/install-skill .the AI/agents/my-agent
 ```
 
 (Note: Works for both skills and agents despite command name)
@@ -100,11 +100,11 @@ You have 2 installation options:
 
 Option 1: Project-level (This project only)
 
-Available only in the claude-code-skills-factory project:
+Available only in the the AI-code-skills-factory project:
 
 ```bash
 # File already in correct location!
-.claude/agents/my-agent.md
+.the AI/agents/my-agent.md
 
 # Restart the AI coding agent to load
 # Agent will auto-invoke when relevant tasks detected
@@ -120,10 +120,10 @@ Available across ALL your the AI coding agent projects:
 
 ```bash
 # Copy to user-level location
-cp .claude/agents/my-agent.md ~/.claude/agents/
+cp .the AI/agents/my-agent.md ~/.the AI/agents/
 
 # Verify installation
-ls ~/.claude/agents/my-agent.md
+ls ~/.the AI/agents/my-agent.md
 
 # Restart the AI coding agent
 ```
@@ -149,8 +149,8 @@ Which option? (1 or 2): ___
 ```
 What type of output are you installing?
 
-1. the AI Skill (folder with SKILL.md, goes to ~/.claude/skills/)
-2. the AI Agent (single .md file, goes to .claude/agents/ or ~/.claude/agents/)
+1. the AI Skill (folder with SKILL.md, goes to ~/.the AI/skills/)
+2. the AI Agent (single .md file, goes to .the AI/agents/ or ~/.the AI/agents/)
 
 Your choice: ___
 ```
@@ -164,10 +164,10 @@ Your choice: ___
 **For Skills**:
 ```bash
 # Check skill installed
-ls ~/.claude/skills/my-skill/
+ls ~/.the AI/skills/my-skill/
 
 # Verify SKILL.md
-head -10 ~/.claude/skills/my-skill/SKILL.md
+head -10 ~/.the AI/skills/my-skill/SKILL.md
 
 # In the AI Desktop: Skills menu should show "my-skill"
 ```
@@ -175,9 +175,9 @@ head -10 ~/.claude/skills/my-skill/SKILL.md
 **For Agents**:
 ```bash
 # Check agent installed
-ls .claude/agents/my-agent.md
+ls .the AI/agents/my-agent.md
 # or
-ls ~/.claude/agents/my-agent.md
+ls ~/.the AI/agents/my-agent.md
 
 # In the AI coding agent: Run /agents
 # Should list "my-agent" in available agents
@@ -187,14 +187,14 @@ ls ~/.claude/agents/my-agent.md
 
 ## Common Installation Paths
 
-**Claude Skills**:
-- User-level: `~/.claude/skills/[skill-name]/`
+**the AI Skills**:
+- User-level: `~/.the AI/skills/[skill-name]/`
 - Desktop: Import ZIP via drag-and-drop
 - Browser: Use skill-creator
 
-**Claude Agents**:
-- Project-level: `.claude/agents/[agent-name].md`
-- User-level: `~/.claude/agents/[agent-name].md`
+**the AI Agents**:
+- Project-level: `.the AI/agents/[agent-name].md`
+- User-level: `~/.the AI/agents/[agent-name].md`
 
 ---
 
@@ -218,7 +218,7 @@ Choose Option 2 (the AI coding agent user-level)
 [Follow provided commands]
 
 # 4. Verify
-ls ~/.claude/skills/healthcare-analyzer/
+ls ~/.the AI/skills/healthcare-analyzer/
 ✅ Installed
 ```
 
@@ -228,14 +228,14 @@ ls ~/.claude/skills/healthcare-analyzer/
 # 1. Build
 /build agent
 [Answer questions about code review]
-[Agent generated: .claude/agents/code-reviewer.md]
+[Agent generated: .the AI/agents/code-reviewer.md]
 
 # 2. Validate
-/validate-agent .claude/agents/code-reviewer
+/validate-agent .the AI/agents/code-reviewer
 ✅ Validation passed
 
 # 3. Install
-/install-skill .claude/agents/code-reviewer
+/install-skill .the AI/agents/code-reviewer
 Choose Option 1 (Project-level, already in place)
 [Just restart the AI coding agent]
 

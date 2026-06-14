@@ -7,6 +7,8 @@ variables:
 -->
 
 
+# Onboarding Guide Draft Share Link Workflow
+
 **Sharing** — call the ${SHARE_ONBOARDING_GUIDE_TOOL_NAME} tool twice:
 
 1. **Right after rendering the draft code block** (still in step 5, before the Review questions). Call with `mode='check'` — this uploads the draft to an existing guide (or creates a new one). Either way you get a `share_url` and `short_code`. Instead of the `---` / `**Review**` header from step 5, bridge directly from the link into the numbered questions (no horizontal rule):

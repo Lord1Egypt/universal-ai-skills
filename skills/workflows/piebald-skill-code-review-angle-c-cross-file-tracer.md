@@ -3,6 +3,8 @@ name: 'Skill: Code Review (Angle C — cross-file tracer)'
 description: Code-review finder angle that follows each changed function out to its callers, checking the diff hasn't broken a call-site contract
 ccVersion: 2.1.173
 -->
+# Code Review: Cross-File Tracer
+
 ### Angle C — cross-file tracer
 
 For each function the diff changes, find its callers (Grep for the symbol) and

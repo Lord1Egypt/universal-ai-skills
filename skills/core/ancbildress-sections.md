@@ -162,7 +162,7 @@ src/
 - ship the dry "This project is licensed under X — see \[LICENSE] for details" line; the prose has to outwork the link
 - soften the constraints to sound friendlier — if commercial use is restricted, say so plainly
 
-**Tone:** match the rest of the README. For projects following the changelog-writer voice (cheeky, dry, narrative — see `~/.claude/skills/changelog-writer/SKILL.md`), the License section gets that same edge. It should read like a doorman, not a EULA.
+**Tone:** match the rest of the README. For projects following the changelog-writer voice (cheeky, dry, narrative — see `~/.the AI/skills/changelog-writer/SKILL.md`), the License section gets that same edge. It should read like a doorman, not a EULA.
 
 ### Non-standard / source-available licenses — the default for this user
 

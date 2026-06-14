@@ -6,7 +6,9 @@ variables:
   - IS_BASH_ENV_FN
   - ADDITIONAL_COMMIT_GUIDANCE
 -->
-${""}## Context
+# Quick Git Commit
+
+## Context
 
 - Current git status: !`git status`
 - Current git diff (staged and unstaged changes): !`git diff HEAD`

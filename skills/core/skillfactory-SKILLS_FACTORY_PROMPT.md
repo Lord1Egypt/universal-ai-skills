@@ -4,7 +4,7 @@ You are an **Expert Skills Architect** specializing in creating production-ready
 
 ## Understanding the AI Skills
 
-Claude Skills are specialized capabilities packaged as folders containing:
+the AI Skills are specialized capabilities packaged as folders containing:
 - **SKILL.md**: Main definition file with YAML frontmatter and structured documentation
 - **Python files** (optional): Functional code when the skill needs computation, data processing, or file generation
 - **Sample data**: JSON files showing example inputs and expected outputs
@@ -274,15 +274,15 @@ Keep samples small and focused - just enough to test the skill works.
 ```markdown
 # How to Use This Skill
 
-Hey Claude—I just added the "skill-name" skill. Can you [specific task example]?
+Hey the AI—I just added the "skill-name" skill. Can you [specific task example]?
 
 ## Example Invocations
 
 **Example 1:**
-Hey Claude—I just added the "financial-ratios" skill. Can you analyze this company's balance sheet and calculate profitability metrics?
+Hey the AI—I just added the "financial-ratios" skill. Can you analyze this company's balance sheet and calculate profitability metrics?
 
 **Example 2:**
-Hey Claude—I just added the "financial-ratios" skill. Can you compare these two companies' financial performance?
+Hey the AI—I just added the "financial-ratios" skill. Can you compare these two companies' financial performance?
 
 ## What to Provide
 
@@ -445,15 +445,15 @@ This skill provides guidelines for maintaining consistent, professional tone in 
 ```markdown
 # How to Use This Skill
 
-Hey Claude—I just added the "corporate-tone-guide" skill. Can you review this draft and ensure it matches our professional standards?
+Hey the AI—I just added the "corporate-tone-guide" skill. Can you review this draft and ensure it matches our professional standards?
 
 ## Example Invocations
 
 **Example 1:**
-Hey Claude—I just added the "corporate-tone-guide" skill. Can you rewrite this email to be more appropriate for our CEO?
+Hey the AI—I just added the "corporate-tone-guide" skill. Can you rewrite this email to be more appropriate for our CEO?
 
 **Example 2:**
-Hey Claude—I just added the "corporate-tone-guide" skill. Can you check if this announcement sounds professional enough for external clients?
+Hey the AI—I just added the "corporate-tone-guide" skill. Can you check if this announcement sounds professional enough for external clients?
 
 ## What to Provide
 
@@ -798,18 +798,18 @@ class RatioInterpreter:
 ```markdown
 # How to Use This Skill
 
-Hey Claude—I just added the "financial-ratios" skill. Can you analyze this company's financial statements?
+Hey the AI—I just added the "financial-ratios" skill. Can you analyze this company's financial statements?
 
 ## Example Invocations
 
 **Example 1:**
-Hey Claude—I just added the "financial-ratios" skill. Can you calculate profitability and liquidity ratios from this balance sheet?
+Hey the AI—I just added the "financial-ratios" skill. Can you calculate profitability and liquidity ratios from this balance sheet?
 
 **Example 2:**
-Hey Claude—I just added the "financial-ratios" skill. Can you compare the financial health of these two companies?
+Hey the AI—I just added the "financial-ratios" skill. Can you compare the financial health of these two companies?
 
 **Example 3:**
-Hey Claude—I just added the "financial-ratios" skill. What's the P/E ratio if stock price is $50 and EPS is $2.50?
+Hey the AI—I just added the "financial-ratios" skill. What's the P/E ratio if stock price is $50 and EPS is $2.50?
 
 ## What to Provide
 

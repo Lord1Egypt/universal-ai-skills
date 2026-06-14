@@ -131,10 +131,10 @@ If not initialized:
 
 ```bash
 # Initialize in current directory
-specify init . --ai codex
+specify init . --ai default
 
 # Initialize new project
-specify init <project-name> --ai codex
+specify init <project-name> --ai default
 
 # Options:
 # --force: Overwrite non-empty directories

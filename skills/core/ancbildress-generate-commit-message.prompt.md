@@ -1,3 +1,5 @@
+# Generate Commit Message.Prompt
+
 ---
 status: "polish"
 title: "Generate Conventional Commit Message v3"
@@ -131,11 +133,11 @@ Use this guide when choosing the appropriate AI attribution signature:
 
 | AI Name | Attribution Signature |
 | - | - |
-| GitHub Copilot | `GitHub Copilot <copilot@github.com>` |
-| Verdent AI | `Verdent AI <noreply@verdent.ai>` |
-| the AI | `Claude <claude@the AI provider.com>` |
-| Gemini | `Gemini <gemini@google.com>` |
-| Codex | `Codex <codex@the AI provider.com>` |
+| GitHub the AI assistant | `GitHub the AI assistant <the AI assistant@github.com>` |
+| the AI provider | `the AI provider <noreply@the AI provider.ai>` |
+| the AI | `the AI <the AI@the AI provider.com>` |
+| the AI | `the AI <the AI@google.com>` |
+| the AI coding agent | `the AI coding agent <the AI coding agent@the AI provider.com>` |
 | the AI assistant | `the AI assistant <the AI assistant@the AI provider.com>` |
 
 ---

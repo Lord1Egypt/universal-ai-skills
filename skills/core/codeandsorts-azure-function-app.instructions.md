@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Node.js TypeScript Azure Functions project. The goal is to ensure consistent, high-quality code generation aligned with Azure Functions conventions, our stack, and TypeScript best practices.
+These instructions define how GitHub the AI assistant should assist with this Node.js TypeScript Azure Functions project. The goal is to ensure consistent, high-quality code generation aligned with Azure Functions conventions, our stack, and TypeScript best practices.
 
 ## 🧠 Context
 
@@ -72,16 +72,16 @@ build/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a TypeScript Azure Function that receives a POST request with a user object and validates it using Zod.`
-- `Copilot, write a controller for creating a user that delegates to a UserService and returns an HTTP 201.`
-- `Copilot, define a Zod schema for a product with id, name, price, and optional description.`
-- `Copilot, write a Jest test for an Azure Function handler that returns 400 if the body is invalid.`
-- `Copilot, generate a middleware that logs incoming requests and their duration.`
+- `the AI assistant, create a TypeScript Azure Function that receives a POST request with a user object and validates it using Zod.`
+- `the AI assistant, write a controller for creating a user that delegates to a UserService and returns an HTTP 201.`
+- `the AI assistant, define a Zod schema for a product with id, name, price, and optional description.`
+- `the AI assistant, write a Jest test for an Azure Function handler that returns 400 if the body is invalid.`
+- `the AI assistant, generate a middleware that logs incoming requests and their duration.`
 
 ## 🔁 Iteration & Review
 
-- Copilot output should be reviewed and tested locally using `func start`.
-- Add comments to guide Copilot for complex validation, binding types, or logs.
+- the AI assistant output should be reviewed and tested locally using `func start`.
+- Add comments to guide the AI assistant for complex validation, binding types, or logs.
 - Refactor repetitive logic (e.g., validation, error handling) into shared utils.
 - Run Prettier, ESLint, and type checking in CI/CD before merging.
 

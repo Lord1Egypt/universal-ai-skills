@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: architecture, global, targeted, components
 ---
 
+# Architecture Types
+
 ## Check Architecture and Types
 
 Impact: CRITICAL

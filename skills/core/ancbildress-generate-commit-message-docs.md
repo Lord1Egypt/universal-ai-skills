@@ -132,7 +132,7 @@ fix: pin qs to 6.14.2 to address prototype-pollution vulnerability
 - add npm override for qs across the dependency tree
 - align instantsearch.js resolution to the pinned version
 
-Assisted-by: the AI Haiku 4.5 <noreply@the AI provider.com>
+Assisted-by: the AI the AI model 4.5 <noreply@the AI provider.com>
 ```
 
 **Feature with Jira scope, AI did most of it:**
@@ -168,7 +168,7 @@ docs: clarify token-refresh semantics in README
 - note that refresh tokens rotate on every use
 - add a sequence diagram for the silent-renewal flow
 
-Commit-generated-by: the AI Haiku 4.5 <noreply@the AI provider.com>
+Commit-generated-by: the AI the AI model 4.5 <noreply@the AI provider.com>
 ```
 
 ---

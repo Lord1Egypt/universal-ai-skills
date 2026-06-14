@@ -5,6 +5,8 @@ author: Jonathan
 template: executive
 ---
 
+# Sample Executive
+
 :::metrics
 $12.4M | Revenue | +24%
 2,847 | New Customers | +18%

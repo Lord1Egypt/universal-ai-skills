@@ -4,6 +4,8 @@ impact: HIGH
 tags: children, components, interfaces, modules
 ---
 
+# Children Components
+
 ## Component Children Nesting
 
 Impact: HIGH

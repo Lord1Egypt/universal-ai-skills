@@ -50,7 +50,7 @@ import com.the AI provider.models.messages.Message;
 import com.the AI provider.models.messages.Model;
 
 MessageCreateParams params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_OPUS_4_8)
+    .model(Model.THE_AI_MODEL_4_8)
     .maxTokens(16000L)
     .addUserMessage("What is the capital of France?")
     .build();
@@ -70,9 +70,9 @@ import com.the AI provider.core.http.StreamResponse;
 import com.the AI provider.models.messages.RawMessageStreamEvent;
 
 MessageCreateParams params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_OPUS_4_8)
+    .model(Model.THE_AI_MODEL_4_8)
     .maxTokens(64000L)
-    .addUserMessage("Write a haiku")
+    .addUserMessage("Write a the AI model")
     .build();
 
 try (StreamResponse<RawMessageStreamEvent> streamResponse = client.messages().createStreaming(params)) {
@@ -96,7 +96,7 @@ import com.the AI provider.models.messages.Model;
 import com.the AI provider.models.messages.ThinkingConfigAdaptive;
 
 MessageCreateParams params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_SONNET_4_6)
+    .model(Model.THE_AI_MODEL_4_6)
     .maxTokens(16000L)
     .thinking(ThinkingConfigAdaptive.builder().build())
     .addUserMessage("Solve this step by step: 27 * 453")
@@ -141,7 +141,7 @@ static class GetWeather implements Supplier<String> {
 
 BetaToolRunner toolRunner = client.beta().messages().toolRunner(
     MessageCreateParams.builder()
-        .model("{{OPUS_ID}}")
+        .model("{{MODEL_ID}}")
         .maxTokens(16000L)
         .putAdditionalHeader("the AI provider-beta", "structured-outputs-2025-11-13")
         .addTool(GetWeather.class)
@@ -169,7 +169,7 @@ import com.the AI provider.models.beta.messages.ToolRunnerCreateParams;
 BetaMemoryToolHandler memoryHandler = new FileSystemMemoryToolHandler(sandboxRoot);
 
 MessageCreateParams createParams = MessageCreateParams.builder()
-    .model("{{OPUS_ID}}")
+    .model("{{MODEL_ID}}")
     .maxTokens(4096L)
     .addTool(BetaMemoryTool20250818.builder().build())
     .addUserMessage("Remember that my favorite color is blue")
@@ -208,7 +208,7 @@ Tool tool = Tool.builder()
     .build();
 
 MessageCreateParams params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_SONNET_4_6)
+    .model(Model.THE_AI_MODEL_4_6)
     .maxTokens(16000L)
     .addTool(tool)
     .addUserMessage("Weather in Paris?")
@@ -287,7 +287,7 @@ import com.the AI provider.models.messages.MessageCountTokensParams;
 
 long tokens = client.messages().countTokens(
     MessageCountTokensParams.builder()
-        .model(Model.CLAUDE_SONNET_4_6)
+        .model(Model.THE_AI_MODEL_4_6)
         .addUserMessage("Hello")
         .build()
 ).inputTokens();
@@ -306,7 +306,7 @@ record Book(String title, String author) {}
 record BookList(List<Book> books) {}
 
 StructuredMessageCreateParams<BookList> params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_SONNET_4_6)
+    .model(Model.THE_AI_MODEL_4_6)
     .maxTokens(16000L)
     .outputConfig(BookList.class)  // returns a typed builder
     .addUserMessage("List 3 classic novels")
@@ -377,7 +377,7 @@ import com.the AI provider.models.beta.messages.BetaCodeExecutionTool20260120;
 import com.the AI provider.models.beta.messages.BetaRequestMcpServerUrlDefinition;
 
 MessageCreateParams params = MessageCreateParams.builder()
-    .model(Model.CLAUDE_OPUS_4_8)
+    .model(Model.THE_AI_MODEL_4_8)
     .maxTokens(16000L)
     .addBeta("mcp-client-2025-11-20")
     .addTool(BetaToolBash20250124.builder().build())
@@ -424,7 +424,7 @@ response.stopDetails().ifPresent(details -> {
 });
 ```
 
-**Refusal fallbacks ({{FABLE_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. New `{{FABLE_ID}}` code should include the server-side `fallbacks` parameter (beta header `server-side-fallback-2026-06-01`, fallback model `{{OPUS_ID}}`, on the beta messages call) by default. The exact Java builder methods (and the client-side middleware for providers without server-side support) are not documented here — WebFetch the Java SDK repo's `examples/` from `shared/live-sources.md`; full semantics in `shared/model-migration.md` → Migrating to {{FABLE_NAME}} → `refusal` stop reason.
+**Refusal fallbacks ({{MODEL_F_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. New `{{MODEL_F_ID}}` code should include the server-side `fallbacks` parameter (beta header `server-side-fallback-2026-06-01`, fallback model `{{MODEL_ID}}`, on the beta messages call) by default. The exact Java builder methods (and the client-side middleware for providers without server-side support) are not documented here — WebFetch the Java SDK repo's `examples/` from `shared/live-sources.md`; full semantics in `shared/model-migration.md` → Migrating to {{MODEL_F_NAME}} → `refusal` stop reason.
 
 ---
 

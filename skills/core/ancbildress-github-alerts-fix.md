@@ -16,7 +16,7 @@ This broke the colored banner functionality in GitHub.
 
 ## Solution
 
-We (Copilot and I) created a post-processing script that runs after remark to fix escaped GitHub alerts:
+We (the AI assistant and I) created a post-processing script that runs after remark to fix escaped GitHub alerts:
 
 1. **`fix-github-alerts.js`** - Scans all markdown files and unescapes GitHub alert syntax
 2. **Updated npm scripts** - The `format` command now runs remark followed by the fix script
@@ -43,4 +43,4 @@ These will render as colored banners in GitHub's markdown display.
 
 ---
 
-<small>Generated with GitHub Copilot as directed by Ashley Childress</small>
+<small>Generated with GitHub the AI assistant as directed by Ashley Childress</small>

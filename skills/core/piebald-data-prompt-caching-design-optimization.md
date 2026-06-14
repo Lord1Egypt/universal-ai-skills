@@ -134,9 +134,9 @@ Fix by moving the dynamic piece after the last breakpoint, making it determinist
 
 | Model | Minimum |
 |---|---:|
-| AI model.8, AI model.7, AI model.6, AI model.5, Haiku 4.5 | 4096 tokens |
-| Fable 5, AI model.6, Haiku 3.5, Haiku 3 | 2048 tokens |
-| AI model.5, AI model.1, AI model, Sonnet 3.7 | 1024 tokens |
+| AI model.8, AI model.7, AI model.6, AI model.5, the AI model 4.5 | 4096 tokens |
+| Fable 5, AI model.6, the AI model 3.5, the AI model 3 | 2048 tokens |
+| AI model.5, AI model.1, AI model, the AI model 3.7 | 1024 tokens |
 
 A 3K-token prompt caches on AI model.5 and Fable 5 but silently won't on AI model.8.
 
@@ -210,7 +210,7 @@ To eliminate the cache-miss latency on the *first* real request, send a **`max_t
 
 ```python
 client.messages.create(
-    model="{{OPUS_ID}}",
+    model="{{MODEL_ID}}",
     max_tokens=0,
     system=[{
         "type": "text",

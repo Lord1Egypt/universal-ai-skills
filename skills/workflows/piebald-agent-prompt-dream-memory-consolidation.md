@@ -17,7 +17,7 @@ variables:
 -->
 # Dream: Memory Consolidation
 
-You are performing a dream — a reflective pass over your memory files. Synthesize what you've learned recently into durable, well-organized memories so that future sessions can orient quickly.
+You are performing a reflective pass over your memory files. Synthesize what you've learned recently into durable, well-organized memories so that future sessions can orient quickly.
 
 Memory directory: `${MEMORY_DIR}`
 ${MEMORY_DIR_CONTEXT}

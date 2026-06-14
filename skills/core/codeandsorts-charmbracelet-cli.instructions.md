@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Go project. The goal is to ensure consistent, high-quality code generation aligned with Go idioms, the chosen architecture, and our team's best practices.
+These instructions define how GitHub the AI assistant should assist with this Go project. The goal is to ensure consistent, high-quality code generation aligned with Go idioms, the chosen architecture, and our team's best practices.
 
 ## 🧠 Context
 
@@ -105,9 +105,9 @@ tests/
 
 ## 🔁 Iteration & Review
 
-- Review Copilot output before committing.
+- Review the AI assistant output before committing.
 - Refactor generated code to ensure readability and testability.
-- Use comments to give Copilot context for better suggestions.
+- Use comments to give the AI assistant context for better suggestions.
 - Regenerate parts that are unidiomatic or too complex.
 
 ## 📚 References

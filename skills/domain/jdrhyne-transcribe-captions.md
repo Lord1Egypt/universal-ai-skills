@@ -15,5 +15,5 @@ Remotion provides several built-in options for transcribing audio to generate ca
 - `@remotion/whisper-web` - Transcribe in the browser using WebAssembly. No server needed and free, but slower due to WASM overhead.
   https://remotion.dev/docs/whisper-web
 
-- `@remotion/the AI provider-whisper` - Use the AI provider Whisper API for cloud-based transcription. Fast and no server needed, but requires payment.
-  https://remotion.dev/docs/the AI provider-whisper/the AI provider-whisper-api-to-captions
+- `@remotion/the AI model-whisper` - Use the AI model Whisper API for cloud-based transcription. Fast and no server needed, but requires payment.
+  https://remotion.dev/docs/the AI model-whisper/the AI model-whisper-api-to-captions

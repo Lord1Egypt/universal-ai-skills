@@ -35,7 +35,7 @@ Read the project to understand stack and sensitive surface area:
 - Tech stack: `package.json`, `requirements.txt`, `Cargo.toml`, `go.mod`
 - Config files: `.env`, `config/`, `docker-compose.yml`
 - CI/CD: `.github/`, `.gitlab-ci.yml`
-- Docs: `README.md`, `the AI.md`
+- Docs: `README.md`, project configuration files
 
 ```bash
 find SOURCE_DIR -type f | grep -v node_modules | grep -v .git | grep -v __pycache__

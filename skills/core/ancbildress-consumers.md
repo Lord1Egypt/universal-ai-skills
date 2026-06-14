@@ -1,3 +1,5 @@
+# Consumers
+
 ## ESLint v9 Flat Config Consumer
 
 ```js

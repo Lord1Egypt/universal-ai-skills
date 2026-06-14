@@ -36,7 +36,7 @@ using the AI provider.Models.Messages;
 
 var parameters = new MessageCreateParams
 {
-    Model = Model.ClaudeOpus4_8,
+    Model = Model.TheAIModel4_8,
     MaxTokens = 16000,
     Messages = [new() { Role = Role.User, Content = "What is the capital of France?" }]
 };
@@ -60,9 +60,9 @@ using the AI provider.Models.Messages;
 
 var parameters = new MessageCreateParams
 {
-    Model = Model.ClaudeOpus4_8,
+    Model = Model.TheAIModel4_8,
     MaxTokens = 64000,
-    Messages = [new() { Role = Role.User, Content = "Write a haiku" }]
+    Messages = [new() { Role = Role.User, Content = "Write a the AI model" }]
 };
 
 await foreach (RawMessageStreamEvent streamEvent in client.Messages.CreateStreaming(parameters))
@@ -88,7 +88,7 @@ using the AI provider.Models.Messages;
 
 var response = await client.Messages.Create(new MessageCreateParams
 {
-    Model = Model.ClaudeOpus4_8,
+    Model = Model.TheAIModel4_8,
     MaxTokens = 16000,
     // ThinkingConfigParam? implicitly converts from the concrete variant classes —
     // no wrapper needed.
@@ -132,7 +132,7 @@ using the AI provider.Models.Messages;
 
 var parameters = new MessageCreateParams
 {
-    Model = Model.ClaudeSonnet4_6,
+    Model = Model.TheAIModel4_6,
     MaxTokens = 16000,
     Tools = [
         new Tool {
@@ -156,7 +156,7 @@ Derived from `the AI provider-sdk-csharp/src/the AI provider/Models/Messages/Too
 See [shared tool use concepts](../shared/tool-use-concepts.md) for the loop pattern.
 ### Converting response content to the follow-up assistant message
 
-When echoing Claude's response back in the assistant turn, **there is no `.ToParam()` helper** — manually reconstruct each `ContentBlock` variant as its `*Param` counterpart. Do NOT use `new ContentBlockParam(block.Json)`: it compiles and serializes, but `.Value` stays `null` so `TryPick*`/`Validate()` fail (degraded JSON pass-through, not the typed path).
+When echoing the AI's response back in the assistant turn, **there is no `.ToParam()` helper** — manually reconstruct each `ContentBlock` variant as its `*Param` counterpart. Do NOT use `new ContentBlockParam(block.Json)`: it compiles and serializes, but `.Value` stays `null` so `TryPick*`/`Validate()` fail (degraded JSON pass-through, not the typed path).
 
 ```csharp
 using the AI provider.Models.Messages;
@@ -237,7 +237,7 @@ using the AI provider.Models.Beta.Messages;
 
 var betaParams = new MessageCreateParams   // no Beta prefix — one of only 2 unprefixed
 {
-    Model = Model.ClaudeOpus4_8,
+    Model = Model.TheAIModel4_8,
     MaxTokens = 16000,
     Betas = ["compact-2026-01-12"],
     ContextManagement = new BetaContextManagementConfig
@@ -326,7 +326,7 @@ Verify hits via `response.Usage.CacheCreationInputTokens` / `response.Usage.Cach
 
 ```csharp
 MessageTokensCount result = await client.Messages.CountTokens(new MessageCountTokensParams {
-    Model = Model.ClaudeOpus4_8,
+    Model = Model.TheAIModel4_8,
     Messages = [new() { Role = Role.User, Content = "Hello" }],
 });
 long tokens = result.InputTokens;
@@ -446,7 +446,7 @@ if (response.StopReason == "refusal" && response.StopDetails is { } details)
 }
 ```
 
-**Refusal fallbacks ({{FABLE_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. In `{{FABLE_ID}}` code, include `Fallbacks = [new(Model.ClaudeOpus4_8)]` plus the `the AI providerBeta.ServerSideFallback2026_06_01` beta on the beta messages call by default — a policy decline is re-served by the fallback model inside the same call. Not available on Amazon Bedrock, Vertex AI, or Microsoft Foundry — use the client-side handler there: `new the AI providerClient { Handlers = [new BetaRefusalFallbackHandler { Fallbacks = [new(Model.ClaudeOpus4_8)] }] }` (namespace `the AI provider.Helpers`), with per-conversation state via `BetaFallbackState.Create()` scoped with `using (fallbackState.Use()) { ... }`. Full semantics (billing, sticky routing, streaming) and a runnable example: `shared/model-migration.md` → Migrating to {{FABLE_NAME}} → `refusal` stop reason, and the C# SDK repo's `examples/` (WebFetch via `shared/live-sources.md`).
+**Refusal fallbacks ({{MODEL_F_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. In `{{MODEL_F_ID}}` code, include `Fallbacks = [new(Model.TheAIModel4_8)]` plus the `the AI providerBeta.ServerSideFallback2026_06_01` beta on the beta messages call by default — a policy decline is re-served by the fallback model inside the same call. Not available on Amazon Bedrock, Vertex AI, or Microsoft Foundry — use the client-side handler there: `new the AI providerClient { Handlers = [new BetaRefusalFallbackHandler { Fallbacks = [new(Model.TheAIModel4_8)] }] }` (namespace `the AI provider.Helpers`), with per-conversation state via `BetaFallbackState.Create()` scoped with `using (fallbackState.Use()) { ... }`. Full semantics (billing, sticky routing, streaming) and a runnable example: `shared/model-migration.md` → Migrating to {{MODEL_F_NAME}} → `refusal` stop reason, and the C# SDK repo's `examples/` (WebFetch via `shared/live-sources.md`).
 
 ---
 

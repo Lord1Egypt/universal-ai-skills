@@ -1,11 +1,11 @@
 ---
 allowed-tools: Bash(ls:*), Bash(find:*), Bash(git status:*), Read, Glob, Skill
-description: Initialize or enhance the AI.md files using the claude-md-enhancer skill with interactive workflow and 100% native format compliance
+description: Initialize or enhance the AI.md files using the the AI-md-enhancer skill with interactive workflow and 100% native format compliance
 ---
 
 # the AI.md Enhancer Command
 
-This command uses the `claude-md-enhancer` skill to initialize or enhance the AI.md files for your project.
+This command uses the `the AI-md-enhancer` skill to initialize or enhance the AI.md files for your project.
 
 ---
 
@@ -38,7 +38,7 @@ Based on the discovery above, I need to determine the appropriate action:
 
 ### For New Projects (No the AI.md):
 
-The `claude-md-enhancer` skill will:
+The `the AI-md-enhancer` skill will:
 1. Explore your repository structure
 2. Detect project type, tech stack, team size, development phase
 3. Show you the discoveries and ask for confirmation
@@ -47,7 +47,7 @@ The `claude-md-enhancer` skill will:
 
 ### For Existing Projects (the AI.md exists):
 
-The `claude-md-enhancer` skill will:
+The `the AI-md-enhancer` skill will:
 1. Analyze current the AI.md for quality and completeness
 2. Calculate quality score (0-100)
 3. Identify missing sections
@@ -60,7 +60,7 @@ The `claude-md-enhancer` skill will:
 
 ### Option A: Direct Skill Invocation
 
-I can invoke the `claude-md-enhancer` skill directly to handle the appropriate workflow based on what I discovered above.
+I can invoke the `the AI-md-enhancer` skill directly to handle the appropriate workflow based on what I discovered above.
 
 The skill provides:
 - ✨ **100% Native Format Compliance**: All generated files follow official the AI coding agent format with project structure diagrams, setup instructions, architecture sections, and file structure explanations
@@ -72,7 +72,7 @@ The skill provides:
 
 ### Option B: Agent Invocation (Recommended for Maintenance)
 
-For ongoing maintenance and automatic updates throughout your project lifecycle, I can invoke the `claude-md-guardian` agent instead:
+For ongoing maintenance and automatic updates throughout your project lifecycle, I can invoke the `the AI-md-guardian` agent instead:
 
 **When to use the agent**:
 - After feature completion
@@ -84,7 +84,7 @@ For ongoing maintenance and automatic updates throughout your project lifecycle,
 **Agent benefits**:
 - 🔄 **Auto-Sync**: Updates the AI.md based on detected changes
 - 🎯 **Smart Detection**: Only updates when significant changes occur
-- ⚡ **Token-Efficient**: Uses haiku model for routine updates
+- ⚡ **Token-Efficient**: Uses the AI model model for routine updates
 - 📦 **Milestone-Aware**: Triggers after completion signals
 - ✨ **Native Format**: Ensures 100% the AI coding agent format compliance
 
@@ -94,6 +94,6 @@ I'm ready to proceed. What would you like me to do?
 
 **For new projects**: I'll run the interactive initialization workflow (skill)
 **For existing projects**: I'll analyze your current the AI.md and suggest improvements (skill)
-**For maintenance**: I'll invoke claude-md-guardian agent to check for updates and synchronize
+**For maintenance**: I'll invoke the AI-md-guardian agent to check for updates and synchronize
 
-Please confirm how you'd like to proceed, or let me know if you have specific requirements (e.g., "Create a the AI.md for my Python FastAPI project" or "Invoke claude-md-guardian to update my the AI.md").
+Please confirm how you'd like to proceed, or let me know if you have specific requirements (e.g., "Create a the AI.md for my Python FastAPI project" or "Invoke the AI-md-guardian to update my the AI.md").

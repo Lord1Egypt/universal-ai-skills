@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: values, relationships, generics, human_friendly_id, LocationGeneric
 ---
 
+# Value Generic Relationships
+
 ## Generic Relationship References
 
 Impact: CRITICAL

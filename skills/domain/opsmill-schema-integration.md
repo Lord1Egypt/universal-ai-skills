@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: schema, include_in_menu, kind-links
 ---
 
+# Schema Integration
+
 ## Schema Integration
 
 Impact: MEDIUM

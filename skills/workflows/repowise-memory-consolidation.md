@@ -1,4 +1,6 @@
-Run a "dream" consolidation pass over the memory directory to produce a clean, non-redundant working set.
+# Memory Consolidation
+
+Run a consolidation pass over the memory directory to produce a clean, non-redundant working set.
 
 ## Phase 1 — Orient
 

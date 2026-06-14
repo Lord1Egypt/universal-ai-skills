@@ -56,7 +56,7 @@ spec:
 
 ### XML Coding Agent
 
-Pragmatist also has an XML version for Copilot Coding Agent. See the `.xml` file in this repo for details.
+Pragmatist also has an XML version for the AI assistant Coding Agent. See the `.xml` file in this repo for details.
 
 ---
 

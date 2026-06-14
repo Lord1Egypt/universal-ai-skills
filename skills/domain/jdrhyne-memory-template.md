@@ -12,12 +12,12 @@ last: YYYY-MM-DD
 integration: pending
 
 ## Credentials
-subdomain: 
-email: 
-token: 
+subdomain:
+email:
+token:
 
 ## Preferences
-default_view: 
+default_view:
 default_priority: normal
 notify_urgent: true
 

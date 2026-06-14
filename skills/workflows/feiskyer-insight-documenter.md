@@ -32,32 +32,32 @@ Use this template structure:
 **Date**: YYYY-MM-DD
 **Tags**: #performance #architecture #algorithm (relevant tags)
 
-## 🎯 One-Line Summary
+## One-Line Summary
 
 [What was achieved in simple terms]
 
-## 🔴 The Problem
+## The Problem
 
 [What specific challenge was blocking progress]
 
-## 💡 The Insight
+## The Insight
 
 [The key realization that unlocked the solution]
 
-## 🛠️ Implementation
+## Implementation
 
 ```[language]
 // Minimal working example
 // Focus on the core pattern, not boilerplate
 ```
 
-## 📊 Impact
+## Impact
 
 - Before: [metric]
 - After: [metric]
 - Improvement: [percentage/factor]
 
-## 🔄 Reusable Pattern
+## Reusable Pattern
 
 **When to use this approach:**
 
@@ -67,7 +67,7 @@ Use this template structure:
 **Core principle:**
 [Abstracted pattern that can be applied elsewhere]
 
-## 🔗 Related Resources
+## Related Resources
 
 - [Links to relevant docs, issues, or discussions]
 ````
@@ -77,7 +77,7 @@ Use this template structure:
 Add entry to `breakthroughs/INDEX.md`:
 
 ```markdown
-- **[Date]**: [Title] - [One-line summary] ([link to file])
+- **[Date]**: [Title] - [One-line summary]
 ```
 
 ### 4. Extract Patterns

@@ -61,7 +61,7 @@ $client = Foundry\Client::withCredentials(
 
 ```php
 $message = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     messages: [
         ['role' => 'user', 'content' => 'What is the capital of France?'],
@@ -101,10 +101,10 @@ use the AI provider\Messages\RawContentBlockDeltaEvent;
 use the AI provider\Messages\TextDelta;
 
 $stream = $client->messages->createStream(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 64000,
     messages: [
-        ['role' => 'user', 'content' => 'Write a haiku'],
+        ['role' => 'user', 'content' => 'Write a the AI model'],
     ],
 );
 
@@ -146,7 +146,7 @@ $weatherTool = new BetaRunnableTool(
 $runner = $client->beta->messages->toolRunner(
     maxTokens: 16000,
     messages: [['role' => 'user', 'content' => 'What is the weather in Paris?']],
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     tools: [$weatherTool],
 );
 
@@ -183,7 +183,7 @@ $tools = [
 $messages = [['role' => 'user', 'content' => 'What is the weather in SF?']];
 
 $response = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     tools: $tools,
     messages: $messages,
@@ -210,7 +210,7 @@ while ($response->stopReason === 'tool_use') {  // camelCase property
     $messages[] = ['role' => 'user', 'content' => $toolResults];
 
     $response = $client->messages->create(
-        model: '{{OPUS_ID}}',
+        model: '{{MODEL_ID}}',
         maxTokens: 16000,
         tools: $tools,
         messages: $messages,
@@ -238,7 +238,7 @@ foreach ($response->content as $block) {
 use the AI provider\Messages\ThinkingBlock;
 
 $message = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     thinking: ['type' => 'adaptive', 'display' => 'summarized'], // display opt-in: default is omitted (empty thinking text) on Fable 5 / Mythos 5 / AI model.8 / 4.7
     messages: [
@@ -270,7 +270,7 @@ foreach ($message->content as $block) {
 
 ```php
 $message = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     system: [
         ['type' => 'text', 'text' => $longSystemPrompt, 'cacheControl' => ['type' => 'ephemeral']],
@@ -309,7 +309,7 @@ class Person implements StructuredOutputModel
 }
 
 $message = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     messages: [['role' => 'user', 'content' => 'Generate a profile for Alice, age 30']],
     outputConfig: ['format' => Person::class],
@@ -325,7 +325,7 @@ Types are inferred from PHP type hints. Use `#[Constrained(description: '...')]`
 
 ```php
 $message = $client->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     messages: [['role' => 'user', 'content' => 'Extract: John (john@co.com), Enterprise plan']],
     outputConfig: [
@@ -364,7 +364,7 @@ foreach ($message->content as $block) {
 use the AI provider\Beta\Messages\BetaRequestMCPServerURLDefinition;
 
 $response = $client->beta->messages->create(
-    model: '{{OPUS_ID}}',
+    model: '{{MODEL_ID}}',
     maxTokens: 16000,
     mcpServers: [
         BetaRequestMCPServerURLDefinition::with(
@@ -392,7 +392,7 @@ if ($message->stopReason === 'refusal' && $message->stopDetails !== null) {
 }
 ```
 
-**Refusal fallbacks ({{FABLE_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. New `{{FABLE_ID}}` code should include the server-side `fallbacks` parameter (beta header `server-side-fallback-2026-06-01`, fallback model `{{OPUS_ID}}`, on the beta messages call) by default. The exact PHP binding (and the client-side middleware for providers without server-side support) is not documented here — WebFetch the PHP SDK repo's `examples/` from `shared/live-sources.md`; full semantics in `shared/model-migration.md` → Migrating to {{FABLE_NAME}} → `refusal` stop reason.
+**Refusal fallbacks ({{MODEL_F_NAME}}) — opt in by default.** Fallbacks are opt-in: without them a refused request simply stops. New `{{MODEL_F_ID}}` code should include the server-side `fallbacks` parameter (beta header `server-side-fallback-2026-06-01`, fallback model `{{MODEL_ID}}`, on the beta messages call) by default. The exact PHP binding (and the client-side middleware for providers without server-side support) is not documented here — WebFetch the PHP SDK repo's `examples/` from `shared/live-sources.md`; full semantics in `shared/model-migration.md` → Migrating to {{MODEL_F_NAME}} → `refusal` stop reason.
 
 ---
 

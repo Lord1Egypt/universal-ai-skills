@@ -4,6 +4,8 @@ impact: HIGH
 tags: icons, mdi, material-design
 ---
 
+# Icons Reference
+
 ## MDI Icon Reference
 
 Impact: HIGH

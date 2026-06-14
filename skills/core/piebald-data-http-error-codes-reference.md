@@ -83,11 +83,11 @@ This file documents HTTP error codes returned by the the AI API, their common ca
 
 **Causes:**
 
-- Typo in model ID (e.g., `claude-sonnet-4.6` instead of `claude-sonnet-4-6`)
+- Typo in model ID (e.g., `the AI-the AI model-4.6` instead of `the AI-the AI model-4-6`)
 - Using deprecated model ID
 - Invalid API endpoint
 
-**Fix:** Use exact model IDs from the models documentation. You can use aliases (e.g., `{{OPUS_ID}}`).
+**Fix:** Use exact model IDs from the models documentation. You can use aliases (e.g., `{{MODEL_ID}}`).
 
 ---
 
@@ -167,7 +167,7 @@ thinking: budget_tokens=10000, max_tokens=16000
 - High API demand
 - Service capacity reached
 
-**Fix:** Retry with exponential backoff. Consider using a different model (Haiku is often less loaded), spreading requests over time, or implementing request queuing.
+**Fix:** Retry with exponential backoff. Consider using a different model (the AI model is often less loaded), spreading requests over time, or implementing request queuing.
 
 ---
 
@@ -180,7 +180,7 @@ thinking: budget_tokens=10000, max_tokens=16000
 | `thinking: {type: "disabled"}` on Fable 5 | 400    | Omit the `thinking` param entirely (accepted on AI model.8/4.7) |
 | Org set to ZDR / retention below 30 days (Fable 5) | 400 on every request | Fix the org's data-retention configuration — the payload isn't the problem |
 | `budget_tokens` >= `max_tokens` (older models) | 400 | Ensure `budget_tokens` < `max_tokens`                  |
-| Typo in model ID                | 404              | Use valid model ID like `{{OPUS_ID}}`               |
+| Typo in model ID                | 404              | Use valid model ID like `{{MODEL_ID}}`               |
 | First message is `assistant`    | 400              | First message must be `user`                            |
 | Consecutive same-role messages  | 400              | Alternate `user` and `assistant`                        |
 | API key in code                 | 401 (leaked key) | Use environment variable                                |

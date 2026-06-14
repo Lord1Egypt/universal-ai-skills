@@ -1,3 +1,5 @@
+# Release Checklist
+
 ---
 name: Release Checklist
 about: Manual checklist for publishing a tagged release
@@ -9,7 +11,7 @@ assignees: ''
 ## Pre-release
 - [ ] Confirm `main` is green (all required checks passing)
 - [ ] Review `CHANGELOG.md` entries match upcoming version
-- [ ] Ensure `.claude/commands/git/*` prompts and docs are up to date
+- [ ] Ensure `.the AI/commands/git/*` prompts and docs are up to date
 - [ ] Verify `/review` and `/security-scan` run clean locally
 
 ## Versioning

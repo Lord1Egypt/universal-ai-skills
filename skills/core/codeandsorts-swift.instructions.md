@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -70,18 +70,18 @@ Resources/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a SwiftUI view that shows a list of users with their names and avatars.`
-- `Copilot, write a model struct for a Product with name, price, and optional discount.`
-- `Copilot, implement a Combine publisher that fetches data from a URL and decodes JSON.`
-- `Copilot, write unit tests for the LoginViewModel using a mock AuthService.`
-- `Copilot, define an enum for authentication state with associated values for success and error.`
+- `the AI assistant, create a SwiftUI view that shows a list of users with their names and avatars.`
+- `the AI assistant, write a model struct for a Product with name, price, and optional discount.`
+- `the AI assistant, implement a Combine publisher that fetches data from a URL and decodes JSON.`
+- `the AI assistant, write unit tests for the LoginViewModel using a mock AuthService.`
+- `the AI assistant, define an enum for authentication state with associated values for success and error.`
 
 ## 🔁 Iteration & Review
 
-- Review Copilot output for proper Swift idioms and memory safety.
+- Review the AI assistant output for proper Swift idioms and memory safety.
 - Refactor large or nested SwiftUI views into reusable components.
 - Use Xcode warnings and SwiftLint to catch violations.
-- Guide Copilot with comments for complex UI layout or async logic.
+- Guide the AI assistant with comments for complex UI layout or async logic.
 
 ## 📚 References
 

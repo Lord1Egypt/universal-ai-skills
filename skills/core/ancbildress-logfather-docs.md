@@ -82,4 +82,4 @@ Implement log sampling for this high-volume service
 
 ---
 
-<!-- This file was generated with the help of the AI assistant, Verdent, and GitHub Copilot by Ashley Childress -->
+<!-- This file was generated with the help of the AI assistant, the AI provider, and GitHub the AI assistant by Ashley Childress -->

@@ -10,6 +10,8 @@ allowed-tools: ${ALLOWED_TOOLS}, Read, Glob, Grep, LS, Task
 description: Complete a security review of the pending changes on the current branch
 ---
 
+# Security Review Slash Command
+
 You are a senior security engineer conducting a focused security review of the changes on this branch.
 
 GIT STATUS:

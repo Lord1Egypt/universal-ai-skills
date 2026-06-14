@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: python, validate, log_error, log_info, InfrahubCheck
 ---
 
+# Python Validate
+
 ## Python Check Class and Validation
 
 Impact: CRITICAL
@@ -33,7 +35,6 @@ and silently passes everything.
 
 ```python
 from infrahub_sdk.checks import InfrahubCheck
-
 
 class MyCheck(InfrahubCheck):
     query = "my_query"  # Must match .infrahub.yml

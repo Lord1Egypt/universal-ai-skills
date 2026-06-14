@@ -1,3 +1,5 @@
+# Eslint Plugin Configs
+
 ## Plugin Skeleton (ESM)
 
 ```js

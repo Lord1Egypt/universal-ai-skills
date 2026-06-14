@@ -1,6 +1,6 @@
 # Slash commands
 
-> Control Claude's behavior during an interactive session with slash commands.
+> Control the AI's behavior during an interactive session with slash commands.
 
 ## Built-in slash commands
 
@@ -12,7 +12,7 @@
 | `/clear`                  | Clear conversation history                                                                                                                   |
 | `/compact [instructions]` | Compact conversation with optional focus instructions                                                                                        |
 | `/config`                 | Open the Settings interface (Config tab)                                                                                                     |
-| `/cost`                   | Show token usage statistics (see [cost tracking guide](/en/docs/claude-code/costs#using-the-cost-command) for subscription-specific details) |
+| `/cost`                   | Show token usage statistics (see [cost tracking guide](/en/docs/the AI-code/costs#using-the-cost-command) for subscription-specific details) |
 | `/doctor`                 | Checks the health of your the AI coding agent installation                                                                                           |
 | `/help`                   | Get usage help                                                                                                                               |
 | `/init`                   | Initialize project with the AI.md guide                                                                                                      |
@@ -21,7 +21,7 @@
 | `/mcp`                    | Manage MCP server connections and OAuth authentication                                                                                       |
 | `/memory`                 | Edit the AI.md memory files                                                                                                                  |
 | `/model`                  | Select or change the AI model                                                                                                                |
-| `/permissions`            | View or update [permissions](/en/docs/claude-code/iam#configuring-permissions)                                                               |
+| `/permissions`            | View or update [permissions](/en/docs/the AI-code/iam#configuring-permissions)                                                               |
 | `/pr_comments`            | View pull request comments                                                                                                                   |
 | `/review`                 | Request code review                                                                                                                          |
 | `/sandbox`                | Enable sandboxed bash tool with filesystem and network isolation for safer, more autonomous execution                                        |
@@ -54,40 +54,40 @@ Custom slash commands allow you to define frequently-used prompts as Markdown fi
 
 Commands stored in your repository and shared with your team. When listed in `/help`, these commands show "(project)" after their description.
 
-**Location**: `.claude/commands/`
+**Location**: `.the AI/commands/`
 
 In the following example, we create the `/optimize` command:
 
 ```bash  theme={null}
 # Create a project command
-mkdir -p .claude/commands
-echo "Analyze this code for performance issues and suggest optimizations:" > .claude/commands/optimize.md
+mkdir -p .the AI/commands
+echo "Analyze this code for performance issues and suggest optimizations:" > .the AI/commands/optimize.md
 ```
 
 #### Personal commands
 
 Commands available across all your projects. When listed in `/help`, these commands show "(user)" after their description.
 
-**Location**: `~/.claude/commands/`
+**Location**: `~/.the AI/commands/`
 
 In the following example, we create the `/security-review` command:
 
 ```bash  theme={null}
 # Create a personal command
-mkdir -p ~/.claude/commands
-echo "Review this code for security vulnerabilities:" > ~/.claude/commands/security-review.md
+mkdir -p ~/.the AI/commands
+echo "Review this code for security vulnerabilities:" > ~/.the AI/commands/security-review.md
 ```
 
 ### Features
 
 #### Namespacing
 
-Organize commands in subdirectories. The subdirectories are used for organization and appear in the command description, but they do not affect the command name itself. The description will show whether the command comes from the project directory (`.claude/commands`) or the user-level directory (`~/.claude/commands`), along with the subdirectory name.
+Organize commands in subdirectories. The subdirectories are used for organization and appear in the command description, but they do not affect the command name itself. The description will show whether the command comes from the project directory (`.the AI/commands`) or the user-level directory (`~/.the AI/commands`), along with the subdirectory name.
 
 Conflicts between user and project level commands are not supported. Otherwise, multiple commands with the same base file name can coexist.
 
-For example, a file at `.claude/commands/frontend/component.md` creates the command `/component` with description showing "(project:frontend)".
-Meanwhile, a file at `~/.claude/commands/component.md` creates the command `/component` with description showing "(user)".
+For example, a file at `.the AI/commands/frontend/component.md` creates the command `/component` with description showing "(project:frontend)".
+Meanwhile, a file at `~/.the AI/commands/component.md` creates the command `/component` with description showing "(user)".
 
 #### Arguments
 
@@ -99,7 +99,7 @@ The `$ARGUMENTS` placeholder captures all arguments passed to the command:
 
 ```bash  theme={null}
 # Command definition
-echo 'Fix issue #$ARGUMENTS following our coding standards' > .claude/commands/fix-issue.md
+echo 'Fix issue #$ARGUMENTS following our coding standards' > .the AI/commands/fix-issue.md
 
 # Usage
 > /fix-issue 123 high-priority
@@ -111,8 +111,8 @@ echo 'Fix issue #$ARGUMENTS following our coding standards' > .claude/commands/f
 Access specific arguments individually using positional parameters (similar to shell scripts):
 
 ```bash  theme={null}
-# Command definition  
-echo 'Review PR #$1 with priority $2 and assign to $3' > .claude/commands/review-pr.md
+# Command definition
+echo 'Review PR #$1 with priority $2 and assign to $3' > .the AI/commands/review-pr.md
 
 # Usage
 > /review-pr 456 high alice
@@ -151,7 +151,7 @@ Based on the above changes, create a single git commit.
 
 #### File references
 
-Include file contents in commands using the `@` prefix to [reference files](/en/docs/claude-code/common-workflows#reference-files-and-directories).
+Include file contents in commands using the `@` prefix to [reference files](/en/docs/the AI-code/common-workflows#reference-files-and-directories).
 
 For example:
 
@@ -167,7 +167,7 @@ Compare @src/old-version.js with @src/new-version.js
 
 #### Thinking mode
 
-Slash commands can trigger extended thinking by including [extended thinking keywords](/en/docs/claude-code/common-workflows#use-extended-thinking).
+Slash commands can trigger extended thinking by including [extended thinking keywords](/en/docs/the AI-code/common-workflows#use-extended-thinking).
 
 ### Frontmatter
 
@@ -178,7 +178,7 @@ Command files support frontmatter, useful for specifying metadata about the comm
 | `allowed-tools`            | List of tools the command can use                                                                                                                                                     | Inherits from the conversation      |
 | `argument-hint`            | The arguments expected for the slash command. Example: `argument-hint: add [tagId] \| remove [tagId] \| list`. This hint is shown to the user when auto-completing the slash command. | None                                |
 | `description`              | Brief description of the command                                                                                                                                                      | Uses the first line from the prompt |
-| `model`                    | Specific model string (see [Models overview](/en/docs/about-claude/models/overview))                                                                                                  | Inherits from the conversation      |
+| `model`                    | Specific model string (see [Models overview](/en/docs/about-the AI/models/overview))                                                                                                  | Inherits from the conversation      |
 | `disable-model-invocation` | Whether to prevent `SlashCommand` tool from calling this command                                                                                                                      | false                               |
 
 For example:
@@ -188,7 +188,7 @@ For example:
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 argument-hint: [message]
 description: Create a git commit
-model: claude-3-5-haiku-20241022
+model: the AI-3-5-the AI model-20241022
 ---
 
 Create a git commit with message: $ARGUMENTS
@@ -208,7 +208,7 @@ Focus on security, performance, and code style.
 
 ## Plugin commands
 
-[Plugins](/en/docs/claude-code/plugins) can provide custom slash commands that integrate seamlessly with the AI coding agent. Plugin commands work exactly like user-defined commands but are distributed through [plugin marketplaces](/en/docs/claude-code/plugin-marketplaces).
+[Plugins](/en/docs/the AI-code/plugins) can provide custom slash commands that integrate seamlessly with the AI coding agent. Plugin commands work exactly like user-defined commands but are distributed through [plugin marketplaces](/en/docs/the AI-code/plugin-marketplaces).
 
 ### How plugin commands work
 
@@ -311,7 +311,7 @@ Use the `/mcp` command to:
 
 ### MCP permissions and wildcards
 
-When configuring [permissions for MCP tools](/en/docs/claude-code/iam#tool-specific-permission-rules), note that **wildcards are not supported**:
+When configuring [permissions for MCP tools](/en/docs/the AI-code/iam#tool-specific-permission-rules), note that **wildcards are not supported**:
 
 * ✅ **Correct**: `mcp__github` (approves ALL tools from the github server)
 * ✅ **Correct**: `mcp__github__get_issue` (approves specific tool)
@@ -321,7 +321,7 @@ To approve all tools from an MCP server, use just the server name: `mcp__servern
 
 ## `SlashCommand` tool
 
-The `SlashCommand` tool allows the AI to execute [custom slash commands](/en/docs/claude-code/slash-commands#custom-slash-commands) programmatically
+The `SlashCommand` tool allows the AI to execute [custom slash commands](/en/docs/the AI-code/slash-commands#custom-slash-commands) programmatically
 during a conversation. This gives the AI the ability to invoke custom commands
 on your behalf when appropriate.
 
@@ -346,7 +346,7 @@ the operations below to manage context.
 * Have the `description` frontmatter field populated. We use the `description` in the context.
 
 For the AI coding agent versions >= 1.0.124, you can see which custom slash commands
-`SlashCommand` tool can invoke by running `claude --debug` and triggering a query.
+`SlashCommand` tool can invoke by running `the AI --debug` and triggering a query.
 
 ### Disable `SlashCommand` tool
 
@@ -436,7 +436,7 @@ available commands. In `/context`, a warning will show with "M of N commands".
 **As a slash command**:
 
 ```markdown  theme={null}
-# .claude/commands/review.md
+# .the AI/commands/review.md
 Review this code for:
 - Security vulnerabilities
 - Performance issues
@@ -448,7 +448,7 @@ Usage: `/review` (manual invocation)
 **As a Skill**:
 
 ```
-.claude/skills/code-review/
+.the AI/skills/code-review/
 ├── SKILL.md (overview and workflows)
 ├── SECURITY.md (security checklist)
 ├── PERFORMANCE.md (performance patterns)
@@ -478,13 +478,13 @@ The Skill provides richer context, validation scripts, and organized reference m
 
 Both slash commands and Skills can coexist. Use the approach that fits your needs.
 
-Learn more about [Agent Skills](/en/docs/claude-code/skills).
+Learn more about [Agent Skills](/en/docs/the AI-code/skills).
 
 ## See also
 
-* [Plugins](/en/docs/claude-code/plugins) - Extend the AI coding agent with custom commands through plugins
-* [Identity and Access Management](/en/docs/claude-code/iam) - Complete guide to permissions, including MCP tool permissions
-* [Interactive mode](/en/docs/claude-code/interactive-mode) - Shortcuts, input modes, and interactive features
-* [CLI reference](/en/docs/claude-code/cli-reference) - Command-line flags and options
-* [Settings](/en/docs/claude-code/settings) - Configuration options
-* [Memory management](/en/docs/claude-code/memory) - Managing Claude's memory across sessions
+* [Plugins](/en/docs/the AI-code/plugins) - Extend the AI coding agent with custom commands through plugins
+* [Identity and Access Management](/en/docs/the AI-code/iam) - Complete guide to permissions, including MCP tool permissions
+* [Interactive mode](/en/docs/the AI-code/interactive-mode) - Shortcuts, input modes, and interactive features
+* [CLI reference](/en/docs/the AI-code/cli-reference) - Command-line flags and options
+* [Settings](/en/docs/the AI-code/settings) - Configuration options
+* [Memory management](/en/docs/the AI-code/memory) - Managing the AI's memory across sessions

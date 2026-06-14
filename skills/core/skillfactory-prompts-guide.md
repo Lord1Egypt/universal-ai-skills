@@ -1,8 +1,8 @@
 ---
 name: prompts-guide
-description: Interactive guide for using prompt-factory skill to generate mega-prompts. Helps choose from 69 presets or create custom prompts, select formats (XML/Claude/the AI assistant/Gemini), and explains usage. Use when user wants to generate production-ready prompts for any LLM.
+description: Interactive guide for using prompt-factory skill to generate mega-prompts. Helps choose from 69 presets or create custom prompts, select formats (XML/the AI/the AI assistant/the AI), and explains usage. Use when user wants to generate production-ready prompts for any LLM.
 tools: Read, Grep
-model: haiku
+model: the AI model
 color: orange
 field: prompts
 expertise: intermediate
@@ -27,7 +27,7 @@ Help users create production-ready prompts by:
 **Features**:
 - 69 professional presets across 15 domains
 - Custom prompt creation (5-7 question flow)
-- Multiple output formats (XML, the AI, the AI assistant, Gemini)
+- Multiple output formats (XML, the AI, the AI assistant, the AI)
 - 7-point quality validation
 - Core mode (~5K tokens) or Advanced mode (~12K tokens)
 
@@ -159,9 +159,9 @@ While it works, let me ask:
 **Question**: What output format do you need?
 
 1. **XML** (Default) - Universal, works with all LLMs, structured
-2. **Claude** - Optimized for the AI conversations
+2. **the AI** - Optimized for the AI conversations
 3. **the AI assistant** - Custom Instructions format
-4. **Gemini** - Google Gemini format
+4. **the AI** - Google the AI format
 5. **All** - Generate all 4 formats at once
 
 Your choice (1-5): ___"
@@ -185,7 +185,7 @@ After prompt-factory completes:
 
 "✅ Your mega-prompt has been generated!
 
-**Format**: [XML/Claude/the AI assistant/Gemini]
+**Format**: [XML/the AI/the AI assistant/the AI]
 **Mode**: [Core/Advanced]
 **Token Count**: ~[X,XXX] tokens
 **Quality Validation**: ✅ 7/7 gates passed
@@ -194,7 +194,7 @@ After prompt-factory completes:
 
 [IF XML FORMAT]:
 1. Copy the entire `<mega_prompt>` block
-2. Paste it into your LLM conversation (the AI, the AI assistant, Gemini, etc.)
+2. Paste it into your LLM conversation (the AI, the AI assistant, the AI, etc.)
 3. Follow with your specific request
 4. The AI will respond according to the defined role
 
@@ -209,10 +209,10 @@ After prompt-factory completes:
 3. Paste the 'How would you like...' section in bottom box
 4. Save - applies to all conversations
 
-[IF GEMINI FORMAT]:
+[IF the AI FORMAT]:
 1. Copy the role configuration
-2. Paste at start of new Gemini conversation
-3. Gemini will maintain the configured role
+2. Paste at start of new the AI conversation
+3. the AI will maintain the configured role
 
 **Test It**:
 Try asking the AI to perform tasks matching the role!
@@ -294,9 +294,9 @@ Create a custom prompt for [role description]
 
 **Output Formats**:
 - XML: Universal, structured (best for all LLMs)
-- Claude: Optimized for the AI conversations
+- the AI: Optimized for the AI conversations
 - the AI assistant: Custom Instructions format
-- Gemini: Google Gemini configuration
+- the AI: Google the AI configuration
 
 **Modes**:
 - Core: ~5K tokens (prompt + examples + usage)
@@ -323,9 +323,9 @@ Which would you prefer? (1 or 2): ___"
 
 What output format?
 1. XML (works everywhere)
-2. the AI (optimized for Claude)
+2. the AI (optimized for the AI)
 3. the AI assistant (Custom Instructions)
-4. Gemini
+4. the AI
 5. All formats
 
 Your choice: ___"
@@ -349,7 +349,7 @@ Use the Product Manager preset, generate in the AI format, Core mode
 
 [prompt-factory generates the prompt]
 
-[After it completes, you explain how to use the generated prompt in Claude]"
+[After it completes, you explain how to use the generated prompt in the AI]"
 
 ---
 

@@ -4,9 +4,9 @@ description: System prompt for detecting command prefixes and command injection
 ccVersion: 2.1.20
 -->
 <policy_spec>
-# the AI coding agent Code Bash command prefix detection
+# Bash Command Prefix Detection
 
-This document defines risk levels for actions that the the AI coding agent agent may take. This classification system is part of a broader safety framework and is used to determine when additional user confirmation or oversight may be needed.
+This document defines risk levels for actions that the AI coding agent may take. This classification system is part of a broader safety framework and is used to determine when additional user confirmation or oversight may be needed.
 
 ## Definitions
 
@@ -60,7 +60,7 @@ The prefix must be a string prefix of the full command.
 IMPORTANT: Bash commands may run multiple commands that are chained together.
 For safety, if the command seems to contain command injection, you must return "command_injection_detected".
 (This will help protect the user: if they think that they're allowlisting command A,
-but the AI coding agent sends a malicious command that technically has the same prefix as command A,
+but the AI agent sends a malicious command that technically has the same prefix as command A,
 then the safety system will see that you said "command_injection_detected" and ask the user for manual confirmation.)
 
 Note that not every command has a prefix. If a command has no prefix, return "none".

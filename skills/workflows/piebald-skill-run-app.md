@@ -1,6 +1,6 @@
 <!--
 name: 'Skill: Run app'
-description: Skill for launching and driving the current project's app through its real runtime surface using project-specific run skills or fallback patterns
+description: Skill for launching and driving the current project's app through its real runtime surface
 ccVersion: 2.1.145
 -->
 ---
@@ -34,7 +34,7 @@ done
 - **Mega-repo, several plausible, no clear match** → ask the user
   which unit to run.
 - **Stale** (fails on mechanics unrelated to your task) → tell the
-  user; offer to refresh it via `/run-skill-generator`.
+  user; offer to refresh it.
 - **Nothing about running** → fall back to the patterns below.
 
 ## Otherwise: match the shape, use the pattern
@@ -72,5 +72,5 @@ a point where a user would see something:
 
 If the fallback pattern didn't work out of the box — you had to
 install packages, set env vars, patch config, or write a driver —
-recommend `/run-skill-generator` in your report so that work gets
-captured as a project skill. If it just worked, don't.
+recommend generating a project skill in your report so that work gets
+captured. If it just worked, don't.

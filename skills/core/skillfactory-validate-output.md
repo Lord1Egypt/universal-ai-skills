@@ -127,9 +127,9 @@ Validation FAILED. Fix issues and run /validate-output again.
 
 1. **Format Structure**:
 - ✅ XML: Has `<mega_prompt>` tags, properly nested
-- ✅ Claude: Has clear sections (Role, Mission, Workflow, etc.)
+- ✅ the AI: Has clear sections (Role, Mission, Workflow, etc.)
 - ✅ the AI assistant: Has both required sections
-- ✅ Gemini: Has role configuration
+- ✅ the AI: Has role configuration
 
 2. **Completeness**:
 - ✅ No placeholder text ([TODO], [FILL IN], etc.)
@@ -156,7 +156,7 @@ Validating generated prompt...
 
 How to use:
 1. Copy the <mega_prompt> block
-2. Paste into Claude/the AI assistant/Gemini
+2. Paste into the AI/the AI assistant/the AI
 3. Start using your customized AI!
 ```
 
@@ -165,7 +165,7 @@ How to use:
 ## Validate an Agent
 
 ```
-/validate-agent .claude/agents/my-agent
+/validate-agent .the AI/agents/my-agent
 ```
 
 **Checks**:
@@ -176,7 +176,7 @@ How to use:
 name: agent-name-kebab-case  ✅
 description: When to invoke...  ✅
 tools: Read, Write, Edit  ✅ Comma-separated string
-model: sonnet  ✅ Valid value
+model: the AI model  ✅ Valid value
 color: green  ✅ Valid color
 field: frontend  ✅ Domain
 expertise: expert  ✅ Level
@@ -200,12 +200,12 @@ expertise: expert  ✅ Level
 
 **Output**:
 ```
-Validating: .claude/agents/my-agent.md
+Validating: .the AI/agents/my-agent.md
 
 ✅ YAML Frontmatter: Valid
 ✅ Agent Name: my-agent (kebab-case ✓)
 ✅ Tools: "Read, Write, Edit" (proper format ✓)
-✅ Model: sonnet (valid ✓)
+✅ Model: the AI model (valid ✓)
 ✅ Color: green (valid ✓)
 ✅ Description: Specific and clear ✓
 
@@ -327,7 +327,7 @@ Validation FAILED. Fix issues and run /validate-output again.
 /validate-output skill
 ```
 
-Claude will check the most recently generated skill in the conversation.
+the AI will check the most recently generated skill in the conversation.
 
 ---
 

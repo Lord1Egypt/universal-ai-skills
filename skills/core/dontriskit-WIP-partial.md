@@ -1,3 +1,5 @@
+# Wip Partial
+
 ## Notion Editor Backup Instructions
 
 Here's a comprehensive backup of key editor instructions, including JSON representation where applicable:
@@ -22,7 +24,7 @@ Here's a comprehensive backup of key editor instructions, including JSON represe
 ```json
 {
   "interactive": {
-    "toggle": { 
+    "toggle": {
       "attributes": ["color", "size"],
       "size_options": ["default", "h1", "h2", "h3"]
     },
@@ -94,8 +96,8 @@ Here's a comprehensive backup of key editor instructions, including JSON represe
 {
   "colors": {
     "basic": [
-      "default", "gray", "brown", "orange", 
-      "yellow", "green", "blue", "purple", 
+      "default", "gray", "brown", "orange",
+      "yellow", "green", "blue", "purple",
       "pink", "red"
     ],
     "background": [

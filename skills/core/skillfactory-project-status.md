@@ -46,7 +46,7 @@
 - LICENSE - MIT License
 
 ### Automation (11 workflows)
-- Automatic code review (Claude AI)
+- Automatic code review (the AI AI)
 - PR-to-issue auto-close
 - Issue auto-triage
 - Plan-to-tasks conversion
@@ -116,13 +116,13 @@
 - Size: 264KB (clean, no venvs)
 
 **GitHub Blueprint**:
-- Location: `/claudecode-github-bluprint/`
+- Location: `/ai-code-github-blueprint/`
 - Purpose: Reusable GitHub automation blueprint
 - Contents: Complete .github folder with 11 workflows
 
 **Ecosystem**:
-- [the AI coding agent Tresor](https://github.com/alirezarezvani/claude-code-tresor) - Development utilities
-- [Claude Skills Library](https://github.com/alirezarezvani/claude-skills) - Domain-specific skills
+- [the AI coding agent Tresor](https://github.com/alirezarezvani/the AI-code-tresor) - Development utilities
+- [the AI Skills Library](https://github.com/alirezarezvani/the AI-skills) - Domain-specific skills
 
 ---
 
@@ -159,14 +159,14 @@
 
 ## 📞 Quick Reference
 
-**Main Repository**: 
+**Main Repository**:
 ```
 ./
 ```
 
 **Health SDK Builder ZIP**:
 ```
-/generated-skills/claude-health-sdk-builder.zip
+/generated-skills/the AI-health-sdk-builder.zip
 ```
 
 **Testing Repository**:

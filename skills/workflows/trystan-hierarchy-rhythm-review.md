@@ -19,7 +19,7 @@ Read the file and the styles it references. Note the medium (slide / page / mobi
 
 ## Phase 2: Run two review passes
 
-Codex runs as a single agent loop. Run both passes **sequentially** against the file, collecting findings as you go before fixing.
+The AI agent runs as a single loop. Run both passes **sequentially** against the file, collecting findings as you go before fixing.
 
 ### Pass 1: Hierarchy review
 

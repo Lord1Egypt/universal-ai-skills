@@ -4,6 +4,8 @@ impact: HIGH
 tags: api, constructor, properties, methods
 ---
 
+# Api Reference
+
 ## InfrahubGenerator API Reference
 
 Impact: HIGH

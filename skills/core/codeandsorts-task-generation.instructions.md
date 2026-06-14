@@ -135,11 +135,11 @@ After generating the task list:
     - Test JWT token generation/verification
 ```
 
-## Integration with GitHub Copilot
+## Integration with GitHub the AI assistant
 
 ### Prompting Strategies
 
-When working with GitHub Copilot on generated tasks:
+When working with GitHub the AI assistant on generated tasks:
 
 1. **Context Setting**: Start with "Based on the PRD and current task T00X..."
 2. **Specific Requests**: "Generate the user registration endpoint with input validation"

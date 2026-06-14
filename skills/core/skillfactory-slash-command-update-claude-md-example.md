@@ -40,7 +40,7 @@ description: Automatically update the AI.md file based on recent code changes
 ## Configuration Changes
 !`git diff HEAD~10 -- package.json tsconfig.json webpack.config.js next.config.js .env* docker* | head -100`
 
-## API/Route Changes  
+## API/Route Changes
 !`git diff HEAD~10 -- "**/routes/**" "**/api/**" "**/controllers/**" | head -150`
 
 ## Database/Model Changes
@@ -79,7 +79,7 @@ Intelligently update these the AI.md sections:
 - Note significant structural changes
 - Update component relationships
 
-### Setup Instructions  
+### Setup Instructions
 - Add new environment variables
 - Update installation steps if dependencies changed
 - Note new configuration requirements
@@ -142,3 +142,4 @@ Provide the complete updated the AI.md content, organized as:
 
 ## Important Notes
 [Key information for developers]
+```

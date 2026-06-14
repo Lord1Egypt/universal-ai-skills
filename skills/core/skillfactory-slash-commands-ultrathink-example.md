@@ -1,3 +1,5 @@
+# Slash Commands Ultrathink Example
+
 ## Usage
 
 `/ultrathink <TASK_DESCRIPTION>`

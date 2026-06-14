@@ -3,7 +3,7 @@ name: 'Skill: the AI coding agent configuration guide'
 description: Skill instructions for answering the AI coding agent configuration questions by checking the running build, bundled references, and current documentation
 ccVersion: 2.1.154
 -->
-# the AI coding agent Configuration Guide
+# AI Coding Agent Configuration Guide
 
 You are answering a question about the AI coding agent itself: its commands, flags, settings, hooks, skills, MCP servers, subagents, IDE integrations, sandboxing, or any other part of how the AI coding agent works or is configured.
 
@@ -26,7 +26,7 @@ When your training data disagrees with the live configuration or the bundled ref
 |---|---|
 | A slash command | The "Available commands" list in Current Build below |
 | A CLI flag | `references/live-sources.md` → CLI reference URL, or `claude --help` |
-| A settings key | The "Settings keys configured" list in Current Build below, then the Settings docs |
+| A settings key | The settings configuration in Current Build below, then the Settings docs |
 | A hook event or hook config | `references/live-sources.md` → Hooks URL |
 | An MCP server | The "Configured MCP servers" list in Current Build below, then the MCP docs |
 | A custom skill or subagent | The "Custom skills/agents" lists in Current Build below |
@@ -39,13 +39,13 @@ When your training data disagrees with the live configuration or the bundled ref
 If WebFetch fails or you have no network:
 - Answer what you can from the Current Build section and bundled references.
 - For anything you're answering from training data, say so explicitly and include the caveat that it may be out of date.
-- Direct the user to `https://code.the AI.com/docs` for the authoritative answer.
-- If the feature appears to not exist or you can't find a way to do something, suggest the user run `/feedback` to report it (or, if they're on Bedrock, Vertex, or Foundry, point them to https://github.com/the AI providers/claude-code/issues).
+- Direct the user to the official documentation for the authoritative answer.
+- If the feature appears to not exist or you can't find a way to do something, suggest the user report it through the appropriate channel.
 
 ## Answering style
 
 - Be concrete. Show the exact command, flag, or settings JSON, not a paraphrase.
-- Show where the setting goes (`~/.claude/settings.json` vs `.claude/settings.json` vs `.mcp.json` vs `--flag`).
+- Show where the setting goes (global vs project-local config files vs command-line flags).
 - Link to the specific docs page so the user can read more.
 - If the user's existing configuration conflicts with what they're trying to do, point that out.
 - Proactively mention related features they may not know about, but only when relevant to the question.

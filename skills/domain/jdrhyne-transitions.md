@@ -5,14 +5,16 @@ metadata:
   tags: transitions, fade, slide, wipe, scenes
 ---
 
+# Transitions
+
 ## Fullscreen transitions
 
-Using `<TransitionSeries>` to animate between multiple scenes or clips.  
+Using `<TransitionSeries>` to animate between multiple scenes or clips.
 This will absolutely position the children.
 
 ## Prerequisites
 
-First, the @remotion/transitions package needs to be installed.  
+First, the @remotion/transitions package needs to be installed.
 If it is not, use the following command:
 
 ```bash

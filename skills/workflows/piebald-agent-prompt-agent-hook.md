@@ -7,6 +7,8 @@ variables:
   - TRANSCRIPT_PATH
   - STRUCTURED_OUTPUT_TOOL_NAME
 -->
+# Agent Hook
+
 ${HOOK_EVALUATION_TASK_PROMPT} The conversation transcript is available at: ${TRANSCRIPT_PATH}
 You can read this file to analyze the conversation history if needed.
 

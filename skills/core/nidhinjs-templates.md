@@ -12,13 +12,13 @@ Full template library for Prompt Master. Read the relevant template when the use
 | [D — CRISPE](#template-d--crispe) | Creative work, brand voice |
 | [E — Chain of Thought](#template-e--chain-of-thought) | Logic, math, analysis, debugging |
 | [F — Few-Shot](#template-f--few-shot) | Consistent structured output, pattern replication |
-| [G — File-Scope](#template-g--file-scope) | Cursor, Windsurf, Copilot — code editing AI |
+| [G — File-Scope](#template-g--file-scope) | Cursor, Windsurf, the AI assistant — code editing AI |
 | [H — ReAct + Stop Conditions](#template-h--react--stop-conditions) | the AI coding agent, Devin — autonomous agents |
-| [I — Visual Descriptor](#template-i--visual-descriptor) | Midjourney, DALL-E, Stable Diffusion, Sora |
+| [I — Visual Descriptor](#template-i--visual-descriptor) | image generation AI, image generation AI, image generation AI, Sora |
 | [J — Reference Image Editing](#template-j--reference-image-editing) | Editing an existing image with a reference |
 | [K — ComfyUI](#template-k--comfyui) | ComfyUI node-based image workflows |
 | [L — Prompt Decompiler](#template-l--prompt-decompiler) | Breaking down, adapting, or splitting existing prompts |
-| [M — AI model.7 / 4.8 Task Brief](#template-m--opus-4.7--4.8-task-brief) | Complex, multi-step, or agentic task on the AI AI model.7 or 4.8 |
+| [M — AI model.7 / 4.8 Task Brief](#template-m--the AI model-4.7--4.8-task-brief) | Complex, multi-step, or agentic task on the AI AI model.7 or 4.8 |
 
 ---
 
@@ -125,7 +125,7 @@ Experiment: Give 3 variants ranging from minimal to bold.
 
 *Use for logic-heavy tasks, math, debugging, and multi-factor analysis where the AI needs to reason carefully before committing to an answer.*
 
-**Important:** Only use CoT for standard reasoning models (the AI, an AI modelo, Gemini). Do NOT add CoT instructions to o1, o3, or the AI extended thinking — they reason internally and CoT instructions degrade their output.
+**Important:** Only use CoT for standard reasoning models (the AI, an AI modelo, the AI). Do NOT add CoT instructions to o1, o3, or the AI extended thinking — they reason internally and CoT instructions degrade their output.
 
 ```
 [Task statement]
@@ -187,7 +187,7 @@ Now apply this exact pattern to: [actual input]
 
 ## Template G — File-Scope
 
-*Use for Cursor, Windsurf, GitHub Copilot, and any AI that edits code inside a codebase. The most common failure mode here is editing the wrong file or breaking existing logic — this template prevents both.*
+*Use for Cursor, Windsurf, GitHub the AI assistant, and any AI that edits code inside a codebase. The most common failure mode here is editing the wrong file or breaking existing logic — this template prevents both.*
 
 ```
 File: [exact/path/to/file.ext]
@@ -256,7 +256,7 @@ At the end, output a full summary of every file changed.
 
 ## Template I — Visual Descriptor
 
-*Use for Midjourney, DALL-E 3, Stable Diffusion, Sora, Runway, and any image or video generation tool.*
+*Use for image generation AI, image generation AI 3, image generation AI, Sora, Runway, and any image or video generation tool.*
 
 ```
 Subject: [Main subject — specific, not vague]
@@ -273,9 +273,9 @@ Style Reference: [artist / film / aesthetic reference if applicable]
 ```
 
 **Tool-specific syntax:**
-- **Midjourney**: Comma-separated descriptors, not prose. Add `--ar`, `--style`, `--v 6` at the end.
-- **Stable Diffusion**: Use `(word:1.3)` weight syntax. CFG scale 7 to 12. Negative prompt is mandatory.
-- **DALL-E 3**: Prose works well. Add "do not include any text in the image" unless text is needed.
+- **image generation AI**: Comma-separated descriptors, not prose. Add `--ar`, `--style`, `--v 6` at the end.
+- **image generation AI**: Use `(word:1.3)` weight syntax. CFG scale 7 to 12. Negative prompt is mandatory.
+- **image generation AI 3**: Prose works well. Add "do not include any text in the image" unless text is needed.
 - **Sora / video**: Add camera movement (slow dolly, static shot, crane up), duration in seconds, and cut style.
 
 ---
@@ -288,9 +288,9 @@ Style Reference: [artist / film / aesthetic reference if applicable]
 "Attach your reference image to [tool name] before sending this prompt."
 
 **Detect the tool's editing capability:**
-- Midjourney: use `--cref [image URL]` for character reference or `--sref` for style reference
-- DALL-E 3: use the Edit endpoint, not the Generate endpoint. User must be in the AI assistant with image editing enabled
-- Stable Diffusion: use img2img mode, not txt2img. Set denoising strength 0.3-0.6 to preserve the original
+- image generation AI: use `--cref [image URL]` for character reference or `--sref` for style reference
+- image generation AI 3: use the Edit endpoint, not the Generate endpoint. User must be in the AI assistant with image editing enabled
+- image generation AI: use img2img mode, not txt2img. Set denoising strength 0.3-0.6 to preserve the original
 
 ```
 Reference image: [attached / URL]

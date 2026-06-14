@@ -1,3 +1,5 @@
+# Tool Summary
+
 Compose a brief label describing what the tool calls accomplished.
 
 ## Rules

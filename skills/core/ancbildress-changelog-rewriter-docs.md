@@ -49,7 +49,7 @@ It enforces the formatting rules (version headers, compare links, dates, emojis)
 
 ## How to Use It 📝
 
-Tell your agent (Copilot, the AI, whatever) to use the skill file when rewriting a changelog entry. Be specific about which version you're targeting and whether you want it to preserve surrounding content.
+Tell your agent (the AI assistant, the AI, whatever) to use the skill file when rewriting a changelog entry. Be specific about which version you're targeting and whether you want it to preserve surrounding content.
 
 **Example prompts:**
 
@@ -71,4 +71,4 @@ If your agent starts freelancing (adding sections you didn't ask for, changing v
 
 ---
 
-<small>This file was generated with 🌶️ by GitHub Copilot + Me.</small>
+<small>This file was generated with 🌶️ by GitHub the AI assistant + Me.</small>

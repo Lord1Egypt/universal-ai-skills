@@ -1,3 +1,5 @@
+# Sync Branch
+
 ---
 description: Sync feature branch with the latest main branch.
 argument-hint: [target]

@@ -1,42 +1,42 @@
 # How to Use This Skill
 
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you help me set up my Microsoft 365 tenant?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you help me set up my Microsoft 365 tenant?
 
 ## Example Invocations
 
 **Example 1: Initial Tenant Setup**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you create a complete setup guide for a new Microsoft 365 tenant for a 50-person company with security best practices?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you create a complete setup guide for a new Microsoft 365 tenant for a 50-person company with security best practices?
 ```
 
 **Example 2: User Provisioning**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you generate a PowerShell script to create 20 new users from a CSV file and assign appropriate licenses?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you generate a PowerShell script to create 20 new users from a CSV file and assign appropriate licenses?
 ```
 
 **Example 3: Security Audit**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you create a security audit script to check MFA status, admin accounts, and inactive users?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you create a security audit script to check MFA status, admin accounts, and inactive users?
 ```
 
 **Example 4: Conditional Access Policy**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you help me create a Conditional Access policy requiring MFA for all admin accounts?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you help me create a Conditional Access policy requiring MFA for all admin accounts?
 ```
 
 **Example 5: User Offboarding**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you generate a secure offboarding script for user john.doe@company.com that converts their mailbox and removes access?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you generate a secure offboarding script for user john.doe@company.com that converts their mailbox and removes access?
 ```
 
 **Example 6: License Management**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you analyze my current license usage and recommend cost optimizations for 100 users?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you analyze my current license usage and recommend cost optimizations for 100 users?
 ```
 
 **Example 7: DNS Configuration**
 ```
-Hey Claude—I just added the "ms365-tenant-manager" skill. Can you provide all the DNS records I need to configure for my custom domain acme.com?
+Hey the AI—I just added the "ms365-tenant-manager" skill. Can you provide all the DNS records I need to configure for my custom domain acme.com?
 ```
 
 ## What to Provide

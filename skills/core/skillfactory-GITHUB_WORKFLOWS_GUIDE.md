@@ -93,7 +93,7 @@ This repository includes a comprehensive GitHub automation system that provides:
 
 | Workflow | Trigger | Purpose | Status |
 |----------|---------|---------|--------|
-| **claude-code-review.yml** | PR opened/updated | Automatic code reviews | ✅ Active |
+| **the AI-code-review.yml** | PR opened/updated | Automatic code reviews | ✅ Active |
 | **pr-issue-auto-close.yml** | PR merged | Auto-close linked issues | ✅ Active |
 | **issue-triage.yml** | Issue created | Auto-classification | ✅ Active |
 | **plan-validator.yml** | `plan` label | Validate plan format | ✅ Active |
@@ -143,7 +143,7 @@ PLAN (#100)
    - Actions enabled
 
 2. **Required Tokens**
-   - `CLAUDE_CODE_OAUTH_TOKEN`
+   - `AI_CODE_OAUTH_TOKEN`
    - `PROJECTS_TOKEN`
 
 3. **Team Access**
@@ -155,14 +155,14 @@ PLAN (#100)
 
 ### Step 1: Create Required Secrets
 
-#### CLAUDE_CODE_OAUTH_TOKEN
+#### AI_CODE_OAUTH_TOKEN
 
 **Purpose**: Authenticates the AI coding agent GitHub Action
 
 **How to Add**:
 1. Navigate to: Repository → Settings → Secrets and variables → Actions
 2. Click "New repository secret"
-3. Name: `CLAUDE_CODE_OAUTH_TOKEN`
+3. Name: `AI_CODE_OAUTH_TOKEN`
 4. Value: [Your the AI coding agent OAuth token]
 5. Click "Add secret"
 
@@ -198,7 +198,7 @@ PLAN (#100)
    - Navigate to: https://github.com/users/YOUR_USERNAME/projects
    - Click "New project"
    - Select "Board" template
-   - Name: "@claude-skills-factory"
+   - Name: "@the AI-skills-factory"
 
 2. **Configure Columns** (exact order):
    1. To triage
@@ -263,7 +263,7 @@ gh label create "subtask" --color "e4e669" --description "Subtask from task"
 ```bash
 # Check secrets
 gh secret list
-# Expected: CLAUDE_CODE_OAUTH_TOKEN, PROJECTS_TOKEN
+# Expected: AI_CODE_OAUTH_TOKEN, PROJECTS_TOKEN
 
 # Check labels
 gh label list | wc -l
@@ -664,18 +664,18 @@ if: contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'),
 **Layer 2: Tool Restrictions**
 ```yaml
 # Allowlist specific commands
-claude_args: '--allowed-tools "Bash(gh issue:*),Bash(gh pr:*)"'
+ai_args: '--allowed-tools "Bash(gh issue:*),Bash(gh pr:*)"'
 # Blocks: git push, rm -rf, curl, etc.
 ```
 
 **Layer 3: Token Scoping**
-- `CLAUDE_CODE_OAUTH_TOKEN`: the AI operations only
+- `AI_CODE_OAUTH_TOKEN`: the AI operations only
 - `PROJECTS_TOKEN`: `repo` + `project` (no admin)
 - `GITHUB_TOKEN`: Minimal read permissions
 
 **Layer 4: Branch Protection**
 - Required PR workflow
-- Status checks required (claude-review)
+- Status checks required (the AI-review)
 - No force pushes
 - Conversation resolution required
 
@@ -708,7 +708,7 @@ gh secret list
 
 ```bash
 # Update workflow versions
-# Check: https://github.com/the AI providers/claude-code-action/releases
+# Check: https://github.com/the AI providers/the AI-code-action/releases
 
 # Clean up labels
 gh label list
@@ -929,7 +929,7 @@ gh api rate_limit
 - HIERARCHY.md (plan/task tree visualization)
 
 **External Resources**:
-- the AI coding agent Docs: https://docs.the AI.com/claude-code
+- the AI coding agent Docs: https://docs.the AI.com/the AI-code
 - GitHub Actions: https://docs.github.com/actions
 - GitHub Projects: https://docs.github.com/issues/planning-and-tracking-with-projects
 

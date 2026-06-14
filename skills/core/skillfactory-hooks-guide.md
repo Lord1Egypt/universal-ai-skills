@@ -2,7 +2,7 @@
 name: hooks-guide
 description: Interactive guide for building custom the AI coding agent hooks. Asks straightforward questions, uses hook-factory skill, generates complete hooks with validation, and provides installation instructions.
 tools: Read, Write, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: green
 field: hooks
 expertise: expert
@@ -250,13 +250,13 @@ Generating your hook with the hook-factory skill..."
 Use Bash tool to run hook-factory:
 
 ```bash
-cd /Users/rezarezvani/projects/claude-code-skills-factory && python3 generated-skills/hook-factory/hook_factory.py -r "[Combined Q1 + Q5 into natural language request]"
+cd /Users/rezarezvani/projects/the AI-code-skills-factory && python3 generated-skills/hook-factory/hook_factory.py -r "[Combined Q1 + Q5 into natural language request]"
 ```
 
 OR if matches a template:
 
 ```bash
-cd /Users/rezarezvani/projects/claude-code-skills-factory && python3 generated-skills/hook-factory/hook_factory.py -t [template_name] -l [language]
+cd /Users/rezarezvani/projects/the AI-code-skills-factory && python3 generated-skills/hook-factory/hook_factory.py -t [template_name] -l [language]
 ```
 
 ### Step 3: Validate Generated Hook
@@ -284,9 +284,9 @@ Report validation results to user.
 
 1. Open your the AI coding agent settings:
    ```bash
-   vim ~/.claude/settings.json    # User-level (all projects)
+   vim ~/.the AI/settings.json    # User-level (all projects)
    # OR
-   vim .claude/settings.json      # Project-level (this project only)
+   vim .the AI/settings.json      # Project-level (this project only)
    ```
 
 2. Add the hook configuration to the `hooks` object:

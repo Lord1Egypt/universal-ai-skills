@@ -8,6 +8,8 @@ variables:
   - IS_TRUSTED_DOMAIN
 -->
 
+# WebFetch Summarizer
+
 Web page content:
 ---
 ${WEB_CONTENT}

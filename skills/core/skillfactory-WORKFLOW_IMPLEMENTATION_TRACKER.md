@@ -47,7 +47,7 @@
 - [x] 1.3: Clean up old branches that don't match naming convention
   ```bash
   # Close PRs or rename branches
-  # Delete: claude/issue-*, feat-*, docs/* (if using docs/)
+  # Delete: the AI/issue-*, feat-*, docs/* (if using docs/)
   # Keep: feat/*, fix/*, hotfix/*
   ```
 
@@ -238,7 +238,7 @@
 **Tasks**:
 - [x] 5.1: Create `create-branch-on-issue.yml` workflow (NEW FILE)
   - Source: Blueprint's `.github/workflows/create-branch-on-issue.yml`
-  - Trigger: Issue labeled with `claude-code` + `status:ready`
+  - Trigger: Issue labeled with `the AI-code` + `status:ready`
   - Logic:
     - Extract issue number and title
     - Detect branch type from labels (type:fix, type:hotfix, type:refactor, type:test, type:docs)
@@ -262,7 +262,7 @@
 **Files Created**:
 - `.github/workflows/create-branch-on-issue.yml` (NEW) ✅
   - 492 lines, comprehensive auto-branch creation
-  - Label-based triggering (claude-code + status:ready)
+  - Label-based triggering (the AI-code + status:ready)
   - Smart branch naming from issue title
   - Type detection from labels (type:fix, type:hotfix, etc.)
   - Base branch customization (base:main override)
@@ -298,20 +298,20 @@
 **Goal**: Create `/commit-smart` slash command
 
 **Tasks**:
-- [ ] 6.1: Create `.claude/commands/github/` directory
+- [ ] 6.1: Create `.the AI/commands/github/` directory
   ```bash
-  mkdir -p .claude/commands/github
+  mkdir -p .the AI/commands/github
   ```
 
 - [ ] 6.2: Create `/commit-smart` command (NEW FILE)
-  - Source: Blueprint's `.claude/commands/github/commit-smart.md`
+  - Source: Blueprint's `.the AI/commands/github/commit-smart.md`
   - Features:
     - Git status check
     - Interactive staging
     - Secret detection (API keys, tokens)
     - Quality checks
     - Conventional commit guidance
-    - Auto co-author (Claude)
+    - Auto co-author (the AI)
 
 - [ ] 6.3: Test `/commit-smart` command
   - Make test changes
@@ -320,12 +320,12 @@
   - Test secret detection
 
 - [ ] 6.4: Create command documentation
-  - Add to `.claude/commands/README.md`
+  - Add to `.the AI/commands/README.md`
   - Add usage examples
 
 **Files Created**:
-- `.claude/commands/github/commit-smart.md` (NEW)
-- `.claude/commands/github/README.md` (NEW - documentation)
+- `.the AI/commands/github/commit-smart.md` (NEW)
+- `.the AI/commands/github/README.md` (NEW - documentation)
 
 **Acceptance Criteria**:
 - ✅ `/commit-smart` command works in the AI coding agent
@@ -343,7 +343,7 @@
 
 **Tasks**:
 - [ ] 7.1: Create `/create-pr` command (NEW FILE)
-  - Source: Blueprint's `.claude/commands/github/create-pr.md`
+  - Source: Blueprint's `.the AI/commands/github/create-pr.md`
   - Features:
     - Branch detection and validation
     - Auto-push if not pushed
@@ -367,7 +367,7 @@
   - Verify PR is created correctly
 
 **Files Created**:
-- `.claude/commands/github/create-pr.md` (NEW)
+- `.the AI/commands/github/create-pr.md` (NEW)
 
 **Files Modified**:
 - `.github/pull_request_template.md` (MODIFIED if exists, or NEW)
@@ -411,8 +411,8 @@
   - Test `/start-task` workflow end-to-end
 
 **Files Created**:
-- `.claude/commands/github/switch-to-dev.md` (NEW)
-- `.claude/commands/github/start-task.md` (NEW)
+- `.the AI/commands/github/switch-to-dev.md` (NEW)
+- `.the AI/commands/github/start-task.md` (NEW)
 
 **Acceptance Criteria**:
 - ✅ `/switch-to-dev` safely switches to dev

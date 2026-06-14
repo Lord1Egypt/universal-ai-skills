@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this Node.js TypeScript Express API project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, Express best practices, and TypeScript standards.
+These instructions define how GitHub the AI assistant should assist with this Node.js TypeScript Express API project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, Express best practices, and TypeScript standards.
 
 ## 🧠 Context
 
@@ -76,16 +76,16 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a POST /users endpoint using Express that validates the request body with Zod.`
-- `Copilot, implement a user controller that delegates to a user service and returns 201 Created.`
-- `Copilot, generate a Zod schema for a product with id, name, and price.`
-- `Copilot, write a middleware that handles Zod validation errors and formats a response.`
-- `Copilot, create a Jest unit test for the user controller’s createUser function using mocks.`
+- `the AI assistant, create a POST /users endpoint using Express that validates the request body with Zod.`
+- `the AI assistant, implement a user controller that delegates to a user service and returns 201 Created.`
+- `the AI assistant, generate a Zod schema for a product with id, name, and price.`
+- `the AI assistant, write a middleware that handles Zod validation errors and formats a response.`
+- `the AI assistant, create a Jest unit test for the user controller’s createUser function using mocks.`
 
 ## 🔁 Iteration & Review
 
-- Review Copilot output with Prettier and ESLint before committing.
-- Use comments to guide Copilot when generating controller logic or complex validation.
+- Review the AI assistant output with Prettier and ESLint before committing.
+- Use comments to guide the AI assistant when generating controller logic or complex validation.
 - Refactor repeated logic into shared utilities or middleware.
 - Validate schema contracts and function signatures with type checking.
 

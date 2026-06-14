@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: organization, naming, load-order, dependencies
 ---
 
+# Organization Load Order
+
 ## File Organization and Load Order
 
 Impact: MEDIUM

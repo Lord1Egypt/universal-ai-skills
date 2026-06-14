@@ -54,7 +54,7 @@
 ### 3. Documentation Structure Validation ✅
 
 **Root Directory:**
-- ✅ Only allowed files: README.md, the AI.md, claude-skills-instructions.md, claude-agents-instructions.md
+- ✅ Only allowed files: README.md, the AI.md, the AI-skills-instructions.md, the AI-agents-instructions.md
 - ✅ No unauthorized .md files
 - ✅ All living documents current and accurate
 

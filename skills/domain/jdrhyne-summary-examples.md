@@ -7,12 +7,12 @@ Reference examples for formatting the update report message.
 ```
 🔄 Daily Auto-Update Complete
 
-**Clawdbot**
+**the AI agent**
 Updated: v2026.1.9 → v2026.1.10
 
 Key changes in this release:
-- CLI: add clawdbot update command
-- Gateway: add the AI provider-compatible HTTP endpoint
+- CLI: add the AI agent update command
+- Gateway: add the AI model-compatible HTTP endpoint
 - Sandbox: improved tool-policy errors
 
 **Skills Updated (3)**
@@ -31,7 +31,7 @@ gemini, sag, things-mac, himalaya, peekaboo
 ```
 🔄 Daily Auto-Update Check
 
-**Clawdbot**: v2026.1.10 (already latest)
+**the AI agent**: v2026.1.10 (already latest)
 
 **Skills**: All 8 installed skills are current.
 
@@ -43,7 +43,7 @@ Nothing to update today.
 ```
 🔄 Daily Auto-Update Complete
 
-**Clawdbot**: v2026.1.10 (no update available)
+**the AI agent**: v2026.1.10 (no update available)
 
 **Skills Updated (2)**
 1. himalaya: 1.0.0 → 1.0.1
@@ -62,7 +62,7 @@ prd, gemini, browser, sag, things-mac, peekaboo
 ```
 🔄 Daily Auto-Update Complete (with issues)
 
-**Clawdbot**: v2026.1.9 → v2026.1.10 ✅
+**the AI agent**: v2026.1.9 → v2026.1.10 ✅
 
 **Skills Updated (1)**
 1. prd: 2.0.3 → 2.0.4 ✅
@@ -70,7 +70,7 @@ prd, gemini, browser, sag, things-mac, peekaboo
 **Skills Failed (1)**
 1. ❌ nano-banana-pro: Update failed
    Error: Network timeout while downloading v3.1.2
-   Recommendation: Run `clawdhub update nano-banana-pro` manually
+   Recommendation: Run `the skill registry update nano-banana-pro` manually
 
 **Skills Already Current (6)**
 gemini, sag, things-mac, himalaya, peekaboo, browser
@@ -86,17 +86,17 @@ gemini, sag, things-mac, himalaya, peekaboo, browser
 Daily updates will run at 4:00 AM (America/Los_Angeles).
 
 **What will be updated:**
-- Clawdbot core
-- All installed skills via ClawdHub
+- the AI agent core
+- All installed skills via the skill registry
 
 **Current status:**
-- Clawdbot: v2026.1.10
+- the AI agent: v2026.1.10
 - Installed skills: 8
 
 You'll receive a summary here after each update run.
 
-To modify: `clawdbot cron edit "Daily Auto-Update"`
-To disable: `clawdbot cron remove "Daily Auto-Update"`
+To modify: `the AI agent cron edit "Daily Auto-Update"`
+To disable: `the AI agent cron remove "Daily Auto-Update"`
 ```
 
 ## Formatting Guidelines

@@ -124,7 +124,7 @@ ga_service = client.get_service("GoogleAdsService")
 CUSTOMER_ID = "1234567890"  # No dashes
 
 query = """
-    SELECT 
+    SELECT
         campaign.id,
         campaign.name,
         campaign.status,
@@ -151,7 +151,7 @@ for row in response:
 ### Zero-Conversion Keywords
 ```python
 query = """
-    SELECT 
+    SELECT
         ad_group_criterion.criterion_id,
         ad_group_criterion.keyword.text,
         ad_group_criterion.keyword.match_type,
@@ -173,7 +173,7 @@ query = """
 ### Ad Group Status Check
 ```python
 query = """
-    SELECT 
+    SELECT
         ad_group.id,
         ad_group.name,
         ad_group.status,
@@ -186,7 +186,7 @@ query = """
 
 # Check for ad groups with no ads
 query_ads = """
-    SELECT 
+    SELECT
         ad_group.id,
         ad_group.name,
         ad_group_ad.ad.id
@@ -199,7 +199,7 @@ query_ads = """
 ### Conversion Actions
 ```python
 query = """
-    SELECT 
+    SELECT
         conversion_action.id,
         conversion_action.name,
         conversion_action.status,
@@ -236,7 +236,7 @@ def pause_campaigns(customer_id, campaign_ids):
             protobuf_helpers.field_mask(None, campaign._pb)
         )
         operations.append(operation)
-    
+
     response = campaign_service.mutate_campaigns(
         customer_id=customer_id,
         operations=operations
@@ -261,7 +261,7 @@ def pause_keywords(customer_id, keyword_resource_names):
             protobuf_helpers.field_mask(None, criterion._pb)
         )
         operations.append(operation)
-    
+
     response = ad_group_criterion_service.mutate_ad_group_criteria(
         customer_id=customer_id,
         operations=operations
@@ -280,12 +280,12 @@ def update_budget(customer_id, budget_id, new_amount_micros):
         customer_id, budget_id
     )
     budget.amount_micros = new_amount_micros
-    
+
     client.copy_from(
         operation.update_mask,
         protobuf_helpers.field_mask(None, budget._pb)
     )
-    
+
     response = campaign_budget_service.mutate_campaign_budgets(
         customer_id=customer_id,
         operations=[operation]

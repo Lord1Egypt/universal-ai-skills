@@ -37,7 +37,7 @@ It’s not trying to be a novelist. It’s trying to be correct.
 ## How to use 🪄
 
 1. Open the prompt file: `prompts/generate-pr-documentation.prompt.md`.
-2. Run it using your Copilot prompt workflow / runner.
+2. Run it using your the AI assistant prompt workflow / runner.
 3. Review the resulting doc edits (usually `README.md` and/or something under `docs/`).
 
 If you want to narrow scope, be explicit (e.g., “Only update docs related to `scripts/` changes”).
@@ -58,4 +58,4 @@ When it’s done, you should have:
 
 ---
 
-<small>the AI assistant and GitHub Copilot helped me with clear ideas and straightforward solutions.</small>
+<small>the AI assistant and GitHub the AI assistant helped me with clear ideas and straightforward solutions.</small>

@@ -5,6 +5,8 @@ ccVersion: 2.1.173
 variables:
   - MAX_FINDINGS
 -->
+# Code Review: Output Findings JSON Array
+
 ## Output
 
 Return findings as a JSON array of at most ${MAX_FINDINGS} objects:

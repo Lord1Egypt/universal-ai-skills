@@ -16,6 +16,8 @@ variables:
   - GAP_SWEEP_PHASE
   - OUTPUT_FORMAT_FN
 -->
+# Code Review: Extra-High and Maximum Effort Modes
+
 `${EFFORT_LEVEL} effort → 5+4 angles × 8 candidates → 1-vote verify → sweep → ≤15 findings`
 
 You are reviewing for **recall** at ${EFFORT_LEVEL==="max"?"maximum":"extra-high"} effort: catch every real bug. At

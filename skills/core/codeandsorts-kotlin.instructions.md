@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -76,16 +76,16 @@ src/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a Ktor route that handles a GET request for a list of users.`
-- `Copilot, define a sealed class for representing success and failure states.`
-- `Copilot, write a Kotlin data class for a Book with title, author, and optional year.`
-- `Copilot, write a unit test for the fetchWeatherData() function using MockK.`
-- `Copilot, implement a ViewModel with a StateFlow for UI state management.`
+- `the AI assistant, create a Ktor route that handles a GET request for a list of users.`
+- `the AI assistant, define a sealed class for representing success and failure states.`
+- `the AI assistant, write a Kotlin data class for a Book with title, author, and optional year.`
+- `the AI assistant, write a unit test for the fetchWeatherData() function using MockK.`
+- `the AI assistant, implement a ViewModel with a StateFlow for UI state management.`
 
 ## 🔁 Iteration & Review
 
-- Always review Copilot output for idiomatic Kotlin usage and safety.
-- Guide Copilot with inline comments when generating complex logic.
+- Always review the AI assistant output for idiomatic Kotlin usage and safety.
+- Guide the AI assistant with inline comments when generating complex logic.
 - Refactor verbose Java-style patterns into concise Kotlin equivalents.
 - Run linters (`ktlint`, `detekt`) as part of your CI/CD pipeline.
 

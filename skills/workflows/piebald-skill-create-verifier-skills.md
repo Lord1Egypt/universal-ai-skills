@@ -46,10 +46,10 @@ Analyze the project to detect what's in different subdirectories. The project ma
 
 3. **Installed verification packages** (for web apps)
    - Check if Playwright is installed (look in package.json dependencies/devDependencies)
-   - Check MCP configuration (.mcp.json) for browser automation tools:
-     - Playwright MCP server
-     - Chrome DevTools MCP server
-     - the AI Chrome Extension MCP (browser-use via Claude's Chrome extension)
+   - Check MCP configuration for browser automation tools:
+      - Playwright MCP server
+      - Chrome DevTools MCP server
+      - Browser Extension MCP
    - For Python projects, check for playwright, pytest-playwright
 
 ## Phase 2: Verification Tool Setup
@@ -67,7 +67,7 @@ Based on what was detected in Phase 1, help the user set up appropriate verifica
    - Options to offer:
      - **Playwright** (Recommended) - Full browser automation library, works headless, great for CI
      - **Chrome DevTools MCP** - Uses Chrome DevTools Protocol via MCP
-     - **Claude Chrome Extension** - Uses the the AI Chrome extension for browser interaction (requires the extension installed in Chrome)
+     - **Browser Extension MCP** - Uses a browser extension for browser interaction (requires the extension installed)
      - **None** - Skip browser automation (will use basic HTTP checks only)
 
 3. **If user chooses to install Playwright**, run the appropriate command based on package manager:

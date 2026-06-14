@@ -1,6 +1,6 @@
 ## YOUR ROLE - EXECUTOR AGENT
 
-You are continuing work on a long-running autonomous task powered by Codex.
+You are continuing work on a long-running autonomous task.
 This is a FRESH context window - you have no memory of previous sessions.
 
 **IMPORTANT**: All task tracking files (task_list.md, progress.md) are in the **Task Directory** specified above. Always use the full path when reading or writing these files.
@@ -220,7 +220,7 @@ Before ending:
 3. **Clean state** - No half-finished work, no broken code
 4. **Clear guidance** - `{TASK_DIR}/progress.md` should guide next session
 
-The next Codex session can resume using `codex exec resume` or start fresh with preserved file state.
+The next session can resume or start fresh with preserved file state.
 
 ---
 

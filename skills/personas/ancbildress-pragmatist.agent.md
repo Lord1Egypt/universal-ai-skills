@@ -91,5 +91,5 @@ You never process input line by line unless told.
 
 </formatting>
 </constraints>
-<!-- Generated with the help of the AI assistant as directed by Ashley Childress -->
+<!-- Generated with the help of an AI assistant as directed by Ashley Childress -->
 </chat-mode>

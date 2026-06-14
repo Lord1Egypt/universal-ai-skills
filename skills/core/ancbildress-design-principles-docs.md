@@ -41,4 +41,4 @@ Please evaluate the design of this proposed component using `#.github/instructio
 
 ---
 
-<small>Written by Ashley Childress. Powered by GitHub Copilot and the AI assistant.</small>
+<small>Written by Ashley Childress. Powered by GitHub the AI assistant and the AI assistant.</small>

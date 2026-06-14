@@ -14,6 +14,8 @@ variables:
   - RECALL_BIASED_VERIFY_PHASE
   - OUTPUT_FORMAT_FN
 -->
+# Code Review: High Effort Mode
+
 `high effort → 3+4 angles × 6 candidates → 1-vote verify (recall-biased) → ≤10 findings`
 
 You are reviewing for **recall** at high effort: catch every real bug a careful

@@ -2,7 +2,7 @@
 name: factory-guide
 description: Main navigation guide for the AI coding agent Skills Factory. Use when user wants to build custom Skills, Prompts, or Agents. Orchestrates and delegates to specialized guide agents.
 tools: Read, Grep
-model: haiku
+model: the AI model
 color: purple
 field: orchestration
 expertise: beginner
@@ -66,19 +66,19 @@ What would you like to create today?
 ```
 Choose what to build:
 
-1. **Claude Skill** - Multi-file capability (SKILL.md + Python + samples)
+1. **the AI Skill** - Multi-file capability (SKILL.md + Python + samples)
    Examples: Financial analyzer, AWS architect, content researcher
    Best for: Reusable capabilities across the AI AI, the AI coding agent, API
 
 2. **Mega-Prompt** - Production-ready prompt for any LLM
    Examples: Product Manager, Full-Stack Engineer, Legal Counsel
-   Best for: the AI assistant/Claude/Gemini custom instructions
+   Best for: the AI assistant/the AI/the AI custom instructions
 
-3. **Claude Agent** - Specialized subagent for the AI coding agent workflows
+3. **the AI Agent** - Specialized subagent for the AI coding agent workflows
    Examples: Code reviewer, frontend developer, test runner, or any other assigned role
    Best for: the AI coding agent automation and specialized tasks
 
-4. **Claude Hook** - Workflow automation for the AI coding agent
+4. **the AI Hook** - Workflow automation for the AI coding agent
    Examples: Auto-format code, run tests, send notifications, git automation
    Best for: Automating repetitive tasks in your the AI coding agent workflow
 
@@ -163,7 +163,7 @@ Need to build something else? Just ask me again!
 I'm not sure which type you want to build. Let me clarify:
 
 • the AI Skill = Multi-file capability (like financial analysis tools)
-• Mega-Prompt = Text prompt for the AI assistant/Claude/Gemini
+• Mega-Prompt = Text prompt for the AI assistant/the AI/the AI
 • the AI Agent = Subagent for the AI coding agent workflows
 
 Which of these 3 matches what you want to build?
@@ -197,9 +197,9 @@ Welcome to the Skills Factory!
 
 Based on "healthcare startup", you might want:
 
-1. **Claude Skill** - For healthcare-specific capabilities (e.g., patient data analysis, medical terminology tools)
+1. **the AI Skill** - For healthcare-specific capabilities (e.g., patient data analysis, medical terminology tools)
 2. **Mega-Prompt** - For healthcare-focused AI assistant (e.g., "Healthcare Product Manager" prompt)
-3. **Claude Agent** - For healthcare development workflows (e.g., HIPAA compliance checker agent)
+3. **the AI Agent** - For healthcare development workflows (e.g., HIPAA compliance checker agent)
 
 Which fits your need? (1, 2, or 3)
 ```

@@ -18,7 +18,7 @@ tools: [
 
 ---
 
-# Instructionalist – Copilot Agent 🎩
+# Instructionalist Agent 🎩
 
 ## Persona
 
@@ -32,7 +32,7 @@ tools: [
 
 ## Requirement
 
-- Create or update an **outstanding** `.github/copilot-instructions.md` file that's interactive, adaptive, and never generic.
+- Create or update an **outstanding** instructions file that's interactive, adaptive, and never generic.
 - Work section-by-section using embedded section metadata to cover everything from project overview to test coverage to anti-patterns.
 - Ask targeted questions to fill gaps, encourage excellence, update output only when user provides better/clearer/more complete answers.
 - Support optional **fun detective persona** when user requests it.
@@ -53,7 +53,7 @@ tools: [
 
 ## Outcomes
 
-- An **outstanding** `.github/copilot-instructions.md` file with comprehensive, section-driven content
+- An **outstanding** instructions file with comprehensive, section-driven content
 - Interactive workflow that works section-by-section based on in-file metadata
 - Automatic inclusion of Critical Constraints (unless user has specified them)
 - Conversational follow-up in chat, tailored to specific gaps or improvements needed
@@ -197,4 +197,4 @@ I marked anonymization as (TBD) — do we need explicit PII masking rules?
 Should schema validation be expanded into its own pattern section?
 ```
 
-<!-- Generated with the help of the AI assistant, Verdent, and GitHub Copilot by Ashley Childress -->
+<!-- Generated with the help of an AI assistant by Ashley Childress -->

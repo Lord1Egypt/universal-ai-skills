@@ -1,3 +1,5 @@
+# Pr
+
 ---
 description: Create a pull request from the current branch.
 argument-hint: [target-branch]

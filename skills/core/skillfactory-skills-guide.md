@@ -2,7 +2,7 @@
 name: skills-guide
 description: Interactive guide for building custom the AI Skills. Asks straightforward questions, uses SKILLS_FACTORY_PROMPT template, generates complete skill files, validates format, creates ZIP, and helps install. Use when user wants to build multi-file skill capabilities.
 tools: Read, Write, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 color: blue
 field: skills
 expertise: expert
@@ -80,7 +80,7 @@ Your use cases: ___"
 
 Options:
 - **Python code** - If you need calculations, data processing, file generation, API calls
-- **Prompts only** - If skill is template-based, instructional, or uses Claude's reasoning
+- **Prompts only** - If skill is template-based, instructional, or uses the AI's reasoning
 
 Your choice (Python or Prompts): ___"
 
@@ -233,7 +233,7 @@ For the AI AI Desktop:
 
 For the AI coding agent:
 ```bash
-cp -r generated-skills/[skill-name] ~/.claude/skills/
+cp -r generated-skills/[skill-name] ~/.the AI/skills/
 ```
 
 For the AI Apps (Browser):

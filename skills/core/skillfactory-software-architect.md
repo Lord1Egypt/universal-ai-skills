@@ -1,8 +1,10 @@
+# Software Architect
+
 ---
 name: software-architect
 description: Software architecture and system design expert. Use for designing application architecture, making technical decisions, and creating architecture documentation.
 tools: Read, Write, Grep
-model: opus
+model: the AI model
 color: blue
 field: architecture
 expertise: expert

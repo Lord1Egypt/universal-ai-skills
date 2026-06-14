@@ -1,7 +1,7 @@
 # GitHub Workflow Adaptation Plan
 
 **Project**: the AI coding agent Skills Factory
-**Blueprint Source**: `/Users/rezarezvani/projects/claudecode-github-bluprint`
+**Blueprint Source**: `/Users/rezarezvani/projects/ai-code-github-blueprint`
 **Date**: November 12, 2025
 **Status**: Planning Phase
 
@@ -15,7 +15,7 @@ Adapt the GitHub workflow blueprint to create an automated, the AI coding agent-
 2. ✅ Prevents direct pushes to `main`
 3. ✅ Routes all PRs through `dev` branch
 4. ✅ Auto-creates branches from issues
-5. ✅ Integrates the AI coding agent reviews (@claude)
+5. ✅ Integrates the AI coding agent reviews (@the AI)
 6. ✅ Auto-merges and cleans up after approval
 7. ✅ Auto-switches back to `dev` before next task
 
@@ -39,7 +39,7 @@ Adapt the GitHub workflow blueprint to create an automated, the AI coding agent-
 ```
 1. Create GitHub Issue
    ↓
-2. Label with 'claude-code' + 'status:ready'
+2. Label with 'the AI-code' + 'status:ready'
    ↓
 3. **AUTO**: Branch created (feature/issue-123-clear-name)
    ↓
@@ -51,7 +51,7 @@ Adapt the GitHub workflow blueprint to create an automated, the AI coding agent-
    ↓
 7. **AUTO**: PR validation (branch name, title, quality gates)
    ↓
-8. Tag @claude for review
+8. Tag @the AI for review
    ↓
 9. **AUTO**: the AI coding agent review posted
    ↓
@@ -135,7 +135,7 @@ on:
 ```
 
 **Logic**:
-1. Issue labeled with both `claude-code` + `status:ready`
+1. Issue labeled with both `the AI-code` + `status:ready`
 2. Extract issue number and title
 3. Detect branch type from labels (`type:fix`, `type:feature`, etc.)
 4. Create slug from title (sanitize, kebab-case, max 50 chars)
@@ -245,7 +245,7 @@ All other branches must merge to dev first:
 
 ### Pattern 6: the AI coding agent Review Integration
 
-**Workflow**: `claude-code-review.yml` (to be adapted)
+**Workflow**: `the AI-code-review.yml` (to be adapted)
 
 **Trigger**:
 ```yaml
@@ -257,7 +257,7 @@ on:
 ```
 
 **Logic**:
-1. Detect @claude mention in PR comment
+1. Detect @the AI mention in PR comment
 2. Fetch PR diff and context
 3. Use the AI coding agent Action (v1 GA) to analyze
 4. Post comprehensive review as comment
@@ -297,7 +297,7 @@ None found
 3. **Secret Detection** - Scan for API keys, tokens, passwords
 4. **Quality Checks** - Run lint, type-check, tests
 5. **Commit Message** - Guide conventional commit format
-6. **Auto-Sign** - Add co-author (Claude)
+6. **Auto-Sign** - Add co-author (the AI)
 
 **Secret Patterns Detected**:
 ```regex
@@ -356,7 +356,7 @@ Closes #42
 ## Screenshots (if applicable)
 [Add screenshots]
 
-🤖 Generated with [the AI coding agent](https://the AI.com/claude-code)
+🤖 Generated with [the AI coding agent](https://the AI.com/the AI-code)
 ```
 
 ---
@@ -441,7 +441,7 @@ Allow deletions: ❌
 │   ├── create-branch-on-issue.yml     # Auto-create branches
 │   ├── pr-into-dev.yml                # Validate PRs to dev
 │   ├── dev-to-main.yml                # Validate releases
-│   ├── claude-code-review.yml         # the AI reviews
+│   ├── the AI-code-review.yml         # the AI reviews
 │   └── pr-cleanup.yml                 # Auto-merge & cleanup
 └── actions/                           # Composite actions (DRY)
     ├── fork-safety/                   # Fork PR detection
@@ -452,7 +452,7 @@ Allow deletions: ❌
 **1. Create Branch on Issue** (`create-branch-on-issue.yml`)
 
 **Features**:
-- Trigger: Issue labeled with `claude-code` + `status:ready`
+- Trigger: Issue labeled with `the AI-code` + `status:ready`
 - Branch naming: `{type}/issue-{number}-{slug}`
 - Type detection from labels (`type:feature`, `type:fix`, etc.)
 - Base branch: `dev` (or custom via `base:` label)
@@ -520,9 +520,9 @@ runs:
 
 ---
 
-**4. the AI coding agent Review** (`claude-code-review.yml`)
+**4. the AI coding agent Review** (`the AI-code-review.yml`)
 
-**Trigger**: @claude mentioned in PR comment
+**Trigger**: @the AI mentioned in PR comment
 
 **Actions**:
 1. Fetch PR diff
@@ -534,7 +534,7 @@ runs:
 ```yaml
 # Use the AI coding agent Action v1 GA
 - name: Run the AI coding agent Review
-  uses: the AI providers/claude-code-action@v1
+  uses: the AI providers/the AI-code-action@v1
   with:
     the AI provider-api-key: ${{ secrets.the AI provider_API_KEY }}
     github-token: ${{ github.token }}
@@ -589,7 +589,7 @@ jobs:
 
 **File Structure**:
 ```
-.claude/commands/github/
+.the AI/commands/github/
 ├── commit-smart.md           # Smart commits with quality checks
 ├── create-pr.md              # PR creation with auto-linking
 ├── switch-to-dev.md          # Switch back to dev branch
@@ -604,12 +604,12 @@ jobs:
 - Secret detection (API keys, tokens, etc.)
 - Quality checks (lint, test, type-check)
 - Conventional commit guidance
-- Auto co-author (Claude)
+- Auto co-author (the AI)
 
 **Usage**:
 ```
 User: /commit-smart
-Claude: [Runs all checks, guides commit message, creates commit]
+the AI: [Runs all checks, guides commit message, creates commit]
 ```
 
 **Adaptation Notes**:
@@ -634,7 +634,7 @@ Claude: [Runs all checks, guides commit message, creates commit]
 **Usage**:
 ```
 User: /create-pr
-Claude: [Validates, runs checks, creates PR targeting dev]
+the AI: [Validates, runs checks, creates PR targeting dev]
 ```
 
 **Adaptation Notes**:
@@ -659,7 +659,7 @@ Claude: [Validates, runs checks, creates PR targeting dev]
 **Usage**:
 ```
 User: /switch-to-dev
-Claude: [Checks status, switches to dev, pulls latest]
+the AI: [Checks status, switches to dev, pulls latest]
 
 ✅ Switched to dev branch and pulled latest changes
 Ready to start next task!
@@ -676,7 +676,7 @@ Ready to start next task!
 2. Pull latest changes
 3. Ask for task description
 4. Create GitHub issue (or use existing)
-5. Label issue (`claude-code`, `status:ready`, `type:feature`)
+5. Label issue (`the AI-code`, `status:ready`, `type:feature`)
 6. Wait for auto-branch creation
 7. Checkout new branch
 8. Post ready message
@@ -685,12 +685,12 @@ Ready to start next task!
 ```
 User: /start-task
 
-Claude: What task would you like to work on?
+the AI: What task would you like to work on?
 User: Add new skill for X
 
-Claude:
+the AI:
 1. Created issue #123: "Add new skill for X"
-2. Labeled with claude-code, status:ready, type:feature
+2. Labeled with the AI-code, status:ready, type:feature
 3. Branch created: feature/issue-123-add-new-skill-for-x
 4. Checked out branch
 
@@ -721,7 +721,7 @@ Claude:
    2. Make your changes
    3. Run `/commit-smart` to commit
    4. Run `/create-pr` to create PR
-   5. Tag @claude for review
+   5. Tag @the AI for review
    6. After approval → auto-merged to dev
    7. Run `/switch-to-dev` before next task
 
@@ -811,7 +811,7 @@ git push -u origin dev
 
 # Option 2: Manual
 1. Create issue on GitHub
-2. Label: claude-code, status:ready, type:feature
+2. Label: the AI-code, status:ready, type:feature
 3. Wait for auto-branch creation
 4. git fetch && git checkout feature/issue-123-name
 ```
@@ -842,7 +842,7 @@ git push -u origin dev
 **Review Process**:
 1. Receive PR notification
 2. Review code on GitHub
-3. Tag @claude for automated review (optional)
+3. Tag @the AI for automated review (optional)
 4. Approve or request changes
 5. After approval → Auto-merged to dev
 6. Branch auto-deleted
@@ -887,22 +887,22 @@ Options:
 ## 📚 Reference Links
 
 **Blueprint Repository**:
-- Local: `/Users/rezarezvani/projects/claudecode-github-bluprint`
-- GitHub: `https://github.com/alirezarezvani/claude-code-github-workflow`
+- Local: `/Users/rezarezvani/projects/ai-code-github-blueprint`
+- GitHub: `https://github.com/alirezarezvani/the AI-code-github-workflow`
 
 **Key Blueprint Files**:
 - `implementation.md` - Complete PRD and implementation plan
 - `.github/workflows/create-branch-on-issue.yml` - Auto-branch creation
 - `.github/workflows/pr-into-dev.yml` - PR validation
 - `.github/workflows/dev-to-main.yml` - Release gates
-- `.claude/commands/github/commit-smart.md` - Smart commit
-- `.claude/commands/github/create-pr.md` - PR creation
+- `.the AI/commands/github/commit-smart.md` - Smart commit
+- `.the AI/commands/github/create-pr.md` - PR creation
 
 **Official Documentation**:
 - [GitHub Actions](https://docs.github.com/en/actions)
 - [Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches)
 - [Conventional Commits](https://www.conventionalcommits.org/)
-- [the AI coding agent Action](https://github.com/the AI providers/claude-code-action)
+- [the AI coding agent Action](https://github.com/the AI providers/the AI-code-action)
 
 ---
 

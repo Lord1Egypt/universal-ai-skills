@@ -16,7 +16,7 @@
 
 Shows comprehensive status of your factory work:
 - Skills generated (in generated-skills/)
-- Agents created (in .claude/agents/ or ~/.claude/agents/)
+- Agents created (in .the AI/agents/ or ~/.the AI/agents/)
 - Hooks generated (in generated-hooks/)
 - Prompts generated (in conversation)
 - Validation status
@@ -56,7 +56,7 @@ Factory Status Report
 🤖 the AI Agents Created (1)
 
 1. code-reviewer
-   Location: .claude/agents/code-reviewer.md
+   Location: .the AI/agents/code-reviewer.md
    Size: 8KB
    Status: ✅ Validated ✅ Active (project-level)
    Next: Test with: "Review my recent code changes"
@@ -151,21 +151,21 @@ The command scans:
 ls generated-skills/*/SKILL.md
 
 # Check if installed
-ls ~/.claude/skills/*/SKILL.md
+ls ~/.the AI/skills/*/SKILL.md
 ```
 
 **For Agents**:
 ```bash
 # Check project-level
-ls .claude/agents/*.md
+ls .the AI/agents/*.md
 
 # Check user-level
-ls ~/.claude/agents/*.md
+ls ~/.the AI/agents/*.md
 ```
 
 **For Prompts**:
 - Analyzes recent conversation
-- Looks for generated prompts (XML, the AI, the AI assistant, Gemini formats)
+- Looks for generated prompts (XML, the AI, the AI assistant, the AI formats)
 - Checks token count announcements
 
 **For Hooks**:
@@ -174,10 +174,10 @@ ls ~/.claude/agents/*.md
 ls generated-hooks/*/hook.json
 
 # Check if installed (user-level)
-grep -r "hook.json" ~/.claude/settings.json
+grep -r "hook.json" ~/.the AI/settings.json
 
 # Check if installed (project-level)
-grep -r "hook.json" .claude/settings.json
+grep -r "hook.json" .the AI/settings.json
 ```
 
 ---
@@ -190,7 +190,7 @@ grep -r "hook.json" .claude/settings.json
 - ❌ Issues found - Fix validation errors
 
 **Installation Status**:
-- ✅ Installed - Found in ~/.claude/skills/ or .claude/agents/
+- ✅ Installed - Found in ~/.the AI/skills/ or .the AI/agents/
 - ⏳ Not installed - Run /install-skill
 - ❌ Not found - Check installation path
 

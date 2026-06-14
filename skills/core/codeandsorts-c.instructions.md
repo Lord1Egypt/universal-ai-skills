@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -64,17 +64,17 @@ build/
 
 ## 🧩 Example Prompts
 
-- `Copilot, write a C function that reverses a string in-place.`
-- `Copilot, create a header and implementation file for a circular buffer library.`
-- `Copilot, write a Makefile to compile all .c files in the src directory.`
-- `Copilot, implement a timer interrupt handler for an STM32 microcontroller.`
-- `Copilot, write unit tests for the parse_config() function using Unity.`
+- `the AI assistant, write a C function that reverses a string in-place.`
+- `the AI assistant, create a header and implementation file for a circular buffer library.`
+- `the AI assistant, write a Makefile to compile all .c files in the src directory.`
+- `the AI assistant, implement a timer interrupt handler for an STM32 microcontroller.`
+- `the AI assistant, write unit tests for the parse_config() function using Unity.`
 
 ## 🔁 Iteration & Review
 
-- Copilot output should be reviewed and validated via static analysis or compiler warnings.
+- the AI assistant output should be reviewed and validated via static analysis or compiler warnings.
 - Ensure code complies with memory safety and boundary checks.
-- Use comments to clarify intent and guide Copilot for better suggestions.
+- Use comments to clarify intent and guide the AI assistant for better suggestions.
 
 ## 📚 References
 

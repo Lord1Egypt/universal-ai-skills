@@ -44,8 +44,8 @@ For the AI Desktop:
 - Should appear in list
 
 For the AI coding agent:
-- Skill should be in ~/.claude/skills/my-skill/
-- Check: ls ~/.claude/skills/my-skill/
+- Skill should be in ~/.the AI/skills/my-skill/
+- Check: ls ~/.the AI/skills/my-skill/
 
 Status: [Checks and reports if found]
 
@@ -119,8 +119,8 @@ Run this command:
 You should see "code-reviewer" in the list of available agents.
 
 Location:
-- Project-level: .claude/agents/code-reviewer.md
-- User-level: ~/.claude/agents/code-reviewer.md
+- Project-level: .the AI/agents/code-reviewer.md
+- User-level: ~/.the AI/agents/code-reviewer.md
 
 Status: [Checks and reports]
 
@@ -136,7 +136,7 @@ The agent should auto-invoke when you:
 [Suggest a task that matches agent description]
 ```
 
-Claude should automatically delegate to the code-reviewer agent.
+the AI should automatically delegate to the code-reviewer agent.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -175,7 +175,7 @@ If agent doesn't invoke:
 4. Try manual invocation
 
 If agent has wrong tools:
-1. Edit .claude/agents/code-reviewer.md
+1. Edit .the AI/agents/code-reviewer.md
 2. Update tools: field in YAML
 3. Restart the AI coding agent
 ```
@@ -198,7 +198,7 @@ Since prompts are text (not installed files), here's how to test:
 
 Step 1: Copy Your Generated Prompt
 
-Format: [XML/Claude/the AI assistant/Gemini]
+Format: [XML/the AI/the AI assistant/the AI]
 
 [Shows preview of generated prompt]
 
@@ -206,7 +206,7 @@ Format: [XML/Claude/the AI assistant/Gemini]
 
 Step 2: Test in Target LLM
 
-**For Claude**:
+**For the AI**:
 1. Open new the AI conversation
 2. Paste the prompt at the start
 3. Test with a request matching the role
@@ -216,8 +216,8 @@ Step 2: Test in Target LLM
 2. Paste sections in correct boxes
 3. Start new chat and test
 
-**For Gemini**:
-1. Open new Gemini conversation
+**For the AI**:
+1. Open new the AI conversation
 2. Paste the configuration
 3. Test with a request
 
@@ -327,8 +327,8 @@ Quick test: [Minimal test input]
 
 **Quick Iteration**:
 - Test → Find issues → Edit files → Test again
-- Skills: Edit ~/.claude/skills/[name]/SKILL.md
-- Agents: Edit .claude/agents/[name].md or ~/.claude/agents/[name].md
+- Skills: Edit ~/.the AI/skills/[name]/SKILL.md
+- Agents: Edit .the AI/agents/[name].md or ~/.the AI/agents/[name].md
 - Prompts: Regenerate with /build prompt
 
 ---

@@ -332,7 +332,7 @@ Automatically formats Python files using Black after editing.
 
 ### Manual Installation
 
-1. Open `.claude/settings.json` or `~/.claude/settings.json`
+1. Open `.the AI/settings.json` or `~/.the AI/settings.json`
 
 2. Add this hook to the `hooks` object:
 
@@ -401,7 +401,7 @@ Change `paths` to target different files:
   "hooks": [
     {
       "type": "command",
-      "command": "if ! command -v pytest &> /dev/null; then exit 0; fi && cd \"$CLAUDE_PROJECT_DIR\" && pytest -v || exit 0",
+      "command": "if ! command -v pytest &> /dev/null; then exit 0; fi && cd \"$AI_PROJECT_DIR\" && pytest -v || exit 0",
       "timeout": 120
     }
   ],
@@ -435,7 +435,7 @@ Change `paths` to target different files:
   "hooks": [
     {
       "type": "command",
-      "command": "if ! command -v git &> /dev/null; then exit 0; fi && file_path=$(echo \"$stdin\" | jq -r '.tool_input.file_path') && cd \"$CLAUDE_PROJECT_DIR\" && git add \"$file_path\" || exit 0",
+      "command": "if ! command -v git &> /dev/null; then exit 0; fi && file_path=$(echo \"$stdin\" | jq -r '.tool_input.file_path') && cd \"$AI_PROJECT_DIR\" && git add \"$file_path\" || exit 0",
       "timeout": 60
     }
   ],
@@ -465,7 +465,7 @@ Change `paths` to target different files:
   "hooks": [
     {
       "type": "command",
-      "command": "if [ -f \"$CLAUDE_PROJECT_DIR/TODO.md\" ]; then cat \"$CLAUDE_PROJECT_DIR/TODO.md\"; fi || exit 0",
+      "command": "if [ -f \"$AI_PROJECT_DIR/TODO.md\" ]; then cat \"$AI_PROJECT_DIR/TODO.md\"; fi || exit 0",
       "timeout": 10
     }
   ],
@@ -772,8 +772,8 @@ For each hook, provide:
 ### Installation
 1. Copy hook.json to generated-hooks/{hook-name}/
 2. Add configuration to settings.json:
-   - User-level: ~/.claude/settings.json
-   - Project-level: .claude/settings.json
+   - User-level: ~/.the AI/settings.json
+   - Project-level: .the AI/settings.json
 3. Restart the AI coding agent
 
 ### Test

@@ -4,6 +4,8 @@ impact: HIGH
 tags: connectivity, infrahubctl, uv, poetry, python, environment
 ---
 
+# Connectivity Python Environment
+
 ## Python Environment Detection for infrahubctl
 
 Impact: HIGH

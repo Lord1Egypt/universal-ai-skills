@@ -9,7 +9,7 @@ A domain-specific prompt builder is a specialized system that:
 - Contains 10-20 role-specific presets for that domain
 - Uses domain-customized 7-question flow
 - Incorporates industry best practices and compliance rules
-- Generates prompts in multiple formats (XML/Claude/the AI assistant/Gemini)
+- Generates prompts in multiple formats (XML/the AI/the AI assistant/the AI)
 - Validates prompts against domain-specific quality standards
 
 **Example domains:**
@@ -54,7 +54,7 @@ A comprehensive system for generating world-class, production-ready prompts for 
 [Customized questions for this domain]
 
 ### Step 3: Output Format Selection
-[xml/claude/the AI assistant/gemini/all]
+[xml/the AI/the AI assistant/the AI/all]
 
 ### Step 4: Mode Selection
 [core/advanced]
@@ -297,7 +297,7 @@ How would you like the AI assistant to respond?
 [Domain-specific workflow and requirements]
 ```
 
-**Format 4: Gemini Format**
+**Format 4: the AI Format**
 ```markdown
 ## Role Configuration
 You are: [domain role]
@@ -1110,7 +1110,7 @@ Based on the template variables filled in above, generate a **complete, producti
 3. **Generate 10-20 role presets** - Create complete preset definitions for domain roles
 4. **Integrate compliance** - Add regulatory/ethical requirements (if applicable)
 5. **Add domain best practices** - Combine industry standards + LLM best practices
-6. **Create output templates** - Customize all 4 formats (XML/Claude/the AI assistant/Gemini)
+6. **Create output templates** - Customize all 4 formats (XML/the AI/the AI assistant/the AI)
 7. **Validate completeness** - Ensure self-contained, no external dependencies
 
 ### Output Format
@@ -1147,6 +1147,6 @@ Remember:
 - ✅ All 7 questions customized for domain
 - ✅ Compliance/regulatory requirements integrated (if applicable)
 - ✅ Domain best practices + LLM best practices combined
-- ✅ All 4 output formats supported (XML/Claude/the AI assistant/Gemini)
+- ✅ All 4 output formats supported (XML/the AI/the AI assistant/the AI)
 - ✅ Complete, self-contained system (no external dependencies)
 - ✅ Production-ready, professional quality

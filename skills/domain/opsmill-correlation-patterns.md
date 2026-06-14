@@ -4,6 +4,8 @@ impact: HIGH
 tags: correlation, diffing, joining, policy
 ---
 
+# Correlation Patterns
+
 ## Data Correlation Patterns
 
 Impact: HIGH

@@ -1,3 +1,5 @@
+# Session Title Generator
+
 Produce a concise title for this session.
 
 ## Rules

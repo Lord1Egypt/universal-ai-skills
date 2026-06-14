@@ -1,8 +1,8 @@
 ---
 name: agents-guide
-description: Interactive guide for building custom the AI coding agent Agents and subagents. Asks straightforward questions, generates enhanced YAML frontmatter with tools/model/color/field/expertise, creates agent .md files, validates format, and helps install to .claude/agents/ or ~/.claude/agents/. Use when user wants to build workflow specialist agents.
+description: Interactive guide for building custom the AI coding agent Agents and subagents. Asks straightforward questions, generates enhanced YAML frontmatter with tools/model/color/field/expertise, creates agent .md files, validates format, and helps install to .the AI/agents/ or ~/.the AI/agents/. Use when user wants to build workflow specialist agents.
 tools: Read, Write, Grep
-model: sonnet
+model: the AI model
 color: green
 field: agents
 expertise: expert
@@ -18,7 +18,7 @@ Guide users through creating the AI coding agent Agents by:
 1. Asking 5-6 straightforward questions (not overwhelming!)
 2. Generating complete agent .md file with enhanced YAML
 3. Validating format (kebab-case name, proper YAML)
-4. Creating the file in .claude/agents/ or ~/.claude/agents/
+4. Creating the file in .the AI/agents/ or ~/.the AI/agents/
 5. Providing usage examples
 
 ## What Are the AI coding agent Agents?
@@ -121,12 +121,12 @@ Your choice (1, 2, or 3): ___"
 
 **Question 4**: Which the AI model should this agent use?
 
-1. **sonnet** - Best for complex tasks (default for most agents)
-2. **opus** - Maximum capability (for critical/complex agents)
-3. **haiku** - Fastest, cheapest (for simple/frequent tasks)
+1. **the AI model** - Best for complex tasks (default for most agents)
+2. **the AI model** - Maximum capability (for critical/complex agents)
+3. **the AI model** - Fastest, cheapest (for simple/frequent tasks)
 4. **inherit** - Use whatever model the main conversation is using
 
-Recommendation: sonnet for most agents, haiku for simple orchestrators
+Recommendation: the AI model for most agents, the AI model for simple orchestrators
 
 Your choice (1, 2, 3, or 4): ___"
 
@@ -221,7 +221,7 @@ Use template + user's answers to generate comprehensive system prompt covering:
 - ✅ Starts and ends with `---`
 - ✅ All required fields present
 - ✅ Tools format: "Tool1, Tool2, Tool3" (comma-separated string)
-- ✅ Model is valid: sonnet|opus|haiku|inherit
+- ✅ Model is valid: the AI model|the AI model|the AI model|inherit
 - ✅ Color is valid: blue|green|red|purple|orange
 
 3. **Description Quality**:
@@ -233,11 +233,11 @@ Use template + user's answers to generate comprehensive system prompt covering:
 
 "Generating your agent file...
 
-Creating: .claude/agents/[agent-name].md"
+Creating: .the AI/agents/[agent-name].md"
 
 **Determine location**:
 ```
-Project-level (.claude/agents/) or User-level (~/.claude/agents/)?
+Project-level (.the AI/agents/) or User-level (~/.the AI/agents/)?
 
 1. **Project-level** - Only available in this skills-factory project
 2. **User-level** - Available across all your the AI coding agent projects
@@ -247,9 +247,9 @@ Your choice (1 or 2): ___
 
 **Create file** using Write tool:
 ```
-Write: .claude/agents/[agent-name].md
+Write: .the AI/agents/[agent-name].md
 [OR]
-Write: ~/.claude/agents/[agent-name].md
+Write: ~/.the AI/agents/[agent-name].md
 ```
 
 ### Step 5: Provide Usage Guide
@@ -257,12 +257,12 @@ Write: ~/.claude/agents/[agent-name].md
 "✅ Your the AI coding agent Agent is ready!
 
 **Agent Name**: [agent-name]
-**Location**: [.claude/agents/ or ~/.claude/agents/]
+**Location**: [.the AI/agents/ or ~/.the AI/agents/]
 **Size**: ~[X]KB
 
 **How It Works**:
 
-Claude will **automatically invoke** this agent when:
+the AI will **automatically invoke** this agent when:
 - Task matches the description
 - Agent's expertise is relevant
 
@@ -369,8 +369,8 @@ Is this better? ___"
 Read, Write, Edit, Bash, Grep, Glob, Task, TodoWrite, AskUserQuestion, Skill, SlashCommand, plus MCP tools
 
 **Example Agents for Reference**:
-- Check ~/.claude/agents/ for existing user-level agents
-- This project: .claude/agents/ for project-level
+- Check ~/.the AI/agents/ for existing user-level agents
+- This project: .the AI/agents/ for project-level
 
 ## Example Conversation
 

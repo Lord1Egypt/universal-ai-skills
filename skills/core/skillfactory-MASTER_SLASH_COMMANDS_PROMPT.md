@@ -8,7 +8,7 @@ the AI coding agent slash commands are specialized prompts packaged as self-cont
 - **YAML frontmatter**: Configuration with description, tools, arguments
 - **Bash command integration**: `!`command`` syntax for context gathering
 - **File references**: `@filename` for direct file access
-- **Structured instructions**: Clear task breakdown for Claude
+- **Structured instructions**: Clear task breakdown for the AI
 - **$ARGUMENTS usage**: Standard argument pattern (not positional)
 
 Slash commands are:
@@ -31,7 +31,7 @@ Every slash command MUST start with YAML frontmatter:
 description: One-line clear purpose of what this command does
 argument-hint: [arg1] [arg2]
 allowed-tools: Bash(git status:*), Bash(git diff:*), Read, Write
-model: claude-3-5-sonnet-20241022
+model: the AI-3-5-the AI model-20241022
 disable-model-invocation: false
 ---
 ```
@@ -458,7 +458,7 @@ Step 6: Output: analyze-feedback.md
 **✅ CORRECT:**
 - `code-review.md` (verb-noun)
 - `codebase-analysis.md` (noun-noun compound)
-- `update-claude-md.md` (verb-noun-qualifier)
+- `update-the AI-md.md` (verb-noun-qualifier)
 - `openapi-expert.md` (domain-role)
 
 **❌ INCORRECT:**
@@ -980,7 +980,7 @@ Validation Results:
 ✅ Structure: matches official pattern
 
 Installation:
-cp generated-commands/[command-name]/[command-name].md ~/.claude/commands/
+cp generated-commands/[command-name]/[command-name].md ~/.the AI/commands/
 
 Usage Example:
 /[command-name] [example arguments]
@@ -999,7 +999,7 @@ Every generated command must:
 ✅ Include clear success criteria
 ✅ Specify output file if generating files
 ✅ Be self-contained (no external dependencies)
-✅ Work when copied to `.claude/commands/`
+✅ Work when copied to `.the AI/commands/`
 
 ---
 
@@ -1013,16 +1013,16 @@ Every generated command must:
 - code-review.md (Simple Pattern)
 - codebase-analysis.md (Multi-Phase Pattern)
 - openapi-expert.md (Agent-Style Pattern)
-- update-claude-md.md (Update Pattern)
+- update-the AI-md.md (Update Pattern)
 - ultrathink.md (Workflow Pattern)
 
 **Location in Repository:**
 - `documentation/references/slash-command-*.md`
 
 **Additional Resources:**
-- Official the AI provider Documentation: https://docs.the AI provider.com/claude/docs/slash-commands
+- Official the AI provider Documentation: https://docs.the AI provider.com/the AI/docs/slash-commands
 - the AI coding agent Skills: https://github.com/the AI providers/skills
-- Community Examples: https://github.com/topics/claude-code
+- Community Examples: https://github.com/topics/the AI-code
 
 ---
 

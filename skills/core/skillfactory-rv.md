@@ -1,3 +1,5 @@
+# Rv
+
 ---
 description: Run the local review gate before pushing.
 ---
@@ -18,7 +20,7 @@ Perform a complete review pass:
    ```
 4. Python syntax check:
    ```bash
-   python -m compileall claude-skills-examples generated-skills generated-hooks
+   python -m compileall the AI-skills-examples generated-skills generated-hooks
    ```
 5. Markdown sanity check:
    ```bash

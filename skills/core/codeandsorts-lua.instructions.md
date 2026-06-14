@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -65,18 +65,18 @@ tests/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a Lua module that exposes two functions: add and subtract.`
-- `Copilot, implement a timer system using LÖVE callbacks.`
-- `Copilot, write a Neovim Lua config that maps <leader>f to :Telescope find_files.`
-- `Copilot, write a test using busted for a function that reverses a string.`
-- `Copilot, create a config loader that reads a Lua table from a file.`
+- `the AI assistant, create a Lua module that exposes two functions: add and subtract.`
+- `the AI assistant, implement a timer system using LÖVE callbacks.`
+- `the AI assistant, write a Neovim Lua config that maps <leader>f to :Telescope find_files.`
+- `the AI assistant, write a test using busted for a function that reverses a string.`
+- `the AI assistant, create a config loader that reads a Lua table from a file.`
 
 ## 🔁 Iteration & Review
 
-- Always review Copilot output for global leakage or misused metatables.
+- Always review the AI assistant output for global leakage or misused metatables.
 - Refactor output to follow Lua idioms and avoid verbose patterns.
 - Use comments to describe intent if generating complex logic.
-- Test all modules with `busted` before accepting new Copilot code.
+- Test all modules with `busted` before accepting new the AI assistant code.
 
 ## 📚 References
 

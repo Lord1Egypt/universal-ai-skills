@@ -315,10 +315,10 @@ generated-hooks/
 ```bash
 cd generated-skills/hook-factory
 
-# Install to user level (~/.claude/settings.json)
+# Install to user level (~/.the AI/settings.json)
 python3 installer.py install generated-hooks/[hook-name] user
 
-# Install to project level (.claude/settings.json)
+# Install to project level (.the AI/settings.json)
 python3 installer.py install generated-hooks/[hook-name] project
 ```
 
@@ -347,7 +347,7 @@ cd generated-skills/hook-factory
 python3 installer.py uninstall [hook-name] user
 
 # Bash (manual - edit settings.json)
-vim ~/.claude/settings.json  # Remove hook entry
+vim ~/.the AI/settings.json  # Remove hook entry
 ```
 
 **List Installed Hooks**:
@@ -361,10 +361,10 @@ python3 installer.py list project
 1. Open the AI coding agent settings:
    ```bash
    # Project-level
-   vim .claude/settings.json
+   vim .the AI/settings.json
 
    # User-level
-   vim ~/.claude/settings.json
+   vim ~/.the AI/settings.json
    ```
 
 2. Add hook configuration:
@@ -391,7 +391,7 @@ python3 installer.py list project
 
 **For development**:
 - `/build` - Build Skills, Prompts, or Agents
-- `/codex-exec` - Run the AI provider Codex CLI commands
+- `/the AI coding agent-exec` - Run the AI provider the AI coding agent CLI commands
 
 ---
 

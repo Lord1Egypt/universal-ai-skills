@@ -4,6 +4,8 @@ impact: LOW
 tags: patterns, flat-list, parent-child, devices, git-repo
 ---
 
+# Patterns Common
+
 ## Common Object Patterns
 
 Impact: LOW (reference patterns)

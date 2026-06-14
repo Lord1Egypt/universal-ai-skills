@@ -275,12 +275,12 @@ Beautiful reports are perceived as more credible and easier to understand.
 
 ## Summary: Nordic Design Checklist
 
-☐ **Generous whitespace** — When in doubt, add more space  
-☐ **Muted colors** — No saturated colors except one accent  
-☐ **Quality typography** — Inter/Geist, proper hierarchy  
-☐ **Subtle borders** — Not heavy dividers  
-☐ **Flat design** — No gradients, minimal shadows  
-☐ **Content-first** — Design serves the information  
-☐ **Consistent rhythm** — Spacing scale, visual balance  
-☐ **Accessibility** — WCAG AA contrast ratios  
+☐ **Generous whitespace** — When in doubt, add more space
+☐ **Muted colors** — No saturated colors except one accent
+☐ **Quality typography** — Inter/Geist, proper hierarchy
+☐ **Subtle borders** — Not heavy dividers
+☐ **Flat design** — No gradients, minimal shadows
+☐ **Content-first** — Design serves the information
+☐ **Consistent rhythm** — Spacing scale, visual balance
+☐ **Accessibility** — WCAG AA contrast ratios
 ☐ **Print-optimized** — Works in B&W, proper page breaks

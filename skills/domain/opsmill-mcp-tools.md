@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: mcp, tools, query, infrahub
 ---
 
+# Mcp Tools
+
 ## Infrahub MCP Server Tool Reference
 
 Impact: CRITICAL

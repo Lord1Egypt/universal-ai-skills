@@ -1,6 +1,6 @@
 # /sync-agents-md - Regenerate AGENTS.md from the AI.md
 
-**Synchronize AGENTS.md with current the AI.md using the codex-cli-bridge skill.**
+**Synchronize AGENTS.md with current the AI.md using the the AI coding agent-cli-bridge skill.**
 
 ---
 
@@ -17,15 +17,15 @@
 ## What This Command Does
 
 **Default** (`/sync-agents-md`):
-- Runs the **codex-cli-bridge** skill
-- Validates environment (Codex CLI + the AI.md)
+- Runs the **the AI coding agent-cli-bridge** skill
+- Validates environment (the AI coding agent CLI + the AI.md)
 - Parses the AI.md and project structure
 - Regenerates AGENTS.md with latest changes
 - Overwrites existing AGENTS.md
 
 **With `--validate`**:
 - Validates environment only (no regeneration)
-- Checks Codex CLI installation
+- Checks the AI coding agent CLI installation
 - Checks the AI.md exists
 - Shows status report
 
@@ -40,16 +40,16 @@
 
 **Run this command when**:
 - ✅ the AI.md has been updated
-- ✅ New skills added to `.claude/skills/`
-- ✅ New agents added to `.claude/agents/`
+- ✅ New skills added to `.the AI/skills/`
+- ✅ New agents added to `.the AI/agents/`
 - ✅ Project structure changed
 - ✅ AGENTS.md is out of sync
-- ✅ Team needs latest Codex CLI documentation
+- ✅ Team needs latest the AI coding agent CLI documentation
 
 **Don't need to run when**:
 - ❌ Only code changes (no config changes)
 - ❌ AGENTS.md already current
-- ❌ Working only with the AI coding agent (not Codex CLI)
+- ❌ Working only with the AI coding agent (not the AI coding agent CLI)
 
 ---
 
@@ -57,9 +57,9 @@
 
 ### Step 1: Environment Validation
 ```
-🔍 Checking Codex CLI installation...
-   ✅ Found: /path/to/codex
-   Version: codex-cli 0.50.0
+🔍 Checking the AI coding agent CLI installation...
+   ✅ Found: /path/to/the AI coding agent
+   Version: the AI coding agent-cli 0.50.0
 
 📄 Checking the AI.md...
    ✅ Found: /project/the AI.md
@@ -100,7 +100,7 @@
 ```
 
 **What happens**:
-1. Validates Codex CLI installed
+1. Validates the AI coding agent CLI installed
 2. Checks the AI.md exists
 3. Parses project structure
 4. Regenerates AGENTS.md
@@ -127,7 +127,7 @@ AGENTS.md is now in sync with the AI.md
 ```
 
 **What happens**:
-1. Checks Codex CLI installation
+1. Checks the AI coding agent CLI installation
 2. Checks the AI.md exists
 3. Shows status report
 4. **Does NOT regenerate AGENTS.md**
@@ -138,7 +138,7 @@ AGENTS.md is now in sync with the AI.md
 
 Environment is ready for AGENTS.md generation.
 
-Codex CLI: v0.50.0 ✅
+the AI coding agent CLI: v0.50.0 ✅
 the AI.md: Found ✅
 AGENTS.md: Exists (last updated: 2025-10-30)
 
@@ -161,14 +161,14 @@ Shows current project status
 ```
 📊 SYNC STATUS
 
-Project: claude-code-skills-factory
+Project: the AI-code-skills-factory
 the AI.md: ✅ Exists
 AGENTS.md: ✅ Exists (in sync)
 Last updated: 2025-10-30 15:52
 
 Skills: 13 (8 functional, 5 prompt-based)
 Agents: 59
-Codex CLI: v0.50.0 installed
+the AI coding agent CLI: v0.50.0 installed
 ```
 
 ---
@@ -185,10 +185,10 @@ When you run `/sync-agents-md`, the following sections in AGENTS.md are regenera
    - Description
 
 2. **Available Skills**
-   - All skills from `.claude/skills/`
-   - Skills from `~/.claude/skills/`
+   - All skills from `.the AI/skills/`
+   - Skills from `~/.the AI/skills/`
    - Generated skills from `generated-skills/`
-   - With Codex CLI usage examples
+   - With the AI coding agent CLI usage examples
 
 3. **Project Structure**
    - Current folder layout
@@ -196,12 +196,12 @@ When you run `/sync-agents-md`, the following sections in AGENTS.md are regenera
    - Documentation references
 
 4. **Workflow Patterns**
-   - Slash commands → Codex CLI equivalents
+   - Slash commands → the AI coding agent CLI equivalents
    - Based on the AI.md workflows section
 
 5. **Command Reference**
    - Updated command mapping table
-   - the AI coding agent ↔ Codex CLI
+   - the AI coding agent ↔ the AI coding agent CLI
 
 ### ❌ What Doesn't Change
 
@@ -235,7 +235,7 @@ git commit -m "docs: Update project configuration"
 ```
 # 1. Create skill
 /build skill
-[Generated: .claude/skills/my-new-skill]
+[Generated: .the AI/skills/my-new-skill]
 
 # 2. Sync AGENTS.md (documents new skill)
 /sync-agents-md
@@ -272,9 +272,9 @@ This command works seamlessly with:
 → Both files ready
 ```
 
-### `/update-claude` - Auto-sync after update
+### `/update-the AI` - Auto-sync after update
 ```
-/update-claude
+/update-the AI
 → Updates the AI.md
 → Auto-runs /sync-agents-md
 → AGENTS.md stays in sync
@@ -292,20 +292,20 @@ This command works seamlessly with:
 
 ## Troubleshooting
 
-### Error: "Codex CLI not found"
+### Error: "the AI coding agent CLI not found"
 
 **Symptom**:
 ```
-❌ Codex CLI not found!
+❌ the AI coding agent CLI not found!
 ```
 
 **Solution**:
 ```bash
-# Install Codex CLI
-# Visit: https://github.com/the AI provider/codex
+# Install the AI coding agent CLI
+# Visit: https://github.com/the AI provider/the AI coding agent
 
 # Verify
-codex --version
+the AI coding agent --version
 ```
 
 ---
@@ -407,7 +407,7 @@ jobs:
       - name: Validate AGENTS.md sync
         run: |
           # Regenerate AGENTS.md
-          python generated-skills/codex-cli-bridge/bridge.py
+          python generated-skills/the AI coding agent-cli-bridge/bridge.py
 
           # Check if changed
           git diff --exit-code AGENTS.md || {
@@ -439,8 +439,8 @@ fi
 ## Technical Details
 
 **Command Type**: Slash command
-**Skill Used**: codex-cli-bridge
-**Python Script**: `generated-skills/codex-cli-bridge/bridge.py`
+**Skill Used**: the AI coding agent-cli-bridge
+**Python Script**: `generated-skills/the AI coding agent-cli-bridge/bridge.py`
 **Output**: AGENTS.md in project root
 **Approach**: Reference-based (no file duplication)
 **Sync Direction**: One-way (the AI.md → AGENTS.md)
@@ -452,7 +452,7 @@ fi
 | Command | Purpose |
 |---------|---------|
 | `/init` | Initialize project with the AI.md (auto-syncs AGENTS.md) |
-| `/update-claude` | Update the AI.md from code changes (auto-syncs AGENTS.md) |
+| `/update-the AI` | Update the AI.md from code changes (auto-syncs AGENTS.md) |
 | `/check-docs` | Validate all documentation is current |
 | `/sync-agents-md` | Manually regenerate AGENTS.md |
 
@@ -460,7 +460,7 @@ fi
 
 ## See Also
 
-- **SKILL.md**: codex-cli-bridge skill documentation
+- **SKILL.md**: the AI coding agent-cli-bridge skill documentation
 - **HOW_TO_USE.md**: Comprehensive usage guide
 - **AGENTS.md**: Example output (this repository)
 - **the AI.md**: Source configuration file
@@ -469,7 +469,7 @@ fi
 
 **Version**: 1.0.0
 **Last Updated**: 2025-10-30
-**Maintained For**: Cross-tool team collaboration (the AI coding agent ↔ Codex CLI)
+**Maintained For**: Cross-tool team collaboration (the AI coding agent ↔ the AI coding agent CLI)
 
 ---
 

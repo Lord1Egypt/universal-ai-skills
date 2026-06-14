@@ -38,7 +38,7 @@ When invoked with a GitHub issue number $1, following the process below to resol
 ### 3. TEST Phase
 
 1. **UI Testing** (if applicable):
-   - Use Puppeteer via MCP if UI changes were made and tool is available
+   - Use browser automation via MCP if UI changes were made and tool is available
    - Verify visual and functional behavior
 2. **Unit Testing**:
    - Write tests that describe expected behavior

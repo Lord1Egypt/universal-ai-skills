@@ -1,3 +1,5 @@
+# Next Action Suggestion
+
 Recommend the single highest-value next action the user could take.
 
 ## Rules

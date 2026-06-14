@@ -33,7 +33,7 @@ Efficiently convert current TodoWrite tasks into a GitHub plan issue. Existing w
 ### Step 2: Set Plan Details
 ```bash
 PLAN_TITLE="$1"  # From command argument
-REPO="alirezarezvani/claude-code-skill-factory"
+REPO="alirezarezvani/the AI-code-skill-factory"
 
 # Validate title provided
 if [ -z "$PLAN_TITLE" ]; then

@@ -1,6 +1,6 @@
-# GitHub Copilot Instructions
+# GitHub the AI assistant Instructions
 
-These instructions define how GitHub Copilot should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
+These instructions define how GitHub the AI assistant should assist with this project. The goal is to ensure consistent, high-quality code generation aligned with our conventions, stack, and best practices.
 
 ## 🧠 Context
 
@@ -71,16 +71,16 @@ build/
 
 ## 🧩 Example Prompts
 
-- `Copilot, create a C++ class for a thread-safe queue using std::mutex and std::condition_variable.`
-- `Copilot, implement an abstract class Drawable with a draw() method and two subclasses.`
-- `Copilot, write a CMakeLists.txt file that builds all .cpp files in src and links Boost.`
-- `Copilot, write a GoogleTest unit test for the MathUtils::Factorial function.`
-- `Copilot, implement a RAII wrapper for a FILE* handle using std::unique_ptr and a custom deleter.`
+- `the AI assistant, create a C++ class for a thread-safe queue using std::mutex and std::condition_variable.`
+- `the AI assistant, implement an abstract class Drawable with a draw() method and two subclasses.`
+- `the AI assistant, write a CMakeLists.txt file that builds all .cpp files in src and links Boost.`
+- `the AI assistant, write a GoogleTest unit test for the MathUtils::Factorial function.`
+- `the AI assistant, implement a RAII wrapper for a FILE* handle using std::unique_ptr and a custom deleter.`
 
 ## 🔁 Iteration & Review
 
-- Always review Copilot-generated code for memory safety and correctness.
-- Use comments to explain complex logic and guide Copilot suggestions.
+- Always review AI assistant-generated code for memory safety and correctness.
+- Use comments to explain complex logic and guide the AI assistant suggestions.
 - Refactor output to match the project's code conventions.
 - Run `clang-tidy`, `cppcheck`, or sanitizers on generated code for static analysis.
 

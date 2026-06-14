@@ -1,6 +1,6 @@
 # GitHub Settings Quick Guide
 
-**Repository**: claude-code-skills-factory
+**Repository**: the AI-code-skills-factory
 **Time Required**: 15-20 minutes
 **Date**: November 12, 2025
 
@@ -20,7 +20,7 @@ Setting up branch protection rules and making `dev` the default branch so:
 
 ### Step 1: Open Repository Settings (1 min)
 
-1. Go to: `https://github.com/alirezarezvani/claude-code-skill-factory`
+1. Go to: `https://github.com/alirezarezvani/the AI-code-skill-factory`
 2. Click the **"Settings"** tab (top right, next to Insights)
 3. In the left sidebar, find **"Code and automation"** section
 4. Click **"Branches"**

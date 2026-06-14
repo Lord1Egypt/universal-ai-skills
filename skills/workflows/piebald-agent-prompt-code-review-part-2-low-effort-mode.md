@@ -3,6 +3,8 @@ name: 'Agent Prompt: /code-review part 2 low effort mode'
 description: Low-effort /code-review prompt that reads the diff once and returns up to four hunk-visible runtime correctness findings
 ccVersion: 2.1.152
 -->
+# Code Review: Low Effort Mode
+
 `low effort → 1 diff pass → no verify → ≤4 findings`
 
 ## Turn 1 — read

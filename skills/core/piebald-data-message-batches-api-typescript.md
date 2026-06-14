@@ -1,6 +1,6 @@
 <!--
 name: 'Data: Message Batches API — TypeScript'
-description: TypeScript usage guide for Claude's asynchronous Message Batches endpoint
+description: TypeScript usage guide for the AI's asynchronous Message Batches endpoint
 ccVersion: 2.1.173
 -->
 # Message Batches API — TypeScript
@@ -29,7 +29,7 @@ const messageBatch = await client.messages.batches.create({
     {
       custom_id: "request-1",
       params: {
-        model: "{{OPUS_ID}}",
+        model: "{{MODEL_ID}}",
         max_tokens: 16000,
         messages: [
           { role: "user", content: "Summarize climate change impacts" },
@@ -39,7 +39,7 @@ const messageBatch = await client.messages.batches.create({
     {
       custom_id: "request-2",
       params: {
-        model: "{{OPUS_ID}}",
+        model: "{{MODEL_ID}}",
         max_tokens: 16000,
         messages: [
           { role: "user", content: "Explain quantum computing basics" },

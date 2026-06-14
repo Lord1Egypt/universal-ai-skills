@@ -71,7 +71,7 @@ skill-name/
 | ------------- | -------- | ------ | --------------------------------------------------- |
 | `name`        | Yes      | String | Lowercase, hyphens, 3-50 chars                      |
 | `description` | Yes      | String | Triggering conditions with `<example>` blocks       |
-| `model`       | Yes      | String | `inherit`, `sonnet`, `opus`, or `haiku`             |
+| `model`       | Yes      | String | `inherit`, `the AI model`, `the AI model`, or `the AI model`             |
 | `color`       | Yes      | String | `blue`, `cyan`, `green`, `yellow`, `magenta`, `red` |
 | `tools`       | No       | Array  | Restrict to specific tools                          |
 
@@ -182,7 +182,7 @@ Supported events: Stop, SubagentStop, UserPromptSubmit, PreToolUse.
 ```json
 {
   "type": "command",
-  "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/validate.sh",
+  "command": "bash ${AI_PLUGIN_ROOT}/hooks/scripts/validate.sh",
   "timeout": 60
 }
 ```
@@ -209,7 +209,7 @@ Supported events: Stop, SubagentStop, UserPromptSubmit, PreToolUse.
       "hooks": [
         {
           "type": "command",
-          "command": "cat ${CLAUDE_PLUGIN_ROOT}/context/project-context.md",
+          "command": "cat ${AI_PLUGIN_ROOT}/context/project-context.md",
           "timeout": 10
         }
       ]
@@ -245,7 +245,7 @@ Decisions: `approve`, `block`, `ask_user` (ask for confirmation).
   "mcpServers": {
     "my-server": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/server.js"],
+      "args": ["${AI_PLUGIN_ROOT}/servers/server.js"],
       "env": {
         "API_KEY": "${API_KEY}"
       }
@@ -287,7 +287,7 @@ Decisions: `approve`, `block`, `ask_user` (ask for confirmation).
 
 All MCP configs support `${VAR_NAME}` substitution:
 
-- `${CLAUDE_PLUGIN_ROOT}` — plugin directory (always use for portability)
+- `${AI_PLUGIN_ROOT}` — plugin directory (always use for portability)
 - `${ANY_ENV_VAR}` — user environment variables
 
 Document all required environment variables in the plugin README.
@@ -309,7 +309,7 @@ Some MCP directory entries have no `url` because the endpoint is dynamic. Plugin
 | --------------- | -------- | --------------- | --------------------------------------------------- |
 | `description`   | No       | String          | Brief description shown in `/help` (under 60 chars) |
 | `allowed-tools` | No       | String or Array | Tools the command can use                           |
-| `model`         | No       | String          | Model override: `sonnet`, `opus`, `haiku`           |
+| `model`         | No       | String          | Model override: `the AI model`, `the AI model`, `the AI model`           |
 | `argument-hint` | No       | String          | Documents expected arguments for autocomplete       |
 
 ### Example Command
@@ -337,7 +337,7 @@ Provide specific line numbers, severity ratings, and remediation suggestions.
 - `$ARGUMENTS` captures all arguments as a single string; `$1`, `$2`, `$3` capture positional arguments.
 - `@path` syntax includes file contents in the command context.
 - `!` backtick syntax executes bash inline for dynamic context (e.g., `` !`git diff --name-only` ``).
-- Use `${CLAUDE_PLUGIN_ROOT}` to reference plugin files portably.
+- Use `${AI_PLUGIN_ROOT}` to reference plugin files portably.
 
 ### allowed-tools Patterns
 

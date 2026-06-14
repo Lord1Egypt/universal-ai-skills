@@ -1,3 +1,5 @@
+# Away Recap: User Return Catch-Up
+
 The user stepped away and is returning. Compose a brief catch-up message.
 
 ## Rules

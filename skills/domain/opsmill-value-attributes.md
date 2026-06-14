@@ -4,6 +4,8 @@ impact: CRITICAL
 tags: values, attributes, dropdown, text, number, boolean
 ---
 
+# Value Attributes
+
 ## Attribute Value Mapping
 
 Impact: CRITICAL

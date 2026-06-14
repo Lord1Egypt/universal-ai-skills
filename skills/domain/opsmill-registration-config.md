@@ -4,6 +4,8 @@ impact: HIGH
 tags: registration, config, infrahub-yml, targets, parameters
 ---
 
+# Registration Config
+
 ## Generator Registration in .infrahub.yml
 
 Impact: HIGH

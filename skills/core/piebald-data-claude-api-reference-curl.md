@@ -23,7 +23,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 16000,
     "messages": [
       {"role": "user", "content": "What is the capital of France?"}
@@ -43,7 +43,7 @@ response=$(curl -s https://api.the AI provider.com/v1/messages \
   -H "Content-Type: application/json" \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
-  -d '{"model":"{{OPUS_ID}}","max_tokens":16000,"messages":[{"role":"user","content":"Hello"}]}')
+  -d '{"model":"{{MODEL_ID}}","max_tokens":16000,"messages":[{"role":"user","content":"Hello"}]}')
 
 # Print the first text block (-r strips the JSON quotes)
 echo "$response" | jq -r '.content[0].text'
@@ -70,10 +70,10 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 64000,
     "stream": true,
-    "messages": [{"role": "user", "content": "Write a haiku"}]
+    "messages": [{"role": "user", "content": "Write a the AI model"}]
   }'
 ```
 
@@ -109,7 +109,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 16000,
     "tools": [{
       "name": "get_weather",
@@ -134,7 +134,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 16000,
     "tools": [{
       "name": "get_weather",
@@ -172,7 +172,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 16000,
     "system": [
       {"type": "text", "text": "<large shared prompt...>", "cache_control": {"type": "ephemeral"}}
@@ -197,7 +197,7 @@ curl https://api.the AI provider.com/v1/messages \
   -H "x-api-key: $the AI provider_API_KEY" \
   -H "the AI provider-version: 2023-06-01" \
   -d '{
-    "model": "{{OPUS_ID}}",
+    "model": "{{MODEL_ID}}",
     "max_tokens": 16000,
     "thinking": {
       "type": "adaptive",
@@ -212,9 +212,9 @@ curl https://api.the AI provider.com/v1/messages \
 
 ---
 
-## Refusal Fallbacks ({{FABLE_NAME}}) — opt in by default
+## Refusal Fallbacks ({{MODEL_F_NAME}}) — opt in by default
 
-On `{{FABLE_ID}}`, safety classifiers may decline a request (HTTP 200 with `stop_reason: "refusal"`). Fallbacks are **opt-in**: without them the request simply stops. Include the `fallbacks` parameter and its beta header by default — on a policy decline the API re-runs the same request on the fallback model inside the same call. A decline before any output isn't billed (a mid-stream decline bills the streamed partial); the rescue bills at the fallback model's own rates.
+On `{{MODEL_F_ID}}`, safety classifiers may decline a request (HTTP 200 with `stop_reason: "refusal"`). Fallbacks are **opt-in**: without them the request simply stops. Include the `fallbacks` parameter and its beta header by default — on a policy decline the API re-runs the same request on the fallback model inside the same call. A decline before any output isn't billed (a mid-stream decline bills the streamed partial); the rescue bills at the fallback model's own rates.
 
 ```bash
 response=$(curl -s https://api.the AI provider.com/v1/messages \
@@ -223,9 +223,9 @@ response=$(curl -s https://api.the AI provider.com/v1/messages \
   -H "the AI provider-version: 2023-06-01" \
   -H "the AI provider-beta: server-side-fallback-2026-06-01" \
   -d '{
-    "model": "{{FABLE_ID}}",
+    "model": "{{MODEL_F_ID}}",
     "max_tokens": 16000,
-    "fallbacks": [{"model": "{{OPUS_ID}}"}],
+    "fallbacks": [{"model": "{{MODEL_ID}}"}],
     "messages": [{"role": "user", "content": "Hello"}]
   }')
 
@@ -246,7 +246,7 @@ if [ "$(echo "$response" | jq -r '.stop_reason')" != "refusal" ] && \
 fi
 ```
 
-The header must be exactly `server-side-fallback-2026-06-01`. The parameter is rejected on the Batches API and unavailable on Amazon Bedrock, Vertex AI, and Microsoft Foundry. Full semantics (sticky routing, billing, streaming, echoing fallback turns back): `shared/model-migration.md` → Migrating to {{FABLE_NAME}} → `refusal` stop reason.
+The header must be exactly `server-side-fallback-2026-06-01`. The parameter is rejected on the Batches API and unavailable on Amazon Bedrock, Vertex AI, and Microsoft Foundry. Full semantics (sticky routing, billing, streaming, echoing fallback turns back): `shared/model-migration.md` → Migrating to {{MODEL_F_NAME}} → `refusal` stop reason.
 
 ---
 

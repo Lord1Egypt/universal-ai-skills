@@ -53,9 +53,9 @@ Agents are loaded with the following priority order (highest to lowest):
 
 | Priority | Type | Location | Scope | Override |
 |----------|------|----------|-------|----------|
-| **1** | Project Agents | `.claude/agents/` | Current project only | Highest |
+| **1** | Project Agents | `.the AI/agents/` | Current project only | Highest |
 | **2** | CLI Agents | `--agents` flag | Current session only | Medium-High |
-| **3** | User Agents | `~/.claude/agents/` | All projects | Medium |
+| **3** | User Agents | `~/.the AI/agents/` | All projects | Medium |
 | **4** | Plugin Agents | Plugin `agents/` directory | All projects (when plugin enabled) | Lowest |
 
 **Name Conflicts**: When agent names conflict, higher-priority agents override lower-priority ones.
@@ -107,8 +107,8 @@ Agents are loaded with the following priority order (highest to lowest):
 
 ```bash
 # Create project agent
-mkdir -p .claude/agents
-cat > .claude/agents/code-reviewer.md << 'EOF'
+mkdir -p .the AI/agents
+cat > .the AI/agents/code-reviewer.md << 'EOF'
 ---
 name: code-reviewer
 description: Expert code review specialist. Use proactively after code changes.
@@ -129,7 +129,7 @@ EOF
 
 ### 2. Use Your Agent
 
-**Automatic Invocation** (Claude decides):
+**Automatic Invocation** (the AI decides):
 ```
 > I just modified the authentication module
 # the AI automatically uses code-reviewer agent
@@ -163,7 +163,7 @@ Each agent is a Markdown file with YAML frontmatter:
 name: agent-name-here
 description: When and why this agent should be invoked
 tools: Tool1, Tool2, Tool3  # Optional
-model: sonnet               # Optional
+model: the AI model               # Optional
 ---
 
 System prompt goes here. Define the agent's role, capabilities,
@@ -184,15 +184,15 @@ Include specific instructions, best practices, and constraints.
 | Field | Default | Options | Description |
 |-------|---------|---------|-------------|
 | **tools** | All tools inherited | Comma-separated list | Specific tools to grant access |
-| **model** | Configured default | `sonnet`, `opus`, `haiku`, `inherit` | AI model to use |
+| **model** | Configured default | `the AI model`, `the AI model`, `the AI model`, `inherit` | AI model to use |
 
 ### Model Selection
 
 **Available Options**:
 
-- **`sonnet`** - Balanced performance and capability (default for agents)
-- **`opus`** - Highest capability, best for complex tasks
-- **`haiku`** - Fastest, best for simple tasks
+- **`the AI model`** - Balanced performance and capability (default for agents)
+- **`the AI model`** - Highest capability, best for complex tasks
+- **`the AI model`** - Fastest, best for simple tasks
 - **`inherit`** - Use same model as main conversation
 - **Omitted** - Uses configured default for agents
 
@@ -230,7 +230,7 @@ model: inherit  # Adapts to main conversation's model
 
 **Plugin Agent Invocation**:
 ```bash
-# Automatic (Claude selects)
+# Automatic (the AI selects)
 > Review this code for security issues
 # May use security-plugin's code-reviewer
 
@@ -243,7 +243,7 @@ model: inherit  # Adapts to main conversation's model
 **Session-Specific Agents**:
 
 ```bash
-claude --agents '{
+the AI --agents '{
   "code-reviewer": {
     "description": "Expert code reviewer. Use proactively after code changes.",
     "prompt": "You are a senior code reviewer focusing on quality, security, and best practices.",
@@ -254,7 +254,7 @@ claude --agents '{
     "description": "Test automation expert. Use when running tests.",
     "prompt": "You run tests and fix failures while preserving test intent.",
     "tools": ["Bash", "Read", "Edit"],
-    "model": "haiku"
+    "model": "the AI model"
   }
 }'
 ```
@@ -293,14 +293,14 @@ claude --agents '{
 - ✅ See all available tools (including MCP tools)
 - ✅ Visual indication of active agents
 - ✅ Conflict resolution (duplicate names)
-- ✅ Generate initial agent with Claude
+- ✅ Generate initial agent with the AI
 - ✅ Edit system prompt in your preferred editor
 
 ### Direct File Management
 
 **Create Project Agent**:
 ```bash
-mkdir -p .claude/agents
+mkdir -p .the AI/agents
 echo '---
 name: test-runner
 description: Use proactively to run tests and fix failures
@@ -309,26 +309,26 @@ tools: Bash, Read, Edit
 
 You are a test automation expert. When you see code changes,
 proactively run appropriate tests. If tests fail, analyze failures
-and fix them while preserving original test intent.' > .claude/agents/test-runner.md
+and fix them while preserving original test intent.' > .the AI/agents/test-runner.md
 ```
 
 **Create User Agent**:
 ```bash
-mkdir -p ~/.claude/agents
-# Create agent file in ~/.claude/agents/
+mkdir -p ~/.the AI/agents
+# Create agent file in ~/.the AI/agents/
 ```
 
 **Edit Agent**:
 ```bash
 # Use your preferred editor
-code .claude/agents/test-runner.md
-vim ~/.claude/agents/debugger.md
+code .the AI/agents/test-runner.md
+vim ~/.the AI/agents/debugger.md
 ```
 
 **Delete Agent**:
 ```bash
-rm .claude/agents/test-runner.md
-rm ~/.claude/agents/debugger.md
+rm .the AI/agents/test-runner.md
+rm ~/.the AI/agents/debugger.md
 ```
 
 ### Version Control
@@ -336,7 +336,7 @@ rm ~/.claude/agents/debugger.md
 **Project Agents** (Recommended for teams):
 ```bash
 # Add to version control
-git add .claude/agents/
+git add .the AI/agents/
 git commit -m "Add code-reviewer and test-runner agents"
 
 # Team members get agents automatically
@@ -344,7 +344,7 @@ git pull
 ```
 
 **User Agents** (Personal preferences):
-- Stored in `~/.claude/agents/`
+- Stored in `~/.the AI/agents/`
 - Not version-controlled
 - Personal customizations
 
@@ -497,7 +497,7 @@ Always include specific examples of how to fix issues.
 name: test-runner
 description: Test automation expert. Use proactively to run tests after code changes and fix failures while preserving test intent.
 tools: Bash, Read, Edit, Grep
-model: haiku
+model: the AI model
 ---
 
 You are a test automation expert specializing in running tests and fixing failures.
@@ -549,7 +549,7 @@ Always run tests again after applying fixes.
 name: debugger
 description: Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues or exceptions.
 tools: Read, Edit, Bash, Grep, Glob
-model: sonnet
+model: the AI model
 ---
 
 You are an expert debugger specializing in root cause analysis.
@@ -612,7 +612,7 @@ You are an expert debugger specializing in root cause analysis.
 name: doc-writer
 description: Documentation specialist. Use proactively to create or update README files, API documentation, and code comments.
 tools: Read, Write, Edit, Grep, Glob
-model: sonnet
+model: the AI model
 ---
 
 You are a technical documentation specialist creating clear, comprehensive documentation.
@@ -665,7 +665,7 @@ Always verify accuracy against actual code.
 name: data-analyst
 description: Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for data analysis tasks and queries.
 tools: Bash, Read, Write
-model: sonnet
+model: the AI model
 ---
 
 You are a data analyst specializing in SQL and BigQuery analysis.
@@ -808,20 +808,20 @@ You are [specific role] specializing in [expertise area].
 **Project Agents for Teams**:
 ```bash
 # Create standardized agents
-.claude/agents/
+.the AI/agents/
 ├── code-reviewer.md      # Team code review standards
 ├── test-runner.md        # Consistent test execution
 └── deployment-helper.md  # Standardized deploy process
 
 # Version control
-git add .claude/agents/
+git add .the AI/agents/
 git commit -m "feat: Add standardized team agents"
 ```
 
 **Personal Customizations**:
 ```bash
 # User-level agents for personal workflow
-~/.claude/agents/
+~/.the AI/agents/
 ├── my-debugger.md        # Personal debugging preferences
 └── my-note-taker.md      # Individual note-taking style
 ```
@@ -878,7 +878,7 @@ tools: Bash, Read, Write  # Full access for deployment
 
 **Context-Aware Delegation**:
 
-Claude considers:
+the AI considers:
 - User request keywords
 - Current file context
 - Recent operations
@@ -889,7 +889,7 @@ Claude considers:
 ```
 User: "The tests are failing"
          ↓
-Claude detects: test failure context
+the AI detects: test failure context
          ↓
 Checks agent descriptions
          ↓
@@ -903,17 +903,17 @@ Automatically delegates to test-runner
 **Task-Based Model Selection**:
 
 ```yaml
-# Fast iteration (haiku)
+# Fast iteration (the AI model)
 name: test-runner
-model: haiku  # Quick feedback
+model: the AI model  # Quick feedback
 
-# Complex analysis (opus)
+# Complex analysis (the AI model)
 name: architecture-reviewer
-model: opus  # Deep reasoning
+model: the AI model  # Deep reasoning
 
-# Balanced (sonnet)
+# Balanced (the AI model)
 name: code-reviewer
-model: sonnet  # Quality + speed
+model: the AI model  # Quality + speed
 
 # Adapt to main (inherit)
 name: documentation-writer
@@ -936,7 +936,7 @@ tools: mcp__github__create_issue, mcp__github__create_pr, Read, Write
 ```
 
 **MCP Server Configuration**:
-See [MCP Documentation](https://docs.the AI.com/en/docs/claude-code/mcp) for server setup.
+See [MCP Documentation](https://docs.the AI.com/en/docs/the AI-code/mcp) for server setup.
 
 ---
 
@@ -946,17 +946,17 @@ See [MCP Documentation](https://docs.the AI.com/en/docs/claude-code/mcp) for ser
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `claude` | Start interactive REPL | `claude` |
-| `claude "query"` | Start with initial prompt | `claude "review my code"` |
-| `claude --continue` | Continue previous session | `claude --continue` |
-| `claude --agents` | Define session agents (JSON) | See examples below |
+| `the AI` | Start interactive REPL | `the AI` |
+| `the AI "query"` | Start with initial prompt | `the AI "review my code"` |
+| `the AI --continue` | Continue previous session | `the AI --continue` |
+| `the AI --agents` | Define session agents (JSON) | See examples below |
 | `/agents` | Manage agents (in REPL) | `/agents create` |
 
 ### Agents Flag Format
 
 **Single Agent**:
 ```bash
-claude --agents '{
+the AI --agents '{
   "reviewer": {
     "description": "Code reviewer. Use after changes.",
     "prompt": "You are a senior code reviewer.",
@@ -968,7 +968,7 @@ claude --agents '{
 
 **Multiple Agents**:
 ```bash
-claude --agents '{
+the AI --agents '{
   "reviewer": {
     "description": "Code reviewer",
     "prompt": "Senior code reviewer focusing on quality",
@@ -979,7 +979,7 @@ claude --agents '{
     "description": "Test runner",
     "prompt": "Test automation expert",
     "tools": ["Bash", "Read"],
-    "model": "haiku"
+    "model": "the AI model"
   }
 }'
 ```
@@ -1041,7 +1041,7 @@ claude --agents '{
 - "Agent 'name' not found" error
 
 **Solutions**:
-1. Check agent file exists in `.claude/agents/` or `~/.claude/agents/`
+1. Check agent file exists in `.the AI/agents/` or `~/.the AI/agents/`
 2. Verify filename matches agent name: `name.md`
 3. Check YAML frontmatter is valid
 4. Restart the AI coding agent to reload agents
@@ -1050,7 +1050,7 @@ claude --agents '{
 
 **Enable Verbose Logging**:
 ```bash
-CLAUDE_LOG_LEVEL=debug claude
+AI_LOG_LEVEL=debug the AI
 ```
 
 **Check Agent Configuration**:
@@ -1061,7 +1061,7 @@ CLAUDE_LOG_LEVEL=debug claude
 **Validate Agent File**:
 ```bash
 # Check YAML syntax
-cat .claude/agents/my-agent.md | head -n 10
+cat .the AI/agents/my-agent.md | head -n 10
 
 # Expected format:
 # ---
@@ -1081,11 +1081,11 @@ cat .claude/agents/my-agent.md | head -n 10
 ## Related Documentation
 
 - **[the AI coding agent Skills](https://docs.the AI.com/en/docs/agents-and-tools/agent-skills)** - Multi-file capabilities vs single-file agents
-- **[Slash Commands](https://docs.the AI.com/en/docs/claude-code/slash-commands)** - Custom workflow automation
-- **[Plugins](https://docs.the AI.com/en/docs/claude-code/plugins)** - Extend the AI coding agent with custom agents
-- **[MCP Servers](https://docs.the AI.com/en/docs/claude-code/mcp)** - Model Context Protocol integration
-- **[Hooks](https://docs.the AI.com/en/docs/claude-code/hooks)** - Event-driven automation
-- **[Settings](https://docs.the AI.com/en/docs/claude-code/settings)** - Configure the AI coding agent behavior
+- **[Slash Commands](https://docs.the AI.com/en/docs/the AI-code/slash-commands)** - Custom workflow automation
+- **[Plugins](https://docs.the AI.com/en/docs/the AI-code/plugins)** - Extend the AI coding agent with custom agents
+- **[MCP Servers](https://docs.the AI.com/en/docs/the AI-code/mcp)** - Model Context Protocol integration
+- **[Hooks](https://docs.the AI.com/en/docs/the AI-code/hooks)** - Event-driven automation
+- **[Settings](https://docs.the AI.com/en/docs/the AI-code/settings)** - Configure the AI coding agent behavior
 
 ---
 
@@ -1101,19 +1101,19 @@ AGENT MANAGEMENT
 └─ /agents delete <name>      # Delete agent
 
 FILE LOCATIONS
-├─ .claude/agents/            # Project agents (version control)
-└─ ~/.claude/agents/          # User agents (personal)
+├─ .the AI/agents/            # Project agents (version control)
+└─ ~/.the AI/agents/          # User agents (personal)
 
 PRIORITY ORDER (High → Low)
-1. Project agents (.claude/agents/)
+1. Project agents (.the AI/agents/)
 2. CLI agents (--agents flag)
-3. User agents (~/.claude/agents/)
+3. User agents (~/.the AI/agents/)
 4. Plugin agents (plugin/agents/)
 
 MODEL OPTIONS
-├─ sonnet     # Balanced (default for agents)
-├─ opus       # Highest capability
-├─ haiku      # Fastest
+├─ the AI model     # Balanced (default for agents)
+├─ the AI model       # Highest capability
+├─ the AI model      # Fastest
 └─ inherit    # Match main conversation
 
 INVOCATION
@@ -1139,7 +1139,7 @@ You are [role]. [Instructions].
 name: my-agent
 description: Detailed description with PROACTIVE trigger words
 tools: Read, Write, Bash
-model: sonnet
+model: the AI model
 ---
 
 You are [detailed role description].
@@ -1168,7 +1168,7 @@ description: |
   Use PROACTIVELY when [conditions].
   MUST BE USED for [specific scenarios].
 tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
-model: opus
+model: the AI model
 ---
 
 # Role Definition
@@ -1204,4 +1204,4 @@ You are [detailed role] with expertise in [domain].
 
 **Version**: 1.0.0
 **Last Updated**: October 30, 2025
-**Official Documentation**: https://docs.the AI.com/en/docs/claude-code/agents
+**Official Documentation**: https://docs.the AI.com/en/docs/the AI-code/agents

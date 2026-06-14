@@ -17,8 +17,8 @@
 ## What This Command Does
 
 Installs hook.json configuration to:
-- **User-level** (`~/.claude/settings.json`) - Applies to all projects
-- **Project-level** (`.claude/settings.json`) - Current project only
+- **User-level** (`~/.the AI/settings.json`) - Applies to all projects
+- **Project-level** (`.the AI/settings.json`) - Current project only
 
 **Installation process**:
 1. ✅ Validates hook.json structure
@@ -40,15 +40,15 @@ Installs hook.json configuration to:
 **Performs**:
 1. Reads `generated-hooks/auto-format-python/hook.json`
 2. Validates JSON structure and safety
-3. Creates backup: `~/.claude/settings.json.backup`
-4. Opens `~/.claude/settings.json`
+3. Creates backup: `~/.the AI/settings.json.backup`
+4. Opens `~/.the AI/settings.json`
 5. Adds hook to appropriate event type section
 6. Saves changes
 
 **Output**:
 ```
 Installing hook: auto-format-python
-Location: User-level (~/.claude/settings.json)
+Location: User-level (~/.the AI/settings.json)
 
 ✅ Hook validation PASSED
    - JSON structure: Valid
@@ -56,7 +56,7 @@ Location: User-level (~/.claude/settings.json)
    - Event type: PostToolUse
 
 Creating backup...
-✅ Backup created: ~/.claude/settings.json.backup
+✅ Backup created: ~/.the AI/settings.json.backup
 
 Installing to PostToolUse hooks...
 ✅ Hook installed successfully!
@@ -73,7 +73,7 @@ Next steps:
 3. Verify hook runs automatically
 
 To test:
-claude --continue
+the AI --continue
 > Edit any Python file
 > Check if Black formatting runs
 ```
@@ -86,15 +86,15 @@ claude --continue
 /install-hook generated-hooks/test-runner project
 ```
 
-**Installs to**: `.claude/settings.json` (current project)
+**Installs to**: `.the AI/settings.json` (current project)
 
 **Output**:
 ```
 Installing hook: test-runner
-Location: Project-level (.claude/settings.json)
+Location: Project-level (.the AI/settings.json)
 
 ✅ Hook validation PASSED
-✅ Backup created: .claude/settings.json.backup
+✅ Backup created: .the AI/settings.json.backup
 ✅ Hook installed successfully!
 
 Event type: SubagentStop
@@ -118,7 +118,7 @@ Next steps:
 ```
 
 **Auto-detection logic**:
-- If `.claude/settings.json` exists → Install to project
+- If `.the AI/settings.json` exists → Install to project
 - Otherwise → Ask user: "Install to user or project level?"
 
 ---
@@ -214,10 +214,10 @@ Then regenerate the hook or fix manually.
 **Restore from backup**:
 ```bash
 # User-level
-cp ~/.claude/settings.json.backup ~/.claude/settings.json
+cp ~/.the AI/settings.json.backup ~/.the AI/settings.json
 
 # Project-level
-cp .claude/settings.json.backup .claude/settings.json
+cp .the AI/settings.json.backup .the AI/settings.json
 ```
 
 **After restore**: Restart the AI coding agent
@@ -231,10 +231,10 @@ cp .claude/settings.json.backup .claude/settings.json
 1. Open settings file:
    ```bash
    # User-level
-   vim ~/.claude/settings.json
+   vim ~/.the AI/settings.json
 
    # Project-level
-   vim .claude/settings.json
+   vim .the AI/settings.json
    ```
 
 2. Find and remove the hook entry under its event type
@@ -278,7 +278,7 @@ cp .claude/settings.json.backup .claude/settings.json
 /install-hook generated-hooks/my-hook user
 
 # 4. Restart the AI coding agent
-claude --continue
+the AI --continue
 
 # 5. Test
 [Trigger the hook event - e.g., edit a file for PostToolUse]
@@ -324,14 +324,14 @@ claude --continue
 
 **macOS**:
 - Hooks can use `osascript`, `afplay` for notifications/sounds
-- Settings location: `~/.claude/settings.json`
+- Settings location: `~/.the AI/settings.json`
 
 **Linux**:
 - Hooks can use `notify-send`, `paplay` for notifications/sounds
-- Settings location: `~/.claude/settings.json`
+- Settings location: `~/.the AI/settings.json`
 
 **Windows**:
-- Settings location: `%USERPROFILE%\.claude\settings.json`
+- Settings location: `%USERPROFILE%\.the AI\settings.json`
 - Use cross-platform tools (git, language-specific formatters)
 
 ---

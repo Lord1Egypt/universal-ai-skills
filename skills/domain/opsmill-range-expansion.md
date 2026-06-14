@@ -4,6 +4,8 @@ impact: MEDIUM
 tags: range, expansion, interfaces, sequential
 ---
 
+# Range Expansion
+
 ## Interface Range Expansion
 
 Impact: MEDIUM

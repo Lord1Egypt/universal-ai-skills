@@ -100,7 +100,7 @@ This audit analyzed **285 markdown files** across the the AI coding agent Skills
 - **Cognitive overload**: 225 lines of orchestration patterns irrelevant to skill generation
 
 **Actual repository content:**
-- `claude-agents-examples/` - 42 agent examples (separate reference)
+- `the AI-agents-examples/` - 42 agent examples (separate reference)
 - `generated-skills/` - 7 production skills
 - `documentation/templates/` - 2 factory prompts
 
@@ -241,7 +241,7 @@ documentation/
 
 ### 1.5 Agent Examples Analysis
 
-#### Inventory (42 agents, 51 commands in claude-agents-examples/)
+#### Inventory (42 agents, 51 commands in the AI-agents-examples/)
 
 **Status**: 🔴 Critical isolation issue
 
@@ -388,7 +388,7 @@ documentation/
 7. Open template (921 lines)
 8. Scroll to bottom for variables
 9. Fill variables, copy entire 921 lines
-10. Paste into Claude
+10. Paste into the AI
 11. **Total time: 15-30 minutes** (Target: <5 minutes)
 
 **Missing:**
@@ -645,7 +645,7 @@ documentation/
 │   ├── SKILLS_FACTORY_PROMPT.md
 │   └── AGENTS_FACTORY_PROMPT.md
 │
-├── examples/              # NEW - Move claude-agents-examples here
+├── examples/              # NEW - Move the AI-agents-examples here
 │   ├── skills/
 │   │   ├── financial-analysis/
 │   │   ├── content-creation/
@@ -788,7 +788,7 @@ documentation/
 4. **Failure points**: 4-5
 
 **To find agent examples:**
-1. README → Repository Contents → claude-agents-examples/ (not linked) → Browse folder → Find agent
+1. README → Repository Contents → the AI-agents-examples/ (not linked) → Browse folder → Find agent
 2. **Clicks**: 4-6
 3. **Hidden**: Not in README or main docs
 
@@ -878,7 +878,7 @@ documentation/
 - [ ] Implement PRD's proposed structure
 - [ ] Create guides/, reference/, examples/, use-cases/ folders
 - [ ] Migrate content from README
-- [ ] Move claude-agents-examples/ to documentation/examples/agents/
+- [ ] Move the AI-agents-examples/ to documentation/examples/agents/
 - [ ] Create navigation index
 
 #### 7. Create Skills Catalog
@@ -1176,8 +1176,8 @@ The the AI coding agent Skills & Agents Factory has **excellent technical assets
 | documentation/operations/ | 2 | Operational | 🟢 Good |
 | documentation/templates/ | 2 | Factory prompts | 🟢 Excellent |
 | generated-skills/ | 7 folders | Production skills | 🟢 Excellent |
-| claude-skills-examples/ | 3 | Example skills | 🟢 Good |
-| claude-agents-examples/ | 262+ | Agent system | 🟡 Isolated |
+| the AI-skills-examples/ | 3 | Example skills | 🟢 Good |
+| the AI-agents-examples/ | 262+ | Agent system | 🟡 Isolated |
 
 ---
 

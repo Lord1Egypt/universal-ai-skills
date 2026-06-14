@@ -2,14 +2,14 @@
 
 ![Status: Check (blue badge)](https://img.shields.io/badge/status-check-3A86FF.svg)
 
-This one exists because the old commit generator was trying too hard. It walked Copilot through every diff like a nervous parent, while modern models were already doing the homework on their own.
+This one exists because the old commit generator was trying too hard. It walked the AI assistant through every diff like a nervous parent, while modern models were already doing the homework on their own.
 
 This generator creates a Conventional Commit message from your repository changes and writes it to `./commit.tmp` for review.
 
 ## How to use 📝
 
 - Stage the changes you want included in the commit (recommended). The generator prefers staged changes but can fall back to all local changes if needed.
-- Run the generator (via the repository's Copilot workflow). It will attempt to collect changed files and draft a conventional commit message for you.
+- Run the generator (via the repository's the AI assistant workflow). It will attempt to collect changed files and draft a conventional commit message for you.
 
 ## What the generator does ⚙️
 
@@ -34,7 +34,7 @@ The AI will search for any existing commit lint rules in the repository. If foun
 
 ## Why This Exists 💡
 
-When GitHub changed the rules, the original multi-step prompt became irrelevant. Copilot doesn’t need training wheels anymore — it just needs the same thing we do: guardrails.
+When GitHub changed the rules, the original multi-step prompt became irrelevant. the AI assistant doesn’t need training wheels anymore — it just needs the same thing we do: guardrails.
 
 This version keeps those. The format, the tone, and the responsibility stay. Everything else got cut, because all it ever needed to do was make clear, traceable history.
 
@@ -51,7 +51,7 @@ Choose exactly one footer that best describes the AI's role. Higher-level attrib
 - **Assisted-by**: AI made minor edits (roughly 3-33% AI-written) — small fixes or improvements
 - **Commit-generated-by**: AI only wrote the commit message — no code changes, just the message itself
 
-Format: `<type>: GitHub Copilot <github.copilot@github.com>`
+Format: `<type>: GitHub the AI assistant <github.the AI assistant@github.com>`
 
 If you haven’t read it yet, the [RAI section of my blog post](https://dev.to/anchildress1/can-we-set-the-record-straight-ai-content-and-a-bit-of-sanity-1inj#5-ai-code-is-ai-content-writers-you-too) walks through why that matters and why I’m not budging on it. This isn’t about permission. *It’s about provenance.*
 
@@ -90,7 +90,7 @@ feat(DEVOPS-2025): introduce incremental indexer with content dedupe
 - Add comprehensive test coverage for indexer and repository layers
 - Update design notes and runbook to reflect the streamlined flow
 
-Co-authored-by: GitHub Copilot <github.copilot@github.com>
+Co-authored-by: GitHub the AI assistant <github.the AI assistant@github.com>
 ```
 
 That message gets written to `commit.tmp` and echoed right back in chat — ready to use, or tweak, or question out loud if you want to see how honest it feels.
@@ -101,7 +101,7 @@ That message gets written to `commit.tmp` and echoed right back in chat — read
 
 This isn’t really about making better commit messages. It’s about leaving a paper trail that means something.
 
-AI doesn’t erase authorship — it complicates it. So this little generator exists to keep that balance visible: you write code, Copilot helps, and both of you sign the work the same way anyone else would.
+AI doesn’t erase authorship — it complicates it. So this little generator exists to keep that balance visible: you write code, the AI assistant helps, and both of you sign the work the same way anyone else would.
 
 > Because if we’re going to build with AI, we should at least have the decency to leave our names on the door.
 
@@ -111,4 +111,4 @@ And if you want to go one better — use a **GPG key** to sign your commits and 
 
 ---
 
-<small>🛡️ Generated initially with the help of the AI assistant and GitHub Copilot as directed by Ashley Childress</small>
+<small>🛡️ Generated initially with the help of the AI assistant and GitHub the AI assistant as directed by Ashley Childress</small>

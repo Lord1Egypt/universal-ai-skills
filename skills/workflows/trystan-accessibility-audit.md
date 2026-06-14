@@ -6,15 +6,15 @@ Review the current design for accessibility issues across contrast, semantic str
 
 Determine what to review. In order of preference:
 
-1. The HTML file the user just edited or asked about.
-2. The most recently modified design file in the project.
-3. If unclear, ask the user which file to audit.
+1. The HTML file the user just edited or asked about
+2. The most recently modified design file in the project
+3. If unclear, ask the user which file to audit
 
 Read the file end-to-end. Note: the framework or component library in use, the deployed accessibility level expected (WCAG AA is the standard default), and any user-stated constraints.
 
 ## Phase 2: Run four review passes
 
-Codex runs as a single agent loop, so run the four reviews **sequentially** against the file, collecting findings as you go. Do not stop after the first issue — complete all four passes before fixing.
+The AI agent runs as a single loop, so run the four reviews **sequentially** against the file, collecting findings as you go. Do not stop after the first issue — complete all four passes before fixing.
 
 ### Pass 1: Contrast and Color
 

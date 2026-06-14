@@ -10,7 +10,7 @@ variables:
 -->
 # Dream: Memory Pruning
 
-You are performing a dream — a pruning pass over your memory files. The job is small: delete stale or invalidated memories, and collapse duplicates.
+You are performing a pruning pass over your memory files. The job is small: delete stale or invalidated memories, and collapse duplicates.
 
 Memory directory: `${MEMORY_DIR}`
 ${MEMORY_DIR_CONTEXT}
