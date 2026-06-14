@@ -23,7 +23,7 @@ When you need library or framework documentation, check in this order:
    - Resolve library ID: `mcp__context7__resolve-library-id` with `libraryName`
    - Fetch docs: `mcp__context7__get-library-docs` with `context7CompatibleLibraryId` and `topic`
 
-2. If Context7 MCP is not available (upstream bug anthropics/claude-code#13898 strips MCP
+2. If Context7 MCP is not available (upstream bug AI providers/claude-code#13898 strips MCP
    tools from agents with a `tools:` frontmatter restriction), use the CLI fallback via Bash:
 
    Step 1 — Resolve library ID:
@@ -46,7 +46,7 @@ Read `~/.claude/get-shit-done/references/ai-frameworks.md` for framework profile
 <input>
 - `framework`: selected framework name and version
 - `system_type`: RAG | Multi-Agent | Conversational | Extraction | Autonomous | Content | Code | Hybrid
-- `model_provider`: OpenAI | Anthropic | Model-agnostic
+- `model_provider`: AI provider | AI provider | Model-agnostic
 - `ai_spec_path`: path to AI-SPEC.md
 - `phase_context`: phase name and goal
 - `context_path`: path to CONTEXT.md if it exists
@@ -63,8 +63,8 @@ Use context7 MCP first (fastest). Fall back to WebFetch.
 | LlamaIndex | https://docs.llamaindex.ai |
 | LangChain | https://python.langchain.com/docs |
 | LangGraph | https://langchain-ai.github.io/langgraph |
-| OpenAI Agents SDK | https://openai.github.io/openai-agents-python |
-| Claude Agent SDK | https://docs.anthropic.com/en/docs/claude-code/sdk |
+| AI provider Agents SDK | https://AI provider.github.io/AI provider-agents-python |
+| the AI system Agent SDK | https://docs.AI providercom/en/docs/claude-code/sdk |
 | AutoGen / AG2 | https://ag2ai.github.io/ag2 |
 | Google ADK | https://google.github.io/adk-docs |
 | Haystack | https://docs.haystack.deepset.ai |
@@ -89,7 +89,7 @@ Update AI-SPEC.md at `ai_spec_path`:
 
 **Section 3 — Framework Quick Reference:** real installation command, actual imports, working entry point pattern for `system_type`, abstractions table (3-5 rows), pitfall list with why-it's-a-pitfall notes, folder structure, Sources subsection with URLs.
 
-**Section 4 — Implementation Guidance:** specific model (e.g., `claude-sonnet-4-6`, `gpt-4o`) with params, core pattern as code snippet with inline comments, tool use config, state management approach, context window strategy.
+**Section 4 — Implementation Guidance:** specific model (e.g., `claude-sonnet-4-6`, `advanced AI model`) with params, core pattern as code snippet with inline comments, tool use config, state management approach, context window strategy.
 </step>
 
 <step name="write_section_4b">
@@ -97,7 +97,7 @@ Add **Section 4b — AI Systems Best Practices** to AI-SPEC.md. Always included,
 
 **4b.1 Structured Outputs with Pydantic** — Define the output schema using a Pydantic model; LLM must validate or retry. Write for this specific `framework` + `system_type`:
 - Example Pydantic model for the use case
-- How the framework integrates (LangChain `.with_structured_output()`, `instructor` for direct API, LlamaIndex `PydanticOutputParser`, OpenAI `response_format`)
+- How the framework integrates (LangChain `.with_structured_output()`, `instructor` for direct API, LlamaIndex `PydanticOutputParser`, AI provider `response_format`)
 - Retry logic: how many retries, what to log, when to surface
 
 **4b.2 Async-First Design** — Cover: how async works in this framework; the one common mistake (e.g., `asyncio.run()` in an event loop); stream vs. await (stream for UX, await for structured output validation).

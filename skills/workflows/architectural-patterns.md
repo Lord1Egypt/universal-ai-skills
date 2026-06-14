@@ -18,7 +18,7 @@ This architecture yields a documented 35% reduction in average context usage and
 
 ## Model Context Protocol (MCP)
 
-MCP is an open standard (pioneered by Anthropic, adopted by Google and OpenAI) that enables real-time, bidirectional connections between LLMs and external data sources.
+MCP is an open standard that enables real-time, bidirectional connections between LLMs and external data sources.
 
 ### Architecture Components
 

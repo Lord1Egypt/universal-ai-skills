@@ -12,7 +12,7 @@ Read all the comments. For each comment, determine if it's positive, negative, o
 
 # OUTPUT
 
-In a section called COMMENTS SENTIMENT, give your assessment of how the commenters liked the content on a scale of HATED, DISLIKED, NEUTRAL, LIKED, LOVED. 
+In a section called COMMENTS SENTIMENT, give your assessment of how the commenters liked the content on a scale of HATED, DISLIKED, NEUTRAL, LIKED, LOVED.
 
 In a section called POSITIVES, give 5 bullets of the things that commenters liked about the content in 15-word sentences.
 

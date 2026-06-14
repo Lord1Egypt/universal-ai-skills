@@ -117,7 +117,7 @@ In `messages/{locale}.json`, translate the `"book"` section. Key areas:
 ```json
 "chapterDescriptions": {
   "00a-preface": "A personal note from the author",
-  "00b-history": "The story of Awesome ChatGPT Prompts",
+  "00b-history": "The story of Awesome AI assistant Prompts",
   ...
 }
 ```
@@ -208,6 +208,6 @@ The English (`en`) translation is complete and serves as the **base template** f
 ## Quality Guidelines
 
 - **Consistency**: Use consistent terminology throughout (e.g., always translate "prompt" the same way)
-- **Technical terms**: Some terms like "AI", "ChatGPT", "API" may stay in English
+- **Technical terms**: Some terms like "AI", "AI assistant", "API" may stay in English
 - **Cultural adaptation**: Adapt examples to be relevant for the target audience where appropriate
 - **Natural language**: Prioritize natural-sounding translations over literal ones

@@ -1,10 +1,10 @@
-# Claude Code Plugin
+# AI coding agent Plugin
 
-Access prompts.chat directly in [Claude Code](https://code.claude.com) with our official plugin. Search prompts, discover skills, and improve your prompts without leaving your IDE.
+Access prompts.chat directly in [AI coding agent](https://code.claude.com) with our official plugin. Search prompts, discover skills, and improve your prompts without leaving your IDE.
 
 ## Installation
 
-Add the prompts.chat marketplace to Claude Code:
+Add the prompts.chat marketplace to AI coding agent:
 
 ```
 /plugin marketplace add f/prompts.chat
@@ -115,7 +115,7 @@ Automatically activates when you:
 
 Automatically activates when you:
 - Ask for Agent Skills
-- Want to extend Claude's capabilities
+- Want to extend The AI system's capabilities
 - Need to install a skill
 - Mention skills for Claude
 

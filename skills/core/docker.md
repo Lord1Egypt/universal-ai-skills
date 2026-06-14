@@ -175,7 +175,7 @@ services:
       AUTH_GOOGLE_SECRET: "your-google-client-secret"
 ```
 
-### With AI Features (OpenAI)
+### With AI Features
 
 ```yaml
 # compose.yml
@@ -184,7 +184,7 @@ services:
     environment:
       # ... existing vars ...
       PCHAT_FEATURE_AI_SEARCH: "true"
-      OPENAI_API_KEY: "sk-..."
+      LLM_API_KEY: "sk-..."
 ```
 
 ## Database Seeding

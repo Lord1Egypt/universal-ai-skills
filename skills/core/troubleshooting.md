@@ -434,7 +434,7 @@ After services start, API requests fail with authentication errors.
 **Solutions**:
 1. Edit the .env file and add the API key:
    ```bash
-   OPENAI_API_KEY=your-actual-api-key-here
+    LLM_API_KEY=your-actual-api-key-here
    ```
 
 2. Restart services (local mode):

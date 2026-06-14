@@ -29,18 +29,27 @@ Whether you are using Gemini, Claude 3.5 Sonnet, GPT-4o, or an open-source local
 ## 📂 Structure
 
 - `/skills/` - The core directory containing hundreds of universal skills.
-  - `coding/` - Software engineering, code review, and architecture.
-  - `analysis/` - Data science, security audits, and logic parsing.
-  - `writing/` - Copywriting, editing, and content generation.
-  - `agents/` - Multi-agent orchestration and system instructions.
+  - `personas/` - Role-based system prompts (engineer, auditor, researcher, etc.)
+  - `workflows/` - End-to-end workflows (debugging, deployment, SOPs)
+  - `core/` - Foundational skills (security, docker, troubleshooting, etc.)
+  - `domain/` - Domain-specific skills (webperf, cognitive shortcuts, etc.)
 
 ## 🚀 Quick Start
 
-Inject these skills directly into your system prompt or CLI config:
+Use the `uas` CLI manager to browse, install, and manage skills:
 
 ```bash
-# Example: Running an agent with a universal skill
-agent --system-prompt "skills/coding/expert_developer.md" "Build a React dashboard"
+# List all available skills
+./uas.sh list
+
+# Search for a skill
+./uas.sh search security
+
+# Install a skill to your agent
+./uas.sh install personas/security-auditor
+
+# Inject directly into your system prompt or CLI config
+cat skills/workflows/sop.md | your-agent-prompt
 ```
 
 ## 🤝 Contributing

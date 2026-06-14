@@ -2,7 +2,7 @@
 description: Conduct a five-axis code review — correctness, readability, architecture, security, performance
 ---
 
-Invoke the agent-skills:code-review-and-quality skill.
+Follow the code review and quality workflow.
 
 Review the current changes (staged or recent commits) across all five axes:
 

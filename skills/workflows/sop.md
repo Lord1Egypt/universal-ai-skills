@@ -212,7 +212,7 @@ This document describes the detailed operating steps for each phase of the DeerF
 1. Check whether the `.env` file exists
 2. If it does not exist, copy it from `.env.example`
 3. Check whether the following environment variables are configured:
-   - `OPENAI_API_KEY` (or other model API keys)
+   - `LLM_API_KEY` (or other model API keys)
    - Other required settings
 
 ---

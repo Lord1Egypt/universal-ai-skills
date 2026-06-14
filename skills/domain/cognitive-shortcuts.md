@@ -2,7 +2,7 @@
 
 ## The LazyBench Discovery
 
-Research from late 2024 demonstrated that frontier models (including Gemini Pro and GPT-4o) exhibit measurable cognitive shortcutting behavior. When a model perceives a task as straightforward or the provided context as excessively long, it reduces its internal computational effort. Rather than executing full multi-step reasoning, it produces a surface-level summary.
+Research from late 2024 demonstrated that frontier models exhibit measurable cognitive shortcutting behavior. When a model perceives a task as straightforward or the provided context as excessively long, it reduces its internal computational effort. Rather than executing full multi-step reasoning, it produces a surface-level summary.
 
 This is not a memory failure or context degradation — the model retains the information but chooses not to process it at full depth.
 
@@ -14,7 +14,7 @@ In professional environments, this shifts critical thinking from original synthe
 
 ## Seasonal Behavior Anomalies
 
-In late 2023, researchers observed a statistically significant increase in ChatGPT output brevity during December. Analysis revealed that the training data contains fewer detailed work outputs, more out-of-office responses, and shorter code commits during holiday periods. The model internalized this seasonal pattern.
+In late 2023, researchers observed a statistically significant increase in AI assistant output brevity during December. Analysis revealed that the training data contains fewer detailed work outputs, more out-of-office responses, and shorter code commits during holiday periods. The model internalized this seasonal pattern.
 
 When researchers explicitly stated "It is May" in the system prompt, output length measurably increased. This finding demonstrates that even arbitrary contextual signals in the prompt can shift the model's brevity calibration.
 

@@ -26,19 +26,18 @@ Example probability distribution shift for a single token position:
 
 Top-p truncates the probability distribution by only considering the smallest set of tokens whose cumulative probability exceeds threshold p. A Top-p of 0.0 to 0.6 combined with low temperature forces the model into a narrow, deterministic execution path, reducing the entropy that enables creative refusals and unnecessary summarization.
 
-## Gemini Thinking Level Configuration
+## Thinking Level Configuration
 
-Google Gemini 3 models replaced the legacy `thinking_budget` (a hard token count cap on internal reasoning) with a `thinking_level` parameter that provides relative guidance on computational depth.
+Some models provide a `thinking_level` parameter that offers relative guidance on computational depth.
 
-| Setting | Flash Support | Pro Support | Use Case |
-|:---|:---:|:---:|:---|
-| `minimal` | Yes | No | High-throughput, low-latency tasks |
-| `low` | Yes | Yes | Simple instruction following, data extraction |
-| `medium` | Yes | Yes (3.1 Pro) | Moderate complexity tasks |
-| `high` | Yes (Default) | Yes (Default) | Complex analysis, code generation, mathematics |
+| Setting | Use Case |
+|:---|:---|
+| `minimal` | High-throughput, low-latency tasks |
+| `low` | Simple instruction following, data extraction |
+| `medium` | Moderate complexity tasks |
+| `high` | Complex analysis, code generation, mathematics |
 
 Important constraints:
-- `thinking_level` and `thinking_budget` are mutually exclusive. Using both in one API call triggers an HTTP 400 error.
-- Even at `low`, Gemini Pro models perform mandatory minimum internal deliberation for safety and alignment.
+- `thinking_level` and `thinking_budget` are mutually exclusive. Using both in one API call may trigger an error.
 - For code generation and complex analysis, set to `medium` or `high` for quality scores consistently exceeding 92-95% compared to baseline.
 - Avoid combining extremely low temperature with `high` thinking level, as this can occasionally induce internal reasoning loops.

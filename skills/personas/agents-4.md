@@ -1,10 +1,10 @@
 # AGENTS.md
 
-This file provides guidance to AI coding agents (Claude Code, Cursor, Copilot, Antigravity, etc.) when working with code in this repository.
+This file provides guidance to AI coding agents (AI coding agent, Cursor, Copilot, Antigravity, etc.) when working with code in this repository.
 
 ## Repository Overview
 
-A collection of skills for Claude.ai and Claude Code for senior software engineers. Skills are packaged instructions and scripts that extend Claude and your coding agents capabilities.
+A collection of skills for the AI platform and AI coding agent for senior software engineers. Skills are packaged instructions and scripts that extend the AI system and your coding agents capabilities.
 
 ## OpenCode Integration
 
@@ -63,7 +63,7 @@ Correct behavior:
 
 - Always check for and use skills first
 
-This ensures OpenCode behaves similarly to Claude Code with full workflow enforcement.
+This ensures OpenCode behaves similarly to AI coding agent with full workflow enforcement.
 
 ## Orchestration: Personas, Skills, and Commands
 
@@ -79,7 +79,7 @@ The only multi-persona orchestration pattern this repo endorses is **parallel fa
 
 See [agents/README.md](agents/README.md) for the decision matrix and [references/orchestration-patterns.md](references/orchestration-patterns.md) for the full pattern catalog.
 
-**Claude Code interop:** the personas in `agents/` work as Claude Code subagents (auto-discovered from this plugin's `agents/` directory) and as Agent Teams teammates (referenced by name when spawning). Two platform constraints align with our rules: subagents cannot spawn other subagents, and teams cannot nest. Plugin agents silently ignore the `hooks`, `mcpServers`, and `permissionMode` frontmatter fields.
+**AI coding agent interop:** the personas in `agents/` work as AI coding agent subagents (auto-discovered from this plugin's `agents/` directory) and as Agent Teams teammates (referenced by name when spawning). Two platform constraints align with our rules: subagents cannot spawn other subagents, and teams cannot nest. Plugin agents silently ignore the `hooks`, `mcpServers`, and `permissionMode` frontmatter fields.
 
 ## Creating a New Skill
 
@@ -139,7 +139,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 
 ## Present Results to User
 
-{Template for how Claude should format results when presenting to users}
+{Template for how The AI system should format results when presenting to users}
 
 ## Troubleshooting
 
@@ -178,12 +178,12 @@ zip -r {skill-name}.zip {skill-name}/
 
 Document these two installation methods for users:
 
-**Claude Code:**
+**AI coding agent:**
 ```bash
 cp -r skills/{skill-name} ~/.claude/skills/
 ```
 
-**claude.ai:**
+**the AI platform:**
 Add the skill to project knowledge or paste SKILL.md contents into the conversation.
 
-If the skill requires network access, instruct users to add required domains at `claude.ai/settings/capabilities`.
+If the skill requires network access, instruct users to add required domains at `the AI platform/settings/capabilities`.

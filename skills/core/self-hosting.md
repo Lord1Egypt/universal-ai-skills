@@ -2,7 +2,7 @@
 
 ## Capabilities
 
-- **Curated Prompt Library** — Access 100+ high-quality, community-tested prompts for ChatGPT, Claude, Gemini, Llama, Mistral, and other AI models
+- **Curated Prompt Library** — Access 100+ high-quality, community-tested prompts for various AI models
 - **Discover & Browse** — Explore prompts by categories, tags, or AI-powered semantic search
 - **Create & Share Prompts** — Submit your own prompts with support for text, structured (JSON/YAML), and media-enhanced formats
 - **Version Control** — Track prompt changes with built-in versioning and change request system (similar to PRs)
@@ -13,7 +13,7 @@
 
 ## Benefits
 
-- **Unlock AI Potential:** Stop struggling with prompt engineering — use battle-tested prompts from 141k+ GitHub stars community
+- **Unlock AI Potential:** Stop struggling with prompt engineering — use battle-tested prompts from a large community
 - **Save Time:** Copy prompts with one click, customize variables inline, and use them instantly in any AI chat
 - **Community-Driven Quality:** Every prompt is curated and refined by the community through change requests and voting
 - **Self-Hostable:** Deploy your own white-labeled prompt library for your team or organization with customizable branding, themes, and authentication
@@ -72,7 +72,7 @@ AUTH_GOOGLE_SECRET="your-google-client-secret"
 AUTH_SECRET="generate-a-random-secret"
 
 # Optional: AI-powered semantic search
-OPENAI_API_KEY="your-openai-api-key"
+LLM_API_KEY="your-llm-api-key"
 ```
 
 ## Installation
@@ -180,7 +180,7 @@ export default defineConfig({
     changeRequests: true,
     categories: true,
     tags: true,
-    aiSearch: false,  // Requires OPENAI_API_KEY
+    aiSearch: false,  // Requires LLM API key
   },
 
   // Homepage

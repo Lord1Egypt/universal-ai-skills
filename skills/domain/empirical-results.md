@@ -2,7 +2,7 @@
 
 ## 2025 Controlled Experiments
 
-A controlled study published in December 2025 measured output truncation across several frontier models, including GPT-4 variants and DeepSeek. Three experiments were conducted:
+A controlled study published in December 2025 measured output truncation across several frontier models. Three experiments were conducted:
 
 ### Experiment A: Multi-Part Instruction Compliance
 
@@ -51,7 +51,7 @@ These effects are reproducible and stem from statistical correlations in the tra
 
 ## Seasonal Output Variation
 
-Statistical analysis of ChatGPT outputs during November-December 2023 versus January-March 2024 confirmed:
+Statistical analysis of AI assistant outputs during November-December 2023 versus January-March 2024 confirmed:
 
 - Measurable decrease in average output length during December
 - Correlation with reduced work output in the training data during holiday periods

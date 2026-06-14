@@ -2,7 +2,7 @@
 
 ## Active Discussions
 
-For current work on **Grok Build compatibility** and multi-runtime synchronization across Grok Build, Claude Code, Gemini CLI, and Codex, see:
+For current work on **Grok Build compatibility** and multi-runtime synchronization across Grok Build, AI coding agent, your AI CLI, and Codex, see:
 
 - `docs/discussions/grok-build-support-2026-05.md`
 

@@ -85,7 +85,7 @@ from deerflow.agents.features import RuntimeFeatures
 client = DeerFlowClient(
     # 1. config — 覆盖 config.yaml 的任意 key（结构和 yaml 一致）
     config={
-        "models": [{"name": "gpt-4o", "use": "langchain_openai:ChatOpenAI", "model": "gpt-4o", "api_key": "sk-..."}],
+        "models": [{"name": "advanced AI model", "use": "langchain_AI provider:ChatAI provider", "model": "advanced AI model", "api_key": "sk-..."}],
         "memory": {"max_facts": 50, "enabled": True},
         "title": {"enabled": False},
         "summarization": {"enabled": True, "trigger": [{"type": "tokens", "value": 10000}]},
@@ -123,7 +123,7 @@ client = DeerFlowClient(extra_middleware=[MyAuditMiddleware()])
 
 # 用法 5：纯 SDK（无 config.yaml）
 client = DeerFlowClient(config={
-    "models": [{"name": "gpt-4o", "use": "langchain_openai:ChatOpenAI", ...}],
+    "models": [{"name": "advanced AI model", "use": "langchain_AI provider:ChatAI provider", ...}],
     "tools": [{"name": "bash", "use": "deerflow.sandbox.tools:bash_tool", "group": "bash"}],
     "memory": {"enabled": True},
 })
@@ -339,7 +339,7 @@ client = DeerFlowClient(config={
 
 ```python
 client = DeerFlowClient(config={
-    "models": [{"name": "gpt-4o", "use": "langchain_openai:ChatOpenAI", "model": "gpt-4o", "api_key": "sk-..."}],
+    "models": [{"name": "advanced AI model", "use": "langchain_AI provider:ChatAI provider", "model": "advanced AI model", "api_key": "sk-..."}],
     "tools": [
         {"name": "bash", "group": "bash", "use": "deerflow.sandbox.tools:bash_tool"},
         {"name": "web_search", "group": "web", "use": "deerflow.community.tavily.tools:web_search_tool"},

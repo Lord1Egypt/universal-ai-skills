@@ -21,7 +21,7 @@ You are spawned by:
 
 Your job: Find the root cause through hypothesis testing, maintain debug file state, optionally fix and verify (depending on mode).
 
-@~/.claude/get-shit-done/references/mandatory-initial-read.md
+@references/mandatory-initial-read.md
 
 **Core responsibilities:**
 - Investigate autonomously (user reports symptoms, you find cause)
@@ -33,16 +33,16 @@ Your job: Find the root cause through hypothesis testing, maintain debug file st
 </role>
 
 <required_reading>
-@~/.claude/get-shit-done/references/common-bug-patterns.md
+@references/common-bug-patterns.md
 </required_reading>
 
-**Project skills:** @~/.claude/get-shit-done/references/project-skills-discovery.md
+**Project skills:** @references/project-skills-discovery.md
 - Load `rules/*.md` as needed during **investigation and fix**.
 - Follow skill rules relevant to the bug being investigated and the fix being applied.
 
 <philosophy>
 
-@~/.claude/get-shit-done/references/debugger-philosophy.md
+@references/debugger-philosophy.md
 
 </philosophy>
 
@@ -429,12 +429,12 @@ git bisect bad              # or good, based on testing
 **Example:** Stale hook warning persists after update
 ```
 Check code says:  hooksDir = path.join(configDir, 'hooks')
-                  configDir = ~/.claude
-                  → checks ~/.claude/hooks/
+                  configDir = ~/.config/app
+                  → checks ~/.config/app/hooks/
 
 Installer says:   hooksDest = path.join(targetDir, 'hooks')
-                  targetDir = ~/.claude/get-shit-done
-                  → writes to ~/.claude/get-shit-done/hooks/
+                  targetDir = ~/.config/app/plugins
+                  → writes to ~/.config/app/plugins/hooks/
 
 MISMATCH: Checker looks in wrong directory → hooks "not found" → reported as stale
 ```
@@ -959,7 +959,7 @@ Gather symptoms through questioning. Update file after EACH answer.
 
 <step name="investigation_loop">
 At investigation decision points, apply structured reasoning:
-@~/.claude/get-shit-done/references/thinking-models-debug.md
+@references/thinking-models-debug.md
 
 **Autonomous investigation. Update file continuously.**
 
@@ -982,7 +982,7 @@ At investigation decision points, apply structured reasoning:
 - APPEND to Evidence after each finding
 
 **Phase 1.5: Check common bug patterns**
-- Read @~/.claude/get-shit-done/references/common-bug-patterns.md
+- Read @references/common-bug-patterns.md
 - Match symptoms to pattern categories using the Symptom-to-Category Quick Map
 - Any matching patterns become hypothesis candidates for Phase 2
 - If no patterns match, proceed to open-ended hypothesis formation
@@ -1147,12 +1147,10 @@ mkdir -p .planning/debug/resolved
 mv .planning/debug/{slug}.md .planning/debug/resolved/
 ```
 
-**Check planning config using state load (commit_docs is available from the output):**
+**Check planning config using state load:**
 
 ```bash
-INIT=$(gsd-sdk query state.load)
-if [[ "$INIT" == @file:* ]]; then INIT=$(cat "${INIT#@file:}"); fi
-# commit_docs is in the JSON output
+# Load state and check commit_docs configuration
 ```
 
 **Commit the fix:**
@@ -1166,9 +1164,9 @@ git commit -m "fix: {brief description}
 Root cause: {root_cause}"
 ```
 
-Then commit planning docs via CLI (respects `commit_docs` config automatically):
+Then commit planning docs via CLI:
 ```bash
-gsd-sdk query commit "docs: resolve debug {slug}" --files .planning/debug/resolved/{slug}.md
+# Commit the resolved debug session documentation
 ```
 
 **Append to knowledge base:**
@@ -1179,7 +1177,7 @@ If creating for the first time, write this header first:
 ```markdown
 # GSD Debug Knowledge Base
 
-Resolved debug sessions. Used by `gsd-debugger` to surface known-pattern hypotheses at the start of new investigations.
+Resolved debug sessions. Used by the debugger to surface known-pattern hypotheses at the start of new investigations.
 
 ---
 
@@ -1199,7 +1197,7 @@ Then append the entry:
 
 Commit the knowledge base update alongside the resolved session:
 ```bash
-gsd-sdk query commit "docs: update debug knowledge base with {slug}" --files .planning/debug/knowledge-base.md
+# Commit the knowledge base update
 ```
 
 Report completion and offer next steps.

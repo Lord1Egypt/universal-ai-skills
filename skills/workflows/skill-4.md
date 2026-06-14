@@ -74,7 +74,7 @@ smoke-test/
    - If it already exists, check whether it needs an upgrade with `make config-upgrade`
 2. **Check the .env file**
    - Verify that required environment variables are configured
-   - Especially model API keys such as `OPENAI_API_KEY`
+   - Especially model API keys such as `LLM_API_KEY`
 
 ### Phase 4: Deployment Execution
 

@@ -2,7 +2,7 @@
 
 ## The Cost of Token Generation
 
-Every token an LLM generates consumes GPU compute resources. At an estimated baseline cost of $0.0001 per token, scaling deep multi-step reasoning across hundreds of millions of users would exhaust the financial capacity of any provider. This creates an inherent economic incentive to minimize output length.
+Every token an LLM generates consumes GPU compute resources. Scaling deep multi-step reasoning across hundreds of millions of users would exhaust the financial capacity of any provider. This creates an inherent economic incentive to minimize output length.
 
 ## Brevity Bias Through Alignment
 

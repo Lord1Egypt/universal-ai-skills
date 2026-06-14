@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-> Quick reference for Claude Code when working on prompts.chat
+> Quick reference for AI coding agent when working on prompts.chat
 
 ## Project Overview
 
@@ -49,7 +49,7 @@ src/
 │   ├── ui/           # shadcn/ui base components
 │   └── prompts/      # Prompt-related components
 └── lib/              # Utilities and config
-    ├── ai/           # OpenAI integration
+    ├── ai/           # AI provider integration
     ├── auth/         # NextAuth setup
     └── plugins/      # Auth and storage plugins
 ```

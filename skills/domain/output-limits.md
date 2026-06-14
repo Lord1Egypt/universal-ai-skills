@@ -2,13 +2,13 @@
 
 ## Context Window Asymmetry
 
-Models like Gemini have massive input context windows (up to 2 million tokens) but strictly capped output limits (typically 8,000 tokens). When the model estimates that a complete response would exceed its output budget, it preemptively compresses or summarizes the output rather than risking an abrupt cutoff.
+Some models have massive input context windows (up to 2 million tokens) but strictly capped output limits (typically 8,000 tokens). When the model estimates that a complete response would exceed its output budget, it preemptively compresses or summarizes the output rather than risking an abrupt cutoff.
 
 This creates a paradox: the model can read extensive inputs but cannot respond proportionally, leading to systematic information loss on complex tasks.
 
 ## The Consumer Middleware Problem
 
-Consumer-facing applications (gemini.google.com, standard ChatGPT tiers) apply additional software-level truncation on top of the model's inherent limits. This middleware silently truncates conversation history and uploaded files to reduce compute costs for free and low-tier users.
+Consumer-facing applications apply additional software-level truncation on top of the model's inherent limits. This middleware silently truncates conversation history and uploaded files to reduce compute costs for free and low-tier users.
 
 Key mechanisms:
 
@@ -18,7 +18,7 @@ Key mechanisms:
 
 ## Developer Platform Differences
 
-Direct API access and developer platforms (Google AI Studio, OpenAI API Playground) bypass consumer middleware entirely. These environments provide:
+Direct API access and developer platforms bypass consumer middleware entirely. These environments provide:
 
 - Full context window access without hidden truncation
 - Complete control over generation parameters
@@ -29,11 +29,11 @@ The practical difference is significant: the same model that produces truncated 
 
 ## Terminal and CLI Integration
 
-Purpose-built CLI tools (Gemini CLI, Claude Code, third-party wrappers) offer additional advantages for avoiding truncation:
+Purpose-built CLI tools offer additional advantages for avoiding truncation:
 
 | Access Method | Context Handling | Truncation Risk | Parameter Control |
 |:---|:---|:---|:---|
 | Consumer web app | Aggressive pruning, 32K cap | High | Limited |
-| Developer platform (AI Studio) | Full context, no hidden slicing | Low | Full |
+| Developer platform | Full context, no hidden slicing | Low | Full |
 | Direct API | Full context, raw access | Minimal | Full |
-| CLI tools with local models | No corporate alignment filters | None | Full |
+| CLI tools with local models | No alignment filters | None | Full |

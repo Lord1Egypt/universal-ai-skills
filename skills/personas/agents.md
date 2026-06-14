@@ -50,7 +50,7 @@
 │   │   ├── settings/       # Settings components
 │   │   └── ui/             # shadcn/ui base components
 │   ├── lib/                # Utility libraries
-│   │   ├── ai/             # AI/OpenAI integration
+│   │   ├── ai/             # AI/AI provider integration
 │   │   ├── auth/           # NextAuth configuration
 │   │   ├── config/         # Config type definitions
 │   │   ├── i18n/           # Internationalization setup
@@ -122,7 +122,7 @@ interface MyComponentProps {
 
 export function MyComponent({ title, onAction }: MyComponentProps) {
   const t = useTranslations("namespace");
-  
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold">{title}</h2>
@@ -165,7 +165,7 @@ Authentication and storage use a plugin architecture:
 ### Auth Plugins (`src/lib/plugins/auth/`)
 - `credentials.ts` - Email/password authentication
 - `github.ts` - GitHub OAuth
-- `google.ts` - Google OAuth  
+- `google.ts` - Google OAuth
 - `azure.ts` - Microsoft Entra ID
 
 ### Storage Plugins (`src/lib/plugins/storage/`)
@@ -234,7 +234,7 @@ AUTH_AZURE_AD_ISSUER=
 
 Optional features:
 ```
-OPENAI_API_KEY=         # For AI-powered semantic search
+AI provider_API_KEY=         # For AI-powered semantic search
 ```
 
 ## Testing
